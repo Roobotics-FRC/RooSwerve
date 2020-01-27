@@ -1,16 +1,33 @@
 package frc.team4373.robot.input;
 
-import frc.team4373.robot.RobotMap;
+import frc.team4373.robot.SwerveConstants;
 import frc.team4373.robot.Utils;
 
 public class SwerveInputTransform {
-    private static final double RADIUS = Math.sqrt(Math.pow(RobotMap.ROBOT_WHEELBASE, 2)
-            + Math.pow(RobotMap.ROBOT_TRACKWIDTH, 2));
-    private static final double LR = RobotMap.ROBOT_WHEELBASE / RADIUS;
-    private static final double WR = (RobotMap.ROBOT_TRACKWIDTH / RADIUS);
+    private double trackwidth;
+    private double wheelbase;
 
-    private static double[] speeds = new double[RobotMap.WHEEL_COUNT];
-    private static double[] angles = new double[RobotMap.WHEEL_COUNT];
+    private final double radius;
+    private final double lr;
+    private final double wr;
+
+    private static double[] speeds = new double[SwerveConstants.WHEEL_COUNT];
+    private static double[] angles = new double[SwerveConstants.WHEEL_COUNT];
+
+    /**
+     * Constructs a new swerve input transform for given robot dimensions.
+     * @param trackwidth the robot's trackwidth (unit-agnostic; units must match wheelbase).
+     * @param wheelbase the robot's wheelbase (unit-agnostic; units must match trackwidth).
+     */
+    public SwerveInputTransform(double trackwidth, double wheelbase) {
+        this.trackwidth = trackwidth;
+        this.wheelbase = wheelbase;
+
+        this.radius = Math.sqrt(Math.pow(wheelbase, 2)
+                + Math.pow(trackwidth, 2));
+        this.lr = wheelbase / radius;
+        this.wr = trackwidth / radius;
+    }
 
     /**
      * Produces swerve velocity vectors relative to the field for the given input.
@@ -22,7 +39,7 @@ public class SwerveInputTransform {
      * @param imuAngle the current heading of the robot
      * @return a {@link WheelVector.VectorSet} of velocity vectors.
      */
-    public static WheelVector.VectorSet processNorthUp(double rotation, double x, double y,
+    public WheelVector.VectorSet processNorthUp(double rotation, double x, double y,
                                                        double imuAngle) {
         double angle = Math.toRadians(imuAngle);
 
@@ -42,11 +59,11 @@ public class SwerveInputTransform {
      * @param y the y coordinate of the joystick (forward is positive)
      * @return a {@link WheelVector.VectorSet} of velocity vectors.
      */
-    public static WheelVector.VectorSet processOwnShipUp(double rotation, double x, double y) {
-        final double A = x - rotation * LR;
-        final double B = x + rotation * LR;
-        final double C = y - rotation * WR;
-        final double D = y + rotation * WR;
+    public WheelVector.VectorSet processOwnShipUp(double rotation, double x, double y) {
+        final double A = x - rotation * lr;
+        final double B = x + rotation * lr;
+        final double C = y - rotation * wr;
+        final double D = y + rotation * wr;
 
         speeds[0] = Math.sqrt(Math.pow(B, 2) + Math.pow(C, 2)); //front right
         speeds[1] = Math.sqrt(Math.pow(B, 2) + Math.pow(D, 2)); // front left
@@ -80,7 +97,7 @@ public class SwerveInputTransform {
      * @param y the y-coordinate of the joystick's position (forward-positive).
      * @return a {@link WheelVector.VectorSet} of translational movement vectors.
      */
-    public static WheelVector.VectorSet processTranslation(double x, double y) {
+    public WheelVector.VectorSet processTranslation(double x, double y) {
         double angle = Utils.calculateYOffset(x, y);
         double magnitude = Math.sqrt(x * x + y * y);
         if (magnitude > 1) magnitude = 1;
@@ -93,9 +110,9 @@ public class SwerveInputTransform {
      * @param rate the rate of rotation, [-1, 1].
      * @return a {@link WheelVector.VectorSet} of rotational movement vectors.
      */
-    public static WheelVector.VectorSet processRotation(double rate) {
-        double refAngle = Math.toDegrees(Math.atan2(RobotMap.ROBOT_TRACKWIDTH / 2,
-                RobotMap.ROBOT_WHEELBASE / 2));
+    public WheelVector.VectorSet processRotation(double rate) {
+        double refAngle = Math.toDegrees(Math.atan2(trackwidth / 2,
+                wheelbase / 2));
         double r1Angle = 90 + refAngle;
         double l1Angle = 90 - refAngle;
         double l2Angle = -(90 - refAngle);

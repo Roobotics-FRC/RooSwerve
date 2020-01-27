@@ -1,6 +1,6 @@
 package frc.team4373.robot.input;
 
-import frc.team4373.robot.RobotMap;
+import frc.team4373.robot.SwerveConstants;
 
 public class WheelVector {
     public static final WheelVector ZERO = new WheelVector(0, 0);
@@ -69,7 +69,7 @@ public class WheelVector {
     }
 
     public boolean equals(WheelVector vector) {
-        return this.speed - vector.speed < RobotMap.FP_EQUALITY_THRESHOLD
-                && this.angle - vector.angle < RobotMap.FP_EQUALITY_THRESHOLD;
+        return this.speed - vector.speed < SwerveConstants.FP_EQUALITY_THRESHOLD
+                && this.angle - vector.angle < SwerveConstants.FP_EQUALITY_THRESHOLD;
     }
 }

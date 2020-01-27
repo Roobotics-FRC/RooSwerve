@@ -4,36 +4,39 @@ import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.FeedbackDevice;
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-import frc.team4373.robot.RobotMap;
+import frc.team4373.robot.SwerveConstants;
+import frc.team4373.robot.SwerveConfig;
 import frc.team4373.robot.input.WheelVector;
 
 /**
  * Represents a swerve wheel with two motors.
  */
 public class SwerveWheel {
-    private static final double HALF_REVOLUTION_TICKS = 180 * RobotMap.DEGREES_TO_ENCODER_UNITS;
-    private static final double FULL_REVOLUTION_TICKS = 360 * RobotMap.DEGREES_TO_ENCODER_UNITS;
+    private final String name;
+    private final double maxWheelSpeed;
 
     private WPI_TalonSRX driveMotor;
     private WPI_TalonSRX rotatorMotor;
 
-    private Drivetrain.WheelID wheelID;
     private boolean isInverted = false;
 
     /**
-     * Constructs a new sweve wheel for the specified wheel.
-     * @param wheelID the wheel to construct.
+     * Constructs a new swerve wheel for the specified wheel.
+     * @param driveMotorConfig the config for the drive motor.
+     * @param rotatorMotorConfig the config for the rotator motor.
      */
-    public SwerveWheel(Drivetrain.WheelID wheelID) {
-        RobotMap.MotorConfig driveMotorConfig = RobotMap.getDriveMotorConfig(wheelID);
-        RobotMap.MotorConfig rotatorMotorConfig = RobotMap.getRotatorMotorConfig(wheelID);
-        this.wheelID = wheelID;
+    public SwerveWheel(String name,
+                       SwerveConfig.MotorConfig driveMotorConfig,
+                       SwerveConfig.MotorConfig rotatorMotorConfig,
+                       double maxWheelSpeed, int amperageLimit) {
+        this.name = name;
+        this.maxWheelSpeed = maxWheelSpeed;
 
         this.driveMotor = new WPI_TalonSRX(driveMotorConfig.port);
         this.rotatorMotor = new WPI_TalonSRX(rotatorMotorConfig.port);
 
-        this.driveMotor.configPeakCurrentLimit(RobotMap.TALON_MAX_AMPS,
-                RobotMap.TALON_TIMEOUT_MS);
+        this.driveMotor.configPeakCurrentLimit(amperageLimit,
+                SwerveConstants.TALON_TIMEOUT_MS);
         this.driveMotor.enableCurrentLimit(true);
 
         this.driveMotor.setInverted(driveMotorConfig.inverted);
@@ -47,17 +50,17 @@ public class SwerveWheel {
 
         this.driveMotor.configSelectedFeedbackSensor(FeedbackDevice.QuadEncoder);
         this.rotatorMotor.configSelectedFeedbackSensor(FeedbackDevice.CTRE_MagEncoder_Absolute);
-        this.rotatorMotor.configFeedbackNotContinuous(false, RobotMap.TALON_TIMEOUT_MS);
+        this.rotatorMotor.configFeedbackNotContinuous(false, SwerveConstants.TALON_TIMEOUT_MS);
 
-        this.driveMotor.config_kF(RobotMap.PID_IDX, driveMotorConfig.gains.kF);
-        this.driveMotor.config_kP(RobotMap.PID_IDX, driveMotorConfig.gains.kP);
-        this.driveMotor.config_kI(RobotMap.PID_IDX, driveMotorConfig.gains.kI);
-        this.driveMotor.config_kD(RobotMap.PID_IDX, driveMotorConfig.gains.kD);
+        this.driveMotor.config_kF(SwerveConstants.PID_IDX, driveMotorConfig.gains.kF);
+        this.driveMotor.config_kP(SwerveConstants.PID_IDX, driveMotorConfig.gains.kP);
+        this.driveMotor.config_kI(SwerveConstants.PID_IDX, driveMotorConfig.gains.kI);
+        this.driveMotor.config_kD(SwerveConstants.PID_IDX, driveMotorConfig.gains.kD);
 
-        this.rotatorMotor.config_kF(RobotMap.PID_IDX, rotatorMotorConfig.gains.kF);
-        this.rotatorMotor.config_kP(RobotMap.PID_IDX, rotatorMotorConfig.gains.kP);
-        this.rotatorMotor.config_kI(RobotMap.PID_IDX, rotatorMotorConfig.gains.kI);
-        this.rotatorMotor.config_kD(RobotMap.PID_IDX, rotatorMotorConfig.gains.kD);
+        this.rotatorMotor.config_kF(SwerveConstants.PID_IDX, rotatorMotorConfig.gains.kF);
+        this.rotatorMotor.config_kP(SwerveConstants.PID_IDX, rotatorMotorConfig.gains.kP);
+        this.rotatorMotor.config_kI(SwerveConstants.PID_IDX, rotatorMotorConfig.gains.kI);
+        this.rotatorMotor.config_kD(SwerveConstants.PID_IDX, rotatorMotorConfig.gains.kD);
     }
 
     /**
@@ -67,43 +70,44 @@ public class SwerveWheel {
      */
     public void set(double speed, double heading) {
 
-        heading *= RobotMap.DEGREES_TO_ENCODER_UNITS;
+        heading *= SwerveConstants.DEGREES_TO_ENCODER_UNITS;
 
         double currentRotation = rotatorMotor.getSelectedSensorPosition();
         double rotationError = Math.IEEEremainder(heading - currentRotation,
-                RobotMap.WHEEL_ENCODER_TICKS);
+                SwerveConstants.WHEEL_ENCODER_TICKS);
 
-        SmartDashboard.putNumber("swerve/" + this.wheelID.name() + "/Pre-Inv Rot", rotationError);
+        SmartDashboard.putNumber("swerve/" + this.name + "/Pre-Inv Rot", rotationError);
 
         // minimize azimuth rotation, reversing drive if necessary
-        isInverted = Math.abs(rotationError) > 0.25 * RobotMap.WHEEL_ENCODER_TICKS;
+        isInverted = Math.abs(rotationError) > 0.25 * SwerveConstants.WHEEL_ENCODER_TICKS;
         if (isInverted) {
-            rotationError -= Math.copySign(0.5 * RobotMap.WHEEL_ENCODER_TICKS, rotationError);
+            rotationError -= Math.copySign(0.5 * SwerveConstants.WHEEL_ENCODER_TICKS,
+                    rotationError);
             speed = -speed;
         }
 
-        SmartDashboard.putNumber("swerve/" + this.wheelID.name() + "/Rot Offset", rotationError);
-        SmartDashboard.putNumber("swerve/" + this.wheelID.name() + "/Rot Setpt",
+        SmartDashboard.putNumber("swerve/" + this.name + "/Rot Offset", rotationError);
+        SmartDashboard.putNumber("swerve/" + this.name + "/Rot Setpt",
                 currentRotation + rotationError);
-        SmartDashboard.putNumber("swerve/" + this.wheelID.name() + "/Speed",
-                speed * RobotMap.MAX_WHEEL_SPEED);
+        SmartDashboard.putNumber("swerve/" + this.name + "/Speed",
+                speed * this.maxWheelSpeed);
 
         this.rotatorMotor.set(ControlMode.Position, currentRotation + rotationError);
         if (speed == 0) {
-            this.driveMotor.set(ControlMode.PercentOutput, 0);
+            this.driveMotor.stopMotor();
         } else {
-            this.driveMotor.set(ControlMode.Velocity, speed * RobotMap.MAX_WHEEL_SPEED);
+            this.driveMotor.set(ControlMode.Velocity, speed * this.maxWheelSpeed);
         }
     }
 
     /**
      * Sets drive and rotator PID gains.
-     * @param drivePID a {@link RobotMap.PID} object containing new parameters for the drive PID,
+     * @param drivePID a {@link SwerveConfig.PID} object with new parameters for the drive PID,
      *                 or null to leave unchanged.
-     * @param rotatorPID a {@link RobotMap.PID} object containing parameters for rotational PID,
+     * @param rotatorPID a {@link SwerveConfig.PID} object with parameters for rotational PID,
      *                   or null to leave unchanged.
      */
-    public void setPID(RobotMap.PID drivePID, RobotMap.PID rotatorPID) {
+    public void setPID(SwerveConfig.PID drivePID, SwerveConfig.PID rotatorPID) {
         if (drivePID != null) {
             setDrivePID(drivePID);
         }
@@ -112,14 +116,14 @@ public class SwerveWheel {
         }
     }
 
-    private void setRotatorPID(RobotMap.PID pid) {
+    private void setRotatorPID(SwerveConfig.PID pid) {
         this.rotatorMotor.config_kP(0, pid.kP);
         this.rotatorMotor.config_kI(0, pid.kI);
         this.rotatorMotor.config_kD(0, pid.kD);
         this.rotatorMotor.config_kF(0, pid.kF);
     }
 
-    private void setDrivePID(RobotMap.PID pid) {
+    private void setDrivePID(SwerveConfig.PID pid) {
         this.driveMotor.config_kP(0, pid.kP);
         this.driveMotor.config_kI(0, pid.kI);
         this.driveMotor.config_kD(0, pid.kD);
@@ -135,8 +139,8 @@ public class SwerveWheel {
      * Stops all motors.
      */
     public void stop() {
-        this.driveMotor.set(ControlMode.PercentOutput, 0);
-        this.rotatorMotor.set(ControlMode.PercentOutput, 0);
+        this.driveMotor.stopMotor();
+        this.rotatorMotor.stopMotor();
     }
 
     public WheelVector encoderValues() {
@@ -152,9 +156,14 @@ public class SwerveWheel {
         return this.driveMotor.getMotorOutputPercent();
     }
 
+    /**
+     * Reduces (for the duration of the power cycle) the rotator motor's encoder's position
+     * modulo the number of ticks in a full revolution.
+     */
     public void modularizeAbsoluteEncoder() {
         this.rotatorMotor.setSelectedSensorPosition(
-                (int) (this.rotatorMotor.getSelectedSensorPosition() % FULL_REVOLUTION_TICKS));
+                (int) (this.rotatorMotor.getSelectedSensorPosition()
+                        % SwerveConstants.FULL_REVOLUTION_TICKS));
     }
 
     public void resetAbsoluteEncoder() {

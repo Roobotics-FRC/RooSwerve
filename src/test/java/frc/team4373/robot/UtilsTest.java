@@ -48,4 +48,20 @@ class UtilsTest {
         assertEquals(Utils.leastResidue(-0.5, 2), 1.5);
         // assertThrows(IllegalArgumentException.class, () -> Utils.leastResidue(0, 0));
     }
+
+    @Test
+    void constrainPercentOutput() {
+        assertEquals(Utils.constrainPercentOutput(30), 1);
+        assertEquals(Utils.constrainPercentOutput(1.1), 1);
+        assertEquals(Utils.constrainPercentOutput(-30), -1);
+        assertEquals(Utils.constrainPercentOutput(-1.1), -1);
+        assertEquals(Utils.constrainPercentOutput(0), 0);
+        assertEquals(Utils.constrainPercentOutput(0.2), 0.2);
+        assertEquals(Utils.constrainPercentOutput(-0.2), -0.2);
+        assertEquals(Utils.constrainPercentOutput(0.9), 0.9);
+        assertEquals(Utils.constrainPercentOutput(-0.9), -0.9);
+        assertEquals(Utils.constrainPercentOutput(100), 1) ;
+        assertEquals(Utils.constrainPercentOutput(-100), -1) ;
+        assertEquals(Utils.constrainPercentOutput(0.25), 0.25);
+    }
 }

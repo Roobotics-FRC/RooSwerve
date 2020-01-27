@@ -3,35 +3,20 @@ package frc.team4373.robot.subsystems;
 import com.ctre.phoenix.sensors.PigeonIMU;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-import frc.team4373.robot.RobotMap;
+import frc.team4373.robot.SwerveConfig;
 import frc.team4373.robot.Utils;
-import frc.team4373.robot.commands.teleop.SwerveDriveWithJoystick;
+import frc.team4373.robot.input.SwerveInputTransform;
 import frc.team4373.robot.input.WheelVector;
 
 /**
  * A programmatic representation of the robot's drivetrain.
  */
-public class Drivetrain extends Subsystem {
-    private static volatile Drivetrain instance;
-
-    /**
-     * The getter for the Drivetrain class.
-     * @return the singleton Drivetrain object.
-     */
-    public static Drivetrain getInstance() {
-        if (instance == null) {
-            synchronized (Drivetrain.class) {
-                if (instance == null) {
-                    instance = new Drivetrain();
-                }
-            }
-        }
-        return instance;
-    }
-
+public abstract class SwerveDrivetrain extends Subsystem {
     public enum WheelID {
         RIGHT_1, RIGHT_2, LEFT_1, LEFT_2
     }
+
+    public SwerveInputTransform transform;
 
     private SwerveWheel right1;
     private SwerveWheel right2;
@@ -40,13 +25,21 @@ public class Drivetrain extends Subsystem {
     private PigeonIMU pigeon;
     private double initialAngle;
 
-    private Drivetrain() {
-        this.right1 = new SwerveWheel(WheelID.RIGHT_1);
-        this.right2 = new SwerveWheel(WheelID.RIGHT_2);
-        this.left1 = new SwerveWheel(WheelID.LEFT_1);
-        this.left2 = new SwerveWheel(WheelID.LEFT_2);
+    protected SwerveDrivetrain(SwerveConfig config) {
+        this.right1 = new SwerveWheel("right1",
+                config.wheels.right1Drive, config.wheels.right1Rotate,
+                config.wheels.maxWheelSpeed, config.wheels.amperageLimit);
+        this.right2 = new SwerveWheel("right2",
+                config.wheels.right2Drive, config.wheels.right2Rotate,
+                config.wheels.maxWheelSpeed, config.wheels.amperageLimit);
+        this.left1 = new SwerveWheel("left1",
+                config.wheels.left1Drive, config.wheels.left1Rotate,
+                config.wheels.maxWheelSpeed, config.wheels.amperageLimit);
+        this.left2 = new SwerveWheel("left2",
+                config.wheels.left2Drive, config.wheels.left2Rotate,
+                config.wheels.maxWheelSpeed, config.wheels.amperageLimit);
 
-        this.pigeon = new PigeonIMU(RobotMap.PIGEON_PORT);
+        this.pigeon = new PigeonIMU(config.pigeonPort);
         this.initialAngle = getPigeonYawRaw();
     }
 
@@ -136,7 +129,7 @@ public class Drivetrain extends Subsystem {
         getWheel(wheelID).resetAbsoluteEncoder();
     }
 
-    public void setPID(WheelID wheelID, RobotMap.PID drivePID, RobotMap.PID rotatorPID) {
+    public void setPID(WheelID wheelID, SwerveConfig.PID drivePID, SwerveConfig.PID rotatorPID) {
         getWheel(wheelID).setPID(drivePID, rotatorPID);
     }
 
@@ -166,14 +159,9 @@ public class Drivetrain extends Subsystem {
      * Logs encoder values to SmartDashboard.
      */
     public void logEncoders() {
-        SmartDashboard.putString("R1", this.right1.encoderValues().toString());
-        SmartDashboard.putString("R2", this.right2.encoderValues().toString());
-        SmartDashboard.putString("L1", this.left1.encoderValues().toString());
-        SmartDashboard.putString("L2", this.left2.encoderValues().toString());
-    }
-
-    @Override
-    protected void initDefaultCommand() {
-        setDefaultCommand(new SwerveDriveWithJoystick());
+        SmartDashboard.putString("swerve/R1", this.right1.encoderValues().toString());
+        SmartDashboard.putString("swerve/R2", this.right2.encoderValues().toString());
+        SmartDashboard.putString("swerve/L1", this.left1.encoderValues().toString());
+        SmartDashboard.putString("swerve/L2", this.left2.encoderValues().toString());
     }
 }
