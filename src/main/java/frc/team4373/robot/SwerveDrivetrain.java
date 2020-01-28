@@ -125,8 +125,24 @@ public abstract class SwerveDrivetrain extends Subsystem {
         return getWheel(wheelID).drivePercentOutput();
     }
 
+    /**
+     * Gets the current position of the drive motor.
+     * @param wheelID the ID of the wheel whose position to fetch.
+     * @return the current position in encoder units.
+     */
     public double getDriveMotorPosition(WheelID wheelID) {
         return getWheel(wheelID).getDriveMotorPosition();
+    }
+
+    /**
+     * Gets the average of the drive motor positions.
+     * @return average of drive position in encoder units.
+     */
+    public double getAverageDriveMotorPosition() {
+        return (getDriveMotorPosition(WheelID.LEFT_1)
+                + getDriveMotorPosition(WheelID.LEFT_2)
+                + getDriveMotorPosition(WheelID.RIGHT_1)
+                + getDriveMotorPosition(WheelID.RIGHT_2)) / SwerveConstants.WHEEL_COUNT;
     }
 
     public double getDriveMotorVelocity(WheelID wheelID) {
