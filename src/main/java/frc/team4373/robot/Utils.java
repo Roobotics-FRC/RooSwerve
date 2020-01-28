@@ -1,6 +1,6 @@
 package frc.team4373.robot;
 
-public final class Utils {
+final class Utils {
     private Utils() {}
 
     /**
@@ -8,7 +8,7 @@ public final class Utils {
      * @param angle the angle to normalize, in degrees.
      * @return the angle represented as a positive angle on the range [0, 360].
      */
-    public static double normalizeAngle(double angle) {
+    static double normalizeAngle(double angle) {
         return leastResidue(angle, 360);
     }
 
@@ -18,7 +18,7 @@ public final class Utils {
      * @param y the y-coordinate of the point.
      * @return the normalized angle from the y-axis to the point, in degrees.
      */
-    public static double calculateYOffset(double x, double y) {
+    static double calculateYOffset(double x, double y) {
         // edge case b/c atan2 returns 0 instead of 90 for (0, 0)
         if (x == 0 && y == 0) {
             return 0;
@@ -40,7 +40,7 @@ public final class Utils {
      *
      * @throws IllegalArgumentException if modulus <= 0.
      */
-    public static double leastResidue(double n, double modulus) throws IllegalArgumentException {
+    static double leastResidue(double n, double modulus) throws IllegalArgumentException {
         if (modulus <= 0) {
             throw new IllegalArgumentException("Modulus cannot be less than or equal to zero.");
         }
@@ -52,7 +52,7 @@ public final class Utils {
      * @param output the percent output value to constrain.
      * @return the input percent output constrained to the safe range.
      */
-    public static double constrainPercentOutput(double output) {
+    static double constrainPercentOutput(double output) {
         if (output > 1) {
             return 1;
         }

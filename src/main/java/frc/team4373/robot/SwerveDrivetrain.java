@@ -1,4 +1,4 @@
-package frc.team4373.robot.subsystems;
+package frc.team4373.robot;
 
 import com.ctre.phoenix.sensors.PigeonIMU;
 import edu.wpi.first.wpilibj.command.Subsystem;
@@ -41,6 +41,9 @@ public abstract class SwerveDrivetrain extends Subsystem {
 
         this.pigeon = new PigeonIMU(config.pigeonPort);
         this.initialAngle = getPigeonYawRaw();
+
+        this.transform = new SwerveInputTransform(config.dimensions.trackwidth,
+                config.dimensions.wheelbase);
     }
 
     /**

@@ -1,17 +1,14 @@
-package frc.team4373.robot.subsystems;
+package frc.team4373.robot;
 
 import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.FeedbackDevice;
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-import frc.team4373.robot.SwerveConstants;
-import frc.team4373.robot.SwerveConfig;
-import frc.team4373.robot.input.WheelVector;
 
 /**
  * Represents a swerve wheel with two motors.
  */
-public class SwerveWheel {
+class SwerveWheel {
     private final SwerveDrivetrain.WheelID wheelID;
     private final double maxWheelSpeed;
 
@@ -25,7 +22,7 @@ public class SwerveWheel {
      * @param driveMotorConfig the config for the drive motor.
      * @param rotatorMotorConfig the config for the rotator motor.
      */
-    public SwerveWheel(SwerveDrivetrain.WheelID wheelID,
+    SwerveWheel(SwerveDrivetrain.WheelID wheelID,
                        SwerveConfig.MotorConfig driveMotorConfig,
                        SwerveConfig.MotorConfig rotatorMotorConfig,
                        double maxWheelSpeed, int amperageLimit) {
@@ -68,7 +65,7 @@ public class SwerveWheel {
      * @param heading the heading, in degrees, at which to angle the wheel.
      * @param speed the percent of maximum speed at which to drive.
      */
-    public void set(double speed, double heading) {
+    void set(double speed, double heading) {
 
         heading *= SwerveConstants.DEGREES_TO_ENCODER_UNITS;
 
@@ -107,7 +104,7 @@ public class SwerveWheel {
      * @param rotatorPID a {@link SwerveConfig.PID} object with parameters for rotational PID,
      *                   or null to leave unchanged.
      */
-    public void setPID(SwerveConfig.PID drivePID, SwerveConfig.PID rotatorPID) {
+    void setPID(SwerveConfig.PID drivePID, SwerveConfig.PID rotatorPID) {
         if (drivePID != null) {
             setDrivePID(drivePID);
         }
@@ -130,7 +127,7 @@ public class SwerveWheel {
         this.driveMotor.config_kF(0, pid.kF);
     }
 
-    public void setPercentOutput(double speed, double heading) {
+    void setPercentOutput(double speed, double heading) {
         this.driveMotor.set(ControlMode.PercentOutput, speed);
         this.rotatorMotor.set(ControlMode.PercentOutput, heading);
     }
@@ -138,7 +135,7 @@ public class SwerveWheel {
     /**
      * Stops all motors.
      */
-    public void stop() {
+    void stop() {
         this.driveMotor.stopMotor();
         this.rotatorMotor.stopMotor();
     }
@@ -152,7 +149,7 @@ public class SwerveWheel {
      * Gets the percent output of the drive motor.
      * @return the percent output, [-1, 1].
      */
-    public double drivePercentOutput() {
+    double drivePercentOutput() {
         return this.driveMotor.getMotorOutputPercent();
     }
 
@@ -160,13 +157,13 @@ public class SwerveWheel {
      * Reduces (for the duration of the power cycle) the rotator motor's encoder's position
      * modulo the number of ticks in a full revolution.
      */
-    public void modularizeAbsoluteEncoder() {
+    void modularizeAbsoluteEncoder() {
         this.rotatorMotor.setSelectedSensorPosition(
                 (int) (this.rotatorMotor.getSelectedSensorPosition()
                         % SwerveConstants.FULL_REVOLUTION_TICKS));
     }
 
-    public void resetAbsoluteEncoder() {
+    void resetAbsoluteEncoder() {
         this.rotatorMotor.setSelectedSensorPosition(0);
     }
 }

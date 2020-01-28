@@ -1,5 +1,7 @@
-package frc.team4373.robot.input;
+package frc.team4373.robot;
 
+import frc.team4373.robot.SwerveInputTransform;
+import frc.team4373.robot.WheelVector;
 import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;

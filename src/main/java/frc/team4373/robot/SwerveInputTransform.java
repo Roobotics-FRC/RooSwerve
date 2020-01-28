@@ -1,9 +1,6 @@
-package frc.team4373.robot.input;
+package frc.team4373.robot;
 
-import frc.team4373.robot.SwerveConstants;
-import frc.team4373.robot.Utils;
-
-public class SwerveInputTransform {
+class SwerveInputTransform {
     private double trackwidth;
     private double wheelbase;
 
@@ -19,7 +16,7 @@ public class SwerveInputTransform {
      * @param trackwidth the robot's trackwidth (unit-agnostic; units must match wheelbase).
      * @param wheelbase the robot's wheelbase (unit-agnostic; units must match trackwidth).
      */
-    public SwerveInputTransform(double trackwidth, double wheelbase) {
+    SwerveInputTransform(double trackwidth, double wheelbase) {
         this.trackwidth = trackwidth;
         this.wheelbase = wheelbase;
 
@@ -39,7 +36,7 @@ public class SwerveInputTransform {
      * @param imuAngle the current heading of the robot
      * @return a {@link WheelVector.VectorSet} of velocity vectors.
      */
-    public WheelVector.VectorSet processNorthUp(double rotation, double x, double y,
+    WheelVector.VectorSet processNorthUp(double rotation, double x, double y,
                                                        double imuAngle) {
         double angle = Math.toRadians(imuAngle);
 
@@ -59,7 +56,7 @@ public class SwerveInputTransform {
      * @param y the y coordinate of the joystick (forward is positive)
      * @return a {@link WheelVector.VectorSet} of velocity vectors.
      */
-    public WheelVector.VectorSet processOwnShipUp(double rotation, double x, double y) {
+    WheelVector.VectorSet processOwnShipUp(double rotation, double x, double y) {
         final double A = x - rotation * lr;
         final double B = x + rotation * lr;
         final double C = y - rotation * wr;
@@ -97,7 +94,7 @@ public class SwerveInputTransform {
      * @param y the y-coordinate of the joystick's position (forward-positive).
      * @return a {@link WheelVector.VectorSet} of translational movement vectors.
      */
-    public WheelVector.VectorSet processTranslation(double x, double y) {
+    WheelVector.VectorSet processTranslation(double x, double y) {
         double angle = Utils.calculateYOffset(x, y);
         double magnitude = Math.sqrt(x * x + y * y);
         if (magnitude > 1) magnitude = 1;
@@ -110,7 +107,7 @@ public class SwerveInputTransform {
      * @param rate the rate of rotation, [-1, 1].
      * @return a {@link WheelVector.VectorSet} of rotational movement vectors.
      */
-    public WheelVector.VectorSet processRotation(double rate) {
+    WheelVector.VectorSet processRotation(double rate) {
         double refAngle = Math.toDegrees(Math.atan2(trackwidth / 2,
                 wheelbase / 2));
         double r1Angle = 90 + refAngle;
