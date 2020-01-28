@@ -166,4 +166,20 @@ class SwerveWheel {
     void resetAbsoluteEncoder() {
         this.rotatorMotor.setSelectedSensorPosition(0);
     }
+
+    double getDriveMotorPosition() {
+        return driveMotor.getSelectedSensorPosition();
+    }
+
+    double getDriveMotorVelocity() {
+        return driveMotor.getSelectedSensorVelocity();
+    }
+
+    double getRotatorMotorPosition() {
+        return rotatorMotor.getSelectedSensorPosition();
+    }
+
+    double getRotatorMotorVelocity() {
+        return rotatorMotor.getSelectedSensorPosition();
+    }
 }

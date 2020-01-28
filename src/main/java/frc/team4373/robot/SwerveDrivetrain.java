@@ -132,6 +132,22 @@ public abstract class SwerveDrivetrain extends Subsystem {
         getWheel(wheelID).resetAbsoluteEncoder();
     }
 
+    public double getDriveMotorPosition(WheelID wheelID) {
+        return getWheel(wheelID).getDriveMotorPosition();
+    }
+
+    public double getDriveMotorVelocity(WheelID wheelID) {
+        return getWheel(wheelID).getDriveMotorVelocity();
+    }
+
+    public double getRotatorMotorPosition(WheelID wheelID) {
+        return getWheel(wheelID).getRotatorMotorPosition();
+    }
+
+    public double getRotatorMotorVelocity(WheelID wheelID) {
+        return getWheel(wheelID).getRotatorMotorVelocity();
+    }
+
     public void setPID(WheelID wheelID, SwerveConfig.PID drivePID, SwerveConfig.PID rotatorPID) {
         getWheel(wheelID).setPID(drivePID, rotatorPID);
     }
