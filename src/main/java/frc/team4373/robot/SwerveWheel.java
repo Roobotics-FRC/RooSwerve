@@ -140,11 +140,6 @@ class SwerveWheel {
         this.rotatorMotor.stopMotor();
     }
 
-    public WheelVector encoderValues() {
-        return new WheelVector(driveMotor.getSelectedSensorVelocity(),
-                rotatorMotor.getSelectedSensorPosition());
-    }
-
     /**
      * Gets the percent output of the drive motor.
      * @return the percent output, [-1, 1].

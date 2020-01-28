@@ -2,11 +2,6 @@ package frc.team4373.robot;
 
 import com.ctre.phoenix.sensors.PigeonIMU;
 import edu.wpi.first.wpilibj.command.Subsystem;
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-import frc.team4373.robot.SwerveConfig;
-import frc.team4373.robot.Utils;
-import frc.team4373.robot.input.SwerveInputTransform;
-import frc.team4373.robot.input.WheelVector;
 
 /**
  * A programmatic representation of the robot's drivetrain.
@@ -14,6 +9,10 @@ import frc.team4373.robot.input.WheelVector;
 public abstract class SwerveDrivetrain extends Subsystem {
     public enum WheelID {
         RIGHT_1, RIGHT_2, LEFT_1, LEFT_2
+    }
+
+    public enum DriveMode {
+        NORTH_UP, OWN_SHIP_UP
     }
 
     public SwerveInputTransform transform;
@@ -24,6 +23,8 @@ public abstract class SwerveDrivetrain extends Subsystem {
     private SwerveWheel left2;
     private PigeonIMU pigeon;
     private double initialAngle;
+
+    private DriveMode driveMode = DriveMode.NORTH_UP;
 
     protected SwerveDrivetrain(SwerveConfig config) {
         this.right1 = new SwerveWheel(WheelID.RIGHT_1,
@@ -44,6 +45,58 @@ public abstract class SwerveDrivetrain extends Subsystem {
 
         this.transform = new SwerveInputTransform(config.dimensions.trackwidth,
                 config.dimensions.wheelbase);
+    }
+
+    /**
+     * Stops the robot (i.e. sets outputs of all motors of all wheels to zero).
+     */
+    public void stop() {
+        this.right1.stop();
+        this.right2.stop();
+        this.left1.stop();
+        this.left2.stop();
+    }
+
+    public void drive(double rotation, double x, double y) {
+        switch (driveMode) {
+            case NORTH_UP:
+                setWheelsPID(transform.processNorthUp(rotation, x, y, getAngle()));
+                break;
+            case OWN_SHIP_UP:
+                setWheelsPID(transform.processOwnShipUp(rotation, x, y));
+                break;
+            default: break;
+        }
+    }
+
+    /**
+     * Sets velocity vectors to the four SwerveWheels with PID setpoints for both speed and angle.
+     * @param vectors the four vectors ordered right1, left1, left2, right2.
+     */
+    private void setWheelsPID(WheelVector.VectorSet vectors) {
+        if (vectors.right1 != null) this.right1.set(vectors.right1.speed, vectors.right1.angle);
+        if (vectors.right2 != null) this.right2.set(vectors.right2.speed, vectors.right2.angle);
+        if (vectors.left1 != null) this.left1.set(vectors.left1.speed, vectors.left1.angle);
+        if (vectors.left2 != null) this.left2.set(vectors.left2.speed, vectors.left2.angle);
+    }
+
+    /**
+     * Sets vectors to the SwerveWheels with a PID setpoint for angle and % output for speed.
+     * @param vectors the four vectors ordered right1, left1, left2, right2.
+     */
+    private void setWheelsPercOut(WheelVector.VectorSet vectors) {
+        if (vectors.right1 != null) {
+            this.right1.setPercentOutput(vectors.right1.speed, vectors.right1.angle);
+        }
+        if (vectors.right2 != null) {
+            this.right2.setPercentOutput(vectors.right2.speed, vectors.right2.angle);
+        }
+        if (vectors.left1 != null) {
+            this.left1.setPercentOutput(vectors.left1.speed, vectors.left1.angle);
+        }
+        if (vectors.left2 != null) {
+            this.left2.setPercentOutput(vectors.left2.speed, vectors.left2.angle);
+        }
     }
 
     /**
@@ -72,43 +125,46 @@ public abstract class SwerveDrivetrain extends Subsystem {
         return getWheel(wheelID).drivePercentOutput();
     }
 
-    /**
-     * Sets outputs of all motors of all wheels to zero.
-     */
-    public void zeroMotors() {
-        this.right1.stop();
-        this.right2.stop();
-        this.left1.stop();
-        this.left2.stop();
+    public double getDriveMotorPosition(WheelID wheelID) {
+        return getWheel(wheelID).getDriveMotorPosition();
     }
 
-    /**
-     * Sets velocity vectors to the four SwerveWheels with PID setpoints for both speed and angle.
-     * @param vectors the four vectors ordered right1, left1, left2, right2.
-     */
-    public void setWheelsPID(WheelVector.VectorSet vectors) {
-        if (vectors.right1 != null) this.right1.set(vectors.right1.speed, vectors.right1.angle);
-        if (vectors.right2 != null) this.right2.set(vectors.right2.speed, vectors.right2.angle);
-        if (vectors.left1 != null) this.left1.set(vectors.left1.speed, vectors.left1.angle);
-        if (vectors.left2 != null) this.left2.set(vectors.left2.speed, vectors.left2.angle);
+    public double getDriveMotorVelocity(WheelID wheelID) {
+        return getWheel(wheelID).getDriveMotorVelocity();
     }
 
-    /**
-     * Sets vectors to the SwerveWheels with a PID setpoint for angle and % output for speed.
-     * @param vectors the four vectors ordered right1, left1, left2, right2.
-     */
-    public void setWheelsPercOut(WheelVector.VectorSet vectors) {
-        if (vectors.right1 != null) {
-            this.right1.setPercentOutput(vectors.right1.speed, vectors.right1.angle);
-        }
-        if (vectors.right2 != null) {
-            this.right2.setPercentOutput(vectors.right2.speed, vectors.right2.angle);
-        }
-        if (vectors.left1 != null) {
-            this.left1.setPercentOutput(vectors.left1.speed, vectors.left1.angle);
-        }
-        if (vectors.left2 != null) {
-            this.left2.setPercentOutput(vectors.left2.speed, vectors.left2.angle);
+    public double getRotatorMotorPosition(WheelID wheelID) {
+        return getWheel(wheelID).getRotatorMotorPosition();
+    }
+
+    public double getRotatorMotorVelocity(WheelID wheelID) {
+        return getWheel(wheelID).getRotatorMotorVelocity();
+    }
+
+    public void setPID(WheelID wheelID, SwerveConfig.PID drivePID, SwerveConfig.PID rotatorPID) {
+        getWheel(wheelID).setPID(drivePID, rotatorPID);
+    }
+
+    public void setDriveMode(DriveMode driveMode) {
+        this.driveMode = driveMode;
+    }
+
+    public DriveMode getDriveMode() {
+        return this.driveMode;
+    }
+
+    private SwerveWheel getWheel(WheelID wheelID) {
+        switch (wheelID) {
+            case RIGHT_1:
+                return this.right1;
+            case RIGHT_2:
+                return this.right2;
+            case LEFT_1:
+                return this.left1;
+            case LEFT_2:
+                return this.left2;
+            default:
+                return getWheel(WheelID.RIGHT_1);
         }
     }
 
@@ -132,55 +188,10 @@ public abstract class SwerveDrivetrain extends Subsystem {
         getWheel(wheelID).resetAbsoluteEncoder();
     }
 
-    public double getDriveMotorPosition(WheelID wheelID) {
-        return getWheel(wheelID).getDriveMotorPosition();
-    }
-
-    public double getDriveMotorVelocity(WheelID wheelID) {
-        return getWheel(wheelID).getDriveMotorVelocity();
-    }
-
-    public double getRotatorMotorPosition(WheelID wheelID) {
-        return getWheel(wheelID).getRotatorMotorPosition();
-    }
-
-    public double getRotatorMotorVelocity(WheelID wheelID) {
-        return getWheel(wheelID).getRotatorMotorVelocity();
-    }
-
-    public void setPID(WheelID wheelID, SwerveConfig.PID drivePID, SwerveConfig.PID rotatorPID) {
-        getWheel(wheelID).setPID(drivePID, rotatorPID);
-    }
-
-    private SwerveWheel getWheel(WheelID wheelID) {
-        switch (wheelID) {
-            case RIGHT_1:
-                return this.right1;
-            case RIGHT_2:
-                return this.right2;
-            case LEFT_1:
-                return this.left1;
-            case LEFT_2:
-                return this.left2;
-            default:
-                return getWheel(WheelID.RIGHT_1);
-        }
-    }
-
     /**
      * Resets the pigeon's yaw to consider the current orientation field-forward.
      */
     public void resetPigeonYaw() {
         this.initialAngle = this.getPigeonYawRaw();
-    }
-
-    /**
-     * Logs encoder values to SmartDashboard.
-     */
-    public void logEncoders() {
-        SmartDashboard.putString("swerve/R1", this.right1.encoderValues().toString());
-        SmartDashboard.putString("swerve/R2", this.right2.encoderValues().toString());
-        SmartDashboard.putString("swerve/L1", this.left1.encoderValues().toString());
-        SmartDashboard.putString("swerve/L2", this.left2.encoderValues().toString());
     }
 }
