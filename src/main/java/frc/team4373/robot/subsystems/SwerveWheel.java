@@ -12,7 +12,7 @@ import frc.team4373.robot.input.WheelVector;
  * Represents a swerve wheel with two motors.
  */
 public class SwerveWheel {
-    private final String name;
+    private final SwerveDrivetrain.WheelID wheelID;
     private final double maxWheelSpeed;
 
     private WPI_TalonSRX driveMotor;
@@ -25,11 +25,11 @@ public class SwerveWheel {
      * @param driveMotorConfig the config for the drive motor.
      * @param rotatorMotorConfig the config for the rotator motor.
      */
-    public SwerveWheel(String name,
+    public SwerveWheel(SwerveDrivetrain.WheelID wheelID,
                        SwerveConfig.MotorConfig driveMotorConfig,
                        SwerveConfig.MotorConfig rotatorMotorConfig,
                        double maxWheelSpeed, int amperageLimit) {
-        this.name = name;
+        this.wheelID = wheelID;
         this.maxWheelSpeed = maxWheelSpeed;
 
         this.driveMotor = new WPI_TalonSRX(driveMotorConfig.port);
@@ -76,7 +76,7 @@ public class SwerveWheel {
         double rotationError = Math.IEEEremainder(heading - currentRotation,
                 SwerveConstants.WHEEL_ENCODER_TICKS);
 
-        SmartDashboard.putNumber("swerve/" + this.name + "/Pre-Inv Rot", rotationError);
+        SmartDashboard.putNumber("swerve/" + this.wheelID.name() + "/Pre-Inv Rot", rotationError);
 
         // minimize azimuth rotation, reversing drive if necessary
         isInverted = Math.abs(rotationError) > 0.25 * SwerveConstants.WHEEL_ENCODER_TICKS;
@@ -86,10 +86,10 @@ public class SwerveWheel {
             speed = -speed;
         }
 
-        SmartDashboard.putNumber("swerve/" + this.name + "/Rot Offset", rotationError);
-        SmartDashboard.putNumber("swerve/" + this.name + "/Rot Setpt",
+        SmartDashboard.putNumber("swerve/" + this.wheelID.name() + "/Rot Offset", rotationError);
+        SmartDashboard.putNumber("swerve/" + this.wheelID.name() + "/Rot Setpt",
                 currentRotation + rotationError);
-        SmartDashboard.putNumber("swerve/" + this.name + "/Speed",
+        SmartDashboard.putNumber("swerve/" + this.wheelID.name() + "/Speed",
                 speed * this.maxWheelSpeed);
 
         this.rotatorMotor.set(ControlMode.Position, currentRotation + rotationError);

@@ -26,16 +26,16 @@ public abstract class SwerveDrivetrain extends Subsystem {
     private double initialAngle;
 
     protected SwerveDrivetrain(SwerveConfig config) {
-        this.right1 = new SwerveWheel("right1",
+        this.right1 = new SwerveWheel(WheelID.RIGHT_1,
                 config.wheels.right1Drive, config.wheels.right1Rotate,
                 config.wheels.maxWheelSpeed, config.wheels.amperageLimit);
-        this.right2 = new SwerveWheel("right2",
+        this.right2 = new SwerveWheel(WheelID.RIGHT_2,
                 config.wheels.right2Drive, config.wheels.right2Rotate,
                 config.wheels.maxWheelSpeed, config.wheels.amperageLimit);
-        this.left1 = new SwerveWheel("left1",
+        this.left1 = new SwerveWheel(WheelID.LEFT_1,
                 config.wheels.left1Drive, config.wheels.left1Rotate,
                 config.wheels.maxWheelSpeed, config.wheels.amperageLimit);
-        this.left2 = new SwerveWheel("left2",
+        this.left2 = new SwerveWheel(WheelID.LEFT_2,
                 config.wheels.left2Drive, config.wheels.left2Rotate,
                 config.wheels.maxWheelSpeed, config.wheels.amperageLimit);
 
