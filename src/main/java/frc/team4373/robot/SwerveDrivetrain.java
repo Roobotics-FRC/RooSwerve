@@ -57,6 +57,12 @@ public abstract class SwerveDrivetrain extends Subsystem {
         this.left2.stop();
     }
 
+    /**
+     * Drives using the transform for the given parameters.
+     * @param rotation the rotation, in degrees.
+     * @param x the x-coordinate, -1 to 1.
+     * @param y the y-coordinate, -1 to 1.
+     */
     public void drive(double rotation, double x, double y) {
         switch (driveMode) {
             case NORTH_UP:
@@ -73,7 +79,7 @@ public abstract class SwerveDrivetrain extends Subsystem {
      * Sets velocity vectors to the four SwerveWheels with PID setpoints for both speed and angle.
      * @param vectors the four vectors ordered right1, left1, left2, right2.
      */
-    private void setWheelsPID(WheelVector.VectorSet vectors) {
+    public void setWheelsPID(WheelVector.VectorSet vectors) {
         if (vectors.right1 != null) this.right1.set(vectors.right1.speed, vectors.right1.angle);
         if (vectors.right2 != null) this.right2.set(vectors.right2.speed, vectors.right2.angle);
         if (vectors.left1 != null) this.left1.set(vectors.left1.speed, vectors.left1.angle);
@@ -84,7 +90,7 @@ public abstract class SwerveDrivetrain extends Subsystem {
      * Sets vectors to the SwerveWheels with a PID setpoint for angle and % output for speed.
      * @param vectors the four vectors ordered right1, left1, left2, right2.
      */
-    private void setWheelsPercOut(WheelVector.VectorSet vectors) {
+    public void setWheelsPercOut(WheelVector.VectorSet vectors) {
         if (vectors.right1 != null) {
             this.right1.setPercentOutput(vectors.right1.speed, vectors.right1.angle);
         }

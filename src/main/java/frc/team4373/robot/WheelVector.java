@@ -1,32 +1,32 @@
 package frc.team4373.robot;
 
-class WheelVector {
-    static final WheelVector ZERO = new WheelVector(0, 0);
+public class WheelVector {
+    public static final WheelVector ZERO = new WheelVector(0, 0);
 
-    final double speed;
-    final double angle;
+    public final double speed;
+    public final double angle;
 
     /**
      * Constructs a new WheelVector.
      * @param speed the speed (i.e., the magnitude) of the vector in the range [-1, 1].
      * @param angle the angle (i.e., the direction) of the vector in degrees.
      */
-    WheelVector(double speed, double angle) {
+    public WheelVector(double speed, double angle) {
         this.speed = speed;
         this.angle = angle;
     }
 
-    static class VectorSet {
-        static final VectorSet ZERO = new VectorSet(
+    public static class VectorSet {
+        public static final VectorSet ZERO = new VectorSet(
                 WheelVector.ZERO,
                 WheelVector.ZERO,
                 WheelVector.ZERO,
                 WheelVector.ZERO);
 
-        WheelVector right1;
-        WheelVector right2;
-        WheelVector left1;
-        WheelVector left2;
+        public WheelVector right1;
+        public WheelVector right2;
+        public WheelVector left1;
+        public WheelVector left2;
 
         /**
          * Constructs a new WheelVector VectorSet.
@@ -35,7 +35,7 @@ class WheelVector {
          * @param left1 the vector for the front left wheel.
          * @param left2 the vector for the rear left wheel.
          */
-        VectorSet(WheelVector right1, WheelVector right2,
+        public VectorSet(WheelVector right1, WheelVector right2,
                          WheelVector left1, WheelVector left2) {
             this.right1 = right1;
             this.right2 = right2;
@@ -53,7 +53,7 @@ class WheelVector {
          * @param set the vector set against which to compare.
          * @return true if equal, false if not.
          */
-        boolean equals(WheelVector.VectorSet set) {
+        public boolean equals(WheelVector.VectorSet set) {
             return this.right1.equals(set.right1)
                     && this.right2.equals(set.right2)
                     && this.left1.equals(set.left1)
@@ -66,7 +66,7 @@ class WheelVector {
         return "(speed: " + this.speed + ", angle: " + this.angle + ")";
     }
 
-    boolean equals(WheelVector vector) {
+    public boolean equals(WheelVector vector) {
         return this.speed - vector.speed < SwerveConstants.FP_EQUALITY_THRESHOLD
                 && this.angle - vector.angle < SwerveConstants.FP_EQUALITY_THRESHOLD;
     }
