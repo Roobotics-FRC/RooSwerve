@@ -8,8 +8,8 @@ class SwerveInputTransform {
     private final double lr;
     private final double wr;
 
-    private static double[] speeds = new double[SwerveConstants.WHEEL_COUNT];
-    private static double[] angles = new double[SwerveConstants.WHEEL_COUNT];
+    private double[] speeds = new double[SwerveConstants.WHEEL_COUNT];
+    private double[] angles = new double[SwerveConstants.WHEEL_COUNT];
 
     /**
      * Constructs a new swerve input transform for given robot dimensions.
