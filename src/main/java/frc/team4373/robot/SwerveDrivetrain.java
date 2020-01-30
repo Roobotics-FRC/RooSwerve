@@ -2,6 +2,7 @@ package frc.team4373.robot;
 
 import com.ctre.phoenix.sensors.PigeonIMU;
 import edu.wpi.first.wpilibj.command.Subsystem;
+import frc.team4373.robot.commands.SwerveDriveWithJoystick;
 
 /**
  * A programmatic representation of the robot's drivetrain.
@@ -15,6 +16,10 @@ public abstract class SwerveDrivetrain extends Subsystem {
         NORTH_UP, OWN_SHIP_UP
     }
 
+    public enum BrakeMode {
+        IMPLODE, OCTAGON, NONE
+    }
+
     public SwerveInputTransform transform;
 
     private SwerveWheel right1;
@@ -25,6 +30,9 @@ public abstract class SwerveDrivetrain extends Subsystem {
     private double initialAngle;
 
     private DriveMode driveMode = DriveMode.NORTH_UP;
+    private BrakeMode brakeMode = BrakeMode.IMPLODE;
+
+    private WheelVector.VectorSet brakeVectors;
 
     protected SwerveDrivetrain(SwerveConfig config) {
         this.right1 = new SwerveWheel(WheelID.RIGHT_1,
@@ -45,6 +53,8 @@ public abstract class SwerveDrivetrain extends Subsystem {
 
         this.transform = new SwerveInputTransform(config.dimensions.trackwidth,
                 config.dimensions.wheelbase);
+
+        this.brakeVectors = this.transform.calculateBrakeVectors(brakeMode);
     }
 
     /**
@@ -64,6 +74,10 @@ public abstract class SwerveDrivetrain extends Subsystem {
      * @param y the y-coordinate, -1 to 1.
      */
     public void drive(double rotation, double x, double y) {
+        if ((rotation == x && x == y && y == 0) && (this.brakeMode != BrakeMode.NONE)) {
+            setWheelsPID(brakeVectors);
+            return;
+        }
         switch (driveMode) {
             case NORTH_UP:
                 setWheelsPID(transform.processNorthUp(rotation, x, y, getAngle()));
@@ -173,6 +187,15 @@ public abstract class SwerveDrivetrain extends Subsystem {
 
     public DriveMode getDriveMode() {
         return this.driveMode;
+    }
+
+    public void setBrakeMode(BrakeMode brakeMode) {
+        this.brakeMode = brakeMode;
+        this.brakeVectors = this.transform.calculateBrakeVectors(brakeMode);
+    }
+
+    public BrakeMode getBrakeMode() {
+        return this.brakeMode;
     }
 
     private SwerveWheel getWheel(WheelID wheelID) {

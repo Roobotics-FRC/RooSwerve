@@ -120,4 +120,19 @@ public class SwerveInputTransform {
         WheelVector l2 = new WheelVector(rate, l2Angle);
         return new WheelVector.VectorSet(r1, r2, l1, l2);
     }
+
+    public WheelVector.VectorSet calculateBrakeVectors(SwerveDrivetrain.BrakeMode brakeMode) {
+        switch (brakeMode) {
+            case IMPLODE:
+                WheelVector.VectorSet vectors = processRotation(0);
+                WheelVector tmp = vectors.left1;
+                vectors.left1 = (vectors.right2 = vectors.left2);
+                vectors.left2 = (vectors.right1 = tmp);
+                return vectors;
+            case OCTAGON: return processRotation(0);
+            case NONE: return null;
+            default: break;
+        }
+        return null;
+    }
 }
