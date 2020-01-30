@@ -69,7 +69,7 @@ public abstract class SwerveDrivetrain extends Subsystem {
 
     /**
      * Drives using the transform for the given parameters.
-     * @param rotation the rotation, in degrees.
+     * @param rotation the joystick rotation, in degrees.
      * @param x the x-coordinate, -1 to 1.
      * @param y the y-coordinate, -1 to 1.
      */

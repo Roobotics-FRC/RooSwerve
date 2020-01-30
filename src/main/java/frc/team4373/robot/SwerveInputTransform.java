@@ -121,6 +121,11 @@ public class SwerveInputTransform {
         return new WheelVector.VectorSet(r1, r2, l1, l2);
     }
 
+    /**
+     * Calculates a {@link WheelVector.VectorSet} for the given brake mode.
+     * @param brakeMode the brake mode for which to calculate vectors.
+     * @return the vectors for the specified brake mode using the configured robot dimensions.
+     */
     public WheelVector.VectorSet calculateBrakeVectors(SwerveDrivetrain.BrakeMode brakeMode) {
         switch (brakeMode) {
             case IMPLODE:

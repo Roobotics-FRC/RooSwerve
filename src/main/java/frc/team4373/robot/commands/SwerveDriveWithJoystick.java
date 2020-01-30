@@ -6,7 +6,7 @@ import frc.team4373.robot.SwerveDrivetrain;
 import java.util.function.DoubleSupplier;
 
 /**
- * A Javadoc template. TODO: Update SwerveDriveWithJoystick Javadoc.
+ * A default command for controlling a SwerveDrive.
  */
 public class SwerveDriveWithJoystick extends Command {
     private SwerveDrivetrain drivetrain;
@@ -14,14 +14,21 @@ public class SwerveDriveWithJoystick extends Command {
     private DoubleSupplier yGetter;
     private DoubleSupplier rotationGetter;
 
+    /**
+     * Constructs a new SwerveDriveWithJoystick command.
+     * @param xGetter a supplier of the x joystick input, [-1, 1].
+     * @param yGetter  a supplier of the y joystick input, [-1, 1].
+     * @param twistGetter a supplier of the twist (z) joystick input, [-1, 1].
+     * @param drivetrain the {@link SwerveDrivetrain} subsystem to drive.
+     */
     public SwerveDriveWithJoystick(DoubleSupplier xGetter,
                                    DoubleSupplier yGetter,
-                                   DoubleSupplier rotationGetter,
+                                   DoubleSupplier twistGetter,
                                    SwerveDrivetrain drivetrain) {
         requires(this.drivetrain = drivetrain);
         this.xGetter = xGetter;
         this.yGetter = yGetter;
-        this.rotationGetter = rotationGetter;
+        this.rotationGetter = twistGetter;
     }
 
     @Override
