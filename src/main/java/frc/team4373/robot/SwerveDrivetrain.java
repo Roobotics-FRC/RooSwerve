@@ -2,24 +2,44 @@ package frc.team4373.robot;
 
 import com.ctre.phoenix.sensors.PigeonIMU;
 import edu.wpi.first.wpilibj.command.Subsystem;
-import frc.team4373.robot.commands.SwerveDriveWithJoystick;
+
+import javax.annotation.Nullable;
 
 /**
- * A programmatic representation of the robot's drivetrain.
+ * A programmatic representation of a swerve drivetrain.
+ *
+ * Requirements:
+ *  * The robot must be rectangular.
+ *  * The motors must use CTRE TalonSRX motor controllers.
+ *  * The robot must have a Pigeon IMU.
+ *  * The motor controllers and Pigeon must be connected over the CAN bus.
+ *  * The motor controlllers must have encoders connected.
  */
 public abstract class SwerveDrivetrain extends Subsystem {
+    /**
+     * A programmatic representation of which wheel is being referenced.
+     */
     public enum WheelID {
         RIGHT_1, RIGHT_2, LEFT_1, LEFT_2
     }
 
+    /**
+     * The drive mode for the swerve bot.
+     */
     public enum DriveMode {
         NORTH_UP, OWN_SHIP_UP
     }
 
+    /**
+     * The brake mode for the swerve bot (i.e. what to do when the input is zero).
+     */
     public enum BrakeMode {
         IMPLODE, OCTAGON, NONE
     }
 
+    /**
+     * The {@link SwerveInputTransform} transform object for this swerve bot.
+     */
     public SwerveInputTransform transform;
 
     private SwerveWheel right1;
@@ -34,6 +54,10 @@ public abstract class SwerveDrivetrain extends Subsystem {
 
     private WheelVector.VectorSet brakeVectors;
 
+    /**
+     * Creates a new SwerveDrivetrain subclass instance with the given configuration.
+     * @param config the configuration for the new SwerveDrivetrain.
+     */
     protected SwerveDrivetrain(SwerveConfig config) {
         this.right1 = new SwerveWheel(WheelID.RIGHT_1,
                 config.wheels.right1Drive, config.wheels.right1Rotate,
@@ -177,7 +201,15 @@ public abstract class SwerveDrivetrain extends Subsystem {
         return getWheel(wheelID).getRotatorMotorVelocity();
     }
 
-    public void setPID(WheelID wheelID, SwerveConfig.PID drivePID, SwerveConfig.PID rotatorPID) {
+    /**
+     * Sets the PID gains for a specified wheel.
+     * @param wheelID the wheel whose PID gains to change.
+     * @param drivePID a {@link SwerveConfig.PID} object with new parameters for the drive PID,
+     *      *           or null to leave unchanged.
+     * @param rotatorPID a {@link SwerveConfig.PID} object with parameters for rotational PID,
+     *      *            or null to leave unchanged.
+     */
+    public void setPID(WheelID wheelID, @Nullable SwerveConfig.PID drivePID, @Nullable SwerveConfig.PID rotatorPID) {
         getWheel(wheelID).setPID(drivePID, rotatorPID);
     }
 

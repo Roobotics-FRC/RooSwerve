@@ -1,9 +1,21 @@
 package frc.team4373.robot;
 
+/**
+ * A programmatic representation of a vector that wheels can be set to.
+ */
 public class WheelVector {
+    /**
+     * The vector with 0 for both components.
+     */
     public static final WheelVector ZERO = new WheelVector(0, 0);
 
+    /**
+     * The speed (i.e. magnitude) of the vector (in the range [-1, 1]).
+     */
     public final double speed;
+    /**
+     * The angle (i.e. direction) of the vector in degrees.
+     */
     public final double angle;
 
     /**
@@ -16,16 +28,34 @@ public class WheelVector {
         this.angle = angle;
     }
 
+    /**
+     * A set of four vectors that the bot can be set to.
+     */
     public static class VectorSet {
+        /**
+         * The set of vectors which are all zero.
+         */
         public static final VectorSet ZERO = new VectorSet(
                 WheelVector.ZERO,
                 WheelVector.ZERO,
                 WheelVector.ZERO,
                 WheelVector.ZERO);
 
+        /**
+         * The vector for the front right wheel.
+         */
         public WheelVector right1;
+        /**
+         * The vector for the rear right wheel.
+         */
         public WheelVector right2;
+        /**
+         * The vector for the front left wheel.
+         */
         public WheelVector left1;
+        /**
+         * The vector for the rear left wheel.
+         */
         public WheelVector left2;
 
         /**

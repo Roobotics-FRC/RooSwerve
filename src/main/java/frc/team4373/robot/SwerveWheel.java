@@ -113,6 +113,10 @@ class SwerveWheel {
         }
     }
 
+    /**
+     * Sets the PID gains for the rotator motor.
+     * @param pid the new PID gains.
+     */
     private void setRotatorPID(SwerveConfig.PID pid) {
         this.rotatorMotor.config_kP(0, pid.kP);
         this.rotatorMotor.config_kI(0, pid.kI);
@@ -120,6 +124,10 @@ class SwerveWheel {
         this.rotatorMotor.config_kF(0, pid.kF);
     }
 
+    /**
+     * Sets the PID gains for the drive motor.
+     * @param pid the new PID gains.
+     */
     private void setDrivePID(SwerveConfig.PID pid) {
         this.driveMotor.config_kP(0, pid.kP);
         this.driveMotor.config_kI(0, pid.kI);
@@ -127,9 +135,14 @@ class SwerveWheel {
         this.driveMotor.config_kF(0, pid.kF);
     }
 
-    void setPercentOutput(double speed, double heading) {
-        this.driveMotor.set(ControlMode.PercentOutput, speed);
-        this.rotatorMotor.set(ControlMode.PercentOutput, heading);
+    /**
+     * Sets the wheel's motors in percent output (non-closed-loop, non PID) mode.
+     * @param drivePower the percent of maximum output to set the drive motor to (not limited).
+     * @param rotatorPower the percent of maximum output to set the rotator motor to (not limited).
+     */
+    void setPercentOutput(double drivePower, double rotatorPower) {
+        this.driveMotor.set(ControlMode.PercentOutput, drivePower);
+        this.rotatorMotor.set(ControlMode.PercentOutput, rotatorPower);
     }
 
     /**

@@ -1,5 +1,8 @@
 package frc.team4373.robot;
 
+/**
+ * A class to transform inputs into the proper swerve outputs.
+ */
 public class SwerveInputTransform {
     private double trackwidth;
     private double wheelbase;
@@ -131,8 +134,8 @@ public class SwerveInputTransform {
             case IMPLODE:
                 WheelVector.VectorSet vectors = processRotation(0);
                 WheelVector tmp = vectors.left1;
-                vectors.left1 = (vectors.right2 = vectors.left2);
-                vectors.left2 = (vectors.right1 = tmp);
+                vectors.left1 = (vectors.right2 = vectors.left2); //assignments in Java return
+                vectors.left2 = (vectors.right1 = tmp); //the assigned value, allowing this.
                 return vectors;
             case OCTAGON: return processRotation(0);
             case NONE: return null;

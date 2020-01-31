@@ -2,9 +2,22 @@ package frc.team4373.robot;
 
 import com.ctre.phoenix.motorcontrol.NeutralMode;
 
+/**
+ * A configuration object for a swerve bot.
+ */
 public class SwerveConfig {
+    /**
+     * The dimensions of the robot.
+     * The units used do not matter, so long as they are the same.
+     */
     public final RobotDimensions dimensions;
+    /**
+     * The {@link WheelsConfig} configuration for the wheels of the robot.
+     */
     public final WheelsConfig wheels;
+    /**
+     * The CAN ID for the Pigeon IMU. It must be connected over CAN, not through the gadgeteer.
+     */
     public final int pigeonID;
 
     /**
@@ -21,17 +34,50 @@ public class SwerveConfig {
         this.pigeonID = pigeonID;
     }
 
+    /**
+     * A configuration object for all four wheels of a swerve bot.
+     */
     public static final class WheelsConfig {
+        /**
+         * The {@link MotorConfig} configuration for the front right drive motor.
+         */
         public final MotorConfig right1Drive;
+        /**
+         * The {@link MotorConfig} configuration for the front right rotator motor.
+         */
         public final MotorConfig right1Rotate;
+        /**
+         * The {@link MotorConfig} configuration for the rear right drive motor.
+         */
         public final MotorConfig right2Drive;
+        /**
+         * The {@link MotorConfig} configuration for the rear right rotator motor.
+         */
         public final MotorConfig right2Rotate;
+        /**
+         * The {@link MotorConfig} configuration for the front left drive motor.
+         */
         public final MotorConfig left1Drive;
+        /**
+         * The {@link MotorConfig} configuration for the front left rotator motor.
+         */
         public final MotorConfig left1Rotate;
+        /**
+         * The {@link MotorConfig} configuration for the rear left drive motor.
+         */
         public final MotorConfig left2Drive;
+        /**
+         * The {@link MotorConfig} configuration for the rear left rotator motor.
+         */
         public final MotorConfig left2Rotate;
 
+        /**
+         * The maximum speed, in native encoder units, allowed for the drive motors.
+         */
         public final double maxWheelSpeed;
+        /**
+         * The maximum amperage allowed for the drive motors (to prevent brownout).
+         */
         public final int amperageLimit;
 
         /**
@@ -66,11 +112,29 @@ public class SwerveConfig {
         }
     }
 
+    /**
+     * The configuration for a single motor.
+     */
     public static final class MotorConfig {
+        /**
+         * The CAN ID of the motor's TalonSRX motor controller.
+         */
         public final int ID;
+        /**
+         * Whether or not the motor output should be inverted.
+         */
         public final boolean inverted;
+        /**
+         * The mode for the motor when its input is zero.
+         */
         public final NeutralMode neutralMode;
+        /**
+         * Whether or not the encoder is out of phase with the motor.
+         */
         public final boolean encoderPhase;
+        /**
+         * The PID gains for the motor.
+         */
         public final PID gains;
 
         /**
@@ -78,6 +142,8 @@ public class SwerveConfig {
          * @param ID the CAN ID of the motor's TalonSRX motor controller.
          * @param inverted whether to invert motor output values.
          * @param neutralMode the motor's passive neutral mode.
+         * @param encoderPhase whether the encoder is out of phase with the motor.
+         * @param gains the PID gains for the motor.
          */
         public MotorConfig(int ID, boolean inverted,
                            NeutralMode neutralMode, boolean encoderPhase, PID gains) {
@@ -90,6 +156,10 @@ public class SwerveConfig {
     }
 
     // PID- and sensor-related constants
+
+    /**
+     * A configuration object containing the PID gains for a PID controller.
+     */
     public static final class PID {
         public final double kF;
         public final double kP;
@@ -111,8 +181,21 @@ public class SwerveConfig {
         }
     }
 
+    /**
+     * A configuration object representing the dimensions of the robot.
+     */
     public static final class RobotDimensions {
+        /**
+         * The trackwidth of the robot.
+         * Trackwidth is the distance bwetween the centers of the right and left wheels.
+         * It must be in the same units as the wheelbase.
+         */
         public final double trackwidth;
+        /**
+         * The wheelbase of the robot.
+         * Wheelbase is the distance between the centers of the front and rear wheels.
+         * It must be in the same units as the trackwidth.
+         */
         public final double wheelbase;
 
         /**
