@@ -1,7 +1,7 @@
-package frc.team4373.robot.commands;
+package frc.team4373.swerve.commands;
 
 import edu.wpi.first.wpilibj.command.Command;
-import frc.team4373.robot.SwerveDrivetrain;
+import frc.team4373.swerve.SwerveDrivetrain;
 
 import java.util.function.DoubleSupplier;
 
