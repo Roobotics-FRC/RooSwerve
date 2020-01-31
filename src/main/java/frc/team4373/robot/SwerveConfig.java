@@ -5,7 +5,7 @@ import com.ctre.phoenix.motorcontrol.NeutralMode;
 public class SwerveConfig {
     public final RobotDimensions dimensions;
     public final WheelsConfig wheels;
-    public final int pigeonPort;
+    public final int pigeonID;
 
     /**
      * Constructs a new configuration object for a swerve bot.
@@ -18,7 +18,7 @@ public class SwerveConfig {
                         int pigeonID) {
         this.dimensions = dimensions;
         this.wheels = wheels;
-        this.pigeonPort = pigeonID;
+        this.pigeonID = pigeonID;
     }
 
     public static final class WheelsConfig {
@@ -67,7 +67,7 @@ public class SwerveConfig {
     }
 
     public static final class MotorConfig {
-        public final int port;
+        public final int ID;
         public final boolean inverted;
         public final NeutralMode neutralMode;
         public final boolean encoderPhase;
@@ -75,13 +75,13 @@ public class SwerveConfig {
 
         /**
          * Constructs a new MotorConfig.
-         * @param port the port to which the motor is attached.
+         * @param ID the CAN ID of the motor's TalonSRX motor controller.
          * @param inverted whether to invert motor output values.
          * @param neutralMode the motor's passive neutral mode.
          */
-        public MotorConfig(int port, boolean inverted,
+        public MotorConfig(int ID, boolean inverted,
                            NeutralMode neutralMode, boolean encoderPhase, PID gains) {
-            this.port = port;
+            this.ID = ID;
             this.inverted = inverted;
             this.neutralMode = neutralMode;
             this.encoderPhase = encoderPhase;

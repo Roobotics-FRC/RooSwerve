@@ -48,7 +48,7 @@ public abstract class SwerveDrivetrain extends Subsystem {
                 config.wheels.left2Drive, config.wheels.left2Rotate,
                 config.wheels.maxWheelSpeed, config.wheels.amperageLimit);
 
-        this.pigeon = new PigeonIMU(config.pigeonPort);
+        this.pigeon = new PigeonIMU(config.pigeonID);
         this.initialAngle = getPigeonYawRaw();
 
         this.transform = new SwerveInputTransform(config.dimensions.trackwidth,

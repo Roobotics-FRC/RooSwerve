@@ -29,8 +29,8 @@ class SwerveWheel {
         this.wheelID = wheelID;
         this.maxWheelSpeed = maxWheelSpeed;
 
-        this.driveMotor = new WPI_TalonSRX(driveMotorConfig.port);
-        this.rotatorMotor = new WPI_TalonSRX(rotatorMotorConfig.port);
+        this.driveMotor = new WPI_TalonSRX(driveMotorConfig.ID);
+        this.rotatorMotor = new WPI_TalonSRX(rotatorMotorConfig.ID);
 
         this.driveMotor.configPeakCurrentLimit(amperageLimit,
                 SwerveConstants.TALON_TIMEOUT_MS);
