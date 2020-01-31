@@ -19,7 +19,7 @@ public class SwerveInputTransform {
      * @param trackwidth the robot's trackwidth (unit-agnostic; units must match wheelbase).
      * @param wheelbase the robot's wheelbase (unit-agnostic; units must match trackwidth).
      */
-    SwerveInputTransform(double trackwidth, double wheelbase) {
+    public SwerveInputTransform(double trackwidth, double wheelbase) {
         this.trackwidth = trackwidth;
         this.wheelbase = wheelbase;
 
