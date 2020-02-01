@@ -12,7 +12,6 @@ final class SwerveConstants {
     static final double DEGREES_TO_PIGEON_UNITS = 8192d / 360d;
 
     // Wheels et al.
-    // Max speed really seems around 8000, but we want some leeway
     static final int PID_IDX = 0;
     static final int WHEEL_COUNT = 4;
     static final double WHEEL_ENCODER_TICKS = 4096d;

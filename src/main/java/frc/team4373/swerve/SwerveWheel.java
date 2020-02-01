@@ -188,6 +188,6 @@ class SwerveWheel {
     }
 
     double getRotatorMotorVelocity() {
-        return rotatorMotor.getSelectedSensorPosition();
+        return rotatorMotor.getSelectedSensorVelocity();
     }
 }
