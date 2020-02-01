@@ -8,12 +8,15 @@ import javax.annotation.Nullable;
 /**
  * A programmatic representation of a swerve drivetrain.
  *
- * Requirements:
- *  * The robot must be rectangular.
- *  * The motors must use CTRE TalonSRX motor controllers.
- *  * The robot must have a Pigeon IMU.
- *  * The motor controllers and Pigeon must be connected over the CAN bus.
- *  * The motor controlllers must have encoders connected.
+ * <p>Requirements:
+ * <ul>
+ *     <li>The robot must be rectangular.</li>
+ *      <li>The robot must be rectangular.</li>
+ *      <li>The motors must use CTRE TalonSRX motor controllers.</li>
+ *      <li>The robot must have a Pigeon IMU.</li>
+ *      <li>The motor controllers and Pigeon must be connected over the CAN bus.</li>
+ *      <li>The motor controlllers must have encoders connected.</li>
+ * </ul>
  */
 public abstract class SwerveDrivetrain extends Subsystem {
     /**
@@ -31,7 +34,7 @@ public abstract class SwerveDrivetrain extends Subsystem {
     }
 
     /**
-     * The brake mode for the swerve bot (i.e. what to do when the input is zero).
+     * The brake mode for the swerve bot (what to do when the input is zero).
      */
     public enum BrakeMode {
         IMPLODE, OCTAGON, NONE
@@ -82,7 +85,7 @@ public abstract class SwerveDrivetrain extends Subsystem {
     }
 
     /**
-     * Stops the robot (i.e. sets outputs of all motors of all wheels to zero).
+     * Stops the robot (sets outputs of all motors of all wheels to zero).
      */
     public void stop() {
         this.right1.stop();
@@ -145,6 +148,7 @@ public abstract class SwerveDrivetrain extends Subsystem {
 
     /**
      * Returns the current angle relative to the starting position (mod 360).
+     * @return the current angle relative to the starting position on the interval [0, 360).
      */
     public double getAngle() {
         return Utils.normalizeAngle(getPigeonYawRaw() - initialAngle);
@@ -209,7 +213,7 @@ public abstract class SwerveDrivetrain extends Subsystem {
      * @param rotatorPID a {@link SwerveConfig.PID} object with parameters for rotational PID,
      *      *            or null to leave unchanged.
      */
-    public void setPID(WheelID wheelID, @Nullable SwerveConfig.PID drivePID, @Nullable SwerveConfig.PID rotatorPID) {
+    public void setPID(WheelID wheelID, SwerveConfig.PID drivePID, SwerveConfig.PID rotatorPID) {
         getWheel(wheelID).setPID(drivePID, rotatorPID);
     }
 
@@ -258,8 +262,11 @@ public abstract class SwerveDrivetrain extends Subsystem {
     }
 
     /**
-     * This function should <b>NEVER</b> <i>regularly</i> be called.
+     * Resets the position of the rotator encoder of the given wheel.
+     *
+     * <p>This function should <b>NEVER</b> <i>regularly</i> be called.
      * It should be called once per mechanical change, with all wheels facing forward.
+     * @param wheelID the wheel whose encoder should be reset.
      */
     public void resetEncoder(WheelID wheelID) {
         getWheel(wheelID).resetAbsoluteEncoder();

@@ -113,7 +113,7 @@ public class SwerveConfig {
     }
 
     /**
-     * The configuration for a single motor.
+     * A configuration object for a single motor.
      */
     public static final class MotorConfig {
         /**
