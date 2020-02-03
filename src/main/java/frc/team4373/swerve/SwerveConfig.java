@@ -119,7 +119,7 @@ public class SwerveConfig {
         /**
          * The CAN ID of the motor's TalonSRX motor controller.
          */
-        public final int ID;
+        public final int id;
         /**
          * Whether or not the motor output should be inverted.
          */
@@ -139,15 +139,15 @@ public class SwerveConfig {
 
         /**
          * Constructs a new MotorConfig.
-         * @param ID the CAN ID of the motor's TalonSRX motor controller.
+         * @param id the CAN ID of the motor's TalonSRX motor controller.
          * @param inverted whether to invert motor output values.
          * @param neutralMode the motor's passive neutral mode.
          * @param encoderPhase whether the encoder is out of phase with the motor.
          * @param gains the PID gains for the motor.
          */
-        public MotorConfig(int ID, boolean inverted,
+        public MotorConfig(int id, boolean inverted,
                            NeutralMode neutralMode, boolean encoderPhase, PID gains) {
-            this.ID = ID;
+            this.id = id;
             this.inverted = inverted;
             this.neutralMode = neutralMode;
             this.encoderPhase = encoderPhase;
