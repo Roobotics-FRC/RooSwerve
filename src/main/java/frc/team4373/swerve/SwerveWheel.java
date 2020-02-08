@@ -173,6 +173,7 @@ class SwerveWheel {
 
     /**
      * Resets the position of the absolute encoder on the rotator motor.
+     *
      * <p>NOTE: this change does not permanently persist and will be lost upon power cycling.
      */
     void resetAbsoluteEncoder() {

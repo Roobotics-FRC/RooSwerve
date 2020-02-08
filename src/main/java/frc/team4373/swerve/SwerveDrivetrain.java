@@ -29,12 +29,14 @@ public abstract class SwerveDrivetrain extends Subsystem {
 
     /**
      * The drive mode for the swerve bot.
+     *
      * <p>The modes are as follows:
      * <ul>
-     *     <li>North-up mode maintains a constant sense of north using the gyro (i.e., pushing the joystick
-     *         forward moves in the same direction regardless of the robot's orientation)</li>
+     *     <li>North-up mode maintains a constant sense of north using the gyro (i.e., pushing the
+     *     joystick forward moves in the same direction regardless of the robot's orientation)</li>
      *     <li>Own-ship-up mode always drives relative to the front of the robot
-     *         (i.e., pushing the joystick forward moves the robot in the direction it is facing)</li>
+     *         (i.e., pushing the joystick forward moves the robot in the direction it is
+     *         facing)</li>
      * </ul>
      */
     public enum DriveMode {
@@ -43,6 +45,7 @@ public abstract class SwerveDrivetrain extends Subsystem {
 
     /**
      * The swerve brake mode for the swerve bot (i.e., what to do when the input is zero).
+     *
      * <p>The modes are as follows:
      * <ul>
      *     <li>Implode mode points all wheels inward (toward the center of the bot)</li>
