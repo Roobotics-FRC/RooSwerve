@@ -15,7 +15,11 @@ jobs:
     - stage: test
       script: ./gradlew check
     - stage: deploy
-      script: ./deploy
+      name: "Deploy to RooMaven"
+      script: scripts/deploy.sh
+    - stage: deploy
+      name: "Update documentation"
+      script: scripts/docs.sh
 
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock

@@ -1,3 +1,5 @@
+set -o errexit
+
 ./gradlew jar
 
 git clone https://github.com/Roobotics-FRC/RooMaven.git
