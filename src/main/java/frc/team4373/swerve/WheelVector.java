@@ -10,11 +10,11 @@ public class WheelVector {
     public static final WheelVector ZERO = new WheelVector(0, 0);
 
     /**
-     * The speed (i.e. magnitude) of the vector (in the range [-1, 1]).
+     * The speed (i.e., magnitude) of the vector (in the range [-1, 1]).
      */
     public final double speed;
     /**
-     * The angle (i.e. direction) of the vector in degrees.
+     * The angle (i.e., direction) of the vector in degrees.
      */
     public final double angle;
 

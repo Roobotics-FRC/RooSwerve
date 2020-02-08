@@ -158,12 +158,27 @@ public class SwerveConfig {
     // PID- and sensor-related constants
 
     /**
-     * A configuration object containing the PID gains for a PID controller.
+     * A configuration object containing the gains for a PID controller.
      */
     public static final class PID {
+        /**
+         * The feedforward gain.
+         */
         public final double kF;
+
+        /**
+         * The proportional gain.
+         */
         public final double kP;
+
+        /**
+         * The integral gain.
+         */
         public final double kI;
+
+        /**
+         * The derivative gain.
+         */
         public final double kD;
 
         /**

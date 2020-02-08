@@ -171,22 +171,43 @@ class SwerveWheel {
                         % SwerveConstants.FULL_REVOLUTION_TICKS));
     }
 
+    /**
+     * Resets the position of the absolute encoder on the rotator motor.
+     * <p>NOTE: this change does not permanently persist and will be lost upon power cycling.
+     */
     void resetAbsoluteEncoder() {
         this.rotatorMotor.setSelectedSensorPosition(0);
     }
 
+    /**
+     * Gets the position of the drive motor in encoder units.
+     * @return the position of the drive motor in encoder units.
+     */
     double getDriveMotorPosition() {
         return driveMotor.getSelectedSensorPosition();
     }
 
+    /**
+     * Gets the velocity of the drive motor in encoder units.
+     * @return the velocity of the drive motor in encoder units.
+     */
     double getDriveMotorVelocity() {
         return driveMotor.getSelectedSensorVelocity();
     }
 
+    /**
+     * Gets the position of the rotator motor in encoder units.
+     * Since the rotator is a mag encoder, this is the absolute position.
+     * @return the absolute position of the rotator motor in encoder units.
+     */
     double getRotatorMotorPosition() {
         return rotatorMotor.getSelectedSensorPosition();
     }
 
+    /**
+     * Gets the velocity of the rotator motor in encoder units.
+     * @return the velocity of the rotator motor in encoder units.
+     */
     double getRotatorMotorVelocity() {
         return rotatorMotor.getSelectedSensorVelocity();
     }

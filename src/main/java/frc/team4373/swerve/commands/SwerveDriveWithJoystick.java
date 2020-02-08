@@ -6,7 +6,7 @@ import frc.team4373.swerve.SwerveDrivetrain;
 import java.util.function.DoubleSupplier;
 
 /**
- * A default command for controlling a SwerveDrive.
+ * A default command for controlling a SwerveDrivetrain.
  */
 public class SwerveDriveWithJoystick extends Command {
     private SwerveDrivetrain drivetrain;

@@ -21,6 +21,7 @@ import javax.annotation.Nullable;
 public abstract class SwerveDrivetrain extends Subsystem {
     /**
      * A programmatic representation of which wheel is being referenced.
+     * Typically, "1" wheels are front and "2" wheels are rear.
      */
     public enum WheelID {
         RIGHT_1, RIGHT_2, LEFT_1, LEFT_2
@@ -28,13 +29,28 @@ public abstract class SwerveDrivetrain extends Subsystem {
 
     /**
      * The drive mode for the swerve bot.
+     * <p>The modes are as follows:
+     * <ul>
+     *     <li>North-up mode maintains a constant sense of north using the gyro (i.e., pushing the joystick
+     *         forward moves in the same direction regardless of the robot's orientation)</li>
+     *     <li>Own-ship-up mode always drives relative to the front of the robot
+     *         (i.e., pushing the joystick forward moves the robot in the direction it is facing)</li>
+     * </ul>
      */
     public enum DriveMode {
         NORTH_UP, OWN_SHIP_UP
     }
 
     /**
-     * The brake mode for the swerve bot (what to do when the input is zero).
+     * The swerve brake mode for the swerve bot (i.e., what to do when the input is zero).
+     * <p>The modes are as follows:
+     * <ul>
+     *     <li>Implode mode points all wheels inward (toward the center of the bot)</li>
+     *     <li>Octagon mode points all wheels orthogonally to the diagonal that runs from the wheel
+     *         to the center (the standard turning configuration)</li>
+ *         <li>When swerve brake mode is disabled, the wheels remain in the direction they were
+     *         facing before stopping</li>
+     * </ul>
      */
     public enum BrakeMode {
         IMPLODE, OCTAGON, NONE
@@ -85,7 +101,7 @@ public abstract class SwerveDrivetrain extends Subsystem {
     }
 
     /**
-     * Stops the robot (sets outputs of all motors of all wheels to zero).
+     * Stops the robot (i.e., sets outputs of all motors of all wheels to zero).
      */
     public void stop() {
         this.right1.stop();
@@ -193,14 +209,31 @@ public abstract class SwerveDrivetrain extends Subsystem {
                 + getDriveMotorPosition(WheelID.RIGHT_2)) / SwerveConstants.WHEEL_COUNT;
     }
 
+    /**
+     * Gets the velocity of the drive motor for the specified wheel.
+     * @param wheelID the ID of the wheel whose drive velocity to fetch.
+     * @return the wheel's drive velocity in encoder units.
+     */
     public double getDriveMotorVelocity(WheelID wheelID) {
         return getWheel(wheelID).getDriveMotorVelocity();
     }
 
+    /**
+     * Gets the position of the rotator motor for the specified wheel.
+     * Since the rotator is a mag encoder, this is an absolute position.
+     *
+     * @param wheelID the ID of the wheel whose rotator position to fetch.
+     * @return the wheel's absolute rotator position in encoder units.
+     */
     public double getRotatorMotorPosition(WheelID wheelID) {
         return getWheel(wheelID).getRotatorMotorPosition();
     }
 
+    /**
+     * Gets the velocity of the rotator motor for the specified wheel.
+     * @param wheelID the ID of the wheel whose rotator velocity to fetch.
+     * @return the wheel's rotator velocity in encoder units.
+     */
     public double getRotatorMotorVelocity(WheelID wheelID) {
         return getWheel(wheelID).getRotatorMotorVelocity();
     }
@@ -209,31 +242,52 @@ public abstract class SwerveDrivetrain extends Subsystem {
      * Sets the PID gains for a specified wheel.
      * @param wheelID the wheel whose PID gains to change.
      * @param drivePID a {@link SwerveConfig.PID} object with new parameters for the drive PID,
-     *      *           or null to leave unchanged.
+     *                 or null to leave unchanged.
      * @param rotatorPID a {@link SwerveConfig.PID} object with parameters for rotational PID,
-     *      *            or null to leave unchanged.
+     *                   or null to leave unchanged.
      */
     public void setPID(WheelID wheelID, SwerveConfig.PID drivePID, SwerveConfig.PID rotatorPID) {
         getWheel(wheelID).setPID(drivePID, rotatorPID);
     }
 
+    /**
+     * Sets the swerve drive mode (north- or own-ship-up).
+     * @param driveMode the {@link DriveMode} to set.
+     */
     public void setDriveMode(DriveMode driveMode) {
         this.driveMode = driveMode;
     }
 
+    /**
+     * Gets the current drive mode.
+     * @return the currently selected {@link DriveMode}.
+     */
     public DriveMode getDriveMode() {
         return this.driveMode;
     }
 
+    /**
+     * Sets the swerve brake mode.
+     * @param brakeMode the {@link BrakeMode} to set.
+     */
     public void setBrakeMode(BrakeMode brakeMode) {
         this.brakeMode = brakeMode;
         this.brakeVectors = this.transform.calculateBrakeVectors(brakeMode);
     }
 
+    /**
+     * Gets the currently selected swerve brake mode.
+     * @return the currently selected {@link BrakeMode}.
+     */
     public BrakeMode getBrakeMode() {
         return this.brakeMode;
     }
 
+    /**
+     * Gets the swerve wheel with the specified ID.
+     * @param wheelID the ID of the wheel to fetch.
+     * @return the {@link SwerveWheel} object.
+     */
     private SwerveWheel getWheel(WheelID wheelID) {
         switch (wheelID) {
             case RIGHT_1:
