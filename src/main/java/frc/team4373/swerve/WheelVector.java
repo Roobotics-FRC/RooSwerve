@@ -1,7 +1,7 @@
 package frc.team4373.swerve;
 
 /**
- * A programmatic representation of a vector that wheels can be set to.
+ * A programmatic representation of a vector that wheels can be set to follow.
  */
 public class WheelVector {
     /**
@@ -29,7 +29,7 @@ public class WheelVector {
     }
 
     /**
-     * A set of four vectors that the bot can be set to.
+     * A set of four vectors corresponding to the four wheels of the bot.
      */
     public static class VectorSet {
         /**

@@ -202,7 +202,7 @@ public class SwerveConfig {
     public static final class RobotDimensions {
         /**
          * The trackwidth of the robot.
-         * Trackwidth is the distance bwetween the centers of the right and left wheels.
+         * Trackwidth is the distance between the centers of the right and left wheels.
          * It must be in the same units as the wheelbase.
          */
         public final double trackwidth;
