@@ -12,8 +12,8 @@ YOUR_JAR_FILE=../build/libs/RooSwerve-$YOUR_VERSION.jar
 
 mvn install:install-file -DgroupId=$YOUR_GROUP -DartifactId=$YOUR_ARTIFACT -Dversion=$YOUR_VERSION -Dfile=$YOUR_JAR_FILE -Dpackaging=jar -DgeneratePom=true -DlocalRepositoryPath=. -DcreateChecksum=true
 
-git config user.name "AFS RooBotics"
-git config user.email "AFSroobotics@abingtonfriends.net"
+git config --local user.name "AFS RooBotics"
+git config --local user.email "AFSroobotics@abingtonfriends.net"
 
 git add .
 git commit -am "Update RooSwerve to version $YOUR_VERSION"
