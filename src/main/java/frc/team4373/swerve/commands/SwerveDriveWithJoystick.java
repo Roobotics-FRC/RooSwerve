@@ -41,7 +41,11 @@ public class SwerveDriveWithJoystick extends Command {
         double x = xGetter.getAsDouble();
         double y = yGetter.getAsDouble();
         double rotation = rotationGetter.getAsDouble();
-        drivetrain.drive(rotation, x, y);
+        if (x == 0 && y == 0 && rotation == 0) {
+            this.drivetrain.brake();
+        } else {
+            this.drivetrain.drive(rotation, x, y);
+        }
     }
 
     @Override

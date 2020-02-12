@@ -120,10 +120,6 @@ public abstract class SwerveDrivetrain extends Subsystem {
      * @param y the y-coordinate, -1 to 1.
      */
     public void drive(double rotation, double x, double y) {
-        if ((rotation == x && x == y && y == 0) && (this.brakeMode != BrakeMode.NONE)) {
-            setWheelsPID(brakeVectors);
-            return;
-        }
         switch (driveMode) {
             case NORTH_UP:
                 setWheelsPID(transform.processNorthUp(rotation, x, y, getAngle()));
@@ -133,6 +129,13 @@ public abstract class SwerveDrivetrain extends Subsystem {
                 break;
             default: break;
         }
+    }
+
+    /**
+     * Sets the wheels to the configured brake configuration if any is selected.
+     */
+    public void brake() {
+        this.setWheelsPID(brakeVectors);
     }
 
     /**
