@@ -12,8 +12,8 @@ class SwerveWheel {
     private final SwerveDrivetrain.WheelID wheelID;
     private final double maxWheelSpeed;
 
-    private WPI_TalonSRX driveMotor;
-    private WPI_TalonSRX rotatorMotor;
+    protected WPI_TalonSRX driveMotor;
+    protected WPI_TalonSRX rotatorMotor;
 
     private boolean isInverted = false;
 

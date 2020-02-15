@@ -1,5 +1,6 @@
 package frc.team4373.swerve;
 
+import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 import com.ctre.phoenix.sensors.PigeonIMU;
 import edu.wpi.first.wpilibj.command.Subsystem;
 
@@ -11,11 +12,9 @@ import javax.annotation.Nullable;
  * <p>Requirements:
  * <ul>
  *     <li>The robot must be rectangular.</li>
- *      <li>The robot must be rectangular.</li>
- *      <li>The motors must use CTRE TalonSRX motor controllers.</li>
- *      <li>The robot must have a Pigeon IMU.</li>
- *      <li>The motor controllers and Pigeon must be connected over the CAN bus.</li>
- *      <li>The motor controlllers must have encoders connected.</li>
+ *     <li>The motors must use CTRE TalonSRX motor controllers.</li>
+ *     <li>The motor controllers must be connected over the CAN bus.</li>
+ *     <li>The motor controllers must have encoders connected.</li>
  * </ul>
  */
 public abstract class SwerveDrivetrain extends Subsystem {
@@ -44,7 +43,7 @@ public abstract class SwerveDrivetrain extends Subsystem {
     }
 
     /**
-     * The swerve brake mode for the swerve bot (i.e., what to do when the input is zero).
+     * The swerve brake mode for the swerve bot.
      *
      * <p>The modes are as follows:
      * <ul>
@@ -68,7 +67,15 @@ public abstract class SwerveDrivetrain extends Subsystem {
     private SwerveWheel right2;
     private SwerveWheel left1;
     private SwerveWheel left2;
+
+    /**
+     * The Pigeon IMU object.
+     *
+     * <p>NOTE: This may be {@code null} if no Pigeon is connected.
+     */
+    @Nullable
     private PigeonIMU pigeon;
+    private int pigeonAxis;
     private double initialAngle;
 
     private DriveMode driveMode = DriveMode.NORTH_UP;
@@ -94,7 +101,37 @@ public abstract class SwerveDrivetrain extends Subsystem {
                 config.wheels.left2Drive, config.wheels.left2Rotate,
                 config.wheels.maxWheelSpeed, config.wheels.amperageLimit);
 
-        this.pigeon = new PigeonIMU(config.pigeonID);
+        switch (config.pigeonConfig.connectionType) {
+            case CAN:
+                this.pigeon = new PigeonIMU(config.pigeonConfig.id);
+                break;
+            case GADGETEER:
+                if (config.pigeonConfig.id == config.wheels.right1Drive.id) {
+                    this.pigeon = new PigeonIMU(this.right1.driveMotor);
+                } else if (config.pigeonConfig.id == config.wheels.right1Rotate.id) {
+                    this.pigeon = new PigeonIMU(this.right1.rotatorMotor);
+                } else if (config.pigeonConfig.id == config.wheels.right2Drive.id) {
+                    this.pigeon = new PigeonIMU(this.right2.driveMotor);
+                } else if (config.pigeonConfig.id == config.wheels.right2Rotate.id) {
+                    this.pigeon = new PigeonIMU(this.right2.rotatorMotor);
+                } else if (config.pigeonConfig.id == config.wheels.left1Drive.id) {
+                    this.pigeon = new PigeonIMU(this.left1.driveMotor);
+                } else if (config.pigeonConfig.id == config.wheels.left1Rotate.id) {
+                    this.pigeon = new PigeonIMU(this.left1.rotatorMotor);
+                } else if (config.pigeonConfig.id == config.wheels.left2Drive.id) {
+                    this.pigeon = new PigeonIMU(this.left2.driveMotor);
+                } else if (config.pigeonConfig.id == config.wheels.left2Rotate.id) {
+                    this.pigeon = new PigeonIMU(this.left2.rotatorMotor);
+                } else {
+                    this.pigeon = new PigeonIMU(new WPI_TalonSRX(config.pigeonConfig.id));
+                }
+                break;
+            case NONE:
+            default:
+                this.pigeon = null;
+        }
+        this.pigeonAxis = config.pigeonConfig.axis.yprPos;
+
         this.initialAngle = getPigeonYawRaw();
 
         this.transform = new SwerveInputTransform(config.dimensions.trackwidth,
@@ -177,13 +214,14 @@ public abstract class SwerveDrivetrain extends Subsystem {
     }
 
     /**
-     * Returns the raw Pigeon yaw value.
-     * @return Pigeon yaw value.
+     * Returns the raw Pigeon yaw value, or 0 if no Pigeon is connected.
+     * @return the Pigeon yaw value.
      */
     public double getPigeonYawRaw() {
+        if (this.pigeon == null) return 0;
         double[] ypr = new double[3];
         this.pigeon.getYawPitchRoll(ypr);
-        return ypr[0] * -1;
+        return ypr[this.pigeonAxis] * -1;
     }
 
     /**
@@ -334,8 +372,9 @@ public abstract class SwerveDrivetrain extends Subsystem {
 
     /**
      * Resets the pigeon's yaw to consider the current orientation field-forward.
+     * (I.e., the current direction will be considered "forward"/"north" in north-up mode.)
      */
-    public void resetPigeonYaw() {
+    public void resetNorth() {
         this.initialAngle = this.getPigeonYawRaw();
     }
 }
