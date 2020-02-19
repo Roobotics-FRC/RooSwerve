@@ -110,6 +110,83 @@ public class SwerveConfig {
             this.maxWheelSpeed = maxWheelSpeed;
             this.currentLimitConfig = currentLimitConfig;
         }
+
+        /**
+         * Constructs a new configuration object for all wheels on a swerve bot.
+         * @param right1Drive the {@link MotorConfig} for the right 1 drive motor.
+         * @param right1Rotate the {@link MotorConfig} for the right 1 rotator motor.
+         * @param right2Drive the {@link MotorConfig} for the right 2 drive motor.
+         * @param right2Rotate the {@link MotorConfig} for the right 2 rotator motor.
+         * @param left1Drive the {@link MotorConfig} for the left 1 drive motor.
+         * @param left1Rotate the {@link MotorConfig} for the left 1 rotator motor.
+         * @param left2Drive the {@link MotorConfig} for the left 2 drive motor.
+         * @param left2Rotate the {@link MotorConfig} for the left 2 rotator motor.
+         * @param maxWheelSpeed the max speed, in encoder units, attainable by the drive motors.
+         * @param amperageLimit the amperage limit for all drive & rotator motors.
+         */
+        public WheelsConfig(MotorConfig right1Drive, MotorConfig right1Rotate,
+                            MotorConfig right2Drive, MotorConfig right2Rotate,
+                            MotorConfig left1Drive, MotorConfig left1Rotate,
+                            MotorConfig left2Drive, MotorConfig left2Rotate,
+                            double maxWheelSpeed, int amperageLimit) {
+            this(right1Drive,
+                    right1Rotate,
+                    right2Drive,
+                    right2Rotate,
+                    left1Drive,
+                    left1Rotate,
+                    left2Drive,
+                    left2Rotate,
+                    maxWheelSpeed,
+                    new CurrentLimitConfig(amperageLimit,
+                            0,
+                            amperageLimit,
+                            true,
+                            amperageLimit,
+                            0,
+                            amperageLimit,
+                            true));
+        }
+
+        /**
+         * Constructs a new configuration object for all wheels on a swerve bot.
+         * @param right1Drive the {@link MotorConfig} for the right 1 drive motor.
+         * @param right1Rotate the {@link MotorConfig} for the right 1 rotator motor.
+         * @param right2Drive the {@link MotorConfig} for the right 2 drive motor.
+         * @param right2Rotate the {@link MotorConfig} for the right 2 rotator motor.
+         * @param left1Drive the {@link MotorConfig} for the left 1 drive motor.
+         * @param left1Rotate the {@link MotorConfig} for the left 1 rotator motor.
+         * @param left2Drive the {@link MotorConfig} for the left 2 drive motor.
+         * @param left2Rotate the {@link MotorConfig} for the left 2 rotator motor.
+         * @param maxWheelSpeed the max speed, in encoder units, attainable by the drive motors.
+         * @param driveMotorAmperageLimit the amperage limit for the drive motors.
+         * @param rotatorMotorAmperageLimit the amperage limit for the rotator motors.
+         */
+        public WheelsConfig(MotorConfig right1Drive, MotorConfig right1Rotate,
+                            MotorConfig right2Drive, MotorConfig right2Rotate,
+                            MotorConfig left1Drive, MotorConfig left1Rotate,
+                            MotorConfig left2Drive, MotorConfig left2Rotate,
+                            double maxWheelSpeed,
+                            int driveMotorAmperageLimit, int rotatorMotorAmperageLimit) {
+            this(right1Drive,
+                    right1Rotate,
+                    right2Drive,
+                    right2Rotate,
+                    left1Drive,
+                    left1Rotate,
+                    left2Drive,
+                    left2Rotate,
+                    maxWheelSpeed,
+                    new CurrentLimitConfig(rotatorMotorAmperageLimit,
+                            0,
+                            rotatorMotorAmperageLimit,
+                            true,
+                            driveMotorAmperageLimit,
+                            0,
+                            driveMotorAmperageLimit,
+                            true)
+                    );
+        }
     }
 
     /**
