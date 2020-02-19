@@ -34,26 +34,30 @@ class SwerveWheel {
         this.driveMotor = new WPI_TalonSRX(driveMotorConfig.id);
         this.rotatorMotor = new WPI_TalonSRX(rotatorMotorConfig.id);
 
-        this.driveMotor.configPeakCurrentLimit(
-                currentLimitConfig.driveMotorPeakAmperage,
-                SwerveConstants.TALON_TIMEOUT_MS);
-        this.driveMotor.configPeakCurrentDuration(
-                currentLimitConfig.driveMotorPeakDuration,
-                SwerveConstants.TALON_TIMEOUT_MS);
-        this.driveMotor.configContinuousCurrentLimit(
-                currentLimitConfig.driveMotorContinuousAmperage,
-                SwerveConstants.TALON_TIMEOUT_MS);
-        this.driveMotor.enableCurrentLimit(currentLimitConfig.driveMotorLimitingEnabled);
-        this.rotatorMotor.configPeakCurrentLimit(
-                currentLimitConfig.rotatorMotorPeakAmperage,
-                SwerveConstants.TALON_TIMEOUT_MS);
-        this.rotatorMotor.configPeakCurrentDuration(
-                currentLimitConfig.rotatorMotorPeakDuration,
-                SwerveConstants.TALON_TIMEOUT_MS);
-        this.rotatorMotor.configContinuousCurrentLimit(
-                currentLimitConfig.rotatorMotorContinuousAmperage,
-                SwerveConstants.TALON_TIMEOUT_MS);
-        this.rotatorMotor.enableCurrentLimit(currentLimitConfig.rotatorMotorLimitingEnabled);
+        if (currentLimitConfig.driveMotorLimitingEnabled) {
+            this.driveMotor.configPeakCurrentLimit(
+                    currentLimitConfig.driveMotorPeakAmperage,
+                    SwerveConstants.TALON_TIMEOUT_MS);
+            this.driveMotor.configPeakCurrentDuration(
+                    currentLimitConfig.driveMotorPeakDuration,
+                    SwerveConstants.TALON_TIMEOUT_MS);
+            this.driveMotor.configContinuousCurrentLimit(
+                    currentLimitConfig.driveMotorContinuousAmperage,
+                    SwerveConstants.TALON_TIMEOUT_MS);
+            this.driveMotor.enableCurrentLimit(true);
+        }
+        if (currentLimitConfig.rotatorMotorLimitingEnabled) {
+            this.rotatorMotor.configPeakCurrentLimit(
+                    currentLimitConfig.rotatorMotorPeakAmperage,
+                    SwerveConstants.TALON_TIMEOUT_MS);
+            this.rotatorMotor.configPeakCurrentDuration(
+                    currentLimitConfig.rotatorMotorPeakDuration,
+                    SwerveConstants.TALON_TIMEOUT_MS);
+            this.rotatorMotor.configContinuousCurrentLimit(
+                    currentLimitConfig.rotatorMotorContinuousAmperage,
+                    SwerveConstants.TALON_TIMEOUT_MS);
+            this.rotatorMotor.enableCurrentLimit(true);
+        }
 
         this.driveMotor.setInverted(driveMotorConfig.inverted);
         this.rotatorMotor.setInverted(rotatorMotorConfig.inverted);
