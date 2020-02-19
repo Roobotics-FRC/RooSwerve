@@ -76,9 +76,9 @@ public class SwerveConfig {
          */
         public final double maxWheelSpeed;
         /**
-         * The maximum amperage allowed for the drive motors (to prevent brownout).
+         * The {@link CurrentLimitConfig} configuration for current limiting.
          */
-        public final int amperageLimit;
+        public final CurrentLimitConfig currentLimitConfig;
 
         /**
          * Constructs a new configuration object for all wheels on a swerve bot.
@@ -91,13 +91,13 @@ public class SwerveConfig {
          * @param left2Drive the {@link MotorConfig} for the left 2 drive motor.
          * @param left2Rotate the {@link MotorConfig} for the left 2 rotator motor.
          * @param maxWheelSpeed the max speed, in encoder units, attainable by the drive motors.
-         * @param amperageLimit the max allowed amperage to the drive motors (to prevent brownout).
+         * @param currentLimitConfig the {@link CurrentLimitConfig} for current limiting.
          */
         public WheelsConfig(MotorConfig right1Drive, MotorConfig right1Rotate,
                             MotorConfig right2Drive, MotorConfig right2Rotate,
                             MotorConfig left1Drive, MotorConfig left1Rotate,
                             MotorConfig left2Drive, MotorConfig left2Rotate,
-                            double maxWheelSpeed, int amperageLimit) {
+                            double maxWheelSpeed, CurrentLimitConfig currentLimitConfig) {
             this.right1Drive = right1Drive;
             this.right1Rotate = right1Rotate;
             this.right2Drive = right2Drive;
@@ -108,7 +108,7 @@ public class SwerveConfig {
             this.left2Rotate = left2Rotate;
 
             this.maxWheelSpeed = maxWheelSpeed;
-            this.amperageLimit = amperageLimit;
+            this.currentLimitConfig = currentLimitConfig;
         }
     }
 
@@ -221,6 +221,35 @@ public class SwerveConfig {
         public RobotDimensions(double trackwidth, double wheelbase) {
             this.trackwidth = trackwidth;
             this.wheelbase = wheelbase;
+        }
+    }
+
+    public static final class CurrentLimitConfig {
+        public final int rotatorMotorPeakAmperage;
+        public final int rotatorMotorPeakDuration;
+        public final int rotatorMotorContinuousAmperage;
+        public final boolean rotatorMotorLimitingEnabled;
+        public final int driveMotorPeakAmperage;
+        public final int driveMotorPeakDuration;
+        public final int driveMotorContinuousAmperage;
+        public final boolean driveMotorLimitingEnabled;
+
+        public CurrentLimitConfig(int rotatorMotorPeakAmperage,
+                                  int rotatorMotorPeakDuration,
+                                  int rotatorMotorContinuousAmperage,
+                                  boolean rotatorMotorLimitingEnabled,
+                                  int driveMotorPeakAmperage,
+                                  int driveMotorPeakDuration,
+                                  int driveMotorContinuousAmperage,
+                                  boolean driveMotorLimitingEnabled) {
+            this.rotatorMotorPeakAmperage = rotatorMotorPeakAmperage;
+            this.rotatorMotorPeakDuration = rotatorMotorPeakDuration;
+            this.rotatorMotorContinuousAmperage = rotatorMotorContinuousAmperage;
+            this.rotatorMotorLimitingEnabled = rotatorMotorLimitingEnabled;
+            this.driveMotorPeakAmperage = driveMotorPeakAmperage;
+            this.driveMotorPeakDuration = driveMotorPeakDuration;
+            this.driveMotorContinuousAmperage = driveMotorContinuousAmperage;
+            this.driveMotorLimitingEnabled = driveMotorLimitingEnabled;
         }
     }
 }
