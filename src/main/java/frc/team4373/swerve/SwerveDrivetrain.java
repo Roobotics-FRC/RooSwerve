@@ -143,6 +143,7 @@ public abstract class SwerveDrivetrain extends Subsystem {
      * @param vectors the four vectors ordered right1, left1, left2, right2.
      */
     public void setWheelsPID(WheelVector.VectorSet vectors) {
+        if (vectors == null) return;
         if (vectors.right1 != null) this.right1.set(vectors.right1.speed, vectors.right1.angle);
         if (vectors.right2 != null) this.right2.set(vectors.right2.speed, vectors.right2.angle);
         if (vectors.left1 != null) this.left1.set(vectors.left1.speed, vectors.left1.angle);
@@ -154,6 +155,7 @@ public abstract class SwerveDrivetrain extends Subsystem {
      * @param vectors the four vectors ordered right1, left1, left2, right2.
      */
     public void setWheelsPercOut(WheelVector.VectorSet vectors) {
+        if (vectors == null) return;
         if (vectors.right1 != null) {
             this.right1.setPercentOutput(vectors.right1.speed, vectors.right1.angle);
         }
