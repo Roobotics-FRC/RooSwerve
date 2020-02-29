@@ -137,7 +137,7 @@ public class SwerveConfig {
                     left2Drive,
                     left2Rotate,
                     maxWheelSpeed,
-                    CurrentLimitConfig.none);
+                    CurrentLimitConfig.NONE);
         } 
     }
 
@@ -365,9 +365,9 @@ public class SwerveConfig {
         }
 
         /**
-         * No current limiting.
+         * A current limit configuration for no current limiting.
          */
-        public static final CurrentLimitConfig none =
+        public static final CurrentLimitConfig NONE =
                 new CurrentLimitConfig(0, 0, 0, false, 0, 0, 0, false);
     }
 }
