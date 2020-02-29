@@ -18,5 +18,5 @@ git config --local user.name "AFS RooBotics"
 git config --local user.email "AFSroobotics@abingtonfriends.net"
 git add .
 git commit -m "Update documentation"
-git remote set-url origin https://"${GH_TOKEN}"@github.com/Roobotics-FRC/RooSwerve.git
+git remote set-url origin https://"${GITHUB_TOKEN}"@github.com/Roobotics-FRC/RooSwerve.git
 git push
