@@ -32,9 +32,9 @@ class SwerveWheel {
         this.driveMotor = new WPI_TalonSRX(driveMotorConfig.id);
         this.rotatorMotor = new WPI_TalonSRX(rotatorMotorConfig.id);
 
-        this.driveMotor.configPeakCurrentLimit(amperageLimit,
-                SwerveConstants.TALON_TIMEOUT_MS);
-        this.driveMotor.enableCurrentLimit(true);
+        // this.driveMotor.configPeakCurrentLimit(amperageLimit,
+        //         SwerveConstants.TALON_TIMEOUT_MS);
+        this.driveMotor.enableCurrentLimit(false);
 
         this.driveMotor.setInverted(driveMotorConfig.inverted);
         this.rotatorMotor.setInverted(rotatorMotorConfig.inverted);
