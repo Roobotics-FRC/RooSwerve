@@ -44,8 +44,8 @@ class SwerveWheel {
             this.driveMotor.configContinuousCurrentLimit(
                     currentLimitConfig.driveMotorContinuousAmperage,
                     SwerveConstants.TALON_TIMEOUT_MS);
-            this.driveMotor.enableCurrentLimit(true);
         }
+        this.driveMotor.enableCurrentLimit(currentLimitConfig.driveMotorLimitingEnabled);
         if (currentLimitConfig.rotatorMotorLimitingEnabled) {
             this.rotatorMotor.configPeakCurrentLimit(
                     currentLimitConfig.rotatorMotorPeakAmperage,
@@ -56,8 +56,8 @@ class SwerveWheel {
             this.rotatorMotor.configContinuousCurrentLimit(
                     currentLimitConfig.rotatorMotorContinuousAmperage,
                     SwerveConstants.TALON_TIMEOUT_MS);
-            this.rotatorMotor.enableCurrentLimit(true);
         }
+        this.rotatorMotor.enableCurrentLimit(currentLimitConfig.rotatorMotorLimitingEnabled);
 
         this.driveMotor.setInverted(driveMotorConfig.inverted);
         this.rotatorMotor.setInverted(rotatorMotorConfig.inverted);
