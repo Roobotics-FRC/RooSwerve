@@ -76,9 +76,9 @@ public class SwerveConfig {
          */
         public final double maxWheelSpeed;
         /**
-         * The maximum amperage allowed for the drive motors (to prevent brownout).
+         * The {@link CurrentLimitConfig} configuration for current limiting.
          */
-        public final int amperageLimit;
+        public final CurrentLimitConfig currentLimitConfig;
 
         /**
          * Constructs a new configuration object for all wheels on a swerve bot.
@@ -91,13 +91,13 @@ public class SwerveConfig {
          * @param left2Drive the {@link MotorConfig} for the left 2 drive motor.
          * @param left2Rotate the {@link MotorConfig} for the left 2 rotator motor.
          * @param maxWheelSpeed the max speed, in encoder units, attainable by the drive motors.
-         * @param amperageLimit the max allowed amperage to the drive motors (to prevent brownout).
+         * @param currentLimitConfig the {@link CurrentLimitConfig} for current limiting.
          */
         public WheelsConfig(MotorConfig right1Drive, MotorConfig right1Rotate,
                             MotorConfig right2Drive, MotorConfig right2Rotate,
                             MotorConfig left1Drive, MotorConfig left1Rotate,
                             MotorConfig left2Drive, MotorConfig left2Rotate,
-                            double maxWheelSpeed, int amperageLimit) {
+                            double maxWheelSpeed, CurrentLimitConfig currentLimitConfig) {
             this.right1Drive = right1Drive;
             this.right1Rotate = right1Rotate;
             this.right2Drive = right2Drive;
@@ -108,8 +108,37 @@ public class SwerveConfig {
             this.left2Rotate = left2Rotate;
 
             this.maxWheelSpeed = maxWheelSpeed;
-            this.amperageLimit = amperageLimit;
+            this.currentLimitConfig = currentLimitConfig;
         }
+
+        /**
+         * Constructs a new configuration object for all wheels on a swerve bot (no current limit).
+         * @param right1Drive the {@link MotorConfig} for the right 1 drive motor.
+         * @param right1Rotate the {@link MotorConfig} for the right 1 rotator motor.
+         * @param right2Drive the {@link MotorConfig} for the right 2 drive motor.
+         * @param right2Rotate the {@link MotorConfig} for the right 2 rotator motor.
+         * @param left1Drive the {@link MotorConfig} for the left 1 drive motor.
+         * @param left1Rotate the {@link MotorConfig} for the left 1 rotator motor.
+         * @param left2Drive the {@link MotorConfig} for the left 2 drive motor.
+         * @param left2Rotate the {@link MotorConfig} for the left 2 rotator motor.
+         * @param maxWheelSpeed the max speed, in encoder units, attainable by the drive motors.
+         */
+        public WheelsConfig(MotorConfig right1Drive, MotorConfig right1Rotate,
+                            MotorConfig right2Drive, MotorConfig right2Rotate,
+                            MotorConfig left1Drive, MotorConfig left1Rotate,
+                            MotorConfig left2Drive, MotorConfig left2Rotate,
+                            double maxWheelSpeed) {
+            this(right1Drive,
+                    right1Rotate,
+                    right2Drive,
+                    right2Rotate,
+                    left1Drive,
+                    left1Rotate,
+                    left2Drive,
+                    left2Rotate,
+                    maxWheelSpeed,
+                    CurrentLimitConfig.NONE);
+        } 
     }
 
     /**
@@ -222,5 +251,123 @@ public class SwerveConfig {
             this.trackwidth = trackwidth;
             this.wheelbase = wheelbase;
         }
+    }
+
+    /**
+     * A configuration object representing the current limiting to perform on the drivetrain.
+     */
+    public static final class CurrentLimitConfig {
+        /**
+         * The point beyond which current will be limited (for the rotator motors).
+         */
+        public final int rotatorMotorPeakAmperage;
+        /**
+         * The duration that the current draw is allowed to be over the peak amperage (rotator).
+         */
+        public final int rotatorMotorPeakDuration;
+        /**
+         * The amperage that the current draw is limited to (for the rotator motors).
+         */
+        public final int rotatorMotorContinuousAmperage;
+        /**
+         * Whether or not current limiting is enabled for the rotator motors.
+         * If false, no current limiting configuration is set to the Talons.
+         */
+        public final boolean rotatorMotorLimitingEnabled;
+        /**
+         * The point beyond which current will be limited (for the drive motors).
+         */
+        public final int driveMotorPeakAmperage;
+        /**
+         * The duration that the current draw is allowed to be over the peak amperage (drive).
+         */
+        public final int driveMotorPeakDuration;
+        /**
+         * The amperage that the current draw is limited to (for the drive motors).
+         */
+        public final int driveMotorContinuousAmperage;
+        /**
+         * Whether or not current limiting is enabled for the drive motors.
+         * If false, no current limiting configuration is set to the Talons.
+         */
+        public final boolean driveMotorLimitingEnabled;
+
+        /**
+         * Creates a CurrentLimitConfig object with the specified parameters.
+         * @param rotatorMotorPeakAmperage the point beyond which current will be limited (rotate).
+         * @param rotatorMotorPeakDuration the duration beyond peak amperage before limiting (R).
+         * @param rotatorMotorContinuousAmperage the amperage that current is limited to (rotator).
+         * @param rotatorMotorLimitingEnabled whether current limiting is enabled (rotator motors).
+         * @param driveMotorPeakAmperage the point beyond which current will be limited (drive).
+         * @param driveMotorPeakDuration the duration beyond peak amperage before limiting (drive).
+         * @param driveMotorContinuousAmperage the amperage that current is limited to (drive).
+         * @param driveMotorLimitingEnabled whether current limiting is enabled (rotator motors).
+         */
+        public CurrentLimitConfig(int rotatorMotorPeakAmperage,
+                                  int rotatorMotorPeakDuration,
+                                  int rotatorMotorContinuousAmperage,
+                                  boolean rotatorMotorLimitingEnabled,
+                                  int driveMotorPeakAmperage,
+                                  int driveMotorPeakDuration,
+                                  int driveMotorContinuousAmperage,
+                                  boolean driveMotorLimitingEnabled) {
+            this.rotatorMotorPeakAmperage = rotatorMotorPeakAmperage;
+            this.rotatorMotorPeakDuration = rotatorMotorPeakDuration;
+            this.rotatorMotorContinuousAmperage = rotatorMotorContinuousAmperage;
+            this.rotatorMotorLimitingEnabled = rotatorMotorLimitingEnabled;
+            this.driveMotorPeakAmperage = driveMotorPeakAmperage;
+            this.driveMotorPeakDuration = driveMotorPeakDuration;
+            this.driveMotorContinuousAmperage = driveMotorContinuousAmperage;
+            this.driveMotorLimitingEnabled = driveMotorLimitingEnabled;
+        }
+
+        /**
+         * Creates a CurrentLimitConfig object with the specified limit and exceedance duration.
+         * The limit and duration are used for both the drive and rotator motors.
+         * Once the current draw has been over the limit for the specified duration,
+         *   it is capped at the limit.
+         * @param amperageLimit the amperage limit for both the drive and rotator motors.
+         * @param peakDuration the time that excessive current draw is allowed before limiting.
+         */
+        public CurrentLimitConfig(int amperageLimit, int peakDuration) {
+            this(amperageLimit,
+                    peakDuration,
+                    amperageLimit,
+                    true,
+                    amperageLimit,
+                    peakDuration,
+                    amperageLimit,
+                    true);
+        }
+
+        /**
+         * Creates a CurrentLimitConfig object with the specified limit and exceedance duration.
+         * Different values are given for the drive and rotator motors.
+         * Once the current draw has been over the limit for the specified duration,
+         *   it is capped at the limit.
+         * @param driveMotorAmperageLimit the amperage limit for the drive motors.
+         * @param driveMotorPeakDuration the time that excessive current draw is allowed (drive).
+         * @param rotatorMotorAmperageLimit the amperage limit for the rotator motors.
+         * @param rotatorMotorPeakDuration  the time that excessive current draw is allowed (R).
+         */
+        public CurrentLimitConfig(int driveMotorAmperageLimit,
+                                  int driveMotorPeakDuration,
+                                  int rotatorMotorAmperageLimit,
+                                  int rotatorMotorPeakDuration) {
+            this(rotatorMotorAmperageLimit,
+                    rotatorMotorPeakDuration,
+                    rotatorMotorAmperageLimit,
+                    true,
+                    driveMotorAmperageLimit,
+                    driveMotorPeakDuration,
+                    driveMotorAmperageLimit,
+                    true);
+        }
+
+        /**
+         * A current limit configuration for no current limiting.
+         */
+        public static final CurrentLimitConfig NONE =
+                new CurrentLimitConfig(0, 0, 0, false, 0, 0, 0, false);
     }
 }

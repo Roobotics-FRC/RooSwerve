@@ -83,16 +83,16 @@ public abstract class SwerveDrivetrain extends Subsystem {
     protected SwerveDrivetrain(SwerveConfig config) {
         this.right1 = new SwerveWheel(WheelID.RIGHT_1,
                 config.wheels.right1Drive, config.wheels.right1Rotate,
-                config.wheels.maxWheelSpeed, config.wheels.amperageLimit);
+                config.wheels.maxWheelSpeed, config.wheels.currentLimitConfig);
         this.right2 = new SwerveWheel(WheelID.RIGHT_2,
                 config.wheels.right2Drive, config.wheels.right2Rotate,
-                config.wheels.maxWheelSpeed, config.wheels.amperageLimit);
+                config.wheels.maxWheelSpeed, config.wheels.currentLimitConfig);
         this.left1 = new SwerveWheel(WheelID.LEFT_1,
                 config.wheels.left1Drive, config.wheels.left1Rotate,
-                config.wheels.maxWheelSpeed, config.wheels.amperageLimit);
+                config.wheels.maxWheelSpeed, config.wheels.currentLimitConfig);
         this.left2 = new SwerveWheel(WheelID.LEFT_2,
                 config.wheels.left2Drive, config.wheels.left2Rotate,
-                config.wheels.maxWheelSpeed, config.wheels.amperageLimit);
+                config.wheels.maxWheelSpeed, config.wheels.currentLimitConfig);
 
         this.pigeon = new PigeonIMU(config.pigeonID);
         this.initialAngle = getPigeonYawRaw();
