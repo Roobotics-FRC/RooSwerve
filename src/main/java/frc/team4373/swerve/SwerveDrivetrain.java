@@ -335,9 +335,17 @@ public abstract class SwerveDrivetrain extends Subsystem {
     }
 
     /**
-     * Resets the pigeon's yaw to consider the current orientation field-forward.
+     * Resets the pigeon's yaw to consider the current orientation field-forward (zero degrees).
      */
     public void resetPigeonYaw() {
         this.initialAngle = this.getPigeonYawRaw();
+    }
+
+    /**
+     * Sets the pigeon's yaw to be a given value at the current position.
+     * @param angle the value, in degrees, that the pigeon should have at the current position..
+     */
+    public void setPigeonYaw(double angle) {
+        this.initialAngle = this.getPigeonYawRaw() + angle;
     }
 }
