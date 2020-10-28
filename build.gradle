@@ -10,6 +10,7 @@ plugins {
     id "edu.wpi.first.GradleRIO" version "2020.1.2"
     id "idea"
     id "com.github.spotbugs" version "3.0.0"
+    id "maven-publish"
 }
 
 group 'frc.team4373'
@@ -53,6 +54,27 @@ task gitsetup {
 
 task version {
     print version
+}
+
+publishing {
+    repositories {
+        maven {
+            name = "GitHubPackageRegistry"
+            url = uri("https://maven.pkg.github.com/Roobotics-FRC/RooSwerve")
+            credentials {
+                username = findProperty("USERNAME") ?: System.getenv("GITHUB_ACTOR")
+                password = findProperty("GITHUB_API_TOKEN") ?: System.getenv("GITHUB_TOKEN")
+            }
+        }
+    }
+    publications {
+        rooswerve(MavenPublication) {
+            groupId = group
+            artifactId = "rooswerve"
+
+            from components.java
+        }
+    }
 }
 
 // Defining my dependencies. In this case, WPILib (+ friends), and vendor libraries.

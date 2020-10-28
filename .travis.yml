@@ -20,6 +20,18 @@ jobs:
     - stage: deploy
       name: "Update documentation"
       script: scripts/docs.sh
+    - stage: deploy
+      name: "Deploy to GitHub Package Registry"
+      script: ./gradlew jar
+      deploy:
+        provider: releases
+        api_key: "$GITHUB_TOKEN"
+        file_glob: true
+        file: "build/libs/*"
+        skip_cleanup: true
+        name: "Version $(./gradlew version -q)"
+        on:
+          tags: true
 
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
