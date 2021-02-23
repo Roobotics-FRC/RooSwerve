@@ -53,7 +53,13 @@ task gitsetup {
 }
 
 task version {
-    print version
+    doLast {
+        println version
+    }
+}
+
+test {
+    useJUnitPlatform()
 }
 
 publishing {
