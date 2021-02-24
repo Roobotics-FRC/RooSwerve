@@ -31,7 +31,7 @@ class SwerveInputTransformTest {
             out.println();
             out.println("import org.junit.jupiter.api.*;");
             out.println();
-            out.println("import static org.junit.jupiter.api.Assertions.assertTrue;");
+            out.println("import static org.junit.jupiter.api.Assertions.fail;");
             out.println();
             out.println("class SwerveInputTransformConsistencyTest {");
 
@@ -49,11 +49,15 @@ class SwerveInputTransformTest {
                                     ((double) rotation)/4, ((double) x)/4, ((double) y)/4, imuAngle);
                             out.println("\t\tWheelVector.VectorSet set = transform.processNorthUp("
                                     + ((double) rotation)/4 + ", " + ((double) x)/4 + ", " + ((double) y)/4 + ", " + imuAngle + ");");
-                            out.println("\t\tassertTrue(set.equals(new WheelVector.VectorSet(");
-                            out.println("                                new WheelVector(" + set.right1.speed + ", " + set.right1.angle + "),");
-                            out.println("                                new WheelVector(" + set.right2.speed + ", " + set.right2.angle + "),");
-                            out.println("                                new WheelVector(" + set.left1.speed + ", " + set.left1.angle + "),");
-                            out.println("                                new WheelVector(" + set.left2.speed + ", " + set.left2.angle + "))));");
+                            out.println("\t\tWheelVector.VectorSet expected = new WheelVector.VectorSet(");
+                            out.println("\t\t\t\tnew WheelVector(" + set.right1.speed + ", " + set.right1.angle + "),");
+                            out.println("\t\t\t\tnew WheelVector(" + set.right2.speed + ", " + set.right2.angle + "),");
+                            out.println("\t\t\t\tnew WheelVector(" + set.left1.speed + ", " + set.left1.angle + "),");
+                            out.println("\t\t\t\tnew WheelVector(" + set.left2.speed + ", " + set.left2.angle + "));");
+                            out.println("\t\tboolean equal = set.equals(expected);");
+                            out.println("\t\tif (!equal) {");
+                            out.println("\t\t\tfail(\"VectorSets do not match (processing: " + ((double) rotation)/4 + ", " + ((double) x)/4 + ", " + ((double) y)/4 + ", " + imuAngle + ")\\n\\t  got:       \" + set.toString() + \"\\n\\t  expected:  \" + expected.toString());");
+                            out.println("\t\t}");
                             out.println("\t}");
                             out.println();
                         }
