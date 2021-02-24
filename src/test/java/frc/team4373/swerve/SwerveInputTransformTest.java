@@ -18,7 +18,8 @@ class SwerveInputTransformTest {
 
     // @Test
     void generateConsistencyTest() {
-        File file = new File("./src/test/java/frc/team4373/swerve/SwerveInputTransformConsistencyTest.java");
+        File file = new File(
+                "./src/test/java/frc/team4373/swerve/SwerveInputTransformConsistencyTest.java");
         try {
             if (file.createNewFile()) {
                 System.out.println("Created new file SwerveInputTransformConsistencyTest.java");
@@ -37,28 +38,49 @@ class SwerveInputTransformTest {
 
             SwerveInputTransform transform = new SwerveInputTransform(24, 24);
             int i = 0;
-            out.println("\tSwerveInputTransform transform = new SwerveInputTransform(24, 24);");
+            out.println("    SwerveInputTransform transform = new SwerveInputTransform(24, 24);");
             out.println();
             for (int x = 0; x <= 4; x++) {
                 for (int y = 0; y <= 4; y++) {
                     for (int rotation = 0; rotation <= 4; rotation++) {
                         for (int imuAngle = 0; imuAngle < 360; imuAngle = imuAngle + 60) {
-                            out.println("\t@Test");
-                            out.println("\tvoid test" + String.format("%03d", ++i) + "() {");
+                            out.println("    @Test");
+                            out.println("    void test" + String.format("%03d", ++i) + "() {");
                             WheelVector.VectorSet set = transform.processNorthUp(
-                                    ((double) rotation)/4, ((double) x)/4, ((double) y)/4, imuAngle);
-                            out.println("\t\tWheelVector.VectorSet set = transform.processNorthUp("
-                                    + ((double) rotation)/4 + ", " + ((double) x)/4 + ", " + ((double) y)/4 + ", " + imuAngle + ");");
-                            out.println("\t\tWheelVector.VectorSet expected = new WheelVector.VectorSet(");
-                            out.println("\t\t\t\tnew WheelVector(" + set.right1.speed + ", " + set.right1.angle + "),");
-                            out.println("\t\t\t\tnew WheelVector(" + set.right2.speed + ", " + set.right2.angle + "),");
-                            out.println("\t\t\t\tnew WheelVector(" + set.left1.speed + ", " + set.left1.angle + "),");
-                            out.println("\t\t\t\tnew WheelVector(" + set.left2.speed + ", " + set.left2.angle + "));");
-                            out.println("\t\tboolean equal = set.equals(expected);");
-                            out.println("\t\tif (!equal) {");
-                            out.println("\t\t\tfail(\"VectorSets do not match (processing: " + ((double) rotation)/4 + ", " + ((double) x)/4 + ", " + ((double) y)/4 + ", " + imuAngle + ")\\n\\t  got:       \" + set.toString() + \"\\n\\t  expected:  \" + expected.toString());");
-                            out.println("\t\t}");
-                            out.println("\t}");
+                                    ((double) rotation) / 4,
+                                    ((double) x) / 4,
+                                    ((double) y) / 4,
+                                    imuAngle);
+                            out.println("        WheelVector.VectorSet set"
+                                    + " = transform.processNorthUp("
+                                    + ((double) rotation) / 4 + ", "
+                                    + ((double) x) / 4 + ", "
+                                    + ((double) y) / 4 + ", "
+                                    + imuAngle + ");");
+                            out.println("        WheelVector.VectorSet expected"
+                                    + " = new WheelVector.VectorSet(");
+                            out.println("                new WheelVector("
+                                    + set.right1.speed + ", " + set.right1.angle + "),");
+                            out.println("                new WheelVector("
+                                    + set.right2.speed + ", " + set.right2.angle + "),");
+                            out.println("                new WheelVector("
+                                    + set.left1.speed + ", " + set.left1.angle + "),");
+                            out.println("                new WheelVector("
+                                    + set.left2.speed + ", " + set.left2.angle + "));");
+                            out.println("        boolean equal = set.equals(expected);");
+                            out.println("        if (!equal) {");
+                            out.println("            fail(\"VectorSets do not match\"\n"
+                                    + "                    + \"(processing: "
+                                    + "rotation=" + ((double) rotation) / 4
+                                    + ", x=" + ((double) x) / 4
+                                    + ", y=" + ((double) y) / 4
+                                    + ", robotAngle=" + imuAngle + ")\"");
+                            out.print("                    + \"\\n\\t  ");
+                            out.println("got:       \" + set.toString()");
+                            out.print("                    + \"\\n\\t  ");
+                            out.println("expected:  \" + expected.toString());");
+                            out.println("        }");
+                            out.println("    }");
                             out.println();
                         }
                     }
