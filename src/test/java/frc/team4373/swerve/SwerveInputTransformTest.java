@@ -108,10 +108,10 @@ class SwerveInputTransformTest {
 
         WheelVector.VectorSet set5 = transform.processTranslation(0.5, 1);
         assertTrue(set5.equals(new WheelVector.VectorSet(
-                new WheelVector(1, 90 - Math.atan(2)),
-                new WheelVector(1, 90 - Math.atan(2)),
-                new WheelVector(1, 90 - Math.atan(2)),
-                new WheelVector(1, 90 - Math.atan(2)))));
+                new WheelVector(1, 90 - Math.toDegrees(Math.atan(2))),
+                new WheelVector(1, 90 - Math.toDegrees(Math.atan(2))),
+                new WheelVector(1, 90 - Math.toDegrees(Math.atan(2))),
+                new WheelVector(1, 90 - Math.toDegrees(Math.atan(2))))));
 
         WheelVector.VectorSet set6 = transform.processTranslation(0.1, 0.1);
         assertTrue(set6.equals(new WheelVector.VectorSet(
