@@ -2,7 +2,8 @@ package frc.team4373.swerve;
 
 import org.junit.jupiter.api.*;
 
-import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import java.io.*;
+
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class SwerveInputTransformTest {
@@ -13,6 +14,59 @@ class SwerveInputTransformTest {
 
     @AfterEach
     void tearDown() {
+    }
+
+    // @Test
+    void generateConsistencyTest() {
+        File file = new File("./src/test/java/frc/team4373/swerve/SwerveInputTransformConsistencyTest.java");
+        try {
+            if (file.createNewFile()) {
+                System.out.println("Created new file SwerveInputTransformConsistencyTest.java");
+            } else {
+                System.out.println("File SwerveInputTransformConsistencyTest.java already exists");
+            }
+            PrintStream out = new PrintStream(file);
+
+            out.println("package frc.team4373.swerve;");
+            out.println();
+            out.println("import org.junit.jupiter.api.*;");
+            out.println();
+            out.println("import static org.junit.jupiter.api.Assertions.assertTrue;");
+            out.println();
+            out.println("class SwerveInputTransformConsistencyTest {");
+
+            SwerveInputTransform transform = new SwerveInputTransform(24, 24);
+            int i = 0;
+            out.println("\tSwerveInputTransform transform = new SwerveInputTransform(24, 24);");
+            out.println();
+            for (int x = 0; x <= 4; x++) {
+                for (int y = 0; y <= 4; y++) {
+                    for (int rotation = 0; rotation <= 4; rotation++) {
+                        for (int imuAngle = 0; imuAngle < 360; imuAngle = imuAngle + 60) {
+                            out.println("\t@Test");
+                            out.println("\tvoid test" + String.format("%03d", ++i) + "() {");
+                            WheelVector.VectorSet set = transform.processNorthUp(
+                                    ((double) rotation)/4, ((double) x)/4, ((double) y)/4, imuAngle);
+                            out.println("\t\tWheelVector.VectorSet set = transform.processNorthUp("
+                                    + ((double) rotation)/4 + ", " + ((double) x)/4 + ", " + ((double) y)/4 + ", " + imuAngle + ");");
+                            out.println("\t\tassertTrue(set.equals(new WheelVector.VectorSet(");
+                            out.println("                                new WheelVector(" + set.right1.speed + ", " + set.right1.angle + "),");
+                            out.println("                                new WheelVector(" + set.right2.speed + ", " + set.right2.angle + "),");
+                            out.println("                                new WheelVector(" + set.left1.speed + ", " + set.left1.angle + "),");
+                            out.println("                                new WheelVector(" + set.left2.speed + ", " + set.left2.angle + "))));");
+                            out.println("\t}");
+                            out.println();
+                        }
+                    }
+                }
+            }
+            out.println("}");
+            System.out.println("\n" + i + " tests generated.");
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @Test

@@ -60,6 +60,16 @@ task version {
 
 test {
     useJUnitPlatform()
+    filter {
+        excludeTestsMatching "SwerveInputTransformConsistencyTest"
+    }
+}
+
+task consistencyTest(type: Test) {
+    useJUnitPlatform()
+    filter {
+        includeTestsMatching "SwerveInputTransformConsistencyTest"
+    }
 }
 
 publishing {
