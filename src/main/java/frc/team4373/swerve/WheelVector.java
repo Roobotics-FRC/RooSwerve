@@ -97,7 +97,7 @@ public class WheelVector {
     }
 
     public boolean equals(WheelVector vector) {
-        return this.speed - vector.speed < SwerveConstants.FP_EQUALITY_THRESHOLD
-                && this.angle - vector.angle < SwerveConstants.FP_EQUALITY_THRESHOLD;
+        return Math.abs(this.speed - vector.speed) < SwerveConstants.FP_EQUALITY_THRESHOLD
+                && Math.abs(this.angle - vector.angle) < SwerveConstants.FP_EQUALITY_THRESHOLD;
     }
 }
