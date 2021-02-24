@@ -9,7 +9,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test001() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.0, 0.0, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.0, 0.0, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.0, 0.0),
                 new WheelVector(0.0, 0.0),
@@ -18,7 +18,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.0, y=0.0, robotAngle=0)"
+                    + "(processing: rotation=0.0, x=0.0, y=0.0, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -26,7 +26,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test002() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.0, 0.0, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.0, 0.0, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.0, 0.0),
                 new WheelVector(0.0, 0.0),
@@ -35,7 +35,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.0, y=0.0, robotAngle=60)"
+                    + "(processing: rotation=0.0, x=0.0, y=0.0, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -43,7 +43,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test003() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.0, 0.0, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.0, 0.0, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.0, 0.0),
                 new WheelVector(0.0, -0.0),
@@ -52,7 +52,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.0, y=0.0, robotAngle=120)"
+                    + "(processing: rotation=0.0, x=0.0, y=0.0, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -60,7 +60,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test004() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.0, 0.0, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.0, 0.0, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.0, 0.0),
                 new WheelVector(0.0, -0.0),
@@ -69,7 +69,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.0, y=0.0, robotAngle=180)"
+                    + "(processing: rotation=0.0, x=0.0, y=0.0, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -77,7 +77,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test005() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.0, 0.0, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.0, 0.0, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.0, 180.0),
                 new WheelVector(0.0, 180.0),
@@ -86,7 +86,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.0, y=0.0, robotAngle=240)"
+                    + "(processing: rotation=0.0, x=0.0, y=0.0, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -94,7 +94,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test006() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.0, 0.0, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.0, 0.0, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.0, 0.0),
                 new WheelVector(0.0, 0.0),
@@ -103,7 +103,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.0, y=0.0, robotAngle=300)"
+                    + "(processing: rotation=0.0, x=0.0, y=0.0, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -111,7 +111,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test007() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.0, 0.0, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.0, 0.0, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.25, 135.0),
                 new WheelVector(0.25, -135.0),
@@ -120,7 +120,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.0, y=0.0, robotAngle=0)"
+                    + "(processing: rotation=0.25, x=0.0, y=0.0, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -128,7 +128,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test008() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.0, 0.0, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.0, 0.0, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.25, 135.0),
                 new WheelVector(0.25, -135.0),
@@ -137,7 +137,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.0, y=0.0, robotAngle=60)"
+                    + "(processing: rotation=0.25, x=0.0, y=0.0, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -145,7 +145,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test009() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.0, 0.0, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.0, 0.0, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.25, 135.0),
                 new WheelVector(0.25, -135.0),
@@ -154,7 +154,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.0, y=0.0, robotAngle=120)"
+                    + "(processing: rotation=0.25, x=0.0, y=0.0, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -162,7 +162,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test010() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.0, 0.0, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.0, 0.0, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.25, 135.0),
                 new WheelVector(0.25, -135.0),
@@ -171,7 +171,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.0, y=0.0, robotAngle=180)"
+                    + "(processing: rotation=0.25, x=0.0, y=0.0, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -179,7 +179,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test011() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.0, 0.0, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.0, 0.0, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.25, 135.0),
                 new WheelVector(0.25, -135.0),
@@ -188,7 +188,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.0, y=0.0, robotAngle=240)"
+                    + "(processing: rotation=0.25, x=0.0, y=0.0, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -196,7 +196,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test012() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.0, 0.0, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.0, 0.0, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.25, 135.0),
                 new WheelVector(0.25, -135.0),
@@ -205,7 +205,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.0, y=0.0, robotAngle=300)"
+                    + "(processing: rotation=0.25, x=0.0, y=0.0, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -213,7 +213,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test013() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.0, 0.0, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.0, 0.0, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5, 135.0),
                 new WheelVector(0.5, -135.0),
@@ -222,7 +222,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.0, y=0.0, robotAngle=0)"
+                    + "(processing: rotation=0.5, x=0.0, y=0.0, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -230,7 +230,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test014() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.0, 0.0, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.0, 0.0, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5, 135.0),
                 new WheelVector(0.5, -135.0),
@@ -239,7 +239,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.0, y=0.0, robotAngle=60)"
+                    + "(processing: rotation=0.5, x=0.0, y=0.0, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -247,7 +247,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test015() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.0, 0.0, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.0, 0.0, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5, 135.0),
                 new WheelVector(0.5, -135.0),
@@ -256,7 +256,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.0, y=0.0, robotAngle=120)"
+                    + "(processing: rotation=0.5, x=0.0, y=0.0, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -264,7 +264,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test016() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.0, 0.0, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.0, 0.0, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5, 135.0),
                 new WheelVector(0.5, -135.0),
@@ -273,7 +273,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.0, y=0.0, robotAngle=180)"
+                    + "(processing: rotation=0.5, x=0.0, y=0.0, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -281,7 +281,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test017() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.0, 0.0, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.0, 0.0, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5, 135.0),
                 new WheelVector(0.5, -135.0),
@@ -290,7 +290,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.0, y=0.0, robotAngle=240)"
+                    + "(processing: rotation=0.5, x=0.0, y=0.0, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -298,7 +298,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test018() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.0, 0.0, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.0, 0.0, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5, 135.0),
                 new WheelVector(0.5, -135.0),
@@ -307,7 +307,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.0, y=0.0, robotAngle=300)"
+                    + "(processing: rotation=0.5, x=0.0, y=0.0, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -315,7 +315,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test019() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.0, 0.0, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.0, 0.0, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7500000000000001, 135.0),
                 new WheelVector(0.7500000000000001, -135.0),
@@ -324,7 +324,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.0, y=0.0, robotAngle=0)"
+                    + "(processing: rotation=0.75, x=0.0, y=0.0, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -332,7 +332,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test020() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.0, 0.0, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.0, 0.0, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7500000000000001, 135.0),
                 new WheelVector(0.7500000000000001, -135.0),
@@ -341,7 +341,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.0, y=0.0, robotAngle=60)"
+                    + "(processing: rotation=0.75, x=0.0, y=0.0, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -349,7 +349,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test021() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.0, 0.0, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.0, 0.0, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7500000000000001, 135.0),
                 new WheelVector(0.7500000000000001, -135.0),
@@ -358,7 +358,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.0, y=0.0, robotAngle=120)"
+                    + "(processing: rotation=0.75, x=0.0, y=0.0, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -366,7 +366,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test022() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.0, 0.0, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.0, 0.0, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7500000000000001, 135.0),
                 new WheelVector(0.7500000000000001, -135.0),
@@ -375,7 +375,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.0, y=0.0, robotAngle=180)"
+                    + "(processing: rotation=0.75, x=0.0, y=0.0, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -383,7 +383,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test023() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.0, 0.0, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.0, 0.0, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7500000000000001, 135.0),
                 new WheelVector(0.7500000000000001, -135.0),
@@ -392,7 +392,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.0, y=0.0, robotAngle=240)"
+                    + "(processing: rotation=0.75, x=0.0, y=0.0, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -400,7 +400,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test024() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.0, 0.0, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.0, 0.0, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7500000000000001, 135.0),
                 new WheelVector(0.7500000000000001, -135.0),
@@ -409,7 +409,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.0, y=0.0, robotAngle=300)"
+                    + "(processing: rotation=0.75, x=0.0, y=0.0, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -417,7 +417,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test025() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.0, 0.0, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.0, 0.0, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 135.0),
                 new WheelVector(1.0, -135.0),
@@ -426,7 +426,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.0, y=0.0, robotAngle=0)"
+                    + "(processing: rotation=1.0, x=0.0, y=0.0, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -434,7 +434,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test026() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.0, 0.0, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.0, 0.0, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 135.0),
                 new WheelVector(1.0, -135.0),
@@ -443,7 +443,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.0, y=0.0, robotAngle=60)"
+                    + "(processing: rotation=1.0, x=0.0, y=0.0, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -451,7 +451,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test027() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.0, 0.0, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.0, 0.0, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 135.0),
                 new WheelVector(1.0, -135.0),
@@ -460,7 +460,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.0, y=0.0, robotAngle=120)"
+                    + "(processing: rotation=1.0, x=0.0, y=0.0, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -468,7 +468,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test028() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.0, 0.0, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.0, 0.0, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 135.0),
                 new WheelVector(1.0, -135.0),
@@ -477,7 +477,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.0, y=0.0, robotAngle=180)"
+                    + "(processing: rotation=1.0, x=0.0, y=0.0, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -485,7 +485,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test029() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.0, 0.0, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.0, 0.0, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 135.0),
                 new WheelVector(1.0, -135.0),
@@ -494,7 +494,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.0, y=0.0, robotAngle=240)"
+                    + "(processing: rotation=1.0, x=0.0, y=0.0, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -502,7 +502,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test030() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.0, 0.0, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.0, 0.0, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 135.0),
                 new WheelVector(1.0, -135.0),
@@ -511,7 +511,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.0, y=0.0, robotAngle=300)"
+                    + "(processing: rotation=1.0, x=0.0, y=0.0, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -519,7 +519,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test031() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.0, 0.25, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.0, 0.25, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.25, 0.0),
                 new WheelVector(0.25, 0.0),
@@ -528,7 +528,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.0, y=0.25, robotAngle=0)"
+                    + "(processing: rotation=0.0, x=0.0, y=0.25, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -536,7 +536,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test032() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.0, 0.25, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.0, 0.25, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.25, -59.99999999999999),
                 new WheelVector(0.25, -59.99999999999999),
@@ -545,7 +545,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.0, y=0.25, robotAngle=60)"
+                    + "(processing: rotation=0.0, x=0.0, y=0.25, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -553,7 +553,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test033() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.0, 0.25, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.0, 0.25, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.24999999999999997, -120.00000000000001),
                 new WheelVector(0.24999999999999997, -120.00000000000001),
@@ -562,7 +562,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.0, y=0.25, robotAngle=120)"
+                    + "(processing: rotation=0.0, x=0.0, y=0.25, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -570,7 +570,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test034() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.0, 0.25, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.0, 0.25, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.25, -180.0),
                 new WheelVector(0.25, -180.0),
@@ -579,7 +579,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.0, y=0.25, robotAngle=180)"
+                    + "(processing: rotation=0.0, x=0.0, y=0.25, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -587,7 +587,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test035() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.0, 0.25, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.0, 0.25, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.25, 120.00000000000004),
                 new WheelVector(0.25, 120.00000000000004),
@@ -596,7 +596,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.0, y=0.25, robotAngle=240)"
+                    + "(processing: rotation=0.0, x=0.0, y=0.25, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -604,7 +604,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test036() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.0, 0.25, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.0, 0.25, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.25, 59.99999999999999),
                 new WheelVector(0.25, 59.99999999999999),
@@ -613,7 +613,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.0, y=0.25, robotAngle=300)"
+                    + "(processing: rotation=0.0, x=0.0, y=0.25, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -621,7 +621,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test037() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.0, 0.25, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.0, 0.25, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.19134171618254492, 67.50000000000001),
                 new WheelVector(0.19134171618254492, -67.50000000000001),
@@ -630,7 +630,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.0, y=0.25, robotAngle=0)"
+                    + "(processing: rotation=0.25, x=0.0, y=0.25, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -638,7 +638,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test038() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.0, 0.25, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.0, 0.25, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.06526309611002577, -142.50000000000003),
                 new WheelVector(0.39667667014561764, -97.5),
@@ -647,7 +647,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.0, y=0.25, robotAngle=60)"
+                    + "(processing: rotation=0.25, x=0.0, y=0.25, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -655,7 +655,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test039() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.0, 0.25, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.0, 0.25, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.30438071450436033, -172.5),
                 new WheelVector(0.49572243068690525, -127.50000000000001),
@@ -664,7 +664,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.0, y=0.25, robotAngle=120)"
+                    + "(processing: rotation=0.25, x=0.0, y=0.25, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -672,7 +672,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test040() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.0, 0.25, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.0, 0.25, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.46193976625564337, 157.5),
                 new WheelVector(0.46193976625564337, -157.5),
@@ -681,7 +681,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.0, y=0.25, robotAngle=180)"
+                    + "(processing: rotation=0.25, x=0.0, y=0.25, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -689,7 +689,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test041() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.0, 0.25, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.0, 0.25, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.4957224306869052, 127.50000000000001),
                 new WheelVector(0.3043807145043604, 172.50000000000003),
@@ -698,7 +698,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.0, y=0.25, robotAngle=240)"
+                    + "(processing: rotation=0.25, x=0.0, y=0.25, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -706,7 +706,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test042() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.0, 0.25, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.0, 0.25, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.39667667014561764, 97.5),
                 new WheelVector(0.06526309611002577, 142.50000000000003),
@@ -715,7 +715,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.0, y=0.25, robotAngle=300)"
+                    + "(processing: rotation=0.25, x=0.0, y=0.25, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -723,7 +723,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test043() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.0, 0.25, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.0, 0.25, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.3684064395519752, 106.32494993689525),
                 new WheelVector(0.3684064395519752, -106.32494993689525),
@@ -732,7 +732,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.0, y=0.25, robotAngle=0)"
+                    + "(processing: rotation=0.5, x=0.0, y=0.25, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -740,7 +740,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test044() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.0, 0.25, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.0, 0.25, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.26649304573990845, 149.0519131142261),
                 new WheelVector(0.614169977510811, -111.84727287354741),
@@ -749,7 +749,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.0, y=0.25, robotAngle=60)"
+                    + "(processing: rotation=0.5, x=0.0, y=0.25, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -757,7 +757,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test045() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.0, 0.25, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.0, 0.25, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.4977903561986409, 164.01946591599656),
                 new WheelVector(0.7442993057717218, -130.01276527436752),
@@ -766,7 +766,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.0, y=0.25, robotAngle=120)"
+                    + "(processing: rotation=0.5, x=0.0, y=0.25, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -774,7 +774,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test046() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.0, 0.25, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.0, 0.25, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.6994831629829533, 149.6388065951783),
                 new WheelVector(0.6994831629829534, -149.6388065951783),
@@ -783,7 +783,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.0, y=0.25, robotAngle=180)"
+                    + "(processing: rotation=0.5, x=0.0, y=0.25, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -791,7 +791,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test047() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.0, 0.25, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.0, 0.25, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7442993057717218, 130.01276527436755),
                 new WheelVector(0.4977903561986411, -164.01946591599653),
@@ -800,7 +800,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.0, y=0.25, robotAngle=240)"
+                    + "(processing: rotation=0.5, x=0.0, y=0.25, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -808,7 +808,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test048() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.0, 0.25, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.0, 0.25, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.614169977510811, 111.84727287354741),
                 new WheelVector(0.26649304573990845, -149.0519131142261),
@@ -817,7 +817,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.0, y=0.25, robotAngle=300)"
+                    + "(processing: rotation=0.5, x=0.0, y=0.25, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -825,7 +825,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test049() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.0, 0.25, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.0, 0.25, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5998624484455122, 117.8607277622439),
                 new WheelVector(0.5998624484455122, -117.8607277622439),
@@ -834,7 +834,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.0, y=0.25, robotAngle=0)"
+                    + "(processing: rotation=0.75, x=0.0, y=0.25, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -842,7 +842,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test050() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.0, 0.25, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.0, 0.25, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5126185864184009, 142.25144491522693),
                 new WheelVector(0.8497394553117121, -118.4899848255466),
@@ -851,7 +851,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.0, y=0.25, robotAngle=60)"
+                    + "(processing: rotation=0.75, x=0.0, y=0.25, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -859,7 +859,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test051() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.0, 0.25, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.0, 0.25, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7265967644344109, 154.41122415163315),
                 new WheelVector(0.993590551916835, -131.2661328378322),
@@ -868,7 +868,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.0, y=0.25, robotAngle=120)"
+                    + "(processing: rotation=0.75, x=0.0, y=0.25, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -876,7 +876,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test052() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.0, 0.25, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.0, 0.25, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.9434855817366556, 145.79908049184624),
                 new WheelVector(0.9434855817366556, -145.79908049184624),
@@ -885,7 +885,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.0, y=0.25, robotAngle=180)"
+                    + "(processing: rotation=0.75, x=0.0, y=0.25, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -893,7 +893,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test053() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.0, 0.25, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.0, 0.25, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.993590551916835, 131.2661328378322),
                 new WheelVector(0.7265967644344111, -154.41122415163312),
@@ -902,7 +902,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.0, y=0.25, robotAngle=240)"
+                    + "(processing: rotation=0.75, x=0.0, y=0.25, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -910,7 +910,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test054() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.0, 0.25, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.0, 0.25, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.8497394553117121, 118.4899848255466),
                 new WheelVector(0.5126185864184009, -142.25144491522693),
@@ -919,7 +919,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.0, y=0.25, robotAngle=300)"
+                    + "(processing: rotation=0.75, x=0.0, y=0.25, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -927,7 +927,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test055() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.0, 0.25, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.0, 0.25, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7075659915250843, 122.88051081011038),
                 new WheelVector(0.7075659915250843, -122.88051081011038),
@@ -936,7 +936,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.0, y=0.25, robotAngle=0)"
+                    + "(processing: rotation=1.0, x=0.0, y=0.25, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -944,7 +944,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test056() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.0, 0.25, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.0, 0.25, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.612366357058668, 139.87576260774736),
                 new WheelVector(0.878197812380431, -122.22116310969463),
@@ -953,7 +953,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.0, y=0.25, robotAngle=60)"
+                    + "(processing: rotation=1.0, x=0.0, y=0.25, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -961,7 +961,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test057() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.0, 0.25, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.0, 0.25, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7770206931527175, 149.47689562667077),
                 new WheelVector(1.0, -132.01650125802686),
@@ -970,7 +970,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.0, y=0.25, robotAngle=120)"
+                    + "(processing: rotation=1.0, x=0.0, y=0.25, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -978,7 +978,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test058() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.0, 0.25, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.0, 0.25, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 143.5431548148923),
                 new WheelVector(1.0, -143.5431548148923),
@@ -987,7 +987,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.0, y=0.25, robotAngle=180)"
+                    + "(processing: rotation=1.0, x=0.0, y=0.25, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -995,7 +995,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test059() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.0, 0.25, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.0, 0.25, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 132.01650125802686),
                 new WheelVector(0.7770206931527177, -149.47689562667077),
@@ -1004,7 +1004,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.0, y=0.25, robotAngle=240)"
+                    + "(processing: rotation=1.0, x=0.0, y=0.25, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -1012,7 +1012,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test060() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.0, 0.25, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.0, 0.25, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.878197812380431, 122.22116310969463),
                 new WheelVector(0.612366357058668, -139.87576260774736),
@@ -1021,7 +1021,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.0, y=0.25, robotAngle=300)"
+                    + "(processing: rotation=1.0, x=0.0, y=0.25, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -1029,7 +1029,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test061() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.0, 0.5, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.0, 0.5, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5, 0.0),
                 new WheelVector(0.5, 0.0),
@@ -1038,7 +1038,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.0, y=0.5, robotAngle=0)"
+                    + "(processing: rotation=0.0, x=0.0, y=0.5, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -1046,7 +1046,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test062() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.0, 0.5, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.0, 0.5, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5, -59.99999999999999),
                 new WheelVector(0.5, -59.99999999999999),
@@ -1055,7 +1055,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.0, y=0.5, robotAngle=60)"
+                    + "(processing: rotation=0.0, x=0.0, y=0.5, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -1063,7 +1063,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test063() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.0, 0.5, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.0, 0.5, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.49999999999999994, -120.00000000000001),
                 new WheelVector(0.49999999999999994, -120.00000000000001),
@@ -1072,7 +1072,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.0, y=0.5, robotAngle=120)"
+                    + "(processing: rotation=0.0, x=0.0, y=0.5, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -1080,7 +1080,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test064() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.0, 0.5, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.0, 0.5, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5, -180.0),
                 new WheelVector(0.5, -180.0),
@@ -1089,7 +1089,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.0, y=0.5, robotAngle=180)"
+                    + "(processing: rotation=0.0, x=0.0, y=0.5, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -1097,7 +1097,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test065() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.0, 0.5, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.0, 0.5, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5, 120.00000000000004),
                 new WheelVector(0.5, 120.00000000000004),
@@ -1106,7 +1106,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.0, y=0.5, robotAngle=240)"
+                    + "(processing: rotation=0.0, x=0.0, y=0.5, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -1114,7 +1114,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test066() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.0, 0.5, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.0, 0.5, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5, 59.99999999999999),
                 new WheelVector(0.5, 59.99999999999999),
@@ -1123,7 +1123,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.0, y=0.5, robotAngle=300)"
+                    + "(processing: rotation=0.0, x=0.0, y=0.5, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -1131,7 +1131,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test067() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.0, 0.5, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.0, 0.5, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.36840643955197516, 28.675050063104766),
                 new WheelVector(0.36840643955197516, -28.675050063104766),
@@ -1140,7 +1140,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.0, y=0.5, robotAngle=0)"
+                    + "(processing: rotation=0.25, x=0.0, y=0.5, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -1148,7 +1148,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test068() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.0, 0.5, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.0, 0.5, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.26649304573990845, -74.05191311422608),
                 new WheelVector(0.614169977510811, -83.15272712645259),
@@ -1157,7 +1157,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.0, y=0.5, robotAngle=60)"
+                    + "(processing: rotation=0.25, x=0.0, y=0.5, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -1165,7 +1165,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test069() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.0, 0.5, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.0, 0.5, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.4977903561986408, -149.01946591599656),
                 new WheelVector(0.7442993057717218, -124.98723472563248),
@@ -1174,7 +1174,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.0, y=0.5, robotAngle=120)"
+                    + "(processing: rotation=0.25, x=0.0, y=0.5, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -1182,7 +1182,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test070() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.0, 0.5, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.0, 0.5, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.6994831629829533, 165.3611934048217),
                 new WheelVector(0.6994831629829533, -165.3611934048217),
@@ -1191,7 +1191,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.0, y=0.5, robotAngle=180)"
+                    + "(processing: rotation=0.25, x=0.0, y=0.5, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -1199,7 +1199,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test071() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.0, 0.5, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.0, 0.5, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7442993057717218, 124.9872347256325),
                 new WheelVector(0.49779035619864104, 149.0194659159966),
@@ -1208,7 +1208,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.0, y=0.5, robotAngle=240)"
+                    + "(processing: rotation=0.25, x=0.0, y=0.5, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -1216,7 +1216,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test072() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.0, 0.5, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.0, 0.5, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.614169977510811, 83.15272712645259),
                 new WheelVector(0.26649304573990845, 74.05191311422608),
@@ -1225,7 +1225,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.0, y=0.5, robotAngle=300)"
+                    + "(processing: rotation=0.25, x=0.0, y=0.5, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -1233,7 +1233,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test073() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.0, 0.5, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.0, 0.5, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.38268343236508984, 67.50000000000001),
                 new WheelVector(0.38268343236508984, -67.50000000000001),
@@ -1242,7 +1242,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.0, y=0.5, robotAngle=0)"
+                    + "(processing: rotation=0.5, x=0.0, y=0.5, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -1250,7 +1250,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test074() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.0, 0.5, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.0, 0.5, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.13052619222005155, -142.50000000000003),
                 new WheelVector(0.7933533402912353, -97.5),
@@ -1259,7 +1259,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.0, y=0.5, robotAngle=60)"
+                    + "(processing: rotation=0.5, x=0.0, y=0.5, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -1267,7 +1267,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test075() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.0, 0.5, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.0, 0.5, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.6087614290087207, -172.5),
                 new WheelVector(0.9914448613738105, -127.50000000000001),
@@ -1276,7 +1276,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.0, y=0.5, robotAngle=120)"
+                    + "(processing: rotation=0.5, x=0.0, y=0.5, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -1284,7 +1284,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test076() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.0, 0.5, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.0, 0.5, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.9238795325112867, 157.5),
                 new WheelVector(0.9238795325112867, -157.5),
@@ -1293,7 +1293,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.0, y=0.5, robotAngle=180)"
+                    + "(processing: rotation=0.5, x=0.0, y=0.5, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -1301,7 +1301,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test077() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.0, 0.5, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.0, 0.5, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.9914448613738104, 127.50000000000001),
                 new WheelVector(0.6087614290087208, 172.50000000000003),
@@ -1310,7 +1310,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.0, y=0.5, robotAngle=240)"
+                    + "(processing: rotation=0.5, x=0.0, y=0.5, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -1318,7 +1318,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test078() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.0, 0.5, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.0, 0.5, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7933533402912353, 97.5),
                 new WheelVector(0.13052619222005155, 142.50000000000003),
@@ -1327,7 +1327,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.0, y=0.5, robotAngle=300)"
+                    + "(processing: rotation=0.5, x=0.0, y=0.5, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -1335,7 +1335,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test079() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.0, 0.5, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.0, 0.5, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.4584002243324191, 93.27323494581232),
                 new WheelVector(0.4584002243324191, -93.27323494581232),
@@ -1344,7 +1344,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.0, y=0.5, robotAngle=0)"
+                    + "(processing: rotation=0.75, x=0.0, y=0.5, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -1352,7 +1352,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test080() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.0, 0.5, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.0, 0.5, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.23935885067189017, 160.85541048242075),
                 new WheelVector(0.809286824929511, -106.22484972764532),
@@ -1361,7 +1361,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.0, y=0.5, robotAngle=60)"
+                    + "(processing: rotation=0.75, x=0.0, y=0.5, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -1369,7 +1369,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test081() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.0, 0.5, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.0, 0.5, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.634308674377451, 172.89116948925653),
                 new WheelVector(1.0, -129.0082779986062),
@@ -1378,7 +1378,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.0, y=0.5, robotAngle=120)"
+                    + "(processing: rotation=0.75, x=0.0, y=0.5, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -1386,7 +1386,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test082() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.0, 0.5, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.0, 0.5, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.9999999999999998, 152.76427607960952),
                 new WheelVector(1.0, -152.76427607960952),
@@ -1395,7 +1395,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.0, y=0.5, robotAngle=180)"
+                    + "(processing: rotation=0.75, x=0.0, y=0.5, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -1403,7 +1403,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test083() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.0, 0.5, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.0, 0.5, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 129.00827799860622),
                 new WheelVector(0.6343086743774513, -172.8911694892565),
@@ -1412,7 +1412,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.0, y=0.5, robotAngle=240)"
+                    + "(processing: rotation=0.75, x=0.0, y=0.5, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -1420,7 +1420,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test084() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.0, 0.5, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.0, 0.5, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.809286824929511, 106.22484972764532),
                 new WheelVector(0.23935885067189017, -160.85541048242075),
@@ -1429,7 +1429,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.0, y=0.5, robotAngle=300)"
+                    + "(processing: rotation=0.75, x=0.0, y=0.5, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -1437,7 +1437,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test085() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.0, 0.5, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.0, 0.5, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5266837846116297, 106.32494993689525),
                 new WheelVector(0.5266837846116297, -106.32494993689525),
@@ -1446,7 +1446,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.0, y=0.5, robotAngle=0)"
+                    + "(processing: rotation=1.0, x=0.0, y=0.5, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -1454,7 +1454,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test086() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.0, 0.5, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.0, 0.5, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.35804553849959175, 149.0519131142261),
                 new WheelVector(0.8251653236113299, -111.84727287354741),
@@ -1463,7 +1463,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.0, y=0.5, robotAngle=60)"
+                    + "(processing: rotation=1.0, x=0.0, y=0.5, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -1471,7 +1471,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test087() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.0, 0.5, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.0, 0.5, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.6688040044354339, 164.01946591599656),
                 new WheelVector(1.0, -130.01276527436752),
@@ -1480,7 +1480,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.0, y=0.5, robotAngle=120)"
+                    + "(processing: rotation=1.0, x=0.0, y=0.5, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -1488,7 +1488,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test088() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.0, 0.5, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.0, 0.5, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.9999999999999999, 149.6388065951783),
                 new WheelVector(1.0, -149.6388065951783),
@@ -1497,7 +1497,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.0, y=0.5, robotAngle=180)"
+                    + "(processing: rotation=1.0, x=0.0, y=0.5, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -1505,7 +1505,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test089() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.0, 0.5, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.0, 0.5, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 130.01276527436755),
                 new WheelVector(0.6688040044354341, -164.01946591599653),
@@ -1514,7 +1514,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.0, y=0.5, robotAngle=240)"
+                    + "(processing: rotation=1.0, x=0.0, y=0.5, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -1522,7 +1522,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test090() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.0, 0.5, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.0, 0.5, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.8251653236113299, 111.84727287354741),
                 new WheelVector(0.35804553849959175, -149.0519131142261),
@@ -1531,7 +1531,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.0, y=0.5, robotAngle=300)"
+                    + "(processing: rotation=1.0, x=0.0, y=0.5, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -1539,7 +1539,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test091() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.0, 0.75, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.0, 0.75, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.75, 0.0),
                 new WheelVector(0.75, 0.0),
@@ -1548,7 +1548,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.0, y=0.75, robotAngle=0)"
+                    + "(processing: rotation=0.0, x=0.0, y=0.75, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -1556,7 +1556,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test092() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.0, 0.75, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.0, 0.75, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7500000000000001, -59.99999999999999),
                 new WheelVector(0.7500000000000001, -59.99999999999999),
@@ -1565,7 +1565,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.0, y=0.75, robotAngle=60)"
+                    + "(processing: rotation=0.0, x=0.0, y=0.75, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -1573,7 +1573,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test093() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.0, 0.75, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.0, 0.75, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7499999999999999, -120.00000000000001),
                 new WheelVector(0.7499999999999999, -120.00000000000001),
@@ -1582,7 +1582,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.0, y=0.75, robotAngle=120)"
+                    + "(processing: rotation=0.0, x=0.0, y=0.75, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -1590,7 +1590,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test094() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.0, 0.75, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.0, 0.75, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.75, -180.0),
                 new WheelVector(0.75, -180.0),
@@ -1599,7 +1599,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.0, y=0.75, robotAngle=180)"
+                    + "(processing: rotation=0.0, x=0.0, y=0.75, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -1607,7 +1607,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test095() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.0, 0.75, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.0, 0.75, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.75, 120.00000000000004),
                 new WheelVector(0.75, 120.00000000000004),
@@ -1616,7 +1616,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.0, y=0.75, robotAngle=240)"
+                    + "(processing: rotation=0.0, x=0.0, y=0.75, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -1624,7 +1624,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test096() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.0, 0.75, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.0, 0.75, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7500000000000001, 59.99999999999999),
                 new WheelVector(0.7500000000000001, 59.99999999999999),
@@ -1633,7 +1633,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.0, y=0.75, robotAngle=300)"
+                    + "(processing: rotation=0.0, x=0.0, y=0.75, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -1641,7 +1641,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test097() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.0, 0.75, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.0, 0.75, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5998624484455122, 17.139272237756135),
                 new WheelVector(0.5998624484455122, -17.139272237756135),
@@ -1650,7 +1650,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.0, y=0.75, robotAngle=0)"
+                    + "(processing: rotation=0.25, x=0.0, y=0.75, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -1658,7 +1658,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test098() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.0, 0.75, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.0, 0.75, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5126185864184009, -67.2514449152269),
                 new WheelVector(0.8497394553117121, -76.51001517445341),
@@ -1667,7 +1667,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.0, y=0.75, robotAngle=60)"
+                    + "(processing: rotation=0.25, x=0.0, y=0.75, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -1675,7 +1675,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test099() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.0, 0.75, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.0, 0.75, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7265967644344108, -139.41122415163312),
                 new WheelVector(0.9935905519168348, -123.73386716216781),
@@ -1684,7 +1684,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.0, y=0.75, robotAngle=120)"
+                    + "(processing: rotation=0.25, x=0.0, y=0.75, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -1692,7 +1692,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test100() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.0, 0.75, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.0, 0.75, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.9434855817366555, 169.2009195081538),
                 new WheelVector(0.9434855817366555, -169.20091950815376),
@@ -1701,7 +1701,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.0, y=0.75, robotAngle=180)"
+                    + "(processing: rotation=0.25, x=0.0, y=0.75, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -1709,7 +1709,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test101() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.0, 0.75, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.0, 0.75, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.9935905519168349, 123.73386716216784),
                 new WheelVector(0.7265967644344109, 139.41122415163315),
@@ -1718,7 +1718,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.0, y=0.75, robotAngle=240)"
+                    + "(processing: rotation=0.25, x=0.0, y=0.75, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -1726,7 +1726,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test102() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.0, 0.75, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.0, 0.75, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.8497394553117121, 76.51001517445341),
                 new WheelVector(0.5126185864184009, 67.2514449152269),
@@ -1735,7 +1735,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.0, y=0.75, robotAngle=300)"
+                    + "(processing: rotation=0.25, x=0.0, y=0.75, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -1743,7 +1743,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test103() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.0, 0.75, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.0, 0.75, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.4584002243324191, 41.726765054187695),
                 new WheelVector(0.4584002243324191, -41.726765054187695),
@@ -1752,7 +1752,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.0, y=0.75, robotAngle=0)"
+                    + "(processing: rotation=0.5, x=0.0, y=0.75, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -1760,7 +1760,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test104() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.0, 0.75, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.0, 0.75, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.23935885067189017, -85.85541048242074),
                 new WheelVector(0.8092868249295109, -88.7751502723547),
@@ -1769,7 +1769,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.0, y=0.75, robotAngle=60)"
+                    + "(processing: rotation=0.5, x=0.0, y=0.75, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -1777,7 +1777,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test105() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.0, 0.75, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.0, 0.75, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.6343086743774511, -157.89116948925653),
                 new WheelVector(1.0, -125.99172200139381),
@@ -1786,7 +1786,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.0, y=0.75, robotAngle=120)"
+                    + "(processing: rotation=0.5, x=0.0, y=0.75, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -1794,7 +1794,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test106() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.0, 0.75, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.0, 0.75, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 162.2357239203905),
                 new WheelVector(1.0, -162.23572392039048),
@@ -1803,7 +1803,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.0, y=0.75, robotAngle=180)"
+                    + "(processing: rotation=0.5, x=0.0, y=0.75, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -1811,7 +1811,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test107() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.0, 0.75, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.0, 0.75, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 125.99172200139384),
                 new WheelVector(0.6343086743774513, 157.89116948925655),
@@ -1820,7 +1820,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.0, y=0.75, robotAngle=240)"
+                    + "(processing: rotation=0.5, x=0.0, y=0.75, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -1828,7 +1828,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test108() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.0, 0.75, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.0, 0.75, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.8092868249295109, 88.7751502723547),
                 new WheelVector(0.23935885067189017, 85.85541048242074),
@@ -1837,7 +1837,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.0, y=0.75, robotAngle=300)"
+                    + "(processing: rotation=0.5, x=0.0, y=0.75, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -1845,7 +1845,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test109() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.0, 0.75, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.0, 0.75, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.41421356237309503, 67.50000000000001),
                 new WheelVector(0.41421356237309503, -67.50000000000001),
@@ -1854,7 +1854,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.0, y=0.75, robotAngle=0)"
+                    + "(processing: rotation=0.75, x=0.0, y=0.75, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -1862,7 +1862,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test110() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.0, 0.75, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.0, 0.75, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.1316524975873958, -142.50000000000003),
                 new WheelVector(0.8001991549907407, -97.5),
@@ -1871,7 +1871,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.0, y=0.75, robotAngle=60)"
+                    + "(processing: rotation=0.75, x=0.0, y=0.75, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -1879,7 +1879,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test111() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.0, 0.75, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.0, 0.75, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.6140144073823541, -172.5),
                 new WheelVector(1.0, -127.50000000000001),
@@ -1888,7 +1888,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.0, y=0.75, robotAngle=120)"
+                    + "(processing: rotation=0.75, x=0.0, y=0.75, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -1896,7 +1896,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test112() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.0, 0.75, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.0, 0.75, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 157.5),
                 new WheelVector(1.0, -157.5),
@@ -1905,7 +1905,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.0, y=0.75, robotAngle=180)"
+                    + "(processing: rotation=0.75, x=0.0, y=0.75, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -1913,7 +1913,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test113() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.0, 0.75, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.0, 0.75, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 127.50000000000001),
                 new WheelVector(0.6140144073823545, 172.50000000000003),
@@ -1922,7 +1922,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.0, y=0.75, robotAngle=240)"
+                    + "(processing: rotation=0.75, x=0.0, y=0.75, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -1930,7 +1930,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test114() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.0, 0.75, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.0, 0.75, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.8001991549907407, 97.5),
                 new WheelVector(0.1316524975873958, 142.50000000000003),
@@ -1939,7 +1939,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.0, y=0.75, robotAngle=300)"
+                    + "(processing: rotation=0.75, x=0.0, y=0.75, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -1947,7 +1947,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test115() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.0, 0.75, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.0, 0.75, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.4373913178314939, 86.52868175547141),
                 new WheelVector(0.4373913178314939, -86.52868175547141),
@@ -1956,7 +1956,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.0, y=0.75, robotAngle=0)"
+                    + "(processing: rotation=1.0, x=0.0, y=0.75, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -1964,7 +1964,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test116() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.0, 0.75, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.0, 0.75, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.19423490531978055, 170.16265868624802),
                 new WheelVector(0.8048501160215458, -103.7556802620704),
@@ -1973,7 +1973,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.0, y=0.75, robotAngle=60)"
+                    + "(processing: rotation=1.0, x=0.0, y=0.75, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -1981,7 +1981,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test117() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.0, 0.75, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.0, 0.75, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.6244545533381017, 176.95369793751564),
                 new WheelVector(1.0, -128.57746332458296),
@@ -1990,7 +1990,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.0, y=0.75, robotAngle=120)"
+                    + "(processing: rotation=1.0, x=0.0, y=0.75, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -1998,7 +1998,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test118() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.0, 0.75, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.0, 0.75, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 154.11356470173735),
                 new WheelVector(1.0, -154.11356470173732),
@@ -2007,7 +2007,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.0, y=0.75, robotAngle=180)"
+                    + "(processing: rotation=1.0, x=0.0, y=0.75, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -2015,7 +2015,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test119() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.0, 0.75, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.0, 0.75, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 128.577463324583),
                 new WheelVector(0.624454553338102, -176.95369793751564),
@@ -2024,7 +2024,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.0, y=0.75, robotAngle=240)"
+                    + "(processing: rotation=1.0, x=0.0, y=0.75, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -2032,7 +2032,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test120() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.0, 0.75, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.0, 0.75, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.8048501160215458, 103.7556802620704),
                 new WheelVector(0.19423490531978055, -170.16265868624802),
@@ -2041,7 +2041,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.0, y=0.75, robotAngle=300)"
+                    + "(processing: rotation=1.0, x=0.0, y=0.75, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -2049,7 +2049,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test121() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.0, 1.0, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.0, 1.0, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 0.0),
                 new WheelVector(1.0, 0.0),
@@ -2058,7 +2058,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.0, y=1.0, robotAngle=0)"
+                    + "(processing: rotation=0.0, x=0.0, y=1.0, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -2066,7 +2066,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test122() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.0, 1.0, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.0, 1.0, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, -59.99999999999999),
                 new WheelVector(1.0, -59.99999999999999),
@@ -2075,7 +2075,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.0, y=1.0, robotAngle=60)"
+                    + "(processing: rotation=0.0, x=0.0, y=1.0, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -2083,7 +2083,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test123() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.0, 1.0, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.0, 1.0, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.9999999999999999, -120.00000000000001),
                 new WheelVector(0.9999999999999999, -120.00000000000001),
@@ -2092,7 +2092,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.0, y=1.0, robotAngle=120)"
+                    + "(processing: rotation=0.0, x=0.0, y=1.0, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -2100,7 +2100,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test124() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.0, 1.0, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.0, 1.0, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, -180.0),
                 new WheelVector(1.0, -180.0),
@@ -2109,7 +2109,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.0, y=1.0, robotAngle=180)"
+                    + "(processing: rotation=0.0, x=0.0, y=1.0, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -2117,7 +2117,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test125() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.0, 1.0, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.0, 1.0, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 120.00000000000004),
                 new WheelVector(1.0, 120.00000000000004),
@@ -2126,7 +2126,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.0, y=1.0, robotAngle=240)"
+                    + "(processing: rotation=0.0, x=0.0, y=1.0, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -2134,7 +2134,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test126() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.0, 1.0, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.0, 1.0, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 59.99999999999999),
                 new WheelVector(1.0, 59.99999999999999),
@@ -2143,7 +2143,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.0, y=1.0, robotAngle=300)"
+                    + "(processing: rotation=0.0, x=0.0, y=1.0, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -2151,7 +2151,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test127() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.0, 1.0, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.0, 1.0, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7075659915250843, 12.11948918988963),
                 new WheelVector(0.7075659915250843, -12.11948918988963),
@@ -2160,7 +2160,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.0, y=1.0, robotAngle=0)"
+                    + "(processing: rotation=0.25, x=0.0, y=1.0, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -2168,7 +2168,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test128() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.0, 1.0, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.0, 1.0, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.612366357058668, -64.87576260774736),
                 new WheelVector(0.878197812380431, -72.77883689030537),
@@ -2177,7 +2177,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.0, y=1.0, robotAngle=60)"
+                    + "(processing: rotation=0.25, x=0.0, y=1.0, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -2185,7 +2185,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test129() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.0, 1.0, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.0, 1.0, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7770206931527175, -134.47689562667077),
                 new WheelVector(1.0, -122.98349874197312),
@@ -2194,7 +2194,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.0, y=1.0, robotAngle=120)"
+                    + "(processing: rotation=0.25, x=0.0, y=1.0, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -2202,7 +2202,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test130() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.0, 1.0, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.0, 1.0, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 171.45684518510774),
                 new WheelVector(1.0, -171.4568451851077),
@@ -2211,7 +2211,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.0, y=1.0, robotAngle=180)"
+                    + "(processing: rotation=0.25, x=0.0, y=1.0, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -2219,7 +2219,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test131() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.0, 1.0, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.0, 1.0, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 122.98349874197315),
                 new WheelVector(0.7770206931527176, 134.47689562667082),
@@ -2228,7 +2228,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.0, y=1.0, robotAngle=240)"
+                    + "(processing: rotation=0.25, x=0.0, y=1.0, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -2236,7 +2236,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test132() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.0, 1.0, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.0, 1.0, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.878197812380431, 72.77883689030537),
                 new WheelVector(0.612366357058668, 64.87576260774736),
@@ -2245,7 +2245,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.0, y=1.0, robotAngle=300)"
+                    + "(processing: rotation=0.25, x=0.0, y=1.0, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -2253,7 +2253,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test133() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.0, 1.0, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.0, 1.0, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5266837846116296, 28.675050063104766),
                 new WheelVector(0.5266837846116296, -28.675050063104766),
@@ -2262,7 +2262,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.0, y=1.0, robotAngle=0)"
+                    + "(processing: rotation=0.5, x=0.0, y=1.0, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -2270,7 +2270,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test134() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.0, 1.0, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.0, 1.0, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.3580455384995918, -74.05191311422608),
                 new WheelVector(0.82516532361133, -83.15272712645259),
@@ -2279,7 +2279,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.0, y=1.0, robotAngle=60)"
+                    + "(processing: rotation=0.5, x=0.0, y=1.0, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -2287,7 +2287,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test135() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.0, 1.0, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.0, 1.0, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.6688040044354336, -149.01946591599656),
                 new WheelVector(1.0, -124.98723472563248),
@@ -2296,7 +2296,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.0, y=1.0, robotAngle=120)"
+                    + "(processing: rotation=0.5, x=0.0, y=1.0, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -2304,7 +2304,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test136() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.0, 1.0, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.0, 1.0, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 165.3611934048217),
                 new WheelVector(1.0, -165.3611934048217),
@@ -2313,7 +2313,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.0, y=1.0, robotAngle=180)"
+                    + "(processing: rotation=0.5, x=0.0, y=1.0, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -2321,7 +2321,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test137() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.0, 1.0, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.0, 1.0, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 124.9872347256325),
                 new WheelVector(0.668804004435434, 149.0194659159966),
@@ -2330,7 +2330,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.0, y=1.0, robotAngle=240)"
+                    + "(processing: rotation=0.5, x=0.0, y=1.0, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -2338,7 +2338,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test138() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.0, 1.0, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.0, 1.0, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.82516532361133, 83.15272712645259),
                 new WheelVector(0.3580455384995918, 74.05191311422608),
@@ -2347,7 +2347,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.0, y=1.0, robotAngle=300)"
+                    + "(processing: rotation=0.5, x=0.0, y=1.0, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -2355,7 +2355,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test139() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.0, 1.0, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.0, 1.0, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.43739131783149376, 48.471318244528604),
                 new WheelVector(0.43739131783149376, -48.471318244528604),
@@ -2364,7 +2364,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.0, y=1.0, robotAngle=0)"
+                    + "(processing: rotation=0.75, x=0.0, y=1.0, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -2372,7 +2372,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test140() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.0, 1.0, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.0, 1.0, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.19423490531978052, -95.16265868624804),
                 new WheelVector(0.8048501160215458, -91.2443197379296),
@@ -2381,7 +2381,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.0, y=1.0, robotAngle=60)"
+                    + "(processing: rotation=0.75, x=0.0, y=1.0, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -2389,7 +2389,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test141() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.0, 1.0, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.0, 1.0, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.6244545533381017, -161.95369793751564),
                 new WheelVector(1.0, -126.42253667541702),
@@ -2398,7 +2398,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.0, y=1.0, robotAngle=120)"
+                    + "(processing: rotation=0.75, x=0.0, y=1.0, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -2406,7 +2406,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test142() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.0, 1.0, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.0, 1.0, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 160.88643529826268),
                 new WheelVector(1.0, -160.88643529826265),
@@ -2415,7 +2415,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.0, y=1.0, robotAngle=180)"
+                    + "(processing: rotation=0.75, x=0.0, y=1.0, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -2423,7 +2423,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test143() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.0, 1.0, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.0, 1.0, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 126.42253667541705),
                 new WheelVector(0.624454553338102, 161.95369793751564),
@@ -2432,7 +2432,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.0, y=1.0, robotAngle=240)"
+                    + "(processing: rotation=0.75, x=0.0, y=1.0, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -2440,7 +2440,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test144() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.0, 1.0, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.0, 1.0, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.8048501160215458, 91.2443197379296),
                 new WheelVector(0.19423490531978052, 95.16265868624804),
@@ -2449,7 +2449,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.0, y=1.0, robotAngle=300)"
+                    + "(processing: rotation=0.75, x=0.0, y=1.0, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -2457,7 +2457,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test145() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.0, 1.0, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.0, 1.0, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.41421356237309515, 67.50000000000001),
                 new WheelVector(0.41421356237309515, -67.50000000000001),
@@ -2466,7 +2466,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.0, y=1.0, robotAngle=0)"
+                    + "(processing: rotation=1.0, x=0.0, y=1.0, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -2474,7 +2474,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test146() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.0, 1.0, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.0, 1.0, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.1316524975873958, -142.50000000000003),
                 new WheelVector(0.8001991549907408, -97.5),
@@ -2483,7 +2483,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.0, y=1.0, robotAngle=60)"
+                    + "(processing: rotation=1.0, x=0.0, y=1.0, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -2491,7 +2491,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test147() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.0, 1.0, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.0, 1.0, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.6140144073823542, -172.5),
                 new WheelVector(1.0, -127.50000000000001),
@@ -2500,7 +2500,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.0, y=1.0, robotAngle=120)"
+                    + "(processing: rotation=1.0, x=0.0, y=1.0, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -2508,7 +2508,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test148() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.0, 1.0, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.0, 1.0, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 157.5),
                 new WheelVector(1.0, -157.5),
@@ -2517,7 +2517,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.0, y=1.0, robotAngle=180)"
+                    + "(processing: rotation=1.0, x=0.0, y=1.0, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -2525,7 +2525,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test149() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.0, 1.0, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.0, 1.0, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 127.50000000000001),
                 new WheelVector(0.6140144073823545, 172.50000000000003),
@@ -2534,7 +2534,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.0, y=1.0, robotAngle=240)"
+                    + "(processing: rotation=1.0, x=0.0, y=1.0, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -2542,7 +2542,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test150() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.0, 1.0, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.0, 1.0, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.8001991549907408, 97.5),
                 new WheelVector(0.1316524975873958, 142.50000000000003),
@@ -2551,7 +2551,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.0, y=1.0, robotAngle=300)"
+                    + "(processing: rotation=1.0, x=0.0, y=1.0, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -2559,7 +2559,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test151() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.25, 0.0, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.25, 0.0, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.25, 90.0),
                 new WheelVector(0.25, 90.0),
@@ -2568,7 +2568,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.25, y=0.0, robotAngle=0)"
+                    + "(processing: rotation=0.0, x=0.25, y=0.0, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -2576,7 +2576,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test152() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.25, 0.0, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.25, 0.0, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.25, 30.00000000000001),
                 new WheelVector(0.25, 30.00000000000001),
@@ -2585,7 +2585,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.25, y=0.0, robotAngle=60)"
+                    + "(processing: rotation=0.0, x=0.25, y=0.0, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -2593,7 +2593,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test153() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.25, 0.0, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.25, 0.0, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.24999999999999997, -29.999999999999993),
                 new WheelVector(0.24999999999999997, -29.999999999999993),
@@ -2602,7 +2602,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.25, y=0.0, robotAngle=120)"
+                    + "(processing: rotation=0.0, x=0.25, y=0.0, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -2610,7 +2610,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test154() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.25, 0.0, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.25, 0.0, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.25, -90.0),
                 new WheelVector(0.25, -90.0),
@@ -2619,7 +2619,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.25, y=0.0, robotAngle=180)"
+                    + "(processing: rotation=0.0, x=0.25, y=0.0, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -2627,7 +2627,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test155() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.25, 0.0, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.25, 0.0, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.25, -149.99999999999997),
                 new WheelVector(0.25, -149.99999999999997),
@@ -2636,7 +2636,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.25, y=0.0, robotAngle=240)"
+                    + "(processing: rotation=0.0, x=0.25, y=0.0, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -2644,7 +2644,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test156() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.25, 0.0, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.25, 0.0, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.25, 149.99999999999997),
                 new WheelVector(0.25, 149.99999999999997),
@@ -2653,7 +2653,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.25, y=0.0, robotAngle=300)"
+                    + "(processing: rotation=0.0, x=0.25, y=0.0, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -2661,7 +2661,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test157() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.25, 0.0, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.25, 0.0, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.46193976625564337, 112.50000000000001),
                 new WheelVector(0.19134171618254492, 157.5),
@@ -2670,7 +2670,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.25, y=0.0, robotAngle=0)"
+                    + "(processing: rotation=0.25, x=0.25, y=0.0, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -2678,7 +2678,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test158() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.25, 0.0, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.25, 0.0, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.30438071450436033, 82.50000000000001),
                 new WheelVector(0.06526309611002577, -52.50000000000001),
@@ -2687,7 +2687,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.25, y=0.0, robotAngle=60)"
+                    + "(processing: rotation=0.25, x=0.25, y=0.0, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -2695,7 +2695,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test159() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.25, 0.0, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.25, 0.0, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.06526309611002586, 52.500000000000036),
                 new WheelVector(0.30438071450436033, -82.50000000000001),
@@ -2704,7 +2704,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.25, y=0.0, robotAngle=120)"
+                    + "(processing: rotation=0.25, x=0.25, y=0.0, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -2712,7 +2712,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test160() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.25, 0.0, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.25, 0.0, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.19134171618254486, -157.5),
                 new WheelVector(0.46193976625564337, -112.50000000000001),
@@ -2721,7 +2721,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.25, y=0.0, robotAngle=180)"
+                    + "(processing: rotation=0.25, x=0.25, y=0.0, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -2729,7 +2729,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test161() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.25, 0.0, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.25, 0.0, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.39667667014561747, 172.5),
                 new WheelVector(0.4957224306869052, -142.5),
@@ -2738,7 +2738,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.25, y=0.0, robotAngle=240)"
+                    + "(processing: rotation=0.25, x=0.25, y=0.0, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -2746,7 +2746,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test162() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.25, 0.0, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.25, 0.0, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.49572243068690525, 142.5),
                 new WheelVector(0.39667667014561764, -172.5),
@@ -2755,7 +2755,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.25, y=0.0, robotAngle=300)"
+                    + "(processing: rotation=0.25, x=0.25, y=0.0, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -2763,7 +2763,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test163() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.25, 0.0, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.25, 0.0, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.6994831629829533, 120.36119340482172),
                 new WheelVector(0.3684064395519752, -163.67505006310478),
@@ -2772,7 +2772,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.25, y=0.0, robotAngle=0)"
+                    + "(processing: rotation=0.5, x=0.25, y=0.0, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -2780,7 +2780,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test164() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.25, 0.0, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.25, 0.0, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.49779035619864104, 105.98053408400347),
                 new WheelVector(0.26649304573990845, -120.94808688577392),
@@ -2789,7 +2789,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.25, y=0.0, robotAngle=60)"
+                    + "(processing: rotation=0.5, x=0.25, y=0.0, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -2797,7 +2797,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test165() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.25, 0.0, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.25, 0.0, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.2664930457399085, 120.94808688577392),
                 new WheelVector(0.4977903561986409, -105.98053408400347),
@@ -2806,7 +2806,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.25, y=0.0, robotAngle=120)"
+                    + "(processing: rotation=0.5, x=0.25, y=0.0, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -2814,7 +2814,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test166() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.25, 0.0, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.25, 0.0, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.3684064395519751, 163.67505006310478),
                 new WheelVector(0.6994831629829533, -120.36119340482172),
@@ -2823,7 +2823,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.25, y=0.0, robotAngle=180)"
+                    + "(processing: rotation=0.5, x=0.25, y=0.0, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -2831,7 +2831,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test167() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.25, 0.0, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.25, 0.0, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.6141699775108109, 158.1527271264526),
                 new WheelVector(0.7442993057717218, -139.98723472563248),
@@ -2840,7 +2840,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.25, y=0.0, robotAngle=240)"
+                    + "(processing: rotation=0.5, x=0.25, y=0.0, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -2848,7 +2848,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test168() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.25, 0.0, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.25, 0.0, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7442993057717219, 139.98723472563248),
                 new WheelVector(0.614169977510811, -158.1527271264526),
@@ -2857,7 +2857,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.25, y=0.0, robotAngle=300)"
+                    + "(processing: rotation=0.5, x=0.25, y=0.0, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -2865,7 +2865,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test169() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.25, 0.0, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.25, 0.0, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.9434855817366556, 124.20091950815379),
                 new WheelVector(0.5998624484455122, -152.13927223775613),
@@ -2874,7 +2874,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.25, y=0.0, robotAngle=0)"
+                    + "(processing: rotation=0.75, x=0.25, y=0.0, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -2882,7 +2882,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test170() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.25, 0.0, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.25, 0.0, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7265967644344109, 115.58877584836688),
                 new WheelVector(0.5126185864184009, -127.7485550847731),
@@ -2891,7 +2891,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.25, y=0.0, robotAngle=60)"
+                    + "(processing: rotation=0.75, x=0.25, y=0.0, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -2899,7 +2899,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test171() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.25, 0.0, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.25, 0.0, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5126185864184009, 127.74855508477309),
                 new WheelVector(0.7265967644344109, -115.58877584836688),
@@ -2908,7 +2908,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.25, y=0.0, robotAngle=120)"
+                    + "(processing: rotation=0.75, x=0.25, y=0.0, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -2916,7 +2916,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test172() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.25, 0.0, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.25, 0.0, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5998624484455122, 152.13927223775613),
                 new WheelVector(0.9434855817366556, -124.20091950815379),
@@ -2925,7 +2925,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.25, y=0.0, robotAngle=180)"
+                    + "(processing: rotation=0.75, x=0.25, y=0.0, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -2933,7 +2933,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test173() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.25, 0.0, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.25, 0.0, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.8497394553117121, 151.51001517445346),
                 new WheelVector(0.993590551916835, -138.7338671621678),
@@ -2942,7 +2942,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.25, y=0.0, robotAngle=240)"
+                    + "(processing: rotation=0.75, x=0.25, y=0.0, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -2950,7 +2950,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test174() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.25, 0.0, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.25, 0.0, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.9935905519168349, 138.73386716216783),
                 new WheelVector(0.8497394553117121, -151.51001517445343),
@@ -2959,7 +2959,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.25, y=0.0, robotAngle=300)"
+                    + "(processing: rotation=0.75, x=0.25, y=0.0, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -2967,7 +2967,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test175() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.25, 0.0, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.25, 0.0, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 126.45684518510771),
                 new WheelVector(0.7075659915250843, -147.11948918988963),
@@ -2976,7 +2976,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.25, y=0.0, robotAngle=0)"
+                    + "(processing: rotation=1.0, x=0.25, y=0.0, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -2984,7 +2984,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test176() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.25, 0.0, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.25, 0.0, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7770206931527176, 120.52310437332923),
                 new WheelVector(0.612366357058668, -130.12423739225264),
@@ -2993,7 +2993,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.25, y=0.0, robotAngle=60)"
+                    + "(processing: rotation=1.0, x=0.25, y=0.0, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -3001,7 +3001,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test177() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.25, 0.0, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.25, 0.0, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.612366357058668, 130.12423739225264),
                 new WheelVector(0.7770206931527175, -120.52310437332923),
@@ -3010,7 +3010,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.25, y=0.0, robotAngle=120)"
+                    + "(processing: rotation=1.0, x=0.25, y=0.0, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -3018,7 +3018,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test178() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.25, 0.0, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.25, 0.0, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7075659915250843, 147.11948918988963),
                 new WheelVector(1.0, -126.45684518510771),
@@ -3027,7 +3027,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.25, y=0.0, robotAngle=180)"
+                    + "(processing: rotation=1.0, x=0.25, y=0.0, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -3035,7 +3035,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test179() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.25, 0.0, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.25, 0.0, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.8781978123804308, 147.7788368903054),
                 new WheelVector(1.0, -137.98349874197314),
@@ -3044,7 +3044,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.25, y=0.0, robotAngle=240)"
+                    + "(processing: rotation=1.0, x=0.25, y=0.0, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -3052,7 +3052,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test180() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.25, 0.0, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.25, 0.0, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 137.98349874197314),
                 new WheelVector(0.878197812380431, -147.7788368903054),
@@ -3061,7 +3061,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.25, y=0.0, robotAngle=300)"
+                    + "(processing: rotation=1.0, x=0.25, y=0.0, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -3069,7 +3069,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test181() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.25, 0.25, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.25, 0.25, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.3535533905932738, 45.0),
                 new WheelVector(0.3535533905932738, 45.0),
@@ -3078,7 +3078,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.25, y=0.25, robotAngle=0)"
+                    + "(processing: rotation=0.0, x=0.25, y=0.25, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -3086,7 +3086,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test182() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.25, 0.25, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.25, 0.25, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.3535533905932738, -14.999999999999993),
                 new WheelVector(0.3535533905932738, -14.999999999999993),
@@ -3095,7 +3095,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.25, y=0.25, robotAngle=60)"
+                    + "(processing: rotation=0.0, x=0.25, y=0.25, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -3103,7 +3103,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test183() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.25, 0.25, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.25, 0.25, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.35355339059327373, -74.99999999999999),
                 new WheelVector(0.35355339059327373, -74.99999999999999),
@@ -3112,7 +3112,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.25, y=0.25, robotAngle=120)"
+                    + "(processing: rotation=0.0, x=0.25, y=0.25, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -3120,7 +3120,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test184() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.25, 0.25, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.25, 0.25, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.3535533905932738, -135.0),
                 new WheelVector(0.3535533905932738, -135.0),
@@ -3129,7 +3129,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.25, y=0.25, robotAngle=180)"
+                    + "(processing: rotation=0.0, x=0.25, y=0.25, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -3137,7 +3137,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test185() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.25, 0.25, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.25, 0.25, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.35355339059327373, 165.00000000000003),
                 new WheelVector(0.35355339059327373, 165.00000000000003),
@@ -3146,7 +3146,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.25, y=0.25, robotAngle=240)"
+                    + "(processing: rotation=0.0, x=0.25, y=0.25, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -3154,7 +3154,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test186() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.25, 0.25, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.25, 0.25, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.3535533905932738, 105.0),
                 new WheelVector(0.3535533905932738, 105.0),
@@ -3163,7 +3163,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.25, y=0.25, robotAngle=300)"
+                    + "(processing: rotation=0.0, x=0.25, y=0.25, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -3171,7 +3171,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test187() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.25, 0.25, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.25, 0.25, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.4330127018922193, 80.26438968275465),
                 new WheelVector(0.10355339059327374, 45.0),
@@ -3180,7 +3180,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.25, y=0.25, robotAngle=0)"
+                    + "(processing: rotation=0.25, x=0.25, y=0.25, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -3188,7 +3188,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test188() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.25, 0.25, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.25, 0.25, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.1854909460756815, 27.36780515862268),
                 new WheelVector(0.3148200316874413, -58.4494755261363),
@@ -3197,7 +3197,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.25, y=0.25, robotAngle=60)"
+                    + "(processing: rotation=0.25, x=0.25, y=0.25, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -3205,7 +3205,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test189() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.25, 0.25, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.25, 0.25, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.18549094607568137, -117.36780515862269),
                 new WheelVector(0.5252507474038646, -99.34287017526722),
@@ -3214,7 +3214,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.25, y=0.25, robotAngle=120)"
+                    + "(processing: rotation=0.25, x=0.25, y=0.25, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -3222,7 +3222,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test190() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.25, 0.25, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.25, 0.25, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.4330127018922193, -170.26438968275465),
                 new WheelVector(0.6035533905932738, -135.0),
@@ -3231,7 +3231,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.25, y=0.25, robotAngle=180)"
+                    + "(processing: rotation=0.25, x=0.25, y=0.25, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -3239,7 +3239,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test191() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.25, 0.25, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.25, 0.25, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5836035545847442, 152.63219484137733),
                 new WheelVector(0.5252507474038647, -170.65712982473278),
@@ -3248,7 +3248,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.25, y=0.25, robotAngle=240)"
+                    + "(processing: rotation=0.25, x=0.25, y=0.25, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -3256,7 +3256,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test192() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.25, 0.25, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.25, 0.25, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5836035545847443, 117.36780515862269),
                 new WheelVector(0.3148200316874413, 148.4494755261363),
@@ -3265,7 +3265,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.25, y=0.25, robotAngle=300)"
+                    + "(processing: rotation=0.25, x=0.25, y=0.25, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -3273,7 +3273,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test193() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.25, 0.25, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.25, 0.25, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.6123724356957945, 99.73561031724536),
                 new WheelVector(0.14644660940672627, -135.0),
@@ -3282,7 +3282,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.25, y=0.25, robotAngle=0)"
+                    + "(processing: rotation=0.5, x=0.25, y=0.25, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -3290,7 +3290,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test194() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.25, 0.25, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.25, 0.25, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.26232381163764523, 92.63219484137733),
                 new WheelVector(0.4452227585191071, -91.5505244738637),
@@ -3299,7 +3299,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.25, y=0.25, robotAngle=60)"
+                    + "(processing: rotation=0.5, x=0.25, y=0.25, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -3307,7 +3307,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test195() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.25, 0.25, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.25, 0.25, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.2623238116376451, 177.36780515862267),
                 new WheelVector(0.7428167306251501, -110.65712982473279),
@@ -3316,7 +3316,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.25, y=0.25, robotAngle=120)"
+                    + "(processing: rotation=0.5, x=0.25, y=0.25, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -3324,7 +3324,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test196() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.25, 0.25, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.25, 0.25, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.6123724356957945, 170.26438968275465),
                 new WheelVector(0.8535533905932738, -135.0),
@@ -3333,7 +3333,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.25, y=0.25, robotAngle=180)"
+                    + "(processing: rotation=0.5, x=0.25, y=0.25, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -3341,7 +3341,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test197() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.25, 0.25, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.25, 0.25, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.8253400619428923, 147.3678051586227),
                 new WheelVector(0.7428167306251504, -159.3428701752672),
@@ -3350,7 +3350,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.25, y=0.25, robotAngle=240)"
+                    + "(processing: rotation=0.5, x=0.25, y=0.25, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -3358,7 +3358,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test198() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.25, 0.25, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.25, 0.25, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.8253400619428924, 122.63219484137736),
                 new WheelVector(0.4452227585191071, -178.44947552613633),
@@ -3367,7 +3367,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.25, y=0.25, robotAngle=300)"
+                    + "(processing: rotation=0.5, x=0.25, y=0.25, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -3375,7 +3375,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test199() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.25, 0.25, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.25, 0.25, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7513512301775386, 109.76059817932111),
                 new WheelVector(0.3592455179659185, -135.0),
@@ -3384,7 +3384,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.25, y=0.25, robotAngle=0)"
+                    + "(processing: rotation=0.75, x=0.25, y=0.25, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -3392,7 +3392,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test200() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.25, 0.25, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.25, 0.25, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.4461054854224879, 113.28197635645219),
                 new WheelVector(0.6068601041928336, -106.89117457959846),
@@ -3401,7 +3401,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.25, y=0.25, robotAngle=60)"
+                    + "(processing: rotation=0.75, x=0.25, y=0.25, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -3409,7 +3409,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test201() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.25, 0.25, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.25, 0.25, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.44610548542248785, 156.71802364354784),
                 new WheelVector(0.9114444130406946, -116.71760439543074),
@@ -3418,7 +3418,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.25, y=0.25, robotAngle=120)"
+                    + "(processing: rotation=0.75, x=0.25, y=0.25, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -3426,7 +3426,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test202() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.25, 0.25, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.25, 0.25, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7513512301775386, 160.23940182067892),
                 new WheelVector(1.0, -135.0),
@@ -3435,7 +3435,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.25, y=0.25, robotAngle=180)"
+                    + "(processing: rotation=0.75, x=0.25, y=0.25, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -3443,7 +3443,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test203() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.25, 0.25, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.25, 0.25, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 144.50167480382058),
                 new WheelVector(0.9114444130406948, -153.28239560456927),
@@ -3452,7 +3452,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.25, y=0.25, robotAngle=240)"
+                    + "(processing: rotation=0.75, x=0.25, y=0.25, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -3460,7 +3460,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test204() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.25, 0.25, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.25, 0.25, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 125.49832519617944),
                 new WheelVector(0.6068601041928336, -163.10882542040156),
@@ -3469,7 +3469,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.25, y=0.25, robotAngle=300)"
+                    + "(processing: rotation=0.75, x=0.25, y=0.25, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -3477,7 +3477,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test205() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.25, 0.25, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.25, 0.25, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7836116248912243, 115.52877936550931),
                 new WheelVector(0.47759225007251715, -135.0),
@@ -3486,7 +3486,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.25, y=0.25, robotAngle=0)"
+                    + "(processing: rotation=1.0, x=0.25, y=0.25, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -3494,7 +3494,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test206() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.25, 0.25, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.25, 0.25, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5431934368354893, 120.70575538596037),
                 new WheelVector(0.6663562474808866, -114.59803029876787),
@@ -3503,7 +3503,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.25, y=0.25, robotAngle=60)"
+                    + "(processing: rotation=1.0, x=0.25, y=0.25, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -3511,7 +3511,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test207() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.25, 0.25, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.25, 0.25, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5431934368354893, 149.29424461403963),
                 new WheelVector(0.9225120385471086, -120.41555594321144),
@@ -3520,7 +3520,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.25, y=0.25, robotAngle=120)"
+                    + "(processing: rotation=1.0, x=0.25, y=0.25, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -3528,7 +3528,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test208() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.25, 0.25, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.25, 0.25, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7836116248912242, 154.4712206344907),
                 new WheelVector(1.0, -135.0),
@@ -3537,7 +3537,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.25, y=0.25, robotAngle=180)"
+                    + "(processing: rotation=1.0, x=0.25, y=0.25, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -3545,7 +3545,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test209() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.25, 0.25, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.25, 0.25, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 142.70746906041018),
                 new WheelVector(0.9225120385471086, -149.58444405678856),
@@ -3554,7 +3554,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.25, y=0.25, robotAngle=240)"
+                    + "(processing: rotation=1.0, x=0.25, y=0.25, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -3562,7 +3562,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test210() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.25, 0.25, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.25, 0.25, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 127.29253093958982),
                 new WheelVector(0.6663562474808866, -155.40196970123216),
@@ -3571,7 +3571,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.25, y=0.25, robotAngle=300)"
+                    + "(processing: rotation=1.0, x=0.25, y=0.25, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -3579,7 +3579,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test211() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.25, 0.5, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.25, 0.5, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5590169943749475, 26.56505117707799),
                 new WheelVector(0.5590169943749475, 26.56505117707799),
@@ -3588,7 +3588,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.25, y=0.5, robotAngle=0)"
+                    + "(processing: rotation=0.0, x=0.25, y=0.5, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -3596,7 +3596,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test212() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.25, 0.5, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.25, 0.5, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5590169943749475, -33.434948822922),
                 new WheelVector(0.5590169943749475, -33.434948822922),
@@ -3605,7 +3605,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.25, y=0.5, robotAngle=60)"
+                    + "(processing: rotation=0.0, x=0.25, y=0.5, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -3613,7 +3613,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test213() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.25, 0.5, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.25, 0.5, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5590169943749473, -93.43494882292201),
                 new WheelVector(0.5590169943749473, -93.43494882292201),
@@ -3622,7 +3622,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.25, y=0.5, robotAngle=120)"
+                    + "(processing: rotation=0.0, x=0.25, y=0.5, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -3630,7 +3630,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test214() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.25, 0.5, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.25, 0.5, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5590169943749475, -153.434948822922),
                 new WheelVector(0.5590169943749475, -153.434948822922),
@@ -3639,7 +3639,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.25, y=0.5, robotAngle=180)"
+                    + "(processing: rotation=0.0, x=0.25, y=0.5, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -3647,7 +3647,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test215() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.25, 0.5, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.25, 0.5, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5590169943749475, 146.565051177078),
                 new WheelVector(0.5590169943749475, 146.565051177078),
@@ -3656,7 +3656,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.25, y=0.5, robotAngle=240)"
+                    + "(processing: rotation=0.0, x=0.25, y=0.5, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -3664,7 +3664,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test216() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.25, 0.5, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.25, 0.5, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5590169943749473, 86.56505117707799),
                 new WheelVector(0.5590169943749473, 86.56505117707799),
@@ -3673,7 +3673,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.25, y=0.5, robotAngle=300)"
+                    + "(processing: rotation=0.0, x=0.25, y=0.5, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -3681,7 +3681,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test217() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.25, 0.5, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.25, 0.5, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5353612353838122, 52.86119340482172),
                 new WheelVector(0.3314135740355918, 12.764389682754652),
@@ -3690,7 +3690,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.25, y=0.5, robotAngle=0)"
+                    + "(processing: rotation=0.25, x=0.25, y=0.5, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -3698,7 +3698,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test218() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.25, 0.5, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.25, 0.5, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.3180662867861318, -24.368634883850675),
                 new WheelVector(0.5647690085242786, -59.135761546586956),
@@ -3707,7 +3707,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.25, y=0.5, robotAngle=60)"
+                    + "(processing: rotation=0.25, x=0.25, y=0.5, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -3715,7 +3715,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test219() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.25, 0.5, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.25, 0.5, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.435378582888773, -118.87888896787803),
                 new WheelVector(0.7642833741057382, -105.96922028002854),
@@ -3724,7 +3724,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.25, y=0.5, robotAngle=120)"
+                    + "(processing: rotation=0.25, x=0.25, y=0.5, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -3732,7 +3732,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test220() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.25, 0.5, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.25, 0.5, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.6807263382948529, -173.82494993689522),
                 new WheelVector(0.8001031451912656, -147.76438968275465),
@@ -3741,7 +3741,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.25, y=0.5, robotAngle=180)"
+                    + "(processing: rotation=0.25, x=0.25, y=0.5, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -3749,7 +3749,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test221() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.25, 0.5, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.25, 0.5, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.8055022266946766, 142.99767928752416),
                 new WheelVector(0.6565332946701968, 168.4693338831737),
@@ -3758,7 +3758,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.25, y=0.5, robotAngle=240)"
+                    + "(processing: rotation=0.25, x=0.25, y=0.5, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -3766,7 +3766,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test222() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.25, 0.5, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.25, 0.5, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7486290734147076, 101.03414243176718),
                 new WheelVector(0.40727254273465086, 110.59813691802),
@@ -3775,7 +3775,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.25, y=0.5, robotAngle=300)"
+                    + "(processing: rotation=0.25, x=0.25, y=0.5, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -3783,7 +3783,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test223() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.25, 0.5, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.25, 0.5, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.594102825849117, 76.36129272052355),
                 new WheelVector(0.1715728752538099, -35.26438968275467),
@@ -3792,7 +3792,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.25, y=0.5, robotAngle=0)"
+                    + "(processing: rotation=0.5, x=0.25, y=0.5, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -3800,7 +3800,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test224() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.25, 0.5, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.25, 0.5, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.11558735776853787, 21.95844358274006),
                 new WheelVector(0.6369691999543644, -80.31099027542865),
@@ -3809,7 +3809,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.25, y=0.5, robotAngle=60)"
+                    + "(processing: rotation=0.5, x=0.25, y=0.5, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -3817,7 +3817,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test225() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.25, 0.5, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.25, 0.5, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.43773167680266467, -152.1545477812505),
                 new WheelVector(0.9903323441496314, -113.00586827201981),
@@ -3826,7 +3826,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.25, y=0.5, robotAngle=120)"
+                    + "(processing: rotation=0.5, x=0.25, y=0.5, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -3834,7 +3834,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test226() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.25, 0.5, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.25, 0.5, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.8224834854518072, 173.082662059893),
                 new WheelVector(1.0, -144.73561031724535),
@@ -3843,7 +3843,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.25, y=0.5, robotAngle=180)"
+                    + "(processing: rotation=0.5, x=0.25, y=0.5, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -3851,7 +3851,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test227() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.25, 0.5, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.25, 0.5, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 141.10586984676826),
                 new WheelVector(0.7795066873256502, -176.82143657620833),
@@ -3860,7 +3860,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.25, y=0.5, robotAngle=240)"
+                    + "(processing: rotation=0.5, x=0.25, y=0.5, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -3868,7 +3868,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test228() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.25, 0.5, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.25, 0.5, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.9661216171494805, 109.34667151527147),
                 new WheelVector(0.37979184842634, 147.42890516629532),
@@ -3877,7 +3877,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.25, y=0.5, robotAngle=300)"
+                    + "(processing: rotation=0.5, x=0.25, y=0.5, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -3885,7 +3885,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test229() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.25, 0.5, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.25, 0.5, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.6042039371651623, 92.22586777264844),
                 new WheelVector(0.21815956666812703, -96.17505006310478),
@@ -3894,7 +3894,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.25, y=0.5, robotAngle=0)"
+                    + "(processing: rotation=0.75, x=0.25, y=0.5, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -3902,7 +3902,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test230() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.25, 0.5, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.25, 0.5, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.1775798275907797, 106.01791864925374),
                 new WheelVector(0.6455047438738301, -94.3535774219024),
@@ -3911,7 +3911,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.25, y=0.5, robotAngle=60)"
+                    + "(processing: rotation=0.75, x=0.25, y=0.5, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -3919,7 +3919,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test231() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.25, 0.5, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.25, 0.5, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.46054836073001637, -177.18914916859447),
                 new WheelVector(1.0, -117.38673713212948),
@@ -3928,7 +3928,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.25, y=0.5, robotAngle=120)"
+                    + "(processing: rotation=0.75, x=0.25, y=0.5, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -3936,7 +3936,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test232() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.25, 0.5, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.25, 0.5, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.826154464275865, 164.7795154354351),
                 new WheelVector(1.0, -142.8611934048217),
@@ -3945,7 +3945,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.25, y=0.5, robotAngle=180)"
+                    + "(processing: rotation=0.75, x=0.25, y=0.5, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -3953,7 +3953,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test233() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.25, 0.5, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.25, 0.5, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 139.9360519337482),
                 new WheelVector(0.7841289567434379, -167.4274813991328),
@@ -3962,7 +3962,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.25, y=0.5, robotAngle=240)"
+                    + "(processing: rotation=0.75, x=0.25, y=0.5, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -3970,7 +3970,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test234() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.25, 0.5, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.25, 0.5, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.976067667545127, 114.53704426002754),
                 new WheelVector(0.4059715312655433, 176.81090462387039),
@@ -3979,7 +3979,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.25, y=0.5, robotAngle=300)"
+                    + "(processing: rotation=0.75, x=0.25, y=0.5, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -3987,7 +3987,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test235() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.25, 0.5, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.25, 0.5, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.6356728874873746, 102.20989182961294),
                 new WheelVector(0.3257606941142601, -114.37441691242364),
@@ -3996,7 +3996,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.25, y=0.5, robotAngle=0)"
+                    + "(processing: rotation=1.0, x=0.25, y=0.5, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -4004,7 +4004,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test236() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.25, 0.5, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.25, 0.5, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.3003178695158022, 121.08436515941548),
                 new WheelVector(0.6723139479070886, -103.3340116609263),
@@ -4013,7 +4013,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.25, y=0.5, robotAngle=60)"
+                    + "(processing: rotation=1.0, x=0.25, y=0.5, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -4021,7 +4021,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test237() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.25, 0.5, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.25, 0.5, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5153365500919577, 168.61763206589097),
                 new WheelVector(1.0, -120.34468863214035),
@@ -4030,7 +4030,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.25, y=0.5, robotAngle=120)"
+                    + "(processing: rotation=1.0, x=0.25, y=0.5, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -4038,7 +4038,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test238() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.25, 0.5, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.25, 0.5, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.8378782787155113, 159.25934256043894),
                 new WheelVector(1.0, -141.58933961964988),
@@ -4047,7 +4047,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.25, y=0.5, robotAngle=180)"
+                    + "(processing: rotation=1.0, x=0.25, y=0.5, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -4055,7 +4055,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test239() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.25, 0.5, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.25, 0.5, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 139.14175497412765),
                 new WheelVector(0.7988646807814794, -161.2190954633176),
@@ -4064,7 +4064,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.25, y=0.5, robotAngle=240)"
+                    + "(processing: rotation=1.0, x=0.25, y=0.5, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -4072,7 +4072,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test240() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.25, 0.5, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.25, 0.5, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.9777102558780837, 118.03307853800273),
                 new WheelVector(0.47062628943766927, -167.51965003369207),
@@ -4081,7 +4081,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.25, y=0.5, robotAngle=300)"
+                    + "(processing: rotation=1.0, x=0.25, y=0.5, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -4089,7 +4089,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test241() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.25, 0.75, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.25, 0.75, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7905694150420949, 18.43494882292201),
                 new WheelVector(0.7905694150420949, 18.43494882292201),
@@ -4098,7 +4098,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.25, y=0.75, robotAngle=0)"
+                    + "(processing: rotation=0.0, x=0.25, y=0.75, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -4106,7 +4106,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test242() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.25, 0.75, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.25, 0.75, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.790569415042095, -41.56505117707799),
                 new WheelVector(0.790569415042095, -41.56505117707799),
@@ -4115,7 +4115,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.25, y=0.75, robotAngle=60)"
+                    + "(processing: rotation=0.0, x=0.25, y=0.75, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -4123,7 +4123,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test243() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.25, 0.75, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.25, 0.75, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7905694150420949, -101.56505117707799),
                 new WheelVector(0.7905694150420949, -101.56505117707799),
@@ -4132,7 +4132,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.25, y=0.75, robotAngle=120)"
+                    + "(processing: rotation=0.0, x=0.25, y=0.75, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -4140,7 +4140,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test244() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.25, 0.75, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.25, 0.75, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7905694150420949, -161.565051177078),
                 new WheelVector(0.7905694150420949, -161.565051177078),
@@ -4149,7 +4149,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.25, y=0.75, robotAngle=180)"
+                    + "(processing: rotation=0.0, x=0.25, y=0.75, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -4157,7 +4157,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test245() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.25, 0.75, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.25, 0.75, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7905694150420949, 138.43494882292205),
                 new WheelVector(0.7905694150420949, 138.43494882292205),
@@ -4166,7 +4166,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.25, y=0.75, robotAngle=240)"
+                    + "(processing: rotation=0.0, x=0.25, y=0.75, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -4174,7 +4174,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test246() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.25, 0.75, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.25, 0.75, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7905694150420949, 78.43494882292201),
                 new WheelVector(0.7905694150420949, 78.43494882292201),
@@ -4183,7 +4183,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.25, y=0.75, robotAngle=300)"
+                    + "(processing: rotation=0.0, x=0.25, y=0.75, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -4191,7 +4191,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test247() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.25, 0.75, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.25, 0.75, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7004164482197759, 36.66845164972351),
                 new WheelVector(0.5663723168103069, 7.27951543543507),
@@ -4200,7 +4200,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.25, y=0.75, robotAngle=0)"
+                    + "(processing: rotation=0.25, x=0.25, y=0.75, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -4208,7 +4208,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test248() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.25, 0.75, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.25, 0.75, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5202953528869104, -39.979146752108534),
                 new WheelVector(0.7832409740776801, -59.40093783219277),
@@ -4217,7 +4217,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.25, y=0.75, robotAngle=60)"
+                    + "(processing: rotation=0.25, x=0.25, y=0.75, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -4225,7 +4225,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test249() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.25, 0.75, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.25, 0.75, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.6794724351465292, -119.28782308396667),
                 new WheelVector(1.0, -109.41426435673137),
@@ -4234,7 +4234,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.25, y=0.75, robotAngle=120)"
+                    + "(processing: rotation=0.25, x=0.25, y=0.75, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -4242,7 +4242,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test250() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.25, 0.75, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.25, 0.75, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.9111500427000312, -175.48252648401387),
                 new WheelVector(1.0, -155.27413222735157),
@@ -4251,7 +4251,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.25, y=0.75, robotAngle=180)"
+                    + "(processing: rotation=0.25, x=0.25, y=0.75, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -4259,7 +4259,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test251() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.25, 0.75, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.25, 0.75, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 137.60988696453862),
                 new WheelVector(0.8107039106613225, 155.64741238180832),
@@ -4268,7 +4268,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.25, y=0.75, robotAngle=240)"
+                    + "(processing: rotation=0.25, x=0.25, y=0.75, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -4276,7 +4276,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test252() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.25, 0.75, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.25, 0.75, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.9433141033605574, 91.10103765195318),
                 new WheelVector(0.5928948369845086, 91.75195028270883),
@@ -4285,7 +4285,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.25, y=0.75, robotAngle=300)"
+                    + "(processing: rotation=0.25, x=0.25, y=0.75, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -4293,7 +4293,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test253() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.25, 0.75, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.25, 0.75, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5740993140322965, 56.70091950815378),
                 new WheelVector(0.3257606941142601, -14.638806595178293),
@@ -4302,7 +4302,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.25, y=0.75, robotAngle=0)"
+                    + "(processing: rotation=0.5, x=0.25, y=0.75, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -4310,7 +4310,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test254() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.25, 0.75, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.25, 0.75, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.22713090247200368, -35.696683381572285),
                 new WheelVector(0.705216934964463, -74.83731959596768),
@@ -4319,7 +4319,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.25, y=0.75, robotAngle=60)"
+                    + "(processing: rotation=0.5, x=0.25, y=0.75, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -4327,7 +4327,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test255() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.25, 0.75, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.25, 0.75, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5350751483731189, -140.57558895657564),
                 new WheelVector(1.0, -114.41392793557308),
@@ -4336,7 +4336,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.25, y=0.75, robotAngle=120)"
+                    + "(processing: rotation=0.5, x=0.25, y=0.75, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -4344,7 +4344,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test256() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.25, 0.75, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.25, 0.75, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.8812094004590798, 174.63927223775613),
                 new WheelVector(1.0, -151.32494993689522),
@@ -4353,7 +4353,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.25, y=0.75, robotAngle=180)"
+                    + "(processing: rotation=0.5, x=0.25, y=0.75, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -4361,7 +4361,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test257() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.25, 0.75, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.25, 0.75, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 137.10427071204708),
                 new WheelVector(0.7444847355702301, 169.74583057511566),
@@ -4370,7 +4370,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.25, y=0.75, robotAngle=240)"
+                    + "(processing: rotation=0.5, x=0.25, y=0.75, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -4378,7 +4378,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test258() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.25, 0.75, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.25, 0.75, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.9240958615311614, 99.81024808330962),
                 new WheelVector(0.3745111155967668, 114.86124199928034),
@@ -4387,7 +4387,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.25, y=0.75, robotAngle=300)"
+                    + "(processing: rotation=0.5, x=0.25, y=0.75, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -4395,7 +4395,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test259() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.25, 0.75, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.25, 0.75, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5406612094489119, 74.27761319035658),
                 new WheelVector(0.23752766408079765, -51.91733794010702),
@@ -4404,7 +4404,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.25, y=0.75, robotAngle=0)"
+                    + "(processing: rotation=0.75, x=0.25, y=0.75, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -4412,7 +4412,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test260() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.25, 0.75, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.25, 0.75, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.03990682559408938, 5.426151505745644),
                 new WheelVector(0.686172372819783, -86.68083350947317),
@@ -4421,7 +4421,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.25, y=0.75, robotAngle=60)"
+                    + "(processing: rotation=0.75, x=0.25, y=0.75, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -4429,7 +4429,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test261() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.25, 0.75, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.25, 0.75, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.4953061939018526, -160.48051288014105),
                 new WheelVector(1.0, -117.82936291964621),
@@ -4438,7 +4438,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.25, y=0.75, robotAngle=120)"
+                    + "(processing: rotation=0.75, x=0.25, y=0.75, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -4446,7 +4446,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test262() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.25, 0.75, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.25, 0.75, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.8741309099905575, 167.64989987379047),
                 new WheelVector(1.0, -148.63870727947648),
@@ -4455,7 +4455,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.25, y=0.75, robotAngle=180)"
+                    + "(processing: rotation=0.75, x=0.25, y=0.75, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -4463,7 +4463,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test263() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.25, 0.75, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.25, 0.75, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 136.7627159913783),
                 new WheelVector(0.7285327923352978, -179.703214586605),
@@ -4472,7 +4472,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.25, y=0.75, robotAngle=240)"
+                    + "(processing: rotation=0.75, x=0.25, y=0.75, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -4480,7 +4480,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test264() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.25, 0.75, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.25, 0.75, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.9195476047081268, 105.90570135262837),
                 new WheelVector(0.30148967319295233, 146.70666560025074),
@@ -4489,7 +4489,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.25, y=0.75, robotAngle=300)"
+                    + "(processing: rotation=0.75, x=0.25, y=0.75, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -4497,7 +4497,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test265() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.25, 0.75, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.25, 0.75, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5495604511855343, 87.43397797347895),
                 new WheelVector(0.26335448735433414, -84.63927223775615),
@@ -4506,7 +4506,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.25, y=0.75, robotAngle=0)"
+                    + "(processing: rotation=1.0, x=0.25, y=0.75, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -4514,7 +4514,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test266() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.25, 0.75, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.25, 0.75, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.12074463209565565, 122.33882803763484),
                 new WheelVector(0.6911697564635945, -95.36207396241542),
@@ -4523,7 +4523,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.25, y=0.75, robotAngle=60)"
+                    + "(processing: rotation=1.0, x=0.25, y=0.75, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -4531,7 +4531,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test267() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.25, 0.75, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.25, 0.75, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5059717553007798, -175.546838899211),
                 new WheelVector(1.0, -120.29447054585408),
@@ -4540,7 +4540,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.25, y=0.75, robotAngle=120)"
+                    + "(processing: rotation=1.0, x=0.25, y=0.75, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -4548,7 +4548,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test268() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.25, 0.75, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.25, 0.75, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.8759788219485765, 162.5829155046211),
                 new WheelVector(1.0, -146.7009195081538),
@@ -4557,7 +4557,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.25, y=0.75, robotAngle=180)"
+                    + "(processing: rotation=1.0, x=0.25, y=0.75, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -4565,7 +4565,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test269() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.25, 0.75, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.25, 0.75, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 136.51653388206827),
                 new WheelVector(0.7327097883404936, -171.99655799791333),
@@ -4574,7 +4574,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.25, y=0.75, robotAngle=240)"
+                    + "(processing: rotation=1.0, x=0.25, y=0.75, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -4582,7 +4582,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test270() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.25, 0.75, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.25, 0.75, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.9207351046176819, 110.31847183939941),
                 new WheelVector(0.32211884458610296, 172.99474780066174),
@@ -4591,7 +4591,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.25, y=0.75, robotAngle=300)"
+                    + "(processing: rotation=1.0, x=0.25, y=0.75, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -4599,7 +4599,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test271() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.25, 1.0, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.25, 1.0, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 14.036243467926479),
                 new WheelVector(1.0, 14.036243467926479),
@@ -4608,7 +4608,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.25, y=1.0, robotAngle=0)"
+                    + "(processing: rotation=0.0, x=0.25, y=1.0, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -4616,7 +4616,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test272() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.25, 1.0, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.25, 1.0, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, -45.96375653207351),
                 new WheelVector(1.0, -45.96375653207351),
@@ -4625,7 +4625,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.25, y=1.0, robotAngle=60)"
+                    + "(processing: rotation=0.0, x=0.25, y=1.0, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -4633,7 +4633,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test273() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.25, 1.0, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.25, 1.0, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, -105.96375653207352),
                 new WheelVector(1.0, -105.96375653207352),
@@ -4642,7 +4642,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.25, y=1.0, robotAngle=120)"
+                    + "(processing: rotation=0.0, x=0.25, y=1.0, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -4650,7 +4650,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test274() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.25, 1.0, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.25, 1.0, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, -165.96375653207352),
                 new WheelVector(1.0, -165.96375653207352),
@@ -4659,7 +4659,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.25, y=1.0, robotAngle=180)"
+                    + "(processing: rotation=0.0, x=0.25, y=1.0, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -4667,7 +4667,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test275() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.25, 1.0, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.25, 1.0, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 134.0362434679265),
                 new WheelVector(1.0, 134.0362434679265),
@@ -4676,7 +4676,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.25, y=1.0, robotAngle=240)"
+                    + "(processing: rotation=0.0, x=0.25, y=1.0, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -4684,7 +4684,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test276() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.25, 1.0, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.25, 1.0, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 74.03624346792648),
                 new WheelVector(1.0, 74.03624346792648),
@@ -4693,7 +4693,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.25, y=1.0, robotAngle=300)"
+                    + "(processing: rotation=0.0, x=0.25, y=1.0, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -4701,7 +4701,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test277() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.25, 1.0, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.25, 1.0, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7407661426988171, 27.403196277932942),
                 new WheelVector(0.660240939135938, 5.082915504621078),
@@ -4710,7 +4710,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.25, y=1.0, robotAngle=0)"
+                    + "(processing: rotation=0.25, x=0.25, y=1.0, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -4718,7 +4718,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test278() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.25, 1.0, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.25, 1.0, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.6096617992173783, -46.272314177751014),
                 new WheelVector(0.8313414393933436, -59.541594825490236),
@@ -4727,7 +4727,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.25, y=1.0, robotAngle=60)"
+                    + "(processing: rotation=0.25, x=0.25, y=1.0, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -4735,7 +4735,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test279() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.25, 1.0, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.25, 1.0, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7451475848651316, -119.4781721635788),
                 new WheelVector(1.0, -111.51107874018801),
@@ -4744,7 +4744,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.25, y=1.0, robotAngle=120)"
+                    + "(processing: rotation=0.25, x=0.25, y=1.0, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -4752,7 +4752,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test280() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.25, 1.0, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.25, 1.0, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.9419042517911366, -176.43943974585943),
                 new WheelVector(1.0, -160.06602202652107),
@@ -4761,7 +4761,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.25, y=1.0, robotAngle=180)"
+                    + "(processing: rotation=0.25, x=0.25, y=1.0, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -4769,7 +4769,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test281() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.25, 1.0, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.25, 1.0, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 134.22435870603366),
                 new WheelVector(0.8249599508899658, 147.7211488639021),
@@ -4778,7 +4778,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.25, y=1.0, robotAngle=240)"
+                    + "(processing: rotation=0.25, x=0.25, y=1.0, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -4786,7 +4786,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test282() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.25, 1.0, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.25, 1.0, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.934223179406489, 84.77865668243228),
                 new WheelVector(0.6542307484142788, 82.53326678369933),
@@ -4795,7 +4795,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.25, y=1.0, robotAngle=300)"
+                    + "(processing: rotation=0.25, x=0.25, y=1.0, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -4803,7 +4803,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test283() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.25, 1.0, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.25, 1.0, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5967555538478875, 43.034690809091565),
                 new WheelVector(0.4417538780931909, -9.10081401222652),
@@ -4812,7 +4812,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.25, y=1.0, robotAngle=0)"
+                    + "(processing: rotation=0.5, x=0.25, y=1.0, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -4820,7 +4820,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test284() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.25, 1.0, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.25, 1.0, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.34683724540939914, -46.87139114207823),
                 new WheelVector(0.753357394615197, -71.65492080751201),
@@ -4829,7 +4829,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.25, y=1.0, robotAngle=60)"
+                    + "(processing: rotation=0.5, x=0.25, y=1.0, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -4837,7 +4837,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test285() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.25, 1.0, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.25, 1.0, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.6057172048901011, -134.9808953898968),
                 new WheelVector(1.0, -115.3510932822623),
@@ -4846,7 +4846,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.25, y=1.0, robotAngle=120)"
+                    + "(processing: rotation=0.5, x=0.25, y=1.0, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -4854,7 +4854,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test286() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.25, 1.0, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.25, 1.0, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.9159854244266524, 175.62511744499852),
                 new WheelVector(1.0, -155.96776880963594),
@@ -4863,7 +4863,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.25, y=1.0, robotAngle=180)"
+                    + "(processing: rotation=0.5, x=0.25, y=1.0, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -4871,7 +4871,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test287() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.25, 1.0, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.25, 1.0, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 134.351033373478),
                 new WheelVector(0.7434707195187866, 160.09451838242205),
@@ -4880,7 +4880,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.25, y=1.0, robotAngle=240)"
+                    + "(processing: rotation=0.5, x=0.25, y=1.0, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -4888,7 +4888,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test288() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.25, 1.0, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.25, 1.0, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.9049270233543686, 92.98271896433542),
                 new WheelVector(0.4310292912284206, 96.27177653555125),
@@ -4897,7 +4897,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.25, y=1.0, robotAngle=300)"
+                    + "(processing: rotation=0.5, x=0.25, y=1.0, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -4905,7 +4905,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test289() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.25, 1.0, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.25, 1.0, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5301975632748653, 58.956845185107724),
                 new WheelVector(0.31841297104272626, -30.831548350276496),
@@ -4914,7 +4914,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.25, y=1.0, robotAngle=0)"
+                    + "(processing: rotation=0.75, x=0.25, y=1.0, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -4922,7 +4922,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test290() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.25, 1.0, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.25, 1.0, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.1578948029621384, -48.5352870451079),
                 new WheelVector(0.7215724796935831, -81.66886796004614),
@@ -4931,7 +4931,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.25, y=1.0, robotAngle=60)"
+                    + "(processing: rotation=0.75, x=0.25, y=1.0, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -4939,7 +4939,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test291() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.25, 1.0, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.25, 1.0, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5420196130075752, -150.48634878369128),
                 new WheelVector(1.0, -118.14381058950404),
@@ -4948,7 +4948,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.25, y=1.0, robotAngle=120)"
+                    + "(processing: rotation=0.75, x=0.25, y=1.0, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -4956,7 +4956,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test292() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.25, 1.0, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.25, 1.0, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.9056916495284977, 169.61948918988963),
                 new WheelVector(1.0, -152.98252648401387),
@@ -4965,7 +4965,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.25, y=1.0, robotAngle=180)"
+                    + "(processing: rotation=0.75, x=0.25, y=1.0, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -4973,7 +4973,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test293() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.25, 1.0, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.25, 1.0, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 134.44214186458316),
                 new WheelVector(0.7101154310049222, 170.40854563450605),
@@ -4982,7 +4982,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.25, y=1.0, robotAngle=240)"
+                    + "(processing: rotation=0.75, x=0.25, y=1.0, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -4990,7 +4990,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test294() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.25, 1.0, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.25, 1.0, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.8932970136905617, 99.21580214176899),
                 new WheelVector(0.30292707959731346, 118.18200833042881),
@@ -4999,7 +4999,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.25, y=1.0, robotAngle=300)"
+                    + "(processing: rotation=0.75, x=0.25, y=1.0, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -5007,7 +5007,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test295() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.25, 1.0, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.25, 1.0, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5114281453621343, 72.9848742473196),
                 new WheelVector(0.27739580897282934, -57.35010012620953),
@@ -5016,7 +5016,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.25, y=1.0, robotAngle=0)"
+                    + "(processing: rotation=1.0, x=0.25, y=1.0, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -5024,7 +5024,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test296() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.25, 1.0, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.25, 1.0, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.01733238012099924, -74.51081869906965),
                 new WheelVector(0.7131331113610453, -89.62810845654529),
@@ -5033,7 +5033,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.25, y=1.0, robotAngle=60)"
+                    + "(processing: rotation=1.0, x=0.25, y=1.0, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -5041,7 +5041,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test297() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.25, 1.0, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.25, 1.0, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5241675212201611, -164.0070271956363),
                 new WheelVector(1.0, -120.25702428215949),
@@ -5050,7 +5050,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.25, y=1.0, robotAngle=120)"
+                    + "(processing: rotation=1.0, x=0.25, y=1.0, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -5058,7 +5058,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test298() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.25, 1.0, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.25, 1.0, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.9029893061200326, 165.00974254459692),
                 new WheelVector(1.0, -150.72238680964344),
@@ -5067,7 +5067,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.25, y=1.0, robotAngle=180)"
+                    + "(processing: rotation=1.0, x=0.25, y=1.0, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -5075,7 +5075,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test299() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.25, 1.0, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.25, 1.0, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 134.5108186990699),
                 new WheelVector(0.7012428800930348, 178.6351444289285),
@@ -5084,7 +5084,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.25, y=1.0, robotAngle=240)"
+                    + "(processing: rotation=1.0, x=0.25, y=1.0, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -5092,7 +5092,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test300() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.25, 1.0, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.25, 1.0, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.8902442165791848, 104.0070271956363),
                 new WheelVector(0.25939613616007273, 146.16878387063932),
@@ -5101,7 +5101,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.25, y=1.0, robotAngle=300)"
+                    + "(processing: rotation=1.0, x=0.25, y=1.0, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -5109,7 +5109,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test301() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.5, 0.0, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.5, 0.0, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5, 90.0),
                 new WheelVector(0.5, 90.0),
@@ -5118,7 +5118,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.5, y=0.0, robotAngle=0)"
+                    + "(processing: rotation=0.0, x=0.5, y=0.0, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -5126,7 +5126,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test302() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.5, 0.0, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.5, 0.0, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5, 30.00000000000001),
                 new WheelVector(0.5, 30.00000000000001),
@@ -5135,7 +5135,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.5, y=0.0, robotAngle=60)"
+                    + "(processing: rotation=0.0, x=0.5, y=0.0, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -5143,7 +5143,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test303() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.5, 0.0, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.5, 0.0, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.49999999999999994, -29.999999999999993),
                 new WheelVector(0.49999999999999994, -29.999999999999993),
@@ -5152,7 +5152,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.5, y=0.0, robotAngle=120)"
+                    + "(processing: rotation=0.0, x=0.5, y=0.0, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -5160,7 +5160,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test304() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.5, 0.0, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.5, 0.0, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5, -90.0),
                 new WheelVector(0.5, -90.0),
@@ -5169,7 +5169,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.5, y=0.0, robotAngle=180)"
+                    + "(processing: rotation=0.0, x=0.5, y=0.0, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -5177,7 +5177,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test305() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.5, 0.0, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.5, 0.0, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5, -149.99999999999997),
                 new WheelVector(0.5, -149.99999999999997),
@@ -5186,7 +5186,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.5, y=0.0, robotAngle=240)"
+                    + "(processing: rotation=0.0, x=0.5, y=0.0, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -5194,7 +5194,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test306() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.5, 0.0, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.5, 0.0, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5, 149.99999999999997),
                 new WheelVector(0.5, 149.99999999999997),
@@ -5203,7 +5203,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.5, y=0.0, robotAngle=300)"
+                    + "(processing: rotation=0.0, x=0.5, y=0.0, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -5211,7 +5211,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test307() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.5, 0.0, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.5, 0.0, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.6994831629829533, 104.6388065951783),
                 new WheelVector(0.36840643955197516, 118.67505006310476),
@@ -5220,7 +5220,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.5, y=0.0, robotAngle=0)"
+                    + "(processing: rotation=0.25, x=0.5, y=0.0, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -5228,7 +5228,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test308() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.5, 0.0, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.5, 0.0, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.497790356198641, 59.019465915996555),
                 new WheelVector(0.26649304573990845, 15.948086885773927),
@@ -5237,7 +5237,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.5, y=0.0, robotAngle=60)"
+                    + "(processing: rotation=0.25, x=0.5, y=0.0, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -5245,7 +5245,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test309() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.5, 0.0, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.5, 0.0, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.2664930457399084, -15.948086885773893),
                 new WheelVector(0.4977903561986408, -59.01946591599654),
@@ -5254,7 +5254,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.5, y=0.0, robotAngle=120)"
+                    + "(processing: rotation=0.25, x=0.5, y=0.0, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -5262,7 +5262,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test310() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.5, 0.0, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.5, 0.0, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.36840643955197516, -118.67505006310476),
                 new WheelVector(0.6994831629829533, -104.6388065951783),
@@ -5271,7 +5271,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.5, y=0.0, robotAngle=180)"
+                    + "(processing: rotation=0.25, x=0.5, y=0.0, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -5279,7 +5279,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test311() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.5, 0.0, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.5, 0.0, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.6141699775108109, -173.1527271264526),
                 new WheelVector(0.7442993057717218, -145.0127652743675),
@@ -5288,7 +5288,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.5, y=0.0, robotAngle=240)"
+                    + "(processing: rotation=0.25, x=0.5, y=0.0, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -5296,7 +5296,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test312() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.5, 0.0, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.5, 0.0, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7442993057717218, 145.01276527436752),
                 new WheelVector(0.614169977510811, 173.15272712645262),
@@ -5305,7 +5305,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.5, y=0.0, robotAngle=300)"
+                    + "(processing: rotation=0.25, x=0.5, y=0.0, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -5313,7 +5313,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test313() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.5, 0.0, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.5, 0.0, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.9238795325112867, 112.50000000000001),
                 new WheelVector(0.38268343236508984, 157.5),
@@ -5322,7 +5322,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.5, y=0.0, robotAngle=0)"
+                    + "(processing: rotation=0.5, x=0.5, y=0.0, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -5330,7 +5330,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test314() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.5, 0.0, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.5, 0.0, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.6087614290087207, 82.50000000000001),
                 new WheelVector(0.13052619222005155, -52.50000000000001),
@@ -5339,7 +5339,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.5, y=0.0, robotAngle=60)"
+                    + "(processing: rotation=0.5, x=0.5, y=0.0, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -5347,7 +5347,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test315() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.5, 0.0, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.5, 0.0, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.1305261922200517, 52.500000000000036),
                 new WheelVector(0.6087614290087207, -82.50000000000001),
@@ -5356,7 +5356,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.5, y=0.0, robotAngle=120)"
+                    + "(processing: rotation=0.5, x=0.5, y=0.0, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -5364,7 +5364,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test316() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.5, 0.0, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.5, 0.0, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.3826834323650897, -157.5),
                 new WheelVector(0.9238795325112867, -112.50000000000001),
@@ -5373,7 +5373,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.5, y=0.0, robotAngle=180)"
+                    + "(processing: rotation=0.5, x=0.5, y=0.0, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -5381,7 +5381,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test317() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.5, 0.0, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.5, 0.0, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7933533402912349, 172.5),
                 new WheelVector(0.9914448613738104, -142.5),
@@ -5390,7 +5390,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.5, y=0.0, robotAngle=240)"
+                    + "(processing: rotation=0.5, x=0.5, y=0.0, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -5398,7 +5398,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test318() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.5, 0.0, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.5, 0.0, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.9914448613738105, 142.5),
                 new WheelVector(0.7933533402912353, -172.5),
@@ -5407,7 +5407,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.5, y=0.0, robotAngle=300)"
+                    + "(processing: rotation=0.5, x=0.5, y=0.0, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -5415,7 +5415,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test319() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.5, 0.0, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.5, 0.0, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 117.23572392039048),
                 new WheelVector(0.4584002243324191, -176.7267650541877),
@@ -5424,7 +5424,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.5, y=0.0, robotAngle=0)"
+                    + "(processing: rotation=0.75, x=0.5, y=0.0, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -5432,7 +5432,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test320() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.5, 0.0, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.5, 0.0, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.6343086743774511, 97.10883051074349),
                 new WheelVector(0.23935885067189017, -109.14458951757926),
@@ -5441,7 +5441,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.5, y=0.0, robotAngle=60)"
+                    + "(processing: rotation=0.75, x=0.5, y=0.0, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -5449,7 +5449,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test321() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.5, 0.0, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.5, 0.0, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.23935885067189025, 109.14458951757923),
                 new WheelVector(0.634308674377451, -97.10883051074349),
@@ -5458,7 +5458,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.5, y=0.0, robotAngle=120)"
+                    + "(processing: rotation=0.75, x=0.5, y=0.0, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -5466,7 +5466,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test322() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.5, 0.0, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.5, 0.0, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.45840022433241895, 176.7267650541877),
                 new WheelVector(0.9999999999999998, -117.23572392039048),
@@ -5475,7 +5475,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.5, y=0.0, robotAngle=180)"
+                    + "(processing: rotation=0.75, x=0.5, y=0.0, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -5483,7 +5483,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test323() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.5, 0.0, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.5, 0.0, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.8092868249295109, 163.77515027235472),
                 new WheelVector(1.0, -140.99172200139378),
@@ -5492,7 +5492,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.5, y=0.0, robotAngle=240)"
+                    + "(processing: rotation=0.75, x=0.5, y=0.0, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -5500,7 +5500,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test324() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.5, 0.0, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.5, 0.0, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 140.9917220013938),
                 new WheelVector(0.809286824929511, -163.7751502723547),
@@ -5509,7 +5509,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.5, y=0.0, robotAngle=300)"
+                    + "(processing: rotation=0.75, x=0.5, y=0.0, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -5517,7 +5517,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test325() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.5, 0.0, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.5, 0.0, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 120.36119340482172),
                 new WheelVector(0.5266837846116297, -163.67505006310478),
@@ -5526,7 +5526,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.5, y=0.0, robotAngle=0)"
+                    + "(processing: rotation=1.0, x=0.5, y=0.0, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -5534,7 +5534,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test326() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.5, 0.0, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.5, 0.0, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.6688040044354339, 105.98053408400347),
                 new WheelVector(0.35804553849959175, -120.94808688577392),
@@ -5543,7 +5543,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.5, y=0.0, robotAngle=60)"
+                    + "(processing: rotation=1.0, x=0.5, y=0.0, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -5551,7 +5551,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test327() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.5, 0.0, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.5, 0.0, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.35804553849959186, 120.94808688577392),
                 new WheelVector(0.6688040044354339, -105.98053408400347),
@@ -5560,7 +5560,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.5, y=0.0, robotAngle=120)"
+                    + "(processing: rotation=1.0, x=0.5, y=0.0, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -5568,7 +5568,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test328() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.5, 0.0, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.5, 0.0, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5266837846116293, 163.67505006310478),
                 new WheelVector(0.9999999999999999, -120.36119340482172),
@@ -5577,7 +5577,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.5, y=0.0, robotAngle=180)"
+                    + "(processing: rotation=1.0, x=0.5, y=0.0, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -5585,7 +5585,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test329() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.5, 0.0, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.5, 0.0, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.8251653236113299, 158.1527271264526),
                 new WheelVector(1.0, -139.98723472563248),
@@ -5594,7 +5594,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.5, y=0.0, robotAngle=240)"
+                    + "(processing: rotation=1.0, x=0.5, y=0.0, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -5602,7 +5602,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test330() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.5, 0.0, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.5, 0.0, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 139.98723472563248),
                 new WheelVector(0.8251653236113299, -158.1527271264526),
@@ -5611,7 +5611,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.5, y=0.0, robotAngle=300)"
+                    + "(processing: rotation=1.0, x=0.5, y=0.0, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -5619,7 +5619,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test331() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.5, 0.25, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.5, 0.25, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5590169943749475, 63.43494882292201),
                 new WheelVector(0.5590169943749475, 63.43494882292201),
@@ -5628,7 +5628,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.5, y=0.25, robotAngle=0)"
+                    + "(processing: rotation=0.0, x=0.5, y=0.25, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -5636,7 +5636,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test332() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.5, 0.25, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.5, 0.25, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5590169943749473, 3.434948822922018),
                 new WheelVector(0.5590169943749473, 3.434948822922018),
@@ -5645,7 +5645,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.5, y=0.25, robotAngle=60)"
+                    + "(processing: rotation=0.0, x=0.5, y=0.25, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -5653,7 +5653,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test333() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.5, 0.25, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.5, 0.25, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5590169943749475, -56.56505117707798),
                 new WheelVector(0.5590169943749475, -56.56505117707798),
@@ -5662,7 +5662,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.5, y=0.25, robotAngle=120)"
+                    + "(processing: rotation=0.0, x=0.5, y=0.25, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -5670,7 +5670,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test334() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.5, 0.25, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.5, 0.25, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5590169943749475, -116.56505117707799),
                 new WheelVector(0.5590169943749475, -116.56505117707799),
@@ -5679,7 +5679,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.5, y=0.25, robotAngle=180)"
+                    + "(processing: rotation=0.0, x=0.5, y=0.25, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -5687,7 +5687,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test335() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.5, 0.25, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.5, 0.25, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5590169943749475, -176.56505117707798),
                 new WheelVector(0.5590169943749475, -176.56505117707798),
@@ -5696,7 +5696,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.5, y=0.25, robotAngle=240)"
+                    + "(processing: rotation=0.0, x=0.5, y=0.25, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -5704,7 +5704,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test336() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.5, 0.25, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.5, 0.25, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5590169943749475, 123.43494882292201),
                 new WheelVector(0.5590169943749475, 123.43494882292201),
@@ -5713,7 +5713,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.5, y=0.25, robotAngle=300)"
+                    + "(processing: rotation=0.0, x=0.5, y=0.25, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -5721,7 +5721,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test337() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.5, 0.25, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.5, 0.25, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.6807263382948529, 83.82494993689524),
                 new WheelVector(0.3314135740355918, 77.23561031724536),
@@ -5730,7 +5730,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.5, y=0.25, robotAngle=0)"
+                    + "(processing: rotation=0.25, x=0.5, y=0.25, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -5738,7 +5738,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test338() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.5, 0.25, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.5, 0.25, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.4353785828887731, 28.87888896787805),
                 new WheelVector(0.40727254273465086, -20.598136918019986),
@@ -5747,7 +5747,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.5, y=0.25, robotAngle=60)"
+                    + "(processing: rotation=0.25, x=0.5, y=0.25, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -5755,7 +5755,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test339() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.5, 0.25, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.5, 0.25, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.31806628678613175, -65.6313651161493),
                 new WheelVector(0.6565332946701966, -78.46933388317368),
@@ -5764,7 +5764,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.5, y=0.25, robotAngle=120)"
+                    + "(processing: rotation=0.25, x=0.5, y=0.25, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -5772,7 +5772,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test340() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.5, 0.25, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.5, 0.25, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5353612353838122, -142.8611934048217),
                 new WheelVector(0.8001031451912655, -122.23561031724535),
@@ -5781,7 +5781,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.5, y=0.25, robotAngle=180)"
+                    + "(processing: rotation=0.25, x=0.5, y=0.25, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -5789,7 +5789,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test341() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.5, 0.25, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.5, 0.25, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7486290734147075, 168.96585756823288),
                 new WheelVector(0.7642833741057384, -164.03077971997146),
@@ -5798,7 +5798,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.5, y=0.25, robotAngle=240)"
+                    + "(processing: rotation=0.25, x=0.5, y=0.25, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -5806,7 +5806,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test342() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.5, 0.25, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.5, 0.25, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.8055022266946766, 127.00232071247585),
                 new WheelVector(0.5647690085242786, 149.13576154658696),
@@ -5815,7 +5815,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.5, y=0.25, robotAngle=300)"
+                    + "(processing: rotation=0.25, x=0.5, y=0.25, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -5823,7 +5823,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test343() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.5, 0.25, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.5, 0.25, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.8224834854518072, 96.917337940107),
                 new WheelVector(0.1715728752538099, 125.26438968275468),
@@ -5832,7 +5832,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.5, y=0.25, robotAngle=0)"
+                    + "(processing: rotation=0.5, x=0.5, y=0.25, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -5840,7 +5840,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test344() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.5, 0.25, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.5, 0.25, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.4377316768026648, 62.1545477812505),
                 new WheelVector(0.37979184842634, -57.428905166295316),
@@ -5849,7 +5849,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.5, y=0.25, robotAngle=60)"
+                    + "(processing: rotation=0.5, x=0.5, y=0.25, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -5857,7 +5857,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test345() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.5, 0.25, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.5, 0.25, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.11558735776853776, -111.95844358274005),
                 new WheelVector(0.7795066873256501, -93.17856342379169),
@@ -5866,7 +5866,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.5, y=0.25, robotAngle=120)"
+                    + "(processing: rotation=0.5, x=0.5, y=0.25, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -5874,7 +5874,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test346() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.5, 0.25, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.5, 0.25, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.594102825849117, -166.36129272052355),
                 new WheelVector(1.0, -125.26438968275465),
@@ -5883,7 +5883,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.5, y=0.25, robotAngle=180)"
+                    + "(processing: rotation=0.5, x=0.5, y=0.25, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -5891,7 +5891,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test347() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.5, 0.25, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.5, 0.25, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.9661216171494805, 160.65332848472855),
                 new WheelVector(0.9903323441496316, -156.9941317279802),
@@ -5900,7 +5900,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.5, y=0.25, robotAngle=240)"
+                    + "(processing: rotation=0.5, x=0.5, y=0.25, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -5908,7 +5908,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test348() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.5, 0.25, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.5, 0.25, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 128.89413015323177),
                 new WheelVector(0.6369691999543644, 170.31099027542868),
@@ -5917,7 +5917,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.5, y=0.25, robotAngle=300)"
+                    + "(processing: rotation=0.5, x=0.5, y=0.25, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -5925,7 +5925,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test349() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.5, 0.25, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.5, 0.25, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.826154464275865, 105.22048456456493),
                 new WheelVector(0.21815956666812703, -173.82494993689522),
@@ -5934,7 +5934,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.5, y=0.25, robotAngle=0)"
+                    + "(processing: rotation=0.75, x=0.5, y=0.25, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -5942,7 +5942,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test350() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.5, 0.25, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.5, 0.25, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.4605483607300164, 87.18914916859447),
                 new WheelVector(0.4059715312655433, -86.81090462387037),
@@ -5951,7 +5951,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.5, y=0.25, robotAngle=60)"
+                    + "(processing: rotation=0.75, x=0.5, y=0.25, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -5959,7 +5959,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test351() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.5, 0.25, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.5, 0.25, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.17757982759077964, 163.98208135074623),
                 new WheelVector(0.7841289567434376, -102.57251860086721),
@@ -5968,7 +5968,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.5, y=0.25, robotAngle=120)"
+                    + "(processing: rotation=0.75, x=0.5, y=0.25, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -5976,7 +5976,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test352() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.5, 0.25, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.5, 0.25, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.6042039371651623, 177.77413222735157),
                 new WheelVector(1.0, -127.13880659517828),
@@ -5985,7 +5985,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.5, y=0.25, robotAngle=180)"
+                    + "(processing: rotation=0.75, x=0.5, y=0.25, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -5993,7 +5993,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test353() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.5, 0.25, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.5, 0.25, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.9760676675451269, 155.4629557399725),
                 new WheelVector(1.0, -152.61326286787053),
@@ -6002,7 +6002,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.5, y=0.25, robotAngle=240)"
+                    + "(processing: rotation=0.75, x=0.5, y=0.25, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -6010,7 +6010,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test354() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.5, 0.25, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.5, 0.25, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 130.0639480662518),
                 new WheelVector(0.6455047438738301, -175.6464225780976),
@@ -6019,7 +6019,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.5, y=0.25, robotAngle=300)"
+                    + "(processing: rotation=0.75, x=0.5, y=0.25, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -6027,7 +6027,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test355() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.5, 0.25, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.5, 0.25, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.8378782787155113, 110.74065743956108),
                 new WheelVector(0.3257606941142601, -155.6255830875764),
@@ -6036,7 +6036,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.5, y=0.25, robotAngle=0)"
+                    + "(processing: rotation=1.0, x=0.5, y=0.25, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -6044,7 +6044,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test356() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.5, 0.25, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.5, 0.25, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5153365500919578, 101.38236793410906),
                 new WheelVector(0.47062628943766927, -102.48034996630794),
@@ -6053,7 +6053,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.5, y=0.25, robotAngle=60)"
+                    + "(processing: rotation=1.0, x=0.5, y=0.25, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -6061,7 +6061,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test357() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.5, 0.25, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.5, 0.25, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.300317869515802, 148.91563484058452),
                 new WheelVector(0.7988646807814792, -108.78090453668241),
@@ -6070,7 +6070,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.5, y=0.25, robotAngle=120)"
+                    + "(processing: rotation=1.0, x=0.5, y=0.25, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -6078,7 +6078,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test358() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.5, 0.25, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.5, 0.25, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.6356728874873746, 167.79010817038707),
                 new WheelVector(1.0, -128.4106603803501),
@@ -6087,7 +6087,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.5, y=0.25, robotAngle=180)"
+                    + "(processing: rotation=1.0, x=0.5, y=0.25, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -6095,7 +6095,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test359() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.5, 0.25, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.5, 0.25, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.9777102558780836, 151.9669214619973),
                 new WheelVector(1.0, -149.65531136785967),
@@ -6104,7 +6104,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.5, y=0.25, robotAngle=240)"
+                    + "(processing: rotation=1.0, x=0.5, y=0.25, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -6112,7 +6112,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test360() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.5, 0.25, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.5, 0.25, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 130.85824502587238),
                 new WheelVector(0.6723139479070886, -166.66598833907372),
@@ -6121,7 +6121,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.5, y=0.25, robotAngle=300)"
+                    + "(processing: rotation=1.0, x=0.5, y=0.25, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -6129,7 +6129,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test361() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.5, 0.5, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.5, 0.5, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7071067811865476, 45.0),
                 new WheelVector(0.7071067811865476, 45.0),
@@ -6138,7 +6138,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.5, y=0.5, robotAngle=0)"
+                    + "(processing: rotation=0.0, x=0.5, y=0.5, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -6146,7 +6146,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test362() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.5, 0.5, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.5, 0.5, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7071067811865476, -14.999999999999993),
                 new WheelVector(0.7071067811865476, -14.999999999999993),
@@ -6155,7 +6155,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.5, y=0.5, robotAngle=60)"
+                    + "(processing: rotation=0.0, x=0.5, y=0.5, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -6163,7 +6163,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test363() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.5, 0.5, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.5, 0.5, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7071067811865475, -74.99999999999999),
                 new WheelVector(0.7071067811865475, -74.99999999999999),
@@ -6172,7 +6172,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.5, y=0.5, robotAngle=120)"
+                    + "(processing: rotation=0.0, x=0.5, y=0.5, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -6180,7 +6180,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test364() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.5, 0.5, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.5, 0.5, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7071067811865476, -135.0),
                 new WheelVector(0.7071067811865476, -135.0),
@@ -6189,7 +6189,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.5, y=0.5, robotAngle=180)"
+                    + "(processing: rotation=0.0, x=0.5, y=0.5, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -6197,7 +6197,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test365() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.5, 0.5, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.5, 0.5, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7071067811865475, 165.00000000000003),
                 new WheelVector(0.7071067811865475, 165.00000000000003),
@@ -6206,7 +6206,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.5, y=0.5, robotAngle=240)"
+                    + "(processing: rotation=0.0, x=0.5, y=0.5, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -6214,7 +6214,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test366() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.5, 0.5, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.5, 0.5, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7071067811865476, 105.0),
                 new WheelVector(0.7071067811865476, 105.0),
@@ -6223,7 +6223,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.5, y=0.5, robotAngle=300)"
+                    + "(processing: rotation=0.0, x=0.5, y=0.5, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -6231,7 +6231,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test367() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.5, 0.5, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.5, 0.5, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.75, 64.47122063449069),
                 new WheelVector(0.4571067811865476, 45.0),
@@ -6240,7 +6240,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.5, y=0.5, robotAngle=0)"
+                    + "(processing: rotation=0.25, x=0.5, y=0.5, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -6248,7 +6248,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test368() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.5, 0.5, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.5, 0.5, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5062744138825336, -0.7057553859603538),
                 new WheelVector(0.6210662643417071, -35.40196970123214),
@@ -6257,7 +6257,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.5, y=0.5, robotAngle=60)"
+                    + "(processing: rotation=0.25, x=0.5, y=0.5, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -6265,7 +6265,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test369() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.5, 0.5, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.5, 0.5, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5062744138825334, -89.29424461403963),
                 new WheelVector(0.8598120116029064, -89.58444405678857),
@@ -6274,7 +6274,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.5, y=0.5, robotAngle=120)"
+                    + "(processing: rotation=0.25, x=0.5, y=0.5, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -6282,7 +6282,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test370() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.5, 0.5, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.5, 0.5, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7500000000000001, -154.4712206344907),
                 new WheelVector(0.9571067811865476, -135.0),
@@ -6291,7 +6291,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.5, y=0.5, robotAngle=180)"
+                    + "(processing: rotation=0.25, x=0.5, y=0.5, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -6299,7 +6299,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test371() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.5, 0.5, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.5, 0.5, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.9320333780760736, 157.29253093958985),
                 new WheelVector(0.8598120116029067, 179.58444405678858),
@@ -6308,7 +6308,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.5, y=0.5, robotAngle=240)"
+                    + "(processing: rotation=0.25, x=0.5, y=0.5, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -6316,7 +6316,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test372() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.5, 0.5, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.5, 0.5, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.9320333780760737, 112.70746906041018),
                 new WheelVector(0.6210662643417071, 125.40196970123215),
@@ -6325,7 +6325,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.5, y=0.5, robotAngle=300)"
+                    + "(processing: rotation=0.25, x=0.5, y=0.5, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -6333,7 +6333,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test373() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.5, 0.5, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.5, 0.5, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7174389352143008, 80.26438968275465),
                 new WheelVector(0.17157287525380988, 45.0),
@@ -6342,7 +6342,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.5, y=0.5, robotAngle=0)"
+                    + "(processing: rotation=0.5, x=0.5, y=0.5, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -6350,7 +6350,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test374() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.5, 0.5, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.5, 0.5, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.3178372451957823, 27.36780515862268),
                 new WheelVector(0.5394415938940733, -58.4494755261363),
@@ -6359,7 +6359,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.5, y=0.5, robotAngle=60)"
+                    + "(processing: rotation=0.5, x=0.5, y=0.5, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -6367,7 +6367,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test375() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.5, 0.5, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.5, 0.5, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.3178372451957821, -117.36780515862269),
                 new WheelVector(0.9000129339129885, -99.34287017526722),
@@ -6376,7 +6376,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.5, y=0.5, robotAngle=120)"
+                    + "(processing: rotation=0.5, x=0.5, y=0.5, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -6384,7 +6384,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test376() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.5, 0.5, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.5, 0.5, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7174389352143007, -170.26438968275465),
                 new WheelVector(1.0, -135.0),
@@ -6393,7 +6393,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.5, y=0.5, robotAngle=180)"
+                    + "(processing: rotation=0.5, x=0.5, y=0.5, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -6401,7 +6401,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test377() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.5, 0.5, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.5, 0.5, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 152.63219484137733),
                 new WheelVector(0.9000129339129886, -170.65712982473278),
@@ -6410,7 +6410,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.5, y=0.5, robotAngle=240)"
+                    + "(processing: rotation=0.5, x=0.5, y=0.5, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -6418,7 +6418,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test378() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.5, 0.5, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.5, 0.5, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 117.36780515862269),
                 new WheelVector(0.5394415938940733, 148.4494755261363),
@@ -6427,7 +6427,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.5, y=0.5, robotAngle=300)"
+                    + "(processing: rotation=0.5, x=0.5, y=0.5, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -6435,7 +6435,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test379() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.5, 0.5, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.5, 0.5, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7074130871623807, 91.68614334171696),
                 new WheelVector(0.02943725152285948, -135.0),
@@ -6444,7 +6444,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.5, y=0.5, robotAngle=0)"
+                    + "(processing: rotation=0.75, x=0.5, y=0.5, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -6452,7 +6452,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test380() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.5, 0.5, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.5, 0.5, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.269552965091232, 66.26944749190652),
                 new WheelVector(0.5182943710431929, -77.91880178409686),
@@ -6461,7 +6461,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.5, y=0.5, robotAngle=60)"
+                    + "(processing: rotation=0.75, x=0.5, y=0.5, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -6469,7 +6469,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test381() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.5, 0.5, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.5, 0.5, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.26955296509123183, -156.26944749190656),
                 new WheelVector(0.8966770577718692, -105.97368269959304),
@@ -6478,7 +6478,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.5, y=0.5, robotAngle=120)"
+                    + "(processing: rotation=0.75, x=0.5, y=0.5, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -6486,7 +6486,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test382() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.5, 0.5, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.5, 0.5, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7074130871623806, 178.31385665828304),
                 new WheelVector(1.0, -135.0),
@@ -6495,7 +6495,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.5, y=0.5, robotAngle=180)"
+                    + "(processing: rotation=0.75, x=0.5, y=0.5, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -6503,7 +6503,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test383() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.5, 0.5, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.5, 0.5, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 149.54807815253707),
                 new WheelVector(0.8966770577718693, -164.02631730040693),
@@ -6512,7 +6512,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.5, y=0.5, robotAngle=240)"
+                    + "(processing: rotation=0.75, x=0.5, y=0.5, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -6520,7 +6520,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test384() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.5, 0.5, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.5, 0.5, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 120.45192184746294),
                 new WheelVector(0.5182943710431929, 167.91880178409687),
@@ -6529,7 +6529,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.5, y=0.5, robotAngle=300)"
+                    + "(processing: rotation=0.75, x=0.5, y=0.5, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -6537,7 +6537,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test385() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.5, 0.5, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.5, 0.5, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7174389352143008, 99.73561031724536),
                 new WheelVector(0.17157287525380996, -135.0),
@@ -6546,7 +6546,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.5, y=0.5, robotAngle=0)"
+                    + "(processing: rotation=1.0, x=0.5, y=0.5, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -6554,7 +6554,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test386() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.5, 0.5, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.5, 0.5, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.31783724519578227, 92.63219484137733),
                 new WheelVector(0.5394415938940733, -91.5505244738637),
@@ -6563,7 +6563,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.5, y=0.5, robotAngle=60)"
+                    + "(processing: rotation=1.0, x=0.5, y=0.5, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -6571,7 +6571,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test387() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.5, 0.5, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.5, 0.5, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.3178372451957822, 177.36780515862267),
                 new WheelVector(0.9000129339129885, -110.65712982473279),
@@ -6580,7 +6580,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.5, y=0.5, robotAngle=120)"
+                    + "(processing: rotation=1.0, x=0.5, y=0.5, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -6588,7 +6588,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test388() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.5, 0.5, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.5, 0.5, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7174389352143007, 170.26438968275465),
                 new WheelVector(1.0, -135.0),
@@ -6597,7 +6597,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.5, y=0.5, robotAngle=180)"
+                    + "(processing: rotation=1.0, x=0.5, y=0.5, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -6605,7 +6605,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test389() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.5, 0.5, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.5, 0.5, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 147.3678051586227),
                 new WheelVector(0.9000129339129888, -159.3428701752672),
@@ -6614,7 +6614,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.5, y=0.5, robotAngle=240)"
+                    + "(processing: rotation=1.0, x=0.5, y=0.5, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -6622,7 +6622,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test390() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.5, 0.5, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.5, 0.5, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 122.63219484137736),
                 new WheelVector(0.5394415938940733, -178.44947552613633),
@@ -6631,7 +6631,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.5, y=0.5, robotAngle=300)"
+                    + "(processing: rotation=1.0, x=0.5, y=0.5, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -6639,7 +6639,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test391() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.5, 0.75, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.5, 0.75, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.9013878188659973, 33.690067525979785),
                 new WheelVector(0.9013878188659973, 33.690067525979785),
@@ -6648,7 +6648,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.5, y=0.75, robotAngle=0)"
+                    + "(processing: rotation=0.0, x=0.5, y=0.75, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -6656,7 +6656,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test392() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.5, 0.75, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.5, 0.75, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.9013878188659974, -26.309932474020208),
                 new WheelVector(0.9013878188659974, -26.309932474020208),
@@ -6665,7 +6665,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.5, y=0.75, robotAngle=60)"
+                    + "(processing: rotation=0.0, x=0.5, y=0.75, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -6673,7 +6673,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test393() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.5, 0.75, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.5, 0.75, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.9013878188659972, -86.3099324740202),
                 new WheelVector(0.9013878188659972, -86.3099324740202),
@@ -6682,7 +6682,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.5, y=0.75, robotAngle=120)"
+                    + "(processing: rotation=0.0, x=0.5, y=0.75, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -6690,7 +6690,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test394() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.5, 0.75, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.5, 0.75, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.9013878188659973, -146.3099324740202),
                 new WheelVector(0.9013878188659973, -146.3099324740202),
@@ -6699,7 +6699,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.5, y=0.75, robotAngle=180)"
+                    + "(processing: rotation=0.0, x=0.5, y=0.75, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -6707,7 +6707,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test395() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.5, 0.75, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.5, 0.75, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.9013878188659973, 153.69006752597983),
                 new WheelVector(0.9013878188659973, 153.69006752597983),
@@ -6716,7 +6716,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.5, y=0.75, robotAngle=240)"
+                    + "(processing: rotation=0.0, x=0.5, y=0.75, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -6724,7 +6724,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test396() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.5, 0.75, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.5, 0.75, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.9013878188659973, 93.69006752597979),
                 new WheelVector(0.9013878188659973, 93.69006752597979),
@@ -6733,7 +6733,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.5, y=0.75, robotAngle=300)"
+                    + "(processing: rotation=0.0, x=0.5, y=0.75, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -6741,7 +6741,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test397() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.5, 0.75, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.5, 0.75, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7728530170944006, 49.7357239203905),
                 new WheelVector(0.5734425080626623, 29.417337940107004),
@@ -6750,7 +6750,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.5, y=0.75, robotAngle=0)"
+                    + "(processing: rotation=0.25, x=0.5, y=0.75, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -6758,7 +6758,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test398() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.5, 0.75, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.5, 0.75, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5866527431163636, -19.436255639917803),
                 new WheelVector(0.749099141244091, -42.39495418320602),
@@ -6767,7 +6767,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.5, y=0.75, robotAngle=60)"
+                    + "(processing: rotation=0.25, x=0.5, y=0.75, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -6775,7 +6775,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test399() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.5, 0.75, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.5, 0.75, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.6648787346479846, -99.3316816300425),
                 new WheelVector(0.9829532328468624, -96.29683579329902),
@@ -6784,7 +6784,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.5, y=0.75, robotAngle=120)"
+                    + "(processing: rotation=0.25, x=0.5, y=0.75, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -6792,7 +6792,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test400() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.5, 0.75, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.5, 0.75, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.8552979153612374, -160.7732349458123),
                 new WheelVector(1.0, -143.86129272052355),
@@ -6801,7 +6801,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.5, y=0.75, robotAngle=180)"
+                    + "(processing: rotation=0.25, x=0.5, y=0.75, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -6809,7 +6809,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test401() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.5, 0.75, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.5, 0.75, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 149.66395951681997),
                 new WheelVector(0.8848796062704347, 167.2551325721068),
@@ -6818,7 +6818,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.5, y=0.75, robotAngle=240)"
+                    + "(processing: rotation=0.25, x=0.5, y=0.75, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -6826,7 +6826,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test402() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.5, 0.75, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.5, 0.75, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 102.30604589623985),
                 new WheelVector(0.6898309023398465, 107.99685709132697),
@@ -6835,7 +6835,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.5, y=0.75, robotAngle=300)"
+                    + "(processing: rotation=0.25, x=0.5, y=0.75, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -6843,7 +6843,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test403() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.5, 0.75, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.5, 0.75, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.6745821284644979, 65.08672953200221),
                 new WheelVector(0.3029330180190891, 20.274132227351576),
@@ -6852,7 +6852,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.5, y=0.75, robotAngle=0)"
+                    + "(processing: rotation=0.5, x=0.5, y=0.75, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -6860,7 +6860,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test404() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.5, 0.75, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.5, 0.75, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.3299645526787305, -5.775461899920233),
                 new WheelVector(0.6353818328304861, -58.89012905893648),
@@ -6869,7 +6869,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.5, y=0.75, robotAngle=60)"
+                    + "(processing: rotation=0.5, x=0.5, y=0.75, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -6877,7 +6877,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test405() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.5, 0.75, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.5, 0.75, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.47070287366003055, -118.42745242427408),
                 new WheelVector(0.9761340913451488, -103.27084897473992),
@@ -6886,7 +6886,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.5, y=0.75, robotAngle=120)"
+                    + "(processing: rotation=0.5, x=0.5, y=0.75, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -6894,7 +6894,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test406() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.5, 0.75, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.5, 0.75, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7979394496842861, -172.4407541682635),
                 new WheelVector(1.0, -142.2795154354351),
@@ -6903,7 +6903,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.5, y=0.75, robotAngle=180)"
+                    + "(processing: rotation=0.5, x=0.5, y=0.75, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -6911,7 +6911,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test407() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.5, 0.75, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.5, 0.75, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 147.0436464222716),
                 new WheelVector(0.8397419440122347, 177.73386547962377),
@@ -6920,7 +6920,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.5, y=0.75, robotAngle=240)"
+                    + "(processing: rotation=0.5, x=0.5, y=0.75, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -6928,7 +6928,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test408() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.5, 0.75, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.5, 0.75, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 108.18253692684517),
                 new WheelVector(0.5183854077668384, 127.01013641773076),
@@ -6937,7 +6937,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.5, y=0.75, robotAngle=300)"
+                    + "(processing: rotation=0.5, x=0.5, y=0.75, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -6945,7 +6945,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test409() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.5, 0.75, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.5, 0.75, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.6410338455837974, 77.9645436617347),
                 new WheelVector(0.1349344975901998, -7.861193404821733),
@@ -6954,7 +6954,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.5, y=0.75, robotAngle=0)"
+                    + "(processing: rotation=0.75, x=0.5, y=0.75, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -6962,7 +6962,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test410() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.5, 0.75, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.5, 0.75, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.18835341604502243, 25.224238635890416),
                 new WheelVector(0.595478941107495, -73.37269684901489),
@@ -6971,7 +6971,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.5, y=0.75, robotAngle=60)"
+                    + "(processing: rotation=0.75, x=0.5, y=0.75, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -6979,7 +6979,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test411() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.5, 0.75, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.5, 0.75, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.3877257103509785, -141.98688154306933),
                 new WheelVector(0.9739210691722261, -108.27976988933851),
@@ -6988,7 +6988,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.5, y=0.75, robotAngle=120)"
+                    + "(processing: rotation=0.75, x=0.5, y=0.75, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -6996,7 +6996,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test412() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.5, 0.75, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.5, 0.75, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7792835988624217, 178.64295858451422),
                 new WheelVector(1.0, -141.17505006310478),
@@ -7005,7 +7005,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.5, y=0.75, robotAngle=180)"
+                    + "(processing: rotation=0.75, x=0.5, y=0.75, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -7013,7 +7013,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test413() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.5, 0.75, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.5, 0.75, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 145.20933458118785),
                 new WheelVector(0.8251556459440401, -174.4175819915251),
@@ -7022,7 +7022,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.5, y=0.75, robotAngle=240)"
+                    + "(processing: rotation=0.75, x=0.5, y=0.75, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -7030,7 +7030,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test414() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.5, 0.75, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.5, 0.75, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 112.36579070910383),
                 new WheelVector(0.4492315410671859, 147.89145861991935),
@@ -7039,7 +7039,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.5, y=0.75, robotAngle=300)"
+                    + "(processing: rotation=0.75, x=0.5, y=0.75, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -7047,7 +7047,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test415() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.5, 0.75, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.5, 0.75, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.6383546034260774, 87.96491341199834),
                 new WheelVector(0.11177805177571416, -78.29908049184624),
@@ -7056,7 +7056,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.5, y=0.75, robotAngle=0)"
+                    + "(processing: rotation=1.0, x=0.5, y=0.75, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -7064,7 +7064,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test416() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.5, 0.75, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.5, 0.75, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.17253625275855866, 71.83762598161385),
                 new WheelVector(0.5922630557184001, -84.78998279952818),
@@ -7073,7 +7073,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.5, y=0.75, robotAngle=60)"
+                    + "(processing: rotation=1.0, x=0.5, y=0.75, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -7081,7 +7081,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test417() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.5, 0.75, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.5, 0.75, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.38044878585838937, -163.48848988287548),
                 new WheelVector(0.9737471839499201, -111.999236841182),
@@ -7090,7 +7090,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.5, y=0.75, robotAngle=120)"
+                    + "(processing: rotation=1.0, x=0.5, y=0.75, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -7098,7 +7098,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test418() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.5, 0.75, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.5, 0.75, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7778160021132953, 171.91041493260386),
                 new WheelVector(1.0, -140.36072776224387),
@@ -7107,7 +7107,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.5, y=0.75, robotAngle=180)"
+                    + "(processing: rotation=1.0, x=0.5, y=0.75, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -7115,7 +7115,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test419() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.5, 0.75, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.5, 0.75, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 143.8560377419041),
                 new WheelVector(0.8240104558481456, -168.52421605758792),
@@ -7124,7 +7124,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.5, y=0.75, robotAngle=240)"
+                    + "(processing: rotation=1.0, x=0.5, y=0.75, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -7132,7 +7132,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test420() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.5, 0.75, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.5, 0.75, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 115.46507652428524),
                 new WheelVector(0.44334828341916804, 165.88397302232465),
@@ -7141,7 +7141,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.5, y=0.75, robotAngle=300)"
+                    + "(processing: rotation=1.0, x=0.5, y=0.75, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -7149,7 +7149,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test421() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.5, 1.0, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.5, 1.0, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 26.56505117707799),
                 new WheelVector(1.0, 26.56505117707799),
@@ -7158,7 +7158,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.5, y=1.0, robotAngle=0)"
+                    + "(processing: rotation=0.0, x=0.5, y=1.0, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -7166,7 +7166,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test422() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.5, 1.0, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.5, 1.0, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, -33.434948822922),
                 new WheelVector(1.0, -33.434948822922),
@@ -7175,7 +7175,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.5, y=1.0, robotAngle=60)"
+                    + "(processing: rotation=0.0, x=0.5, y=1.0, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -7183,7 +7183,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test423() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.5, 1.0, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.5, 1.0, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, -93.43494882292201),
                 new WheelVector(1.0, -93.43494882292201),
@@ -7192,7 +7192,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.5, y=1.0, robotAngle=120)"
+                    + "(processing: rotation=0.0, x=0.5, y=1.0, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -7200,7 +7200,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test424() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.5, 1.0, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.5, 1.0, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, -153.434948822922),
                 new WheelVector(1.0, -153.434948822922),
@@ -7209,7 +7209,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.5, y=1.0, robotAngle=180)"
+                    + "(processing: rotation=0.0, x=0.5, y=1.0, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -7217,7 +7217,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test425() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.5, 1.0, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.5, 1.0, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 146.565051177078),
                 new WheelVector(1.0, 146.565051177078),
@@ -7226,7 +7226,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.5, y=1.0, robotAngle=240)"
+                    + "(processing: rotation=0.0, x=0.5, y=1.0, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -7234,7 +7234,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test426() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.5, 1.0, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.5, 1.0, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 86.56505117707799),
                 new WheelVector(1.0, 86.56505117707799),
@@ -7243,7 +7243,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.5, y=1.0, robotAngle=300)"
+                    + "(processing: rotation=0.0, x=0.5, y=1.0, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -7251,7 +7251,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test427() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.5, 1.0, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.5, 1.0, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7850433187110758, 39.423823809056856),
                 new WheelVector(0.6514902289208563, 21.436529825399127),
@@ -7260,7 +7260,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.5, y=1.0, robotAngle=0)"
+                    + "(processing: rotation=0.25, x=0.5, y=1.0, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -7268,7 +7268,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test428() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.5, 1.0, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.5, 1.0, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.6412200166097284, -30.14954014664204),
                 new WheelVector(0.8033263708591978, -46.35225450480833),
@@ -7277,7 +7277,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.5, y=1.0, robotAngle=60)"
+                    + "(processing: rotation=0.25, x=0.5, y=1.0, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -7285,7 +7285,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test429() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.5, 1.0, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.5, 1.0, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7375935534711784, -104.54903378546216),
                 new WheelVector(1.0, -100.67802511546016),
@@ -7294,7 +7294,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.5, y=1.0, robotAngle=120)"
+                    + "(processing: rotation=0.25, x=0.5, y=1.0, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -7302,7 +7302,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test430() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.5, 1.0, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.5, 1.0, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.8989696914392886, -164.64141677724956),
                 new WheelVector(1.0, -150.09633807948921),
@@ -7311,7 +7311,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.5, y=1.0, robotAngle=180)"
+                    + "(processing: rotation=0.25, x=0.5, y=1.0, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -7319,7 +7319,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test431() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.5, 1.0, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.5, 1.0, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 144.45906146134476),
                 new WheelVector(0.8751170502185243, 158.40660562693634),
@@ -7328,7 +7328,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.5, y=1.0, robotAngle=240)"
+                    + "(processing: rotation=0.25, x=0.5, y=1.0, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -7336,7 +7336,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test432() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.5, 1.0, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.5, 1.0, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.9862211339278301, 94.85411640256423),
                 new WheelVector(0.7188020416833379, 96.6670859986635),
@@ -7345,7 +7345,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.5, y=1.0, robotAngle=300)"
+                    + "(processing: rotation=0.25, x=0.5, y=1.0, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -7353,7 +7353,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test433() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.5, 1.0, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.5, 1.0, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.6691152742010951, 52.86119340482172),
                 new WheelVector(0.4142135623730951, 12.764389682754652),
@@ -7362,7 +7362,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.5, y=1.0, robotAngle=0)"
+                    + "(processing: rotation=0.5, x=0.5, y=1.0, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -7370,7 +7370,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test434() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.5, 1.0, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.5, 1.0, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.39486704846403103, -24.368634883850675),
                 new WheelVector(0.7011389786490965, -59.135761546586956),
@@ -7379,7 +7379,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.5, y=1.0, robotAngle=60)"
+                    + "(processing: rotation=0.5, x=0.5, y=1.0, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -7387,7 +7387,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test435() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.5, 1.0, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.5, 1.0, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5696559648418292, -118.87888896787803),
                 new WheelVector(1.0, -105.96922028002854),
@@ -7396,7 +7396,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.5, y=1.0, robotAngle=120)"
+                    + "(processing: rotation=0.5, x=0.5, y=1.0, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -7404,7 +7404,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test436() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.5, 1.0, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.5, 1.0, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.8507982281860977, -173.82494993689522),
                 new WheelVector(1.0, -147.76438968275465),
@@ -7413,7 +7413,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.5, y=1.0, robotAngle=180)"
+                    + "(processing: rotation=0.5, x=0.5, y=1.0, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -7421,7 +7421,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test437() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.5, 1.0, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.5, 1.0, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 142.99767928752416),
                 new WheelVector(0.8150608066773898, 168.4693338831737),
@@ -7430,7 +7430,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.5, y=1.0, robotAngle=240)"
+                    + "(processing: rotation=0.5, x=0.5, y=1.0, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -7438,7 +7438,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test438() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.5, 1.0, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.5, 1.0, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.9795176746984098, 101.03414243176718),
                 new WheelVector(0.5328815940961511, 110.59813691802),
@@ -7447,7 +7447,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.5, y=1.0, robotAngle=300)"
+                    + "(processing: rotation=0.5, x=0.5, y=1.0, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -7455,7 +7455,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test439() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.5, 1.0, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.5, 1.0, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.6137768939828058, 65.49440832351412),
                 new WheelVector(0.2551139223577788, -3.6948849019885017),
@@ -7464,7 +7464,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.5, y=1.0, robotAngle=0)"
+                    + "(processing: rotation=0.75, x=0.5, y=1.0, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -7472,7 +7472,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test440() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.5, 1.0, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.5, 1.0, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.22147532083343086, -12.01395111343848),
                 new WheelVector(0.6536260416037705, -70.64505148562168),
@@ -7481,7 +7481,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.5, y=1.0, robotAngle=60)"
+                    + "(processing: rotation=0.75, x=0.5, y=1.0, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -7489,7 +7489,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test441() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.5, 1.0, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.5, 1.0, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.4776601905061534, -135.5628628623248),
                 new WheelVector(1.0, -109.94137470937837),
@@ -7498,7 +7498,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.5, y=1.0, robotAngle=120)"
+                    + "(processing: rotation=0.75, x=0.5, y=1.0, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -7506,7 +7506,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test442() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.5, 1.0, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.5, 1.0, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.8296752604444646, 178.8645858521806),
                 new WheelVector(1.0, -146.04867793448224),
@@ -7515,7 +7515,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.5, y=1.0, robotAngle=180)"
+                    + "(processing: rotation=0.75, x=0.5, y=1.0, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -7523,7 +7523,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test443() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.5, 1.0, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.5, 1.0, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 141.92551220310483),
                 new WheelVector(0.788558377975694, 176.64850998064557),
@@ -7532,7 +7532,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.5, y=1.0, robotAngle=240)"
+                    + "(processing: rotation=0.75, x=0.5, y=1.0, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -7540,7 +7540,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test444() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.5, 1.0, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.5, 1.0, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.9765611759105555, 105.71848363973582),
                 new WheelVector(0.42641644889729774, 128.3474743129416),
@@ -7549,7 +7549,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.5, y=1.0, robotAngle=300)"
+                    + "(processing: rotation=0.75, x=0.5, y=1.0, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -7557,7 +7557,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test445() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.5, 1.0, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.5, 1.0, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.594102825849117, 76.36129272052355),
                 new WheelVector(0.1715728752538099, -35.26438968275467),
@@ -7566,7 +7566,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.5, y=1.0, robotAngle=0)"
+                    + "(processing: rotation=1.0, x=0.5, y=1.0, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -7574,7 +7574,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test446() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.5, 1.0, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.5, 1.0, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.11558735776853787, 21.95844358274006),
                 new WheelVector(0.6369691999543644, -80.31099027542865),
@@ -7583,7 +7583,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.5, y=1.0, robotAngle=60)"
+                    + "(processing: rotation=1.0, x=0.5, y=1.0, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -7591,7 +7591,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test447() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.5, 1.0, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.5, 1.0, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.4420048273577611, -152.1545477812505),
                 new WheelVector(1.0, -113.00586827201981),
@@ -7600,7 +7600,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.5, y=1.0, robotAngle=120)"
+                    + "(processing: rotation=1.0, x=0.5, y=1.0, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -7608,7 +7608,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test448() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.5, 1.0, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.5, 1.0, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.8224834854518072, 173.082662059893),
                 new WheelVector(1.0, -144.73561031724535),
@@ -7617,7 +7617,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.5, y=1.0, robotAngle=180)"
+                    + "(processing: rotation=1.0, x=0.5, y=1.0, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -7625,7 +7625,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test449() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.5, 1.0, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.5, 1.0, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 141.10586984676826),
                 new WheelVector(0.7795066873256502, -176.82143657620833),
@@ -7634,7 +7634,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.5, y=1.0, robotAngle=240)"
+                    + "(processing: rotation=1.0, x=0.5, y=1.0, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -7642,7 +7642,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test450() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.5, 1.0, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.5, 1.0, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.9755529271126251, 109.34667151527147),
                 new WheelVector(0.38349938853350873, 147.42890516629532),
@@ -7651,7 +7651,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.5, y=1.0, robotAngle=300)"
+                    + "(processing: rotation=1.0, x=0.5, y=1.0, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -7659,7 +7659,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test451() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.75, 0.0, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.75, 0.0, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.75, 90.0),
                 new WheelVector(0.75, 90.0),
@@ -7668,7 +7668,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.75, y=0.0, robotAngle=0)"
+                    + "(processing: rotation=0.0, x=0.75, y=0.0, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -7676,7 +7676,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test452() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.75, 0.0, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.75, 0.0, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7500000000000001, 30.00000000000001),
                 new WheelVector(0.7500000000000001, 30.00000000000001),
@@ -7685,7 +7685,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.75, y=0.0, robotAngle=60)"
+                    + "(processing: rotation=0.0, x=0.75, y=0.0, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -7693,7 +7693,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test453() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.75, 0.0, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.75, 0.0, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7499999999999999, -29.999999999999993),
                 new WheelVector(0.7499999999999999, -29.999999999999993),
@@ -7702,7 +7702,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.75, y=0.0, robotAngle=120)"
+                    + "(processing: rotation=0.0, x=0.75, y=0.0, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -7710,7 +7710,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test454() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.75, 0.0, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.75, 0.0, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.75, -90.0),
                 new WheelVector(0.75, -90.0),
@@ -7719,7 +7719,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.75, y=0.0, robotAngle=180)"
+                    + "(processing: rotation=0.0, x=0.75, y=0.0, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -7727,7 +7727,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test455() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.75, 0.0, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.75, 0.0, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.75, -149.99999999999997),
                 new WheelVector(0.75, -149.99999999999997),
@@ -7736,7 +7736,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.75, y=0.0, robotAngle=240)"
+                    + "(processing: rotation=0.0, x=0.75, y=0.0, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -7744,7 +7744,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test456() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.75, 0.0, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.75, 0.0, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7500000000000001, 149.99999999999997),
                 new WheelVector(0.7500000000000001, 149.99999999999997),
@@ -7753,7 +7753,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.75, y=0.0, robotAngle=300)"
+                    + "(processing: rotation=0.0, x=0.75, y=0.0, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -7761,7 +7761,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test457() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.75, 0.0, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.75, 0.0, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.9434855817366555, 100.79908049184624),
                 new WheelVector(0.5998624484455122, 107.13927223775615),
@@ -7770,7 +7770,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.75, y=0.0, robotAngle=0)"
+                    + "(processing: rotation=0.25, x=0.75, y=0.0, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -7778,7 +7778,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test458() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.75, 0.0, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.75, 0.0, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7265967644344109, 49.411224151633135),
                 new WheelVector(0.5126185864184009, 22.748555084773106),
@@ -7787,7 +7787,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.75, y=0.0, robotAngle=60)"
+                    + "(processing: rotation=0.25, x=0.75, y=0.0, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -7795,7 +7795,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test459() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.75, 0.0, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.75, 0.0, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5126185864184007, -22.748555084773077),
                 new WheelVector(0.7265967644344108, -49.41122415163312),
@@ -7804,7 +7804,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.75, y=0.0, robotAngle=120)"
+                    + "(processing: rotation=0.25, x=0.75, y=0.0, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -7812,7 +7812,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test460() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.75, 0.0, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.75, 0.0, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5998624484455122, -107.13927223775613),
                 new WheelVector(0.9434855817366555, -100.79908049184623),
@@ -7821,7 +7821,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.75, y=0.0, robotAngle=180)"
+                    + "(processing: rotation=0.25, x=0.75, y=0.0, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -7829,7 +7829,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test461() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.75, 0.0, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.75, 0.0, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.849739455311712, -166.5100151744534),
                 new WheelVector(0.9935905519168349, -146.26613283783215),
@@ -7838,7 +7838,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.75, y=0.0, robotAngle=240)"
+                    + "(processing: rotation=0.25, x=0.75, y=0.0, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -7846,7 +7846,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test462() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.75, 0.0, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.75, 0.0, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.9935905519168349, 146.26613283783217),
                 new WheelVector(0.8497394553117121, 166.51001517445343),
@@ -7855,7 +7855,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.75, y=0.0, robotAngle=300)"
+                    + "(processing: rotation=0.25, x=0.75, y=0.0, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -7863,7 +7863,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test463() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.75, 0.0, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.75, 0.0, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 107.76427607960952),
                 new WheelVector(0.4584002243324191, 131.7267650541877),
@@ -7872,7 +7872,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.75, y=0.0, robotAngle=0)"
+                    + "(processing: rotation=0.5, x=0.75, y=0.0, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -7880,7 +7880,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test464() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.75, 0.0, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.75, 0.0, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.6343086743774512, 67.89116948925653),
                 new WheelVector(0.23935885067189017, 4.144589517579263),
@@ -7889,7 +7889,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.75, y=0.0, robotAngle=60)"
+                    + "(processing: rotation=0.5, x=0.75, y=0.0, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -7897,7 +7897,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test465() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.75, 0.0, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.75, 0.0, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.23935885067189017, -4.144589517579209),
                 new WheelVector(0.6343086743774511, -67.89116948925653),
@@ -7906,7 +7906,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.75, y=0.0, robotAngle=120)"
+                    + "(processing: rotation=0.5, x=0.75, y=0.0, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -7914,7 +7914,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test466() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.75, 0.0, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.75, 0.0, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.458400224332419, -131.7267650541877),
                 new WheelVector(1.0, -107.76427607960952),
@@ -7923,7 +7923,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.75, y=0.0, robotAngle=180)"
+                    + "(processing: rotation=0.5, x=0.75, y=0.0, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -7931,7 +7931,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test467() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.75, 0.0, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.75, 0.0, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.8092868249295107, -178.77515027235467),
                 new WheelVector(1.0, -144.00827799860616),
@@ -7940,7 +7940,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.75, y=0.0, robotAngle=240)"
+                    + "(processing: rotation=0.5, x=0.75, y=0.0, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -7948,7 +7948,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test468() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.75, 0.0, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.75, 0.0, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 144.0082779986062),
                 new WheelVector(0.8092868249295109, 178.7751502723547),
@@ -7957,7 +7957,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.75, y=0.0, robotAngle=300)"
+                    + "(processing: rotation=0.5, x=0.75, y=0.0, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -7965,7 +7965,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test469() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.75, 0.0, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.75, 0.0, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 112.50000000000001),
                 new WheelVector(0.41421356237309503, 157.50000000000003),
@@ -7974,7 +7974,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.75, y=0.0, robotAngle=0)"
+                    + "(processing: rotation=0.75, x=0.75, y=0.0, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -7982,7 +7982,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test470() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.75, 0.0, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.75, 0.0, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.6140144073823545, 82.50000000000001),
                 new WheelVector(0.1316524975873958, -52.50000000000001),
@@ -7991,7 +7991,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.75, y=0.0, robotAngle=60)"
+                    + "(processing: rotation=0.75, x=0.75, y=0.0, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -7999,7 +7999,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test471() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.75, 0.0, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.75, 0.0, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.13165249758739594, 52.50000000000006),
                 new WheelVector(0.6140144073823541, -82.50000000000001),
@@ -8008,7 +8008,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.75, y=0.0, robotAngle=120)"
+                    + "(processing: rotation=0.75, x=0.75, y=0.0, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -8016,7 +8016,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test472() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.75, 0.0, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.75, 0.0, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.4142135623730949, -157.5),
                 new WheelVector(1.0, -112.50000000000001),
@@ -8025,7 +8025,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.75, y=0.0, robotAngle=180)"
+                    + "(processing: rotation=0.75, x=0.75, y=0.0, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -8033,7 +8033,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test473() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.75, 0.0, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.75, 0.0, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.8001991549907406, 172.5),
                 new WheelVector(1.0, -142.5),
@@ -8042,7 +8042,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.75, y=0.0, robotAngle=240)"
+                    + "(processing: rotation=0.75, x=0.75, y=0.0, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -8050,7 +8050,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test474() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.75, 0.0, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.75, 0.0, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 142.5),
                 new WheelVector(0.8001991549907407, -172.5),
@@ -8059,7 +8059,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.75, y=0.0, robotAngle=300)"
+                    + "(processing: rotation=0.75, x=0.75, y=0.0, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -8067,7 +8067,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test475() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.75, 0.0, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.75, 0.0, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 115.8864352982627),
                 new WheelVector(0.4373913178314939, 176.5286817554714),
@@ -8076,7 +8076,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.75, y=0.0, robotAngle=0)"
+                    + "(processing: rotation=1.0, x=0.75, y=0.0, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -8084,7 +8084,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test476() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.75, 0.0, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.75, 0.0, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.6244545533381018, 93.04630206248437),
                 new WheelVector(0.19423490531978055, -99.83734131375198),
@@ -8093,7 +8093,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.75, y=0.0, robotAngle=60)"
+                    + "(processing: rotation=1.0, x=0.75, y=0.0, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -8101,7 +8101,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test477() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.75, 0.0, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.75, 0.0, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.19423490531978072, 99.83734131375196),
                 new WheelVector(0.6244545533381017, -93.04630206248437),
@@ -8110,7 +8110,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.75, y=0.0, robotAngle=120)"
+                    + "(processing: rotation=1.0, x=0.75, y=0.0, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -8118,7 +8118,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test478() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.75, 0.0, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.75, 0.0, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.4373913178314938, -176.5286817554714),
                 new WheelVector(1.0, -115.8864352982627),
@@ -8127,7 +8127,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.75, y=0.0, robotAngle=180)"
+                    + "(processing: rotation=1.0, x=0.75, y=0.0, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -8135,7 +8135,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test479() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.75, 0.0, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.75, 0.0, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.8048501160215458, 166.24431973792963),
                 new WheelVector(1.0, -141.42253667541704),
@@ -8144,7 +8144,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.75, y=0.0, robotAngle=240)"
+                    + "(processing: rotation=1.0, x=0.75, y=0.0, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -8152,7 +8152,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test480() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.75, 0.0, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.75, 0.0, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 141.42253667541704),
                 new WheelVector(0.8048501160215458, -166.2443197379296),
@@ -8161,7 +8161,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.75, y=0.0, robotAngle=300)"
+                    + "(processing: rotation=1.0, x=0.75, y=0.0, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -8169,7 +8169,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test481() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.75, 0.25, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.75, 0.25, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7905694150420949, 71.56505117707799),
                 new WheelVector(0.7905694150420949, 71.56505117707799),
@@ -8178,7 +8178,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.75, y=0.25, robotAngle=0)"
+                    + "(processing: rotation=0.0, x=0.75, y=0.25, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -8186,7 +8186,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test482() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.75, 0.25, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.75, 0.25, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7905694150420949, 11.565051177077999),
                 new WheelVector(0.7905694150420949, 11.565051177077999),
@@ -8195,7 +8195,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.75, y=0.25, robotAngle=60)"
+                    + "(processing: rotation=0.0, x=0.75, y=0.25, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -8203,7 +8203,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test483() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.75, 0.25, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.75, 0.25, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7905694150420947, -48.434948822922),
                 new WheelVector(0.7905694150420947, -48.434948822922),
@@ -8212,7 +8212,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.75, y=0.25, robotAngle=120)"
+                    + "(processing: rotation=0.0, x=0.75, y=0.25, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -8220,7 +8220,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test484() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.75, 0.25, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.75, 0.25, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7905694150420949, -108.43494882292202),
                 new WheelVector(0.7905694150420949, -108.43494882292202),
@@ -8229,7 +8229,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.75, y=0.25, robotAngle=180)"
+                    + "(processing: rotation=0.0, x=0.75, y=0.25, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -8237,7 +8237,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test485() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.75, 0.25, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.75, 0.25, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7905694150420949, -168.434948822922),
                 new WheelVector(0.7905694150420949, -168.434948822922),
@@ -8246,7 +8246,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.75, y=0.25, robotAngle=240)"
+                    + "(processing: rotation=0.0, x=0.75, y=0.25, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -8254,7 +8254,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test486() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.75, 0.25, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.75, 0.25, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.790569415042095, 131.56505117707798),
                 new WheelVector(0.790569415042095, 131.56505117707798),
@@ -8263,7 +8263,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.75, y=0.25, robotAngle=300)"
+                    + "(processing: rotation=0.0, x=0.75, y=0.25, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -8271,7 +8271,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test487() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.75, 0.25, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.75, 0.25, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.9111500427000311, 85.48252648401387),
                 new WheelVector(0.5663723168103069, 82.72048456456493),
@@ -8280,7 +8280,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.75, y=0.25, robotAngle=0)"
+                    + "(processing: rotation=0.25, x=0.75, y=0.25, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -8288,7 +8288,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test488() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.75, 0.25, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.75, 0.25, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.6794724351465292, 29.287823083966703),
                 new WheelVector(0.5928948369845086, -1.751950282708825),
@@ -8297,7 +8297,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.75, y=0.25, robotAngle=60)"
+                    + "(processing: rotation=0.25, x=0.75, y=0.25, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -8305,7 +8305,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test489() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.75, 0.25, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.75, 0.25, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5202953528869102, -50.020853247891445),
                 new WheelVector(0.8107039106613223, -65.64741238180827),
@@ -8314,7 +8314,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.75, y=0.25, robotAngle=120)"
+                    + "(processing: rotation=0.25, x=0.75, y=0.25, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -8322,7 +8322,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test490() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.75, 0.25, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.75, 0.25, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7004164482197759, -126.66845164972352),
                 new WheelVector(1.0, -114.72586777264844),
@@ -8331,7 +8331,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.75, y=0.25, robotAngle=180)"
+                    + "(processing: rotation=0.25, x=0.75, y=0.25, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -8339,7 +8339,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test491() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.75, 0.25, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.75, 0.25, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.9433141033605575, 178.89896234804687),
                 new WheelVector(1.0, -160.58573564326863),
@@ -8348,7 +8348,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.75, y=0.25, robotAngle=240)"
+                    + "(processing: rotation=0.25, x=0.75, y=0.25, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -8356,7 +8356,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test492() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.75, 0.25, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.75, 0.25, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 132.3901130354614),
                 new WheelVector(0.7832409740776801, 149.40093783219277),
@@ -8365,7 +8365,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.75, y=0.25, robotAngle=300)"
+                    + "(processing: rotation=0.25, x=0.75, y=0.25, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -8373,7 +8373,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test493() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.75, 0.25, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.75, 0.25, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.8812094004590798, 95.36072776224388),
                 new WheelVector(0.3257606941142601, 104.6388065951783),
@@ -8382,7 +8382,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.75, y=0.25, robotAngle=0)"
+                    + "(processing: rotation=0.5, x=0.75, y=0.25, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -8390,7 +8390,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test494() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.75, 0.25, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.75, 0.25, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5350751483731189, 50.57558895657568),
                 new WheelVector(0.3745111155967668, -24.86124199928035),
@@ -8399,7 +8399,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.75, y=0.25, robotAngle=60)"
+                    + "(processing: rotation=0.5, x=0.75, y=0.25, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -8407,7 +8407,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test495() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.75, 0.25, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.75, 0.25, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.22713090247200352, -54.30331661842769),
                 new WheelVector(0.74448473557023, -79.74583057511562),
@@ -8416,7 +8416,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.75, y=0.25, robotAngle=120)"
+                    + "(processing: rotation=0.5, x=0.75, y=0.25, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -8424,7 +8424,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test496() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.75, 0.25, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.75, 0.25, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5740993140322965, -146.7009195081538),
                 new WheelVector(1.0, -118.67505006310476),
@@ -8433,7 +8433,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.75, y=0.25, robotAngle=180)"
+                    + "(processing: rotation=0.5, x=0.75, y=0.25, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -8441,7 +8441,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test497() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.75, 0.25, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.75, 0.25, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.9240958615311614, 170.18975191669043),
                 new WheelVector(1.0, -155.5860720644269),
@@ -8450,7 +8450,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.75, y=0.25, robotAngle=240)"
+                    + "(processing: rotation=0.5, x=0.75, y=0.25, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -8458,7 +8458,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test498() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.75, 0.25, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.75, 0.25, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 132.89572928795292),
                 new WheelVector(0.705216934964463, 164.8373195959677),
@@ -8467,7 +8467,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.75, y=0.25, robotAngle=300)"
+                    + "(processing: rotation=0.5, x=0.75, y=0.25, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -8475,7 +8475,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test499() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.75, 0.25, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.75, 0.25, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.8741309099905575, 102.35010012620954),
                 new WheelVector(0.23752766408079765, 141.91733794010705),
@@ -8484,7 +8484,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.75, y=0.25, robotAngle=0)"
+                    + "(processing: rotation=0.75, x=0.75, y=0.25, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -8492,7 +8492,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test500() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.75, 0.25, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.75, 0.25, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.49530619390185265, 70.48051288014103),
                 new WheelVector(0.30148967319295233, -56.70666560025073),
@@ -8501,7 +8501,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.75, y=0.25, robotAngle=60)"
+                    + "(processing: rotation=0.75, x=0.75, y=0.25, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -8509,7 +8509,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test501() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.75, 0.25, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.75, 0.25, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.039906825594089174, -95.42615150574568),
                 new WheelVector(0.7285327923352974, -90.29678541339499),
@@ -8518,7 +8518,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.75, y=0.25, robotAngle=120)"
+                    + "(processing: rotation=0.75, x=0.75, y=0.25, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -8526,7 +8526,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test502() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.75, 0.25, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.75, 0.25, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5406612094489118, -164.2776131903566),
                 new WheelVector(1.0, -121.36129272052355),
@@ -8535,7 +8535,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.75, y=0.25, robotAngle=180)"
+                    + "(processing: rotation=0.75, x=0.75, y=0.25, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -8543,7 +8543,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test503() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.75, 0.25, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.75, 0.25, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.9195476047081267, 164.09429864737166),
                 new WheelVector(1.0, -152.17063708035377),
@@ -8552,7 +8552,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.75, y=0.25, robotAngle=240)"
+                    + "(processing: rotation=0.75, x=0.75, y=0.25, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -8560,7 +8560,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test504() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.75, 0.25, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.75, 0.25, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 133.23728400862174),
                 new WheelVector(0.686172372819783, 176.68083350947316),
@@ -8569,7 +8569,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.75, y=0.25, robotAngle=300)"
+                    + "(processing: rotation=0.75, x=0.75, y=0.25, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -8577,7 +8577,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test505() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.75, 0.25, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.75, 0.25, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.8759788219485765, 107.41708449537893),
                 new WheelVector(0.26335448735433414, 174.63927223775613),
@@ -8586,7 +8586,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.75, y=0.25, robotAngle=0)"
+                    + "(processing: rotation=1.0, x=0.75, y=0.25, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -8594,7 +8594,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test506() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.75, 0.25, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.75, 0.25, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5059717553007799, 85.54683889921098),
                 new WheelVector(0.32211884458610296, -82.99474780066173),
@@ -8603,7 +8603,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.75, y=0.25, robotAngle=60)"
+                    + "(processing: rotation=1.0, x=0.75, y=0.25, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -8611,7 +8611,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test507() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.75, 0.25, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.75, 0.25, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.12074463209565577, 147.66117196236507),
                 new WheelVector(0.7327097883404935, -98.00344200208669),
@@ -8620,7 +8620,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.75, y=0.25, robotAngle=120)"
+                    + "(processing: rotation=1.0, x=0.75, y=0.25, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -8628,7 +8628,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test508() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.75, 0.25, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.75, 0.25, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5495604511855343, -177.43397797347893),
                 new WheelVector(1.0, -123.29908049184624),
@@ -8637,7 +8637,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.75, y=0.25, robotAngle=180)"
+                    + "(processing: rotation=1.0, x=0.75, y=0.25, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -8645,7 +8645,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test509() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.75, 0.25, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.75, 0.25, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.9207351046176819, 159.68152816060064),
                 new WheelVector(1.0, -149.7055294541459),
@@ -8654,7 +8654,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.75, y=0.25, robotAngle=240)"
+                    + "(processing: rotation=1.0, x=0.75, y=0.25, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -8662,7 +8662,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test510() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.75, 0.25, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.75, 0.25, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 133.48346611793173),
                 new WheelVector(0.6911697564635945, -174.63792603758458),
@@ -8671,7 +8671,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.75, y=0.25, robotAngle=300)"
+                    + "(processing: rotation=1.0, x=0.75, y=0.25, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -8679,7 +8679,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test511() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.75, 0.5, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.75, 0.5, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.9013878188659973, 56.309932474020215),
                 new WheelVector(0.9013878188659973, 56.309932474020215),
@@ -8688,7 +8688,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.75, y=0.5, robotAngle=0)"
+                    + "(processing: rotation=0.0, x=0.75, y=0.5, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -8696,7 +8696,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test512() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.75, 0.5, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.75, 0.5, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.9013878188659973, -3.690067525979779),
                 new WheelVector(0.9013878188659973, -3.690067525979779),
@@ -8705,7 +8705,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.75, y=0.5, robotAngle=60)"
+                    + "(processing: rotation=0.0, x=0.75, y=0.5, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -8713,7 +8713,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test513() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.75, 0.5, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.75, 0.5, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.9013878188659973, -63.69006752597977),
                 new WheelVector(0.9013878188659973, -63.69006752597977),
@@ -8722,7 +8722,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.75, y=0.5, robotAngle=120)"
+                    + "(processing: rotation=0.0, x=0.75, y=0.5, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -8730,7 +8730,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test514() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.75, 0.5, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.75, 0.5, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.9013878188659974, -123.69006752597979),
                 new WheelVector(0.9013878188659974, -123.69006752597979),
@@ -8739,7 +8739,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.75, y=0.5, robotAngle=180)"
+                    + "(processing: rotation=0.0, x=0.75, y=0.5, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -8747,7 +8747,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test515() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.75, 0.5, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.75, 0.5, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.9013878188659973, 176.30993247402023),
                 new WheelVector(0.9013878188659973, 176.30993247402023),
@@ -8756,7 +8756,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.75, y=0.5, robotAngle=240)"
+                    + "(processing: rotation=0.0, x=0.75, y=0.5, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -8764,7 +8764,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test516() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.75, 0.5, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.75, 0.5, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.9013878188659974, 116.30993247402023),
                 new WheelVector(0.9013878188659974, 116.30993247402023),
@@ -8773,7 +8773,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.75, y=0.5, robotAngle=300)"
+                    + "(processing: rotation=0.0, x=0.75, y=0.5, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -8781,7 +8781,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test517() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.75, 0.5, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.75, 0.5, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.8552979153612374, 70.7732349458123),
                 new WheelVector(0.5734425080626623, 60.582662059893),
@@ -8790,7 +8790,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.75, y=0.5, robotAngle=0)"
+                    + "(processing: rotation=0.25, x=0.75, y=0.5, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -8798,7 +8798,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test518() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.75, 0.5, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.75, 0.5, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.6648787346479846, 9.33168163004251),
                 new WheelVector(0.6898309023398465, -17.99685709132696),
@@ -8807,7 +8807,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.75, y=0.5, robotAngle=60)"
+                    + "(processing: rotation=0.25, x=0.75, y=0.5, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -8815,7 +8815,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test519() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.75, 0.5, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.75, 0.5, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5866527431163635, -70.56374436008218),
                 new WheelVector(0.8848796062704345, -77.25513257210675),
@@ -8824,7 +8824,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.75, y=0.5, robotAngle=120)"
+                    + "(processing: rotation=0.25, x=0.75, y=0.5, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -8832,7 +8832,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test520() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.75, 0.5, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.75, 0.5, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7728530170944006, -139.73572392039048),
                 new WheelVector(1.0, -126.13870727947645),
@@ -8841,7 +8841,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.75, y=0.5, robotAngle=180)"
+                    + "(processing: rotation=0.25, x=0.75, y=0.5, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -8849,7 +8849,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test521() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.75, 0.5, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.75, 0.5, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 167.69395410376018),
                 new WheelVector(0.9829532328468626, -173.70316420670096),
@@ -8858,7 +8858,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.75, y=0.5, robotAngle=240)"
+                    + "(processing: rotation=0.25, x=0.75, y=0.5, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -8866,7 +8866,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test522() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.75, 0.5, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.75, 0.5, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 120.33604048318006),
                 new WheelVector(0.749099141244091, 132.394954183206),
@@ -8875,7 +8875,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.75, y=0.5, robotAngle=300)"
+                    + "(processing: rotation=0.25, x=0.75, y=0.5, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -8883,7 +8883,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test523() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.75, 0.5, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.75, 0.5, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7979394496842863, 82.44075416826354),
                 new WheelVector(0.3029330180190891, 69.72586777264843),
@@ -8892,7 +8892,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.75, y=0.5, robotAngle=0)"
+                    + "(processing: rotation=0.5, x=0.75, y=0.5, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -8900,7 +8900,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test524() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.75, 0.5, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.75, 0.5, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.4707028736600309, 28.42745242427408),
                 new WheelVector(0.5183854077668384, -37.01013641773077),
@@ -8909,7 +8909,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.75, y=0.5, robotAngle=60)"
+                    + "(processing: rotation=0.5, x=0.75, y=0.5, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -8917,7 +8917,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test525() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.75, 0.5, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.75, 0.5, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.32996455267873037, -84.22453810007976),
                 new WheelVector(0.8397419440122343, -87.73386547962374),
@@ -8926,7 +8926,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.75, y=0.5, robotAngle=120)"
+                    + "(processing: rotation=0.5, x=0.75, y=0.5, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -8934,7 +8934,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test526() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.75, 0.5, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.75, 0.5, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.6745821284644978, -155.0867295320022),
                 new WheelVector(1.0, -127.72048456456491),
@@ -8943,7 +8943,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.75, y=0.5, robotAngle=180)"
+                    + "(processing: rotation=0.5, x=0.75, y=0.5, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -8951,7 +8951,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test527() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.75, 0.5, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.75, 0.5, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 161.81746307315484),
                 new WheelVector(0.9761340913451492, -166.72915102526008),
@@ -8960,7 +8960,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.75, y=0.5, robotAngle=240)"
+                    + "(processing: rotation=0.5, x=0.75, y=0.5, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -8968,7 +8968,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test528() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.75, 0.5, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.75, 0.5, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 122.95635357772844),
                 new WheelVector(0.6353818328304861, 148.89012905893648),
@@ -8977,7 +8977,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.75, y=0.5, robotAngle=300)"
+                    + "(processing: rotation=0.5, x=0.75, y=0.5, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -8985,7 +8985,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test529() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.75, 0.5, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.75, 0.5, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7792835988624218, 91.3570414154858),
                 new WheelVector(0.1349344975901998, 97.86119340482175),
@@ -8994,7 +8994,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.75, y=0.5, robotAngle=0)"
+                    + "(processing: rotation=0.75, x=0.75, y=0.5, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -9002,7 +9002,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test530() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.75, 0.5, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.75, 0.5, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.3877257103509787, 51.98688154306934),
                 new WheelVector(0.4492315410671859, -57.89145861991934),
@@ -9011,7 +9011,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.75, y=0.5, robotAngle=60)"
+                    + "(processing: rotation=0.75, x=0.75, y=0.5, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -9019,7 +9019,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test531() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.75, 0.5, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.75, 0.5, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.1883534160450223, -115.2242386358904),
                 new WheelVector(0.8251556459440398, -95.58241800847489),
@@ -9028,7 +9028,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.75, y=0.5, robotAngle=120)"
+                    + "(processing: rotation=0.75, x=0.75, y=0.5, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -9036,7 +9036,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test532() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.75, 0.5, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.75, 0.5, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.6410338455837973, -167.9645436617347),
                 new WheelVector(1.0, -128.82494993689522),
@@ -9045,7 +9045,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.75, y=0.5, robotAngle=180)"
+                    + "(processing: rotation=0.75, x=0.75, y=0.5, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -9053,7 +9053,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test533() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.75, 0.5, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.75, 0.5, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 157.6342092908962),
                 new WheelVector(0.9739210691722263, -161.72023011066148),
@@ -9062,7 +9062,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.75, y=0.5, robotAngle=240)"
+                    + "(processing: rotation=0.75, x=0.75, y=0.5, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -9070,7 +9070,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test534() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.75, 0.5, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.75, 0.5, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 124.79066541881217),
                 new WheelVector(0.595478941107495, 163.3726968490149),
@@ -9079,7 +9079,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.75, y=0.5, robotAngle=300)"
+                    + "(processing: rotation=0.75, x=0.75, y=0.5, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -9087,7 +9087,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test535() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.75, 0.5, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.75, 0.5, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7778160021132953, 98.08958506739616),
                 new WheelVector(0.11177805177571416, 168.29908049184624),
@@ -9096,7 +9096,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.75, y=0.5, robotAngle=0)"
+                    + "(processing: rotation=1.0, x=0.75, y=0.5, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -9104,7 +9104,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test536() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.75, 0.5, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.75, 0.5, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.38044878585838954, 73.48848988287548),
                 new WheelVector(0.44334828341916804, -75.88397302232464),
@@ -9113,7 +9113,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.75, y=0.5, robotAngle=60)"
+                    + "(processing: rotation=1.0, x=0.75, y=0.5, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -9121,7 +9121,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test537() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.75, 0.5, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.75, 0.5, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.17253625275855852, -161.83762598161388),
                 new WheelVector(0.8240104558481454, -101.4757839424121),
@@ -9130,7 +9130,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.75, y=0.5, robotAngle=120)"
+                    + "(processing: rotation=1.0, x=0.75, y=0.5, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -9138,7 +9138,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test538() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.75, 0.5, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.75, 0.5, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.6383546034260773, -177.96491341199834),
                 new WheelVector(1.0, -129.63927223775613),
@@ -9147,7 +9147,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.75, y=0.5, robotAngle=180)"
+                    + "(processing: rotation=1.0, x=0.75, y=0.5, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -9155,7 +9155,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test539() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.75, 0.5, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.75, 0.5, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 154.53492347571478),
                 new WheelVector(0.9737471839499203, -158.00076315881802),
@@ -9164,7 +9164,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.75, y=0.5, robotAngle=240)"
+                    + "(processing: rotation=1.0, x=0.75, y=0.5, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -9172,7 +9172,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test540() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.75, 0.5, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.75, 0.5, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 126.14396225809594),
                 new WheelVector(0.5922630557184001, 174.7899827995282),
@@ -9181,7 +9181,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.75, y=0.5, robotAngle=300)"
+                    + "(processing: rotation=1.0, x=0.75, y=0.5, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -9189,7 +9189,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test541() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.75, 0.75, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.75, 0.75, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 45.0),
                 new WheelVector(1.0, 45.0),
@@ -9198,7 +9198,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.75, y=0.75, robotAngle=0)"
+                    + "(processing: rotation=0.0, x=0.75, y=0.75, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -9206,7 +9206,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test542() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.75, 0.75, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.75, 0.75, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, -14.999999999999996),
                 new WheelVector(1.0, -14.999999999999996),
@@ -9215,7 +9215,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.75, y=0.75, robotAngle=60)"
+                    + "(processing: rotation=0.0, x=0.75, y=0.75, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -9223,7 +9223,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test543() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.75, 0.75, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.75, 0.75, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, -74.99999999999999),
                 new WheelVector(1.0, -74.99999999999999),
@@ -9232,7 +9232,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.75, y=0.75, robotAngle=120)"
+                    + "(processing: rotation=0.0, x=0.75, y=0.75, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -9240,7 +9240,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test544() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.75, 0.75, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.75, 0.75, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, -135.0),
                 new WheelVector(1.0, -135.0),
@@ -9249,7 +9249,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.75, y=0.75, robotAngle=180)"
+                    + "(processing: rotation=0.0, x=0.75, y=0.75, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -9257,7 +9257,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test545() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.75, 0.75, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.75, 0.75, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 165.00000000000003),
                 new WheelVector(1.0, 165.00000000000003),
@@ -9266,7 +9266,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.75, y=0.75, robotAngle=240)"
+                    + "(processing: rotation=0.0, x=0.75, y=0.75, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -9274,7 +9274,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test546() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.75, 0.75, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.75, 0.75, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 105.00000000000001),
                 new WheelVector(1.0, 105.00000000000001),
@@ -9283,7 +9283,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.75, y=0.75, robotAngle=300)"
+                    + "(processing: rotation=0.0, x=0.75, y=0.75, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -9291,7 +9291,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test547() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.75, 0.75, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.75, 0.75, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.8314319450215446, 58.262676008304844),
                 new WheelVector(0.6185128603389077, 45.0),
@@ -9300,7 +9300,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.75, y=0.75, robotAngle=0)"
+                    + "(processing: rotation=0.25, x=0.75, y=0.75, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -9308,7 +9308,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test548() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.75, 0.75, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.75, 0.75, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.6649879853013674, -6.577004373207671),
                 new WheelVector(0.7483876831175967, -28.02861052580162),
@@ -9317,7 +9317,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.75, y=0.75, robotAngle=60)"
+                    + "(processing: rotation=0.25, x=0.75, y=0.75, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -9325,7 +9325,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test549() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.75, 0.75, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.75, 0.75, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.6649879853013673, -83.42299562679231),
                 new WheelVector(0.9392150426569237, -85.3484265784089),
@@ -9334,7 +9334,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.75, y=0.75, robotAngle=120)"
+                    + "(processing: rotation=0.25, x=0.75, y=0.75, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -9342,7 +9342,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test550() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.75, 0.75, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.75, 0.75, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.8314319450215446, -148.26267600830485),
                 new WheelVector(1.0, -135.0),
@@ -9351,7 +9351,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.75, y=0.75, robotAngle=180)"
+                    + "(processing: rotation=0.25, x=0.75, y=0.75, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -9359,7 +9359,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test551() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.75, 0.75, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.75, 0.75, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 159.41009889928588),
                 new WheelVector(0.939215042656924, 175.34842657840895),
@@ -9368,7 +9368,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.75, y=0.75, robotAngle=240)"
+                    + "(processing: rotation=0.25, x=0.75, y=0.75, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -9376,7 +9376,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test552() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.75, 0.75, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.75, 0.75, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 110.58990110071417),
                 new WheelVector(0.7483876831175967, 118.02861052580162),
@@ -9385,7 +9385,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.75, y=0.75, robotAngle=300)"
+                    + "(processing: rotation=0.25, x=0.75, y=0.75, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -9393,7 +9393,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test553() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.75, 0.75, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.75, 0.75, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7513512301775385, 70.2394018206789),
                 new WheelVector(0.3592455179659186, 45.0),
@@ -9402,7 +9402,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.75, y=0.75, robotAngle=0)"
+                    + "(processing: rotation=0.5, x=0.75, y=0.75, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -9410,7 +9410,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test554() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.75, 0.75, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.75, 0.75, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.44610548542248785, 6.718023643547837),
                 new WheelVector(0.6068601041928336, -43.10882542040155),
@@ -9419,7 +9419,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.75, y=0.75, robotAngle=60)"
+                    + "(processing: rotation=0.5, x=0.75, y=0.75, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -9427,7 +9427,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test555() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.75, 0.75, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.75, 0.75, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.4461054854224877, -96.71802364354782),
                 new WheelVector(0.9114444130406947, -93.28239560456927),
@@ -9436,7 +9436,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.75, y=0.75, robotAngle=120)"
+                    + "(processing: rotation=0.5, x=0.75, y=0.75, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -9444,7 +9444,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test556() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.75, 0.75, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.75, 0.75, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7513512301775386, -160.23940182067892),
                 new WheelVector(1.0, -135.0),
@@ -9453,7 +9453,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.75, y=0.75, robotAngle=180)"
+                    + "(processing: rotation=0.5, x=0.75, y=0.75, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -9461,7 +9461,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test557() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.75, 0.75, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.75, 0.75, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 155.49832519617945),
                 new WheelVector(0.9114444130406948, -176.71760439543073),
@@ -9470,7 +9470,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.75, y=0.75, robotAngle=240)"
+                    + "(processing: rotation=0.5, x=0.75, y=0.75, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -9478,7 +9478,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test558() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.75, 0.75, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.75, 0.75, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 114.50167480382058),
                 new WheelVector(0.6068601041928336, 133.10882542040156),
@@ -9487,7 +9487,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.75, y=0.75, robotAngle=300)"
+                    + "(processing: rotation=0.5, x=0.75, y=0.75, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -9495,7 +9495,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test559() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.75, 0.75, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.75, 0.75, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7174389352143008, 80.26438968275465),
                 new WheelVector(0.17157287525380985, 45.0),
@@ -9504,7 +9504,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.75, y=0.75, robotAngle=0)"
+                    + "(processing: rotation=0.75, x=0.75, y=0.75, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -9512,7 +9512,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test560() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.75, 0.75, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.75, 0.75, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.31783724519578227, 27.36780515862269),
                 new WheelVector(0.5394415938940733, -58.4494755261363),
@@ -9521,7 +9521,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.75, y=0.75, robotAngle=60)"
+                    + "(processing: rotation=0.75, x=0.75, y=0.75, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -9529,7 +9529,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test561() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.75, 0.75, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.75, 0.75, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.31783724519578205, -117.36780515862269),
                 new WheelVector(0.9000129339129885, -99.34287017526722),
@@ -9538,7 +9538,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.75, y=0.75, robotAngle=120)"
+                    + "(processing: rotation=0.75, x=0.75, y=0.75, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -9546,7 +9546,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test562() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.75, 0.75, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.75, 0.75, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7174389352143007, -170.26438968275465),
                 new WheelVector(1.0, -135.0),
@@ -9555,7 +9555,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.75, y=0.75, robotAngle=180)"
+                    + "(processing: rotation=0.75, x=0.75, y=0.75, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -9563,7 +9563,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test563() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.75, 0.75, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.75, 0.75, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 152.63219484137733),
                 new WheelVector(0.9000129339129888, -170.65712982473278),
@@ -9572,7 +9572,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.75, y=0.75, robotAngle=240)"
+                    + "(processing: rotation=0.75, x=0.75, y=0.75, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -9580,7 +9580,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test564() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.75, 0.75, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.75, 0.75, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 117.36780515862269),
                 new WheelVector(0.5394415938940733, 148.44947552613633),
@@ -9589,7 +9589,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.75, y=0.75, robotAngle=300)"
+                    + "(processing: rotation=0.75, x=0.75, y=0.75, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -9597,7 +9597,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test565() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.75, 0.75, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.75, 0.75, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7074130871623807, 88.31385665828306),
                 new WheelVector(0.029437251522859385, 45.0),
@@ -9606,7 +9606,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.75, y=0.75, robotAngle=0)"
+                    + "(processing: rotation=1.0, x=0.75, y=0.75, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -9614,7 +9614,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test566() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.75, 0.75, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.75, 0.75, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.269552965091232, 53.730552508093496),
                 new WheelVector(0.518294371043193, -72.08119821590314),
@@ -9623,7 +9623,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.75, y=0.75, robotAngle=60)"
+                    + "(processing: rotation=1.0, x=0.75, y=0.75, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -9631,7 +9631,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test567() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.75, 0.75, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.75, 0.75, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.2695529650912318, -143.7305525080935),
                 new WheelVector(0.896677057771869, -104.02631730040697),
@@ -9640,7 +9640,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.75, y=0.75, robotAngle=120)"
+                    + "(processing: rotation=1.0, x=0.75, y=0.75, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -9648,7 +9648,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test568() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.75, 0.75, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.75, 0.75, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7074130871623806, -178.31385665828304),
                 new WheelVector(1.0, -135.0),
@@ -9657,7 +9657,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.75, y=0.75, robotAngle=180)"
+                    + "(processing: rotation=1.0, x=0.75, y=0.75, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -9665,7 +9665,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test569() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.75, 0.75, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.75, 0.75, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 150.45192184746296),
                 new WheelVector(0.8966770577718693, -165.97368269959304),
@@ -9674,7 +9674,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.75, y=0.75, robotAngle=240)"
+                    + "(processing: rotation=1.0, x=0.75, y=0.75, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -9682,7 +9682,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test570() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.75, 0.75, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.75, 0.75, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 119.54807815253709),
                 new WheelVector(0.518294371043193, 162.08119821590316),
@@ -9691,7 +9691,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.75, y=0.75, robotAngle=300)"
+                    + "(processing: rotation=1.0, x=0.75, y=0.75, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -9699,7 +9699,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test571() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.75, 1.0, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.75, 1.0, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 36.86989764584402),
                 new WheelVector(1.0, 36.86989764584402),
@@ -9708,7 +9708,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.75, y=1.0, robotAngle=0)"
+                    + "(processing: rotation=0.0, x=0.75, y=1.0, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -9716,7 +9716,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test572() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.75, 1.0, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.75, 1.0, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, -23.13010235415597),
                 new WheelVector(1.0, -23.13010235415597),
@@ -9725,7 +9725,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.75, y=1.0, robotAngle=60)"
+                    + "(processing: rotation=0.0, x=0.75, y=1.0, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -9733,7 +9733,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test573() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.75, 1.0, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.75, 1.0, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, -83.13010235415598),
                 new WheelVector(1.0, -83.13010235415598),
@@ -9742,7 +9742,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.75, y=1.0, robotAngle=120)"
+                    + "(processing: rotation=0.0, x=0.75, y=1.0, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -9750,7 +9750,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test574() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.75, 1.0, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.75, 1.0, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, -143.13010235415598),
                 new WheelVector(1.0, -143.13010235415598),
@@ -9759,7 +9759,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.75, y=1.0, robotAngle=180)"
+                    + "(processing: rotation=0.0, x=0.75, y=1.0, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -9767,7 +9767,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test575() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.75, 1.0, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.75, 1.0, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 156.86989764584405),
                 new WheelVector(1.0, 156.86989764584405),
@@ -9776,7 +9776,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.75, y=1.0, robotAngle=240)"
+                    + "(processing: rotation=0.0, x=0.75, y=1.0, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -9784,7 +9784,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test576() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.75, 1.0, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 0.75, 1.0, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 96.86989764584402),
                 new WheelVector(1.0, 96.86989764584402),
@@ -9793,7 +9793,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=0.75, y=1.0, robotAngle=300)"
+                    + "(processing: rotation=0.0, x=0.75, y=1.0, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -9801,7 +9801,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test577() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.75, 1.0, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.75, 1.0, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.8275569362555244, 48.386435298262676),
                 new WheelVector(0.6696927241676609, 34.85010012620953),
@@ -9810,7 +9810,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.75, y=1.0, robotAngle=0)"
+                    + "(processing: rotation=0.25, x=0.75, y=1.0, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -9818,7 +9818,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test578() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.75, 1.0, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.75, 1.0, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.6884108489105688, -17.903279512444858),
                 new WheelVector(0.7945890352370024, -34.47017771694077),
@@ -9827,7 +9827,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.75, y=1.0, robotAngle=60)"
+                    + "(processing: rotation=0.25, x=0.75, y=1.0, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -9835,7 +9835,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test579() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.75, 1.0, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.75, 1.0, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7317502516437842, -91.4671443833194),
                 new WheelVector(0.9747050393982983, -91.10139172648975),
@@ -9844,7 +9844,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.75, y=1.0, robotAngle=120)"
+                    + "(processing: rotation=0.25, x=0.75, y=1.0, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -9852,7 +9852,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test580() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.75, 1.0, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.75, 1.0, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.87386375486026, -154.02868175547138),
                 new WheelVector(1.0, -141.77761319035656),
@@ -9861,7 +9861,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.75, y=1.0, robotAngle=180)"
+                    + "(processing: rotation=0.25, x=0.75, y=1.0, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -9869,7 +9869,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test581() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.75, 1.0, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.75, 1.0, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 153.2743252438581),
                 new WheelVector(0.9178985575644512, 166.6703134996656),
@@ -9878,7 +9878,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.75, y=1.0, robotAngle=240)"
+                    + "(processing: rotation=0.25, x=0.75, y=1.0, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -9886,7 +9886,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test582() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.75, 1.0, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 0.75, 1.0, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 102.96048910318734),
                 new WheelVector(0.7651199363186816, 107.04539653132498),
@@ -9895,7 +9895,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=0.75, y=1.0, robotAngle=300)"
+                    + "(processing: rotation=0.25, x=0.75, y=1.0, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -9903,7 +9903,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test583() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.75, 1.0, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.75, 1.0, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.732334502931957, 59.63880659517828),
                 new WheelVector(0.43422251475832546, 31.519559498268393),
@@ -9912,7 +9912,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.75, y=1.0, robotAngle=0)"
+                    + "(processing: rotation=0.5, x=0.75, y=1.0, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -9920,7 +9920,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test584() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.75, 1.0, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.75, 1.0, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.4685037241839764, -9.798942458791677),
                 new WheelVector(0.6731312170842592, -46.697309985592675),
@@ -9929,7 +9929,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.75, y=1.0, robotAngle=60)"
+                    + "(processing: rotation=0.5, x=0.75, y=1.0, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -9937,7 +9937,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test585() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.75, 1.0, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.75, 1.0, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5446142725038956, -102.94759996557633),
                 new WheelVector(0.9614400847074674, -97.2916598332443),
@@ -9946,7 +9946,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.75, y=1.0, robotAngle=120)"
+                    + "(processing: rotation=0.5, x=0.75, y=1.0, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -9954,7 +9954,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test586() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.75, 1.0, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.75, 1.0, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.807610901448493, -163.67505006310478),
                 new WheelVector(1.0, -140.80960571745715),
@@ -9963,7 +9963,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.75, y=1.0, robotAngle=180)"
+                    + "(processing: rotation=0.5, x=0.75, y=1.0, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -9971,7 +9971,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test587() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.75, 1.0, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.75, 1.0, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 150.66829859002402),
                 new WheelVector(0.8754370932059707, 174.7742285251531),
@@ -9980,7 +9980,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.75, y=1.0, robotAngle=240)"
+                    + "(processing: rotation=0.5, x=0.75, y=1.0, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -9988,7 +9988,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test588() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.75, 1.0, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 0.75, 1.0, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 107.50992451405496),
                 new WheelVector(0.6101128332797511, 119.5471691480212),
@@ -9997,7 +9997,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=0.75, y=1.0, robotAngle=300)"
+                    + "(processing: rotation=0.5, x=0.75, y=1.0, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -10005,7 +10005,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test589() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.75, 1.0, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.75, 1.0, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.6834907533149128, 69.85519419395426),
                 new WheelVector(0.2598640361174036, 25.066022026521058),
@@ -10014,7 +10014,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.75, y=1.0, robotAngle=0)"
+                    + "(processing: rotation=0.75, x=0.75, y=1.0, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -10022,7 +10022,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test590() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.75, 1.0, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.75, 1.0, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.3155864139252662, 3.632130210883671),
                 new WheelVector(0.6075292584708339, -58.7739814421531),
@@ -10031,7 +10031,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.75, y=1.0, robotAngle=60)"
+                    + "(processing: rotation=0.75, x=0.75, y=1.0, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -10039,7 +10039,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test591() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.75, 1.0, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.75, 1.0, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.4249587619347357, -118.18368881143563),
                 new WheelVector(0.9549306186176629, -102.13294038818533),
@@ -10048,7 +10048,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.75, y=1.0, robotAngle=120)"
+                    + "(processing: rotation=0.75, x=0.75, y=1.0, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -10056,7 +10056,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test592() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.75, 1.0, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.75, 1.0, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7748352775914634, -171.8313266381576),
                 new WheelVector(1.0, -140.08291550462107),
@@ -10065,7 +10065,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.75, y=1.0, robotAngle=180)"
+                    + "(processing: rotation=0.75, x=0.75, y=1.0, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -10073,7 +10073,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test593() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.75, 1.0, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.75, 1.0, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 148.70021903774233),
                 new WheelVector(0.8546946734103871, -178.65965250787735),
@@ -10082,7 +10082,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.75, y=1.0, robotAngle=240)"
+                    + "(processing: rotation=0.75, x=0.75, y=1.0, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -10090,7 +10090,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test594() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.75, 1.0, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 0.75, 1.0, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 110.99688399670603),
                 new WheelVector(0.5183603601468683, 133.72922719888928),
@@ -10099,7 +10099,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=0.75, y=1.0, robotAngle=300)"
+                    + "(processing: rotation=0.75, x=0.75, y=1.0, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -10107,7 +10107,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test595() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.75, 1.0, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.75, 1.0, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.6622020529986063, 78.63442835063402),
                 new WheelVector(0.1318909710414088, 8.33154835027648),
@@ -10116,7 +10116,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.75, y=1.0, robotAngle=0)"
+                    + "(processing: rotation=1.0, x=0.75, y=1.0, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -10124,7 +10124,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test596() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.75, 1.0, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.75, 1.0, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.22282264873283714, 26.031638575679818),
                 new WheelVector(0.5780101731568613, -69.7332503049544),
@@ -10133,7 +10133,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.75, y=1.0, robotAngle=60)"
+                    + "(processing: rotation=1.0, x=0.75, y=1.0, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -10141,7 +10141,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test597() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.75, 1.0, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.75, 1.0, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.3627529123158993, -136.24225329227792),
                 new WheelVector(0.9521678975532232, -105.97199960381325),
@@ -10150,7 +10150,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.75, y=1.0, robotAngle=120)"
+                    + "(processing: rotation=1.0, x=0.75, y=1.0, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -10158,7 +10158,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test598() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.75, 1.0, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.75, 1.0, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7608440505429983, -178.56067385728574),
                 new WheelVector(1.0, -139.51747351598613),
@@ -10167,7 +10167,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.75, y=1.0, robotAngle=180)"
+                    + "(processing: rotation=1.0, x=0.75, y=1.0, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -10175,7 +10175,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test599() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.75, 1.0, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.75, 1.0, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 147.1647240684935),
                 new WheelVector(0.8459043518717071, -173.3615585836225),
@@ -10184,7 +10184,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.75, y=1.0, robotAngle=240)"
+                    + "(processing: rotation=1.0, x=0.75, y=1.0, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -10192,7 +10192,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test600() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.75, 1.0, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 0.75, 1.0, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 113.73588357718853),
                 new WheelVector(0.47430577717622335, 148.06549604779585),
@@ -10201,7 +10201,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=0.75, y=1.0, robotAngle=300)"
+                    + "(processing: rotation=1.0, x=0.75, y=1.0, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -10209,7 +10209,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test601() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 1.0, 0.0, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 1.0, 0.0, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 90.0),
                 new WheelVector(1.0, 90.0),
@@ -10218,7 +10218,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=1.0, y=0.0, robotAngle=0)"
+                    + "(processing: rotation=0.0, x=1.0, y=0.0, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -10226,7 +10226,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test602() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 1.0, 0.0, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 1.0, 0.0, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 30.00000000000001),
                 new WheelVector(1.0, 30.00000000000001),
@@ -10235,7 +10235,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=1.0, y=0.0, robotAngle=60)"
+                    + "(processing: rotation=0.0, x=1.0, y=0.0, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -10243,7 +10243,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test603() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 1.0, 0.0, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 1.0, 0.0, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.9999999999999999, -29.999999999999993),
                 new WheelVector(0.9999999999999999, -29.999999999999993),
@@ -10252,7 +10252,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=1.0, y=0.0, robotAngle=120)"
+                    + "(processing: rotation=0.0, x=1.0, y=0.0, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -10260,7 +10260,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test604() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 1.0, 0.0, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 1.0, 0.0, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, -90.0),
                 new WheelVector(1.0, -90.0),
@@ -10269,7 +10269,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=1.0, y=0.0, robotAngle=180)"
+                    + "(processing: rotation=0.0, x=1.0, y=0.0, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -10277,7 +10277,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test605() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 1.0, 0.0, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 1.0, 0.0, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, -149.99999999999997),
                 new WheelVector(1.0, -149.99999999999997),
@@ -10286,7 +10286,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=1.0, y=0.0, robotAngle=240)"
+                    + "(processing: rotation=0.0, x=1.0, y=0.0, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -10294,7 +10294,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test606() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 1.0, 0.0, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 1.0, 0.0, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 149.99999999999997),
                 new WheelVector(1.0, 149.99999999999997),
@@ -10303,7 +10303,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=1.0, y=0.0, robotAngle=300)"
+                    + "(processing: rotation=0.0, x=1.0, y=0.0, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -10311,7 +10311,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test607() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 1.0, 0.0, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 1.0, 0.0, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 98.54315481489229),
                 new WheelVector(0.7075659915250843, 102.11948918988963),
@@ -10320,7 +10320,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=1.0, y=0.0, robotAngle=0)"
+                    + "(processing: rotation=0.25, x=1.0, y=0.0, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -10328,7 +10328,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test608() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 1.0, 0.0, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 1.0, 0.0, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7770206931527176, 44.47689562667078),
                 new WheelVector(0.612366357058668, 25.124237392252645),
@@ -10337,7 +10337,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=1.0, y=0.0, robotAngle=60)"
+                    + "(processing: rotation=0.25, x=1.0, y=0.0, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -10345,7 +10345,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test609() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 1.0, 0.0, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 1.0, 0.0, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.612366357058668, -25.12423739225262),
                 new WheelVector(0.7770206931527175, -44.47689562667076),
@@ -10354,7 +10354,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=1.0, y=0.0, robotAngle=120)"
+                    + "(processing: rotation=0.25, x=1.0, y=0.0, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -10362,7 +10362,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test610() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 1.0, 0.0, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 1.0, 0.0, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7075659915250843, -102.11948918988963),
                 new WheelVector(1.0, -98.54315481489229),
@@ -10371,7 +10371,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=1.0, y=0.0, robotAngle=180)"
+                    + "(processing: rotation=0.25, x=1.0, y=0.0, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -10379,7 +10379,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test611() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 1.0, 0.0, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 1.0, 0.0, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.8781978123804308, -162.77883689030537),
                 new WheelVector(1.0, -147.01650125802684),
@@ -10388,7 +10388,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=1.0, y=0.0, robotAngle=240)"
+                    + "(processing: rotation=0.25, x=1.0, y=0.0, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -10396,7 +10396,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test612() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 1.0, 0.0, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 1.0, 0.0, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 147.01650125802686),
                 new WheelVector(0.878197812380431, 162.77883689030537),
@@ -10405,7 +10405,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=1.0, y=0.0, robotAngle=300)"
+                    + "(processing: rotation=0.25, x=1.0, y=0.0, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -10413,7 +10413,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test613() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 1.0, 0.0, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 1.0, 0.0, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 104.6388065951783),
                 new WheelVector(0.5266837846116296, 118.67505006310476),
@@ -10422,7 +10422,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=1.0, y=0.0, robotAngle=0)"
+                    + "(processing: rotation=0.5, x=1.0, y=0.0, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -10430,7 +10430,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test614() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 1.0, 0.0, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 1.0, 0.0, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.6688040044354339, 59.019465915996555),
                 new WheelVector(0.3580455384995918, 15.948086885773927),
@@ -10439,7 +10439,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=1.0, y=0.0, robotAngle=60)"
+                    + "(processing: rotation=0.5, x=1.0, y=0.0, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -10447,7 +10447,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test615() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 1.0, 0.0, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 1.0, 0.0, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.3580455384995917, -15.948086885773893),
                 new WheelVector(0.6688040044354336, -59.01946591599654),
@@ -10456,7 +10456,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=1.0, y=0.0, robotAngle=120)"
+                    + "(processing: rotation=0.5, x=1.0, y=0.0, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -10464,7 +10464,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test616() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 1.0, 0.0, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 1.0, 0.0, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5266837846116296, -118.67505006310476),
                 new WheelVector(1.0, -104.6388065951783),
@@ -10473,7 +10473,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=1.0, y=0.0, robotAngle=180)"
+                    + "(processing: rotation=0.5, x=1.0, y=0.0, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -10481,7 +10481,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test617() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 1.0, 0.0, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 1.0, 0.0, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.8251653236113299, -173.1527271264526),
                 new WheelVector(1.0, -145.0127652743675),
@@ -10490,7 +10490,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=1.0, y=0.0, robotAngle=240)"
+                    + "(processing: rotation=0.5, x=1.0, y=0.0, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -10498,7 +10498,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test618() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 1.0, 0.0, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 1.0, 0.0, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 145.01276527436752),
                 new WheelVector(0.82516532361133, 173.15272712645262),
@@ -10507,7 +10507,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=1.0, y=0.0, robotAngle=300)"
+                    + "(processing: rotation=0.5, x=1.0, y=0.0, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -10515,7 +10515,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test619() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 1.0, 0.0, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 1.0, 0.0, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 109.11356470173733),
                 new WheelVector(0.43739131783149376, 138.47131824452862),
@@ -10524,7 +10524,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=1.0, y=0.0, robotAngle=0)"
+                    + "(processing: rotation=0.75, x=1.0, y=0.0, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -10532,7 +10532,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test620() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 1.0, 0.0, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 1.0, 0.0, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.624454553338102, 71.95369793751564),
                 new WheelVector(0.19423490531978052, -5.162658686248037),
@@ -10541,7 +10541,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=1.0, y=0.0, robotAngle=60)"
+                    + "(processing: rotation=0.75, x=1.0, y=0.0, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -10549,7 +10549,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test621() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 1.0, 0.0, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 1.0, 0.0, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.19423490531978063, 5.162658686248092),
                 new WheelVector(0.6244545533381017, -71.95369793751563),
@@ -10558,7 +10558,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=1.0, y=0.0, robotAngle=120)"
+                    + "(processing: rotation=0.75, x=1.0, y=0.0, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -10566,7 +10566,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test622() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 1.0, 0.0, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 1.0, 0.0, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.43739131783149376, -138.47131824452862),
                 new WheelVector(1.0, -109.11356470173733),
@@ -10575,7 +10575,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=1.0, y=0.0, robotAngle=180)"
+                    + "(processing: rotation=0.75, x=1.0, y=0.0, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -10583,7 +10583,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test623() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 1.0, 0.0, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 1.0, 0.0, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.8048501160215457, 178.75568026207043),
                 new WheelVector(1.0, -143.57746332458296),
@@ -10592,7 +10592,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=1.0, y=0.0, robotAngle=240)"
+                    + "(processing: rotation=0.75, x=1.0, y=0.0, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -10600,7 +10600,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test624() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 1.0, 0.0, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 1.0, 0.0, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 143.57746332458296),
                 new WheelVector(0.8048501160215458, -178.75568026207043),
@@ -10609,7 +10609,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=1.0, y=0.0, robotAngle=300)"
+                    + "(processing: rotation=0.75, x=1.0, y=0.0, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -10617,7 +10617,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test625() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 1.0, 0.0, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 1.0, 0.0, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 112.50000000000001),
                 new WheelVector(0.41421356237309515, 157.5),
@@ -10626,7 +10626,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=1.0, y=0.0, robotAngle=0)"
+                    + "(processing: rotation=1.0, x=1.0, y=0.0, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -10634,7 +10634,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test626() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 1.0, 0.0, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 1.0, 0.0, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.6140144073823542, 82.50000000000001),
                 new WheelVector(0.1316524975873958, -52.50000000000001),
@@ -10643,7 +10643,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=1.0, y=0.0, robotAngle=60)"
+                    + "(processing: rotation=1.0, x=1.0, y=0.0, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -10651,7 +10651,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test627() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 1.0, 0.0, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 1.0, 0.0, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.13165249758739597, 52.500000000000036),
                 new WheelVector(0.6140144073823542, -82.50000000000001),
@@ -10660,7 +10660,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=1.0, y=0.0, robotAngle=120)"
+                    + "(processing: rotation=1.0, x=1.0, y=0.0, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -10668,7 +10668,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test628() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 1.0, 0.0, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 1.0, 0.0, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.41421356237309503, -157.5),
                 new WheelVector(1.0, -112.50000000000001),
@@ -10677,7 +10677,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=1.0, y=0.0, robotAngle=180)"
+                    + "(processing: rotation=1.0, x=1.0, y=0.0, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -10685,7 +10685,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test629() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 1.0, 0.0, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 1.0, 0.0, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.8001991549907406, 172.5),
                 new WheelVector(1.0, -142.5),
@@ -10694,7 +10694,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=1.0, y=0.0, robotAngle=240)"
+                    + "(processing: rotation=1.0, x=1.0, y=0.0, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -10702,7 +10702,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test630() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 1.0, 0.0, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 1.0, 0.0, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 142.5),
                 new WheelVector(0.8001991549907408, -172.5),
@@ -10711,7 +10711,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=1.0, y=0.0, robotAngle=300)"
+                    + "(processing: rotation=1.0, x=1.0, y=0.0, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -10719,7 +10719,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test631() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 1.0, 0.25, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 1.0, 0.25, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 75.96375653207353),
                 new WheelVector(1.0, 75.96375653207353),
@@ -10728,7 +10728,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=1.0, y=0.25, robotAngle=0)"
+                    + "(processing: rotation=0.0, x=1.0, y=0.25, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -10736,7 +10736,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test632() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 1.0, 0.25, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 1.0, 0.25, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 15.963756532073527),
                 new WheelVector(1.0, 15.963756532073527),
@@ -10745,7 +10745,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=1.0, y=0.25, robotAngle=60)"
+                    + "(processing: rotation=0.0, x=1.0, y=0.25, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -10753,7 +10753,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test633() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 1.0, 0.25, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 1.0, 0.25, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, -44.03624346792646),
                 new WheelVector(1.0, -44.03624346792646),
@@ -10762,7 +10762,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=1.0, y=0.25, robotAngle=120)"
+                    + "(processing: rotation=0.0, x=1.0, y=0.25, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -10770,7 +10770,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test634() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 1.0, 0.25, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 1.0, 0.25, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, -104.03624346792648),
                 new WheelVector(1.0, -104.03624346792648),
@@ -10779,7 +10779,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=1.0, y=0.25, robotAngle=180)"
+                    + "(processing: rotation=0.0, x=1.0, y=0.25, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -10787,7 +10787,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test635() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 1.0, 0.25, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 1.0, 0.25, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, -164.03624346792645),
                 new WheelVector(1.0, -164.03624346792645),
@@ -10796,7 +10796,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=1.0, y=0.25, robotAngle=240)"
+                    + "(processing: rotation=0.0, x=1.0, y=0.25, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -10804,7 +10804,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test636() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 1.0, 0.25, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 1.0, 0.25, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 135.96375653207352),
                 new WheelVector(1.0, 135.96375653207352),
@@ -10813,7 +10813,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=1.0, y=0.25, robotAngle=300)"
+                    + "(processing: rotation=0.0, x=1.0, y=0.25, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -10821,7 +10821,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test637() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 1.0, 0.25, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 1.0, 0.25, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.9419042517911366, 86.43943974585942),
                 new WheelVector(0.660240939135938, 84.91708449537893),
@@ -10830,7 +10830,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=1.0, y=0.25, robotAngle=0)"
+                    + "(processing: rotation=0.25, x=1.0, y=0.25, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -10838,7 +10838,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test638() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 1.0, 0.25, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 1.0, 0.25, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7451475848651317, 29.47817216357882),
                 new WheelVector(0.6542307484142788, 7.466733216300676),
@@ -10847,7 +10847,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=1.0, y=0.25, robotAngle=60)"
+                    + "(processing: rotation=0.25, x=1.0, y=0.25, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -10855,7 +10855,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test639() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 1.0, 0.25, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 1.0, 0.25, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.6096617992173783, -43.72768582224896),
                 new WheelVector(0.8249599508899655, -57.72114886390205),
@@ -10864,7 +10864,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=1.0, y=0.25, robotAngle=120)"
+                    + "(processing: rotation=0.25, x=1.0, y=0.25, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -10872,7 +10872,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test640() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 1.0, 0.25, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 1.0, 0.25, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7407661426988171, -117.40319627793293),
                 new WheelVector(1.0, -109.93397797347895),
@@ -10881,7 +10881,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=1.0, y=0.25, robotAngle=180)"
+                    + "(processing: rotation=0.25, x=1.0, y=0.25, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -10889,7 +10889,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test641() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 1.0, 0.25, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 1.0, 0.25, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.9342231794064889, -174.77865668243228),
                 new WheelVector(1.0, -158.48892125981197),
@@ -10898,7 +10898,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=1.0, y=0.25, robotAngle=240)"
+                    + "(processing: rotation=0.25, x=1.0, y=0.25, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -10906,7 +10906,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test642() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 1.0, 0.25, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 1.0, 0.25, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 135.77564129396637),
                 new WheelVector(0.8313414393933436, 149.54159482549022),
@@ -10915,7 +10915,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=1.0, y=0.25, robotAngle=300)"
+                    + "(processing: rotation=0.25, x=1.0, y=0.25, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -10923,7 +10923,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test643() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 1.0, 0.25, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 1.0, 0.25, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.9159854244266524, 94.37488255500149),
                 new WheelVector(0.4417538780931909, 99.10081401222652),
@@ -10932,7 +10932,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=1.0, y=0.25, robotAngle=0)"
+                    + "(processing: rotation=0.5, x=1.0, y=0.25, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -10940,7 +10940,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test644() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 1.0, 0.25, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 1.0, 0.25, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.6057172048901012, 44.980895389896816),
                 new WheelVector(0.4310292912284206, -6.271776535551241),
@@ -10949,7 +10949,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=1.0, y=0.25, robotAngle=60)"
+                    + "(processing: rotation=0.5, x=1.0, y=0.25, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -10957,7 +10957,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test645() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 1.0, 0.25, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 1.0, 0.25, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.3468372454093991, -43.128608857921726),
                 new WheelVector(0.7434707195187863, -70.09451838242202),
@@ -10966,7 +10966,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=1.0, y=0.25, robotAngle=120)"
+                    + "(processing: rotation=0.5, x=1.0, y=0.25, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -10974,7 +10974,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test646() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 1.0, 0.25, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 1.0, 0.25, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5967555538478875, -133.0346908090916),
                 new WheelVector(1.0, -114.03223119036409),
@@ -10983,7 +10983,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=1.0, y=0.25, robotAngle=180)"
+                    + "(processing: rotation=0.5, x=1.0, y=0.25, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -10991,7 +10991,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test647() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 1.0, 0.25, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 1.0, 0.25, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.9049270233543684, 177.0172810356646),
                 new WheelVector(1.0, -154.64890671773767),
@@ -11000,7 +11000,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=1.0, y=0.25, robotAngle=240)"
+                    + "(processing: rotation=0.5, x=1.0, y=0.25, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -11008,7 +11008,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test648() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 1.0, 0.25, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 1.0, 0.25, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 135.648966626522),
                 new WheelVector(0.753357394615197, 161.65492080751204),
@@ -11017,7 +11017,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=1.0, y=0.25, robotAngle=300)"
+                    + "(processing: rotation=0.5, x=1.0, y=0.25, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -11025,7 +11025,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test649() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 1.0, 0.25, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 1.0, 0.25, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.9056916495284978, 100.38051081011038),
                 new WheelVector(0.31841297104272626, 120.8315483502765),
@@ -11034,7 +11034,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=1.0, y=0.25, robotAngle=0)"
+                    + "(processing: rotation=0.75, x=1.0, y=0.25, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -11042,7 +11042,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test650() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 1.0, 0.25, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 1.0, 0.25, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5420196130075752, 60.4863487836913),
                 new WheelVector(0.30292707959731346, -28.182008330428815),
@@ -11051,7 +11051,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=1.0, y=0.25, robotAngle=60)"
+                    + "(processing: rotation=0.75, x=1.0, y=0.25, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -11059,7 +11059,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test651() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 1.0, 0.25, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 1.0, 0.25, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.15789480296213837, -41.46471295489202),
                 new WheelVector(0.7101154310049219, -80.40854563450603),
@@ -11068,7 +11068,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=1.0, y=0.25, robotAngle=120)"
+                    + "(processing: rotation=0.75, x=1.0, y=0.25, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -11076,7 +11076,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test652() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 1.0, 0.25, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 1.0, 0.25, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5301975632748652, -148.95684518510774),
                 new WheelVector(1.0, -117.01747351598613),
@@ -11085,7 +11085,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=1.0, y=0.25, robotAngle=180)"
+                    + "(processing: rotation=0.75, x=1.0, y=0.25, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -11093,7 +11093,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test653() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 1.0, 0.25, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 1.0, 0.25, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.8932970136905615, 170.78419785823104),
                 new WheelVector(1.0, -151.85618941049597),
@@ -11102,7 +11102,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=1.0, y=0.25, robotAngle=240)"
+                    + "(processing: rotation=0.75, x=1.0, y=0.25, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -11110,7 +11110,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test654() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 1.0, 0.25, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 1.0, 0.25, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 135.55785813541686),
                 new WheelVector(0.7215724796935831, 171.66886796004613),
@@ -11119,7 +11119,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=1.0, y=0.25, robotAngle=300)"
+                    + "(processing: rotation=0.75, x=1.0, y=0.25, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -11127,7 +11127,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test655() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 1.0, 0.25, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 1.0, 0.25, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.9029893061200326, 104.99025745540308),
                 new WheelVector(0.27739580897282934, 147.35010012620953),
@@ -11136,7 +11136,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=1.0, y=0.25, robotAngle=0)"
+                    + "(processing: rotation=1.0, x=1.0, y=0.25, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -11144,7 +11144,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test656() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 1.0, 0.25, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 1.0, 0.25, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5241675212201612, 74.0070271956363),
                 new WheelVector(0.25939613616007273, -56.16878387063933),
@@ -11153,7 +11153,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=1.0, y=0.25, robotAngle=60)"
+                    + "(processing: rotation=1.0, x=1.0, y=0.25, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -11161,7 +11161,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test657() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 1.0, 0.25, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 1.0, 0.25, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.0173323801209993, -15.489181300929737),
                 new WheelVector(0.7012428800930345, -88.63514442892848),
@@ -11170,7 +11170,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=1.0, y=0.25, robotAngle=120)"
+                    + "(processing: rotation=1.0, x=1.0, y=0.25, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -11178,7 +11178,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test658() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 1.0, 0.25, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 1.0, 0.25, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5114281453621342, -162.9848742473196),
                 new WheelVector(1.0, -119.27761319035656),
@@ -11187,7 +11187,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=1.0, y=0.25, robotAngle=180)"
+                    + "(processing: rotation=1.0, x=1.0, y=0.25, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -11195,7 +11195,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test659() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 1.0, 0.25, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 1.0, 0.25, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.8902442165791848, 165.99297280436372),
                 new WheelVector(1.0, -149.74297571784052),
@@ -11204,7 +11204,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=1.0, y=0.25, robotAngle=240)"
+                    + "(processing: rotation=1.0, x=1.0, y=0.25, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -11212,7 +11212,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test660() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 1.0, 0.25, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 1.0, 0.25, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 135.48918130093014),
                 new WheelVector(0.7131331113610453, 179.62810845654528),
@@ -11221,7 +11221,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=1.0, y=0.25, robotAngle=300)"
+                    + "(processing: rotation=1.0, x=1.0, y=0.25, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -11229,7 +11229,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test661() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 1.0, 0.5, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 1.0, 0.5, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 63.43494882292201),
                 new WheelVector(1.0, 63.43494882292201),
@@ -11238,7 +11238,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=1.0, y=0.5, robotAngle=0)"
+                    + "(processing: rotation=0.0, x=1.0, y=0.5, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -11246,7 +11246,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test662() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 1.0, 0.5, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 1.0, 0.5, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 3.434948822922018),
                 new WheelVector(1.0, 3.434948822922018),
@@ -11255,7 +11255,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=1.0, y=0.5, robotAngle=60)"
+                    + "(processing: rotation=0.0, x=1.0, y=0.5, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -11263,7 +11263,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test663() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 1.0, 0.5, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 1.0, 0.5, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, -56.56505117707798),
                 new WheelVector(1.0, -56.56505117707798),
@@ -11272,7 +11272,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=1.0, y=0.5, robotAngle=120)"
+                    + "(processing: rotation=0.0, x=1.0, y=0.5, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -11280,7 +11280,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test664() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 1.0, 0.5, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 1.0, 0.5, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, -116.56505117707799),
                 new WheelVector(1.0, -116.56505117707799),
@@ -11289,7 +11289,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=1.0, y=0.5, robotAngle=180)"
+                    + "(processing: rotation=0.0, x=1.0, y=0.5, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -11297,7 +11297,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test665() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 1.0, 0.5, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 1.0, 0.5, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, -176.56505117707798),
                 new WheelVector(1.0, -176.56505117707798),
@@ -11306,7 +11306,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=1.0, y=0.5, robotAngle=240)"
+                    + "(processing: rotation=0.0, x=1.0, y=0.5, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -11314,7 +11314,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test666() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 1.0, 0.5, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 1.0, 0.5, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 123.43494882292201),
                 new WheelVector(1.0, 123.43494882292201),
@@ -11323,7 +11323,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=1.0, y=0.5, robotAngle=300)"
+                    + "(processing: rotation=0.0, x=1.0, y=0.5, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -11331,7 +11331,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test667() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 1.0, 0.5, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 1.0, 0.5, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.8989696914392886, 74.64141677724956),
                 new WheelVector(0.6514902289208563, 68.56347017460088),
@@ -11340,7 +11340,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=1.0, y=0.5, robotAngle=0)"
+                    + "(processing: rotation=0.25, x=1.0, y=0.5, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -11348,7 +11348,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test668() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 1.0, 0.5, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 1.0, 0.5, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7375935534711785, 14.549033785462171),
                 new WheelVector(0.7188020416833379, -6.667085998663475),
@@ -11357,7 +11357,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=1.0, y=0.5, robotAngle=60)"
+                    + "(processing: rotation=0.25, x=1.0, y=0.5, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -11365,7 +11365,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test669() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 1.0, 0.5, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 1.0, 0.5, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.6412200166097284, -59.85045985335793),
                 new WheelVector(0.8751170502185242, -68.40660562693628),
@@ -11374,7 +11374,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=1.0, y=0.5, robotAngle=120)"
+                    + "(processing: rotation=0.25, x=1.0, y=0.5, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -11382,7 +11382,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test670() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 1.0, 0.5, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 1.0, 0.5, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7850433187110758, -129.42382380905684),
                 new WheelVector(1.0, -119.90366192051079),
@@ -11391,7 +11391,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=1.0, y=0.5, robotAngle=180)"
+                    + "(processing: rotation=0.25, x=1.0, y=0.5, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -11399,7 +11399,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test671() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 1.0, 0.5, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 1.0, 0.5, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.98622113392783, 175.1458835974358),
                 new WheelVector(1.0, -169.3219748845398),
@@ -11408,7 +11408,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=1.0, y=0.5, robotAngle=240)"
+                    + "(processing: rotation=0.25, x=1.0, y=0.5, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -11416,7 +11416,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test672() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 1.0, 0.5, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 1.0, 0.5, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 125.54093853865528),
                 new WheelVector(0.8033263708591978, 136.35225450480831),
@@ -11425,7 +11425,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=1.0, y=0.5, robotAngle=300)"
+                    + "(processing: rotation=0.25, x=1.0, y=0.5, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -11433,7 +11433,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test673() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 1.0, 0.5, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 1.0, 0.5, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.8507982281860978, 83.82494993689524),
                 new WheelVector(0.4142135623730951, 77.23561031724536),
@@ -11442,7 +11442,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=1.0, y=0.5, robotAngle=0)"
+                    + "(processing: rotation=0.5, x=1.0, y=0.5, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -11450,7 +11450,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test674() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 1.0, 0.5, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 1.0, 0.5, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5696559648418292, 28.87888896787805),
                 new WheelVector(0.5328815940961511, -20.598136918019986),
@@ -11459,7 +11459,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=1.0, y=0.5, robotAngle=60)"
+                    + "(processing: rotation=0.5, x=1.0, y=0.5, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -11467,7 +11467,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test675() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 1.0, 0.5, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 1.0, 0.5, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.394867048464031, -65.6313651161493),
                 new WheelVector(0.8150608066773894, -78.46933388317368),
@@ -11476,7 +11476,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=1.0, y=0.5, robotAngle=120)"
+                    + "(processing: rotation=0.5, x=1.0, y=0.5, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -11484,7 +11484,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test676() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 1.0, 0.5, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 1.0, 0.5, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.6691152742010951, -142.8611934048217),
                 new WheelVector(1.0, -122.23561031724535),
@@ -11493,7 +11493,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=1.0, y=0.5, robotAngle=180)"
+                    + "(processing: rotation=0.5, x=1.0, y=0.5, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -11501,7 +11501,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test677() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 1.0, 0.5, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 1.0, 0.5, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.9795176746984096, 168.96585756823288),
                 new WheelVector(1.0, -164.03077971997146),
@@ -11510,7 +11510,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=1.0, y=0.5, robotAngle=240)"
+                    + "(processing: rotation=0.5, x=1.0, y=0.5, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -11518,7 +11518,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test678() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 1.0, 0.5, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 1.0, 0.5, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 127.00232071247585),
                 new WheelVector(0.7011389786490965, 149.13576154658696),
@@ -11527,7 +11527,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=1.0, y=0.5, robotAngle=300)"
+                    + "(processing: rotation=0.5, x=1.0, y=0.5, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -11535,7 +11535,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test679() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 1.0, 0.5, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 1.0, 0.5, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.8296752604444647, 91.1354141478194),
                 new WheelVector(0.2551139223577788, 93.69488490198852),
@@ -11544,7 +11544,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=1.0, y=0.5, robotAngle=0)"
+                    + "(processing: rotation=0.75, x=1.0, y=0.5, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -11552,7 +11552,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test680() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 1.0, 0.5, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 1.0, 0.5, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.4776601905061535, 45.562862862324835),
                 new WheelVector(0.42641644889729774, -38.34747431294161),
@@ -11561,7 +11561,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=1.0, y=0.5, robotAngle=60)"
+                    + "(processing: rotation=0.75, x=1.0, y=0.5, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -11569,7 +11569,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test681() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 1.0, 0.5, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 1.0, 0.5, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.2214753208334308, -77.98604888656148),
                 new WheelVector(0.7885583779756937, -86.64850998064556),
@@ -11578,7 +11578,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=1.0, y=0.5, robotAngle=120)"
+                    + "(processing: rotation=0.75, x=1.0, y=0.5, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -11586,7 +11586,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test682() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 1.0, 0.5, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 1.0, 0.5, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.6137768939828058, -155.4944083235141),
                 new WheelVector(1.0, -123.95132206551776),
@@ -11595,7 +11595,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=1.0, y=0.5, robotAngle=180)"
+                    + "(processing: rotation=0.75, x=1.0, y=0.5, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -11603,7 +11603,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test683() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 1.0, 0.5, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 1.0, 0.5, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.9765611759105555, 164.2815163602642),
                 new WheelVector(1.0, -160.05862529062162),
@@ -11612,7 +11612,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=1.0, y=0.5, robotAngle=240)"
+                    + "(processing: rotation=0.75, x=1.0, y=0.5, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -11620,7 +11620,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test684() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 1.0, 0.5, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 1.0, 0.5, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 128.0744877968952),
                 new WheelVector(0.6536260416037705, 160.64505148562168),
@@ -11629,7 +11629,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=1.0, y=0.5, robotAngle=300)"
+                    + "(processing: rotation=0.75, x=1.0, y=0.5, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -11637,7 +11637,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test685() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 1.0, 0.5, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 1.0, 0.5, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.8224834854518072, 96.917337940107),
                 new WheelVector(0.1715728752538099, 125.26438968275468),
@@ -11646,7 +11646,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=1.0, y=0.5, robotAngle=0)"
+                    + "(processing: rotation=1.0, x=1.0, y=0.5, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -11654,7 +11654,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test686() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 1.0, 0.5, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 1.0, 0.5, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.4420048273577612, 62.1545477812505),
                 new WheelVector(0.38349938853350873, -57.428905166295316),
@@ -11663,7 +11663,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=1.0, y=0.5, robotAngle=60)"
+                    + "(processing: rotation=1.0, x=1.0, y=0.5, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -11671,7 +11671,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test687() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 1.0, 0.5, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 1.0, 0.5, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.11558735776853776, -111.95844358274005),
                 new WheelVector(0.7795066873256501, -93.17856342379169),
@@ -11680,7 +11680,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=1.0, y=0.5, robotAngle=120)"
+                    + "(processing: rotation=1.0, x=1.0, y=0.5, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -11688,7 +11688,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test688() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 1.0, 0.5, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 1.0, 0.5, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.594102825849117, -166.36129272052355),
                 new WheelVector(1.0, -125.26438968275465),
@@ -11697,7 +11697,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=1.0, y=0.5, robotAngle=180)"
+                    + "(processing: rotation=1.0, x=1.0, y=0.5, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -11705,7 +11705,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test689() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 1.0, 0.5, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 1.0, 0.5, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.975552927112625, 160.65332848472855),
                 new WheelVector(1.0, -156.9941317279802),
@@ -11714,7 +11714,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=1.0, y=0.5, robotAngle=240)"
+                    + "(processing: rotation=1.0, x=1.0, y=0.5, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -11722,7 +11722,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test690() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 1.0, 0.5, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 1.0, 0.5, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 128.89413015323177),
                 new WheelVector(0.6369691999543644, 170.31099027542868),
@@ -11731,7 +11731,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=1.0, y=0.5, robotAngle=300)"
+                    + "(processing: rotation=1.0, x=1.0, y=0.5, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -11739,7 +11739,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test691() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 1.0, 0.75, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 1.0, 0.75, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 53.13010235415598),
                 new WheelVector(1.0, 53.13010235415598),
@@ -11748,7 +11748,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=1.0, y=0.75, robotAngle=0)"
+                    + "(processing: rotation=0.0, x=1.0, y=0.75, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -11756,7 +11756,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test692() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 1.0, 0.75, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 1.0, 0.75, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, -6.869897645844016),
                 new WheelVector(1.0, -6.869897645844016),
@@ -11765,7 +11765,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=1.0, y=0.75, robotAngle=60)"
+                    + "(processing: rotation=0.0, x=1.0, y=0.75, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -11773,7 +11773,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test693() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 1.0, 0.75, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 1.0, 0.75, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, -66.869897645844),
                 new WheelVector(1.0, -66.869897645844),
@@ -11782,7 +11782,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=1.0, y=0.75, robotAngle=120)"
+                    + "(processing: rotation=0.0, x=1.0, y=0.75, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -11790,7 +11790,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test694() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 1.0, 0.75, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 1.0, 0.75, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, -126.86989764584402),
                 new WheelVector(1.0, -126.86989764584402),
@@ -11799,7 +11799,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=1.0, y=0.75, robotAngle=180)"
+                    + "(processing: rotation=0.0, x=1.0, y=0.75, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -11807,7 +11807,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test695() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 1.0, 0.75, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 1.0, 0.75, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 173.13010235415604),
                 new WheelVector(1.0, 173.13010235415604),
@@ -11816,7 +11816,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=1.0, y=0.75, robotAngle=240)"
+                    + "(processing: rotation=0.0, x=1.0, y=0.75, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -11824,7 +11824,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test696() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 1.0, 0.75, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 1.0, 0.75, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 113.13010235415598),
                 new WheelVector(1.0, 113.13010235415598),
@@ -11833,7 +11833,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=1.0, y=0.75, robotAngle=300)"
+                    + "(processing: rotation=0.0, x=1.0, y=0.75, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -11841,7 +11841,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test697() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 1.0, 0.75, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 1.0, 0.75, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.8738637548602601, 64.0286817554714),
                 new WheelVector(0.6696927241676609, 55.149899873790474),
@@ -11850,7 +11850,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=1.0, y=0.75, robotAngle=0)"
+                    + "(processing: rotation=0.25, x=1.0, y=0.75, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -11858,7 +11858,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test698() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 1.0, 0.75, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 1.0, 0.75, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7317502516437843, 1.4671443833194049),
                 new WheelVector(0.7651199363186816, -17.045396531324972),
@@ -11867,7 +11867,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=1.0, y=0.75, robotAngle=60)"
+                    + "(processing: rotation=0.25, x=1.0, y=0.75, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -11875,7 +11875,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test699() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 1.0, 0.75, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 1.0, 0.75, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.6884108489105687, -72.09672048755512),
                 new WheelVector(0.9178985575644508, -76.67031349966555),
@@ -11884,7 +11884,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=1.0, y=0.75, robotAngle=120)"
+                    + "(processing: rotation=0.25, x=1.0, y=0.75, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -11892,7 +11892,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test700() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 1.0, 0.75, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 1.0, 0.75, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.8275569362555244, -138.38643529826265),
                 new WheelVector(1.0, -128.22238680964344),
@@ -11901,7 +11901,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=1.0, y=0.75, robotAngle=180)"
+                    + "(processing: rotation=0.25, x=1.0, y=0.75, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -11909,7 +11909,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test701() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 1.0, 0.75, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 1.0, 0.75, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 167.0395108968127),
                 new WheelVector(0.9747050393982987, -178.89860827351023),
@@ -11918,7 +11918,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=1.0, y=0.75, robotAngle=240)"
+                    + "(processing: rotation=0.25, x=1.0, y=0.75, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -11926,7 +11926,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test702() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 1.0, 0.75, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 1.0, 0.75, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 116.72567475614196),
                 new WheelVector(0.7945890352370024, 124.47017771694077),
@@ -11935,7 +11935,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=1.0, y=0.75, robotAngle=300)"
+                    + "(processing: rotation=0.25, x=1.0, y=0.75, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -11943,7 +11943,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test703() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 1.0, 0.75, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 1.0, 0.75, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.807610901448493, 73.67505006310476),
                 new WheelVector(0.43422251475832546, 58.48044050173161),
@@ -11952,7 +11952,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=1.0, y=0.75, robotAngle=0)"
+                    + "(processing: rotation=0.5, x=1.0, y=0.75, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -11960,7 +11960,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test704() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 1.0, 0.75, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 1.0, 0.75, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5446142725038957, 12.947599965576337),
                 new WheelVector(0.6101128332797511, -29.54716914802118),
@@ -11969,7 +11969,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=1.0, y=0.75, robotAngle=60)"
+                    + "(processing: rotation=0.5, x=1.0, y=0.75, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -11977,7 +11977,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test705() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 1.0, 0.75, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 1.0, 0.75, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.46850372418397634, -80.20105754120829),
                 new WheelVector(0.8754370932059706, -84.77422852515306),
@@ -11986,7 +11986,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=1.0, y=0.75, robotAngle=120)"
+                    + "(processing: rotation=0.5, x=1.0, y=0.75, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -11994,7 +11994,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test706() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 1.0, 0.75, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 1.0, 0.75, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.732334502931957, -149.6388065951783),
                 new WheelVector(1.0, -129.19039428254288),
@@ -12003,7 +12003,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=1.0, y=0.75, robotAngle=180)"
+                    + "(processing: rotation=0.5, x=1.0, y=0.75, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -12011,7 +12011,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test707() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 1.0, 0.75, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 1.0, 0.75, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 162.49007548594508),
                 new WheelVector(0.9614400847074677, -172.70834016675568),
@@ -12020,7 +12020,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=1.0, y=0.75, robotAngle=240)"
+                    + "(processing: rotation=0.5, x=1.0, y=0.75, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -12028,7 +12028,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test708() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 1.0, 0.75, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 1.0, 0.75, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 119.331701409976),
                 new WheelVector(0.6731312170842592, 136.69730998559265),
@@ -12037,7 +12037,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=1.0, y=0.75, robotAngle=300)"
+                    + "(processing: rotation=0.5, x=1.0, y=0.75, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -12045,7 +12045,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test709() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 1.0, 0.75, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 1.0, 0.75, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7748352775914634, 81.83132663815762),
                 new WheelVector(0.2598640361174036, 64.93397797347895),
@@ -12054,7 +12054,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=1.0, y=0.75, robotAngle=0)"
+                    + "(processing: rotation=0.75, x=1.0, y=0.75, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -12062,7 +12062,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test710() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 1.0, 0.75, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 1.0, 0.75, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.4249587619347358, 28.183688811435637),
                 new WheelVector(0.5183603601468683, -43.72922719888927),
@@ -12071,7 +12071,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=1.0, y=0.75, robotAngle=60)"
+                    + "(processing: rotation=0.75, x=1.0, y=0.75, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -12079,7 +12079,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test711() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 1.0, 0.75, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 1.0, 0.75, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.3155864139252661, -93.63213021088364),
                 new WheelVector(0.8546946734103869, -91.34034749212263),
@@ -12088,7 +12088,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=1.0, y=0.75, robotAngle=120)"
+                    + "(processing: rotation=0.75, x=1.0, y=0.75, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -12096,7 +12096,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test712() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 1.0, 0.75, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 1.0, 0.75, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.6834907533149127, -159.85519419395428),
                 new WheelVector(1.0, -129.91708449537893),
@@ -12105,7 +12105,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=1.0, y=0.75, robotAngle=180)"
+                    + "(processing: rotation=0.75, x=1.0, y=0.75, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -12113,7 +12113,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test713() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 1.0, 0.75, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 1.0, 0.75, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 159.003116003294),
                 new WheelVector(0.9549306186176632, -167.86705961181468),
@@ -12122,7 +12122,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=1.0, y=0.75, robotAngle=240)"
+                    + "(processing: rotation=0.75, x=1.0, y=0.75, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -12130,7 +12130,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test714() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 1.0, 0.75, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 1.0, 0.75, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 121.29978096225771),
                 new WheelVector(0.6075292584708339, 148.77398144215312),
@@ -12139,7 +12139,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=1.0, y=0.75, robotAngle=300)"
+                    + "(processing: rotation=0.75, x=1.0, y=0.75, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -12147,7 +12147,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test715() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 1.0, 0.75, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 1.0, 0.75, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7608440505429984, 88.56067385728574),
                 new WheelVector(0.1318909710414088, 81.66845164972352),
@@ -12156,7 +12156,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=1.0, y=0.75, robotAngle=0)"
+                    + "(processing: rotation=1.0, x=1.0, y=0.75, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -12164,7 +12164,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test716() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 1.0, 0.75, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 1.0, 0.75, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.36275291231589946, 46.24225329227793),
                 new WheelVector(0.47430577717622335, -58.06549604779587),
@@ -12173,7 +12173,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=1.0, y=0.75, robotAngle=60)"
+                    + "(processing: rotation=1.0, x=1.0, y=0.75, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -12181,7 +12181,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test717() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 1.0, 0.75, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 1.0, 0.75, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.22282264873283697, -116.0316385756798),
                 new WheelVector(0.8459043518717068, -96.63844141637749),
@@ -12190,7 +12190,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=1.0, y=0.75, robotAngle=120)"
+                    + "(processing: rotation=1.0, x=1.0, y=0.75, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -12198,7 +12198,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test718() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 1.0, 0.75, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 1.0, 0.75, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.6622020529986063, -168.63442835063404),
                 new WheelVector(1.0, -130.48252648401387),
@@ -12207,7 +12207,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=1.0, y=0.75, robotAngle=180)"
+                    + "(processing: rotation=1.0, x=1.0, y=0.75, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -12215,7 +12215,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test719() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 1.0, 0.75, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 1.0, 0.75, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 156.2641164228115),
                 new WheelVector(0.9521678975532234, -164.02800039618674),
@@ -12224,7 +12224,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=1.0, y=0.75, robotAngle=240)"
+                    + "(processing: rotation=1.0, x=1.0, y=0.75, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -12232,7 +12232,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test720() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 1.0, 0.75, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 1.0, 0.75, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 122.83527593150652),
                 new WheelVector(0.5780101731568613, 159.7332503049544),
@@ -12241,7 +12241,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=1.0, y=0.75, robotAngle=300)"
+                    + "(processing: rotation=1.0, x=1.0, y=0.75, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -12249,7 +12249,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test721() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 1.0, 1.0, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 1.0, 1.0, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 45.0),
                 new WheelVector(1.0, 45.0),
@@ -12258,7 +12258,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=1.0, y=1.0, robotAngle=0)"
+                    + "(processing: rotation=0.0, x=1.0, y=1.0, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -12266,7 +12266,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test722() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 1.0, 1.0, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 1.0, 1.0, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, -14.999999999999993),
                 new WheelVector(1.0, -14.999999999999993),
@@ -12275,7 +12275,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=1.0, y=1.0, robotAngle=60)"
+                    + "(processing: rotation=0.0, x=1.0, y=1.0, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -12283,7 +12283,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test723() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 1.0, 1.0, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 1.0, 1.0, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, -74.99999999999999),
                 new WheelVector(1.0, -74.99999999999999),
@@ -12292,7 +12292,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=1.0, y=1.0, robotAngle=120)"
+                    + "(processing: rotation=0.0, x=1.0, y=1.0, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -12300,7 +12300,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test724() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 1.0, 1.0, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 1.0, 1.0, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, -135.0),
                 new WheelVector(1.0, -135.0),
@@ -12309,7 +12309,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=1.0, y=1.0, robotAngle=180)"
+                    + "(processing: rotation=0.0, x=1.0, y=1.0, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -12317,7 +12317,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test725() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 1.0, 1.0, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 1.0, 1.0, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 165.00000000000003),
                 new WheelVector(1.0, 165.00000000000003),
@@ -12326,7 +12326,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=1.0, y=1.0, robotAngle=240)"
+                    + "(processing: rotation=0.0, x=1.0, y=1.0, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -12334,7 +12334,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test726() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.0, 1.0, 1.0, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.0, 1.0, 1.0, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 105.0),
                 new WheelVector(1.0, 105.0),
@@ -12343,7 +12343,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.0, x=1.0, y=1.0, robotAngle=300)"
+                    + "(processing: rotation=0.0, x=1.0, y=1.0, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -12351,7 +12351,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test727() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 1.0, 1.0, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 1.0, 1.0, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.8629545474840584, 55.02498786207575),
                 new WheelVector(0.6995577903553303, 45.0),
@@ -12360,7 +12360,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=1.0, y=1.0, robotAngle=0)"
+                    + "(processing: rotation=0.25, x=1.0, y=1.0, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -12368,7 +12368,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test728() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 1.0, 1.0, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 1.0, 1.0, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7362945166247831, -9.041834594776786),
                 new WheelVector(0.7993053313034556, -24.533111897082755),
@@ -12377,7 +12377,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=1.0, y=1.0, robotAngle=60)"
+                    + "(processing: rotation=0.25, x=1.0, y=1.0, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -12385,7 +12385,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test729() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 1.0, 1.0, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 1.0, 1.0, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7362945166247828, -80.9581654052232),
                 new WheelVector(0.9503897108879052, -83.0067161646291),
@@ -12394,7 +12394,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=1.0, y=1.0, robotAngle=120)"
+                    + "(processing: rotation=0.25, x=1.0, y=1.0, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -12402,7 +12402,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test730() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 1.0, 1.0, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 1.0, 1.0, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.8629545474840584, -145.02498786207573),
                 new WheelVector(1.0, -135.0),
@@ -12411,7 +12411,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=1.0, y=1.0, robotAngle=180)"
+                    + "(processing: rotation=0.25, x=1.0, y=1.0, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -12419,7 +12419,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test731() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 1.0, 1.0, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 1.0, 1.0, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 160.6166633079716),
                 new WheelVector(0.9503897108879052, 173.00671616462915),
@@ -12428,7 +12428,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=1.0, y=1.0, robotAngle=240)"
+                    + "(processing: rotation=0.25, x=1.0, y=1.0, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -12436,7 +12436,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test732() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.25, 1.0, 1.0, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.25, 1.0, 1.0, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 109.38333669202842),
                 new WheelVector(0.7993053313034556, 114.53311189708276),
@@ -12445,7 +12445,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.25, x=1.0, y=1.0, robotAngle=300)"
+                    + "(processing: rotation=0.25, x=1.0, y=1.0, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -12453,7 +12453,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test733() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 1.0, 1.0, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 1.0, 1.0, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7836116248912244, 64.47122063449069),
                 new WheelVector(0.4775922500725172, 45.0),
@@ -12462,7 +12462,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=1.0, y=1.0, robotAngle=0)"
+                    + "(processing: rotation=0.5, x=1.0, y=1.0, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -12470,7 +12470,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test734() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 1.0, 1.0, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 1.0, 1.0, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5431934368354895, -0.7057553859603538),
                 new WheelVector(0.6663562474808868, -35.40196970123214),
@@ -12479,7 +12479,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=1.0, y=1.0, robotAngle=60)"
+                    + "(processing: rotation=0.5, x=1.0, y=1.0, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -12487,7 +12487,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test735() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 1.0, 1.0, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 1.0, 1.0, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.5431934368354893, -89.29424461403963),
                 new WheelVector(0.9225120385471084, -89.58444405678857),
@@ -12496,7 +12496,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=1.0, y=1.0, robotAngle=120)"
+                    + "(processing: rotation=0.5, x=1.0, y=1.0, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -12504,7 +12504,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test736() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 1.0, 1.0, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 1.0, 1.0, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7836116248912244, -154.4712206344907),
                 new WheelVector(1.0, -135.0),
@@ -12513,7 +12513,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=1.0, y=1.0, robotAngle=180)"
+                    + "(processing: rotation=0.5, x=1.0, y=1.0, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -12521,7 +12521,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test737() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 1.0, 1.0, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 1.0, 1.0, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 157.29253093958985),
                 new WheelVector(0.9225120385471086, 179.58444405678858),
@@ -12530,7 +12530,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=1.0, y=1.0, robotAngle=240)"
+                    + "(processing: rotation=0.5, x=1.0, y=1.0, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -12538,7 +12538,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test738() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.5, 1.0, 1.0, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.5, 1.0, 1.0, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 112.70746906041018),
                 new WheelVector(0.6663562474808868, 125.40196970123215),
@@ -12547,7 +12547,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.5, x=1.0, y=1.0, robotAngle=300)"
+                    + "(processing: rotation=0.5, x=1.0, y=1.0, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -12555,7 +12555,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test739() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 1.0, 1.0, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 1.0, 1.0, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7396594713152661, 72.93835272960236),
                 new WheelVector(0.3069075870889443, 45.0),
@@ -12564,7 +12564,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=1.0, y=1.0, robotAngle=0)"
+                    + "(processing: rotation=0.75, x=1.0, y=1.0, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -12572,7 +12572,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test740() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 1.0, 1.0, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 1.0, 1.0, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.40604684823762904, 11.122958379159098),
                 new WheelVector(0.5842575831179119, -47.005802524468436),
@@ -12581,7 +12581,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=1.0, y=1.0, robotAngle=60)"
+                    + "(processing: rotation=0.75, x=1.0, y=1.0, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -12589,7 +12589,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test741() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 1.0, 1.0, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 1.0, 1.0, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.40604684823762877, -101.12295837915909),
                 new WheelVector(0.9074784402579095, -94.95187420086087),
@@ -12598,7 +12598,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=1.0, y=1.0, robotAngle=120)"
+                    + "(processing: rotation=0.75, x=1.0, y=1.0, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -12606,7 +12606,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test742() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 1.0, 1.0, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 1.0, 1.0, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.739659471315266, -162.93835272960234),
                 new WheelVector(1.0, -135.0),
@@ -12615,7 +12615,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=1.0, y=1.0, robotAngle=180)"
+                    + "(processing: rotation=0.75, x=1.0, y=1.0, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -12623,7 +12623,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test743() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 1.0, 1.0, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 1.0, 1.0, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 154.70117659823651),
                 new WheelVector(0.9074784402579097, -175.04812579913911),
@@ -12632,7 +12632,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=1.0, y=1.0, robotAngle=240)"
+                    + "(processing: rotation=0.75, x=1.0, y=1.0, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -12640,7 +12640,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test744() {
-        WheelVector.VectorSet set = transform.processNorthUp(0.75, 1.0, 1.0, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(0.75, 1.0, 1.0, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 115.2988234017635),
                 new WheelVector(0.5842575831179119, 137.00580252446844),
@@ -12649,7 +12649,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=0.75, x=1.0, y=1.0, robotAngle=300)"
+                    + "(processing: rotation=0.75, x=1.0, y=1.0, robotAngle=300.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -12657,7 +12657,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test745() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 1.0, 1.0, 0);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 1.0, 1.0, 0.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7174389352143008, 80.26438968275465),
                 new WheelVector(0.17157287525380988, 45.0),
@@ -12666,7 +12666,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=1.0, y=1.0, robotAngle=0)"
+                    + "(processing: rotation=1.0, x=1.0, y=1.0, robotAngle=0.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -12674,7 +12674,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test746() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 1.0, 1.0, 60);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 1.0, 1.0, 60.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.3178372451957823, 27.36780515862268),
                 new WheelVector(0.5394415938940733, -58.4494755261363),
@@ -12683,7 +12683,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=1.0, y=1.0, robotAngle=60)"
+                    + "(processing: rotation=1.0, x=1.0, y=1.0, robotAngle=60.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -12691,7 +12691,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test747() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 1.0, 1.0, 120);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 1.0, 1.0, 120.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.3178372451957821, -117.36780515862269),
                 new WheelVector(0.9000129339129885, -99.34287017526722),
@@ -12700,7 +12700,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=1.0, y=1.0, robotAngle=120)"
+                    + "(processing: rotation=1.0, x=1.0, y=1.0, robotAngle=120.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -12708,7 +12708,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test748() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 1.0, 1.0, 180);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 1.0, 1.0, 180.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(0.7174389352143007, -170.26438968275465),
                 new WheelVector(1.0, -135.0),
@@ -12717,7 +12717,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=1.0, y=1.0, robotAngle=180)"
+                    + "(processing: rotation=1.0, x=1.0, y=1.0, robotAngle=180.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -12725,7 +12725,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test749() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 1.0, 1.0, 240);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 1.0, 1.0, 240.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 152.63219484137733),
                 new WheelVector(0.9000129339129886, -170.65712982473278),
@@ -12734,7 +12734,7 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=1.0, y=1.0, robotAngle=240)"
+                    + "(processing: rotation=1.0, x=1.0, y=1.0, robotAngle=240.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }
@@ -12742,7 +12742,7 @@ class SwerveInputTransformConsistencyTest {
 
     @Test
     void test750() {
-        WheelVector.VectorSet set = transform.processNorthUp(1.0, 1.0, 1.0, 300);
+        WheelVector.VectorSet set = transform.processNorthUp(1.0, 1.0, 1.0, 300.0);
         WheelVector.VectorSet expected = new WheelVector.VectorSet(
                 new WheelVector(1.0, 117.36780515862269),
                 new WheelVector(0.5394415938940733, 148.4494755261363),
@@ -12751,7 +12751,143 @@ class SwerveInputTransformConsistencyTest {
         boolean equal = set.equals(expected);
         if (!equal) {
             fail("VectorSets do not match"
-                    + "(processing: rotation=1.0, x=1.0, y=1.0, robotAngle=300)"
+                    + "(processing: rotation=1.0, x=1.0, y=1.0, robotAngle=300.0)"
+                    + "\n\t  got:       " + set.toString()
+                    + "\n\t  expected:  " + expected.toString());
+        }
+    }
+
+    @Test
+    void testOverlyLargeInput1() {
+        WheelVector.VectorSet set = transform.processNorthUp(1.2, 0.4, 0.6, 75.0);
+        WheelVector.VectorSet expected = new WheelVector.VectorSet(
+                new WheelVector(0.2513422500931438, 129.48175784526967),
+                new WheelVector(0.7080798393582519, -103.04387422351734),
+                new WheelVector(0.749530431521147, 14.999999999999998),
+                new WheelVector(1.0, -43.615040969690504));
+        boolean equal = set.equals(expected);
+        if (!equal) {
+            fail("VectorSets do not match"
+                    + "(processing: rotation=1.2, x=0.4, y=0.6, robotAngle=75.0)"
+                    + "\n\t  got:       " + set.toString()
+                    + "\n\t  expected:  " + expected.toString());
+        }
+    }
+
+    @Test
+    void testOverlyLargeInput2() {
+        WheelVector.VectorSet set = transform.processNorthUp(0.1, 1.3, 0.0, 186.0);
+        WheelVector.VectorSet expected = new WheelVector.VectorSet(
+                new WheelVector(0.8987460272109191, -99.59468897937218),
+                new WheelVector(1.0, -98.61537153693348),
+                new WheelVector(0.887433121911718, -93.05260400335266),
+                new WheelVector(0.9898450002089053, -92.73651955836287));
+        boolean equal = set.equals(expected);
+        if (!equal) {
+            fail("VectorSets do not match"
+                    + "(processing: rotation=0.1, x=1.3, y=0.0, robotAngle=186.0)"
+                    + "\n\t  got:       " + set.toString()
+                    + "\n\t  expected:  " + expected.toString());
+        }
+    }
+
+    @Test
+    void testOverlyLargeInput3() {
+        WheelVector.VectorSet set = transform.processNorthUp(0.7, 0.3, 1.1, 20.0);
+        WheelVector.VectorSet expected = new WheelVector.VectorSet(
+                new WheelVector(0.4359756653839756, 31.995882498343235),
+                new WheelVector(0.5021445250921808, -42.5801363652643),
+                new WheelVector(0.9684656197960506, 13.799627185709912),
+                new WheelVector(1.0, -19.862337783991745));
+        boolean equal = set.equals(expected);
+        if (!equal) {
+            fail("VectorSets do not match"
+                    + "(processing: rotation=0.7, x=0.3, y=1.1, robotAngle=20.0)"
+                    + "\n\t  got:       " + set.toString()
+                    + "\n\t  expected:  " + expected.toString());
+        }
+    }
+
+    @Test
+    void testOverlyLargeInput4() {
+        WheelVector.VectorSet set = transform.processNorthUp(0.234, 0.171, 0.9, 400.0);
+        WheelVector.VectorSet expected = new WheelVector.VectorSet(
+                new WheelVector(0.6069698119847327, -23.98676802281418),
+                new WheelVector(0.7714244619715468, -44.038991065984966),
+                new WheelVector(0.8793842460112027, -16.295582168998013),
+                new WheelVector(1.0, -32.428992499708905));
+        boolean equal = set.equals(expected);
+        if (!equal) {
+            fail("VectorSets do not match"
+                    + "(processing: rotation=0.234, x=0.171, y=0.9, robotAngle=400.0)"
+                    + "\n\t  got:       " + set.toString()
+                    + "\n\t  expected:  " + expected.toString());
+        }
+    }
+
+    @Test
+    void testNegativeInput1() {
+        WheelVector.VectorSet set = transform.processNorthUp(-0.4, 0.7, 0.2, 300.0);
+        WheelVector.VectorSet expected = new WheelVector.VectorSet(
+                new WheelVector(0.290903230934977, 132.90212000374382),
+                new WheelVector(0.7415288266545876, 105.489321897141),
+                new WheelVector(0.7312726502534327, 163.0582979965871),
+                new WheelVector(1.0, 134.3898447515578));
+        boolean equal = set.equals(expected);
+        if (!equal) {
+            fail("VectorSets do not match"
+                    + "(processing: rotation=-0.4, x=0.7, y=0.2, robotAngle=300.0)"
+                    + "\n\t  got:       " + set.toString()
+                    + "\n\t  expected:  " + expected.toString());
+        }
+    }
+
+    @Test
+    void testNegativeInput2() {
+        WheelVector.VectorSet set = transform.processNorthUp(0.08, -0.5, 0.121, 4.0);
+        WheelVector.VectorSet expected = new WheelVector.VectorSet(
+                new WheelVector(0.45160281244434974, -86.28531569817044),
+                new WheelVector(0.564549788430184, -87.02924652562879),
+                new WheelVector(0.47261563281744545, -72.46474849667929),
+                new WheelVector(0.5814953996312898, -75.8253632480337));
+        boolean equal = set.equals(expected);
+        if (!equal) {
+            fail("VectorSets do not match"
+                    + "(processing: rotation=0.08, x=-0.5, y=0.121, robotAngle=4.0)"
+                    + "\n\t  got:       " + set.toString()
+                    + "\n\t  expected:  " + expected.toString());
+        }
+    }
+
+    @Test
+    void testNegativeInput3() {
+        WheelVector.VectorSet set = transform.processNorthUp(0.1, 0.9, -0.333, 50.0);
+        WheelVector.VectorSet expected = new WheelVector.VectorSet(
+                new WheelVector(0.937825190157507, 65.8914165004748),
+                new WheelVector(0.817463744683729, 62.055960927299175),
+                new WheelVector(1.0, 58.87277040673152),
+                new WheelVector(0.888105222695138, 54.403668936870375));
+        boolean equal = set.equals(expected);
+        if (!equal) {
+            fail("VectorSets do not match"
+                    + "(processing: rotation=0.1, x=0.9, y=-0.333, robotAngle=50.0)"
+                    + "\n\t  got:       " + set.toString()
+                    + "\n\t  expected:  " + expected.toString());
+        }
+    }
+
+    @Test
+    void testNegativeInput4() {
+        WheelVector.VectorSet set = transform.processNorthUp(0.2, 0.6, 0.4, -78.0);
+        WheelVector.VectorSet expected = new WheelVector.VectorSet(
+                new WheelVector(0.9210988990924407, 134.4597647298436),
+                new WheelVector(0.7460067543476658, 149.85966144433343),
+                new WheelVector(0.7506490008437109, 118.85877699121664),
+                new WheelVector(0.5211303273565009, 134.0451030201224));
+        boolean equal = set.equals(expected);
+        if (!equal) {
+            fail("VectorSets do not match"
+                    + "(processing: rotation=0.2, x=0.6, y=0.4, robotAngle=-78.0)"
                     + "\n\t  got:       " + set.toString()
                     + "\n\t  expected:  " + expected.toString());
         }

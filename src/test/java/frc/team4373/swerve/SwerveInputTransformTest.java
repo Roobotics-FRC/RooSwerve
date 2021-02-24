@@ -44,55 +44,75 @@ class SwerveInputTransformTest {
                 for (int y = 0; y <= 4; y++) {
                     for (int rotation = 0; rotation <= 4; rotation++) {
                         for (int imuAngle = 0; imuAngle < 360; imuAngle = imuAngle + 60) {
-                            out.println("    @Test");
-                            out.println("    void test" + String.format("%03d", ++i) + "() {");
-                            WheelVector.VectorSet set = transform.processNorthUp(
-                                    ((double) rotation) / 4,
-                                    ((double) x) / 4,
-                                    ((double) y) / 4,
-                                    imuAngle);
-                            out.println("        WheelVector.VectorSet set"
-                                    + " = transform.processNorthUp("
-                                    + ((double) rotation) / 4 + ", "
-                                    + ((double) x) / 4 + ", "
-                                    + ((double) y) / 4 + ", "
-                                    + imuAngle + ");");
-                            out.println("        WheelVector.VectorSet expected"
-                                    + " = new WheelVector.VectorSet(");
-                            out.println("                new WheelVector("
-                                    + set.right1.speed + ", " + set.right1.angle + "),");
-                            out.println("                new WheelVector("
-                                    + set.right2.speed + ", " + set.right2.angle + "),");
-                            out.println("                new WheelVector("
-                                    + set.left1.speed + ", " + set.left1.angle + "),");
-                            out.println("                new WheelVector("
-                                    + set.left2.speed + ", " + set.left2.angle + "));");
-                            out.println("        boolean equal = set.equals(expected);");
-                            out.println("        if (!equal) {");
-                            out.println("            fail(\"VectorSets do not match\"\n"
-                                    + "                    + \"(processing: "
-                                    + "rotation=" + ((double) rotation) / 4
-                                    + ", x=" + ((double) x) / 4
-                                    + ", y=" + ((double) y) / 4
-                                    + ", robotAngle=" + imuAngle + ")\"");
-                            out.print("                    + \"\\n\\t  ");
-                            out.println("got:       \" + set.toString()");
-                            out.print("                    + \"\\n\\t  ");
-                            out.println("expected:  \" + expected.toString());");
-                            out.println("        }");
-                            out.println("    }");
-                            out.println();
+                            writeTest(String.format("test%03d", ++i), out,
+                                    ((double) rotation) / 4, ((double) x) / 4, ((double) y) / 4,
+                                    imuAngle, transform);
                         }
                     }
                 }
             }
+            writeTest("testOverlyLargeInput1", out,
+                    1.2, 0.4, 0.6, 75, transform);
+            writeTest("testOverlyLargeInput2", out,
+                    0.1, 1.3, 0, 186, transform);
+            writeTest("testOverlyLargeInput3", out,
+                    0.7, 0.3, 1.1, 20, transform);
+            writeTest("testOverlyLargeInput4", out,
+                    0.234, 0.171, 0.9, 400, transform);
+            writeTest("testNegativeInput1", out,
+                    -0.4, 0.7, 0.2, 300, transform);
+            writeTest("testNegativeInput2", out,
+                    0.08, -0.5, 0.121, 4, transform);
+            writeTest("testNegativeInput3", out,
+                    0.1, 0.9, -0.333, 50, transform);
+            writeTest("testNegativeInput4", out,
+                    0.2, 0.6, 0.4, -78, transform);
             out.println("}");
-            System.out.println("\n" + i + " tests generated.");
+            System.out.println("\n" + (i + 8) + " tests generated.");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    private void writeTest(String name, PrintStream out,
+                           double rotation, double x, double y, double robotAngle,
+                           SwerveInputTransform transform) {
+        out.println("    @Test");
+        out.println("    void " + name + "() {");
+        WheelVector.VectorSet set = transform.processNorthUp(rotation, x, y, robotAngle);
+        out.println("        WheelVector.VectorSet set"
+                + " = transform.processNorthUp("
+                + rotation + ", "
+                + x + ", "
+                + y + ", "
+                + robotAngle + ");");
+        out.println("        WheelVector.VectorSet expected"
+                + " = new WheelVector.VectorSet(");
+        out.println("                new WheelVector("
+                + set.right1.speed + ", " + set.right1.angle + "),");
+        out.println("                new WheelVector("
+                + set.right2.speed + ", " + set.right2.angle + "),");
+        out.println("                new WheelVector("
+                + set.left1.speed + ", " + set.left1.angle + "),");
+        out.println("                new WheelVector("
+                + set.left2.speed + ", " + set.left2.angle + "));");
+        out.println("        boolean equal = set.equals(expected);");
+        out.println("        if (!equal) {");
+        out.println("            fail(\"VectorSets do not match\"\n"
+                + "                    + \"(processing: "
+                + "rotation=" + rotation
+                + ", x=" + x
+                + ", y=" + y
+                + ", robotAngle=" + robotAngle + ")\"");
+        out.print("                    + \"\\n\\t  ");
+        out.println("got:       \" + set.toString()");
+        out.print("                    + \"\\n\\t  ");
+        out.println("expected:  \" + expected.toString());");
+        out.println("        }");
+        out.println("    }");
+        out.println();
     }
 
     @Test
