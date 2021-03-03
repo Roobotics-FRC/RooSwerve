@@ -75,6 +75,14 @@ public class SwerveConfig {
          * The maximum speed, in native encoder units, allowed for the drive motors.
          */
         public final double maxWheelSpeed;
+
+        /**
+         * The number of native encoder units that a drive wheel must rotate to go one inch.
+         * Multiply a value in inches by this constant to convert to native units,
+         *   or divide a value in native units by this constant to convert to inches.
+         */
+        public final double nativeUnitsPerInch;
+
         /**
          * The {@link CurrentLimitConfig} configuration for current limiting.
          */
@@ -91,13 +99,15 @@ public class SwerveConfig {
          * @param left2Drive the {@link MotorConfig} for the left 2 drive motor.
          * @param left2Rotate the {@link MotorConfig} for the left 2 rotator motor.
          * @param maxWheelSpeed the max speed, in encoder units, attainable by the drive motors.
+         * @param nativeUnitsPerInch the native units a drive wheel must rotate to go one inch.
          * @param currentLimitConfig the {@link CurrentLimitConfig} for current limiting.
          */
         public WheelsConfig(MotorConfig right1Drive, MotorConfig right1Rotate,
                             MotorConfig right2Drive, MotorConfig right2Rotate,
                             MotorConfig left1Drive, MotorConfig left1Rotate,
                             MotorConfig left2Drive, MotorConfig left2Rotate,
-                            double maxWheelSpeed, CurrentLimitConfig currentLimitConfig) {
+                            double maxWheelSpeed, double nativeUnitsPerInch,
+                            CurrentLimitConfig currentLimitConfig) {
             this.right1Drive = right1Drive;
             this.right1Rotate = right1Rotate;
             this.right2Drive = right2Drive;
@@ -108,6 +118,7 @@ public class SwerveConfig {
             this.left2Rotate = left2Rotate;
 
             this.maxWheelSpeed = maxWheelSpeed;
+            this.nativeUnitsPerInch = nativeUnitsPerInch;
             this.currentLimitConfig = currentLimitConfig;
         }
 
@@ -122,12 +133,13 @@ public class SwerveConfig {
          * @param left2Drive the {@link MotorConfig} for the left 2 drive motor.
          * @param left2Rotate the {@link MotorConfig} for the left 2 rotator motor.
          * @param maxWheelSpeed the max speed, in encoder units, attainable by the drive motors.
+         * @param nativeUnitsPerInch the native units a drive wheel must rotate to go one inch.
          */
         public WheelsConfig(MotorConfig right1Drive, MotorConfig right1Rotate,
                             MotorConfig right2Drive, MotorConfig right2Rotate,
                             MotorConfig left1Drive, MotorConfig left1Rotate,
                             MotorConfig left2Drive, MotorConfig left2Rotate,
-                            double maxWheelSpeed) {
+                            double maxWheelSpeed, double nativeUnitsPerInch) {
             this(right1Drive,
                     right1Rotate,
                     right2Drive,
@@ -137,6 +149,7 @@ public class SwerveConfig {
                     left2Drive,
                     left2Rotate,
                     maxWheelSpeed,
+                    nativeUnitsPerInch,
                     CurrentLimitConfig.NONE);
         } 
     }

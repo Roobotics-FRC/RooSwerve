@@ -14,7 +14,7 @@ plugins {
 }
 
 group 'frc.team4373'
-version '2.0.1'
+version '3.0.0-SNAPSHOT1'
 
 sourceCompatibility = 1.11
 

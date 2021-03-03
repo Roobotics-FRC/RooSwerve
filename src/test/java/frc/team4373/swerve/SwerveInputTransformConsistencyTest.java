@@ -5,7 +5,10 @@ import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.fail;
 
 class SwerveInputTransformConsistencyTest {
-    SwerveInputTransform transform = new SwerveInputTransform(24, 24);
+    //The `maxWheelSpeed` and `nativeUnitsPerInch` don't matter for tests,
+    //  as both the inputs and outputs of SwerveInputTransform are fractions of max speed.
+    //  I'd avoid letting them be 0, though.
+    SwerveInputTransform transform = new SwerveInputTransform(24, 24, 7000, 550);
 
     @Test
     void test001() {

@@ -36,9 +36,19 @@ class SwerveInputTransformTest {
             out.println();
             out.println("class SwerveInputTransformConsistencyTest {");
 
-            SwerveInputTransform transform = new SwerveInputTransform(24, 24);
+            //The `maxWheelSpeed` and `nativeUnitsPerInch` don't matter for tests,
+            //  as both the inputs and outputs of SwerveInputTransform are fractions of max speed.
+            //  I'd avoid letting them be 0, though.
+            //maxWheelSpeed: 7000 (2020 code), 8200 (test bed actual), 9000 (2020 bot actual)
+            //nativeUnitsPerInch: 20d/3d*1024/(4*Math.PI)
+            SwerveInputTransform transform = new SwerveInputTransform(24, 24,
+                    7000, 550);
             int i = 0;
-            out.println("    SwerveInputTransform transform = new SwerveInputTransform(24, 24);");
+
+            out.println("    //The `maxWheelSpeed` and `nativeUnitsPerInch` don't matter for tests,");
+            out.println("    //  as both the inputs and outputs of SwerveInputTransform are fractions of max speed.");
+            out.println("    //  I'd avoid letting them be 0, though.");
+            out.println("    SwerveInputTransform transform = new SwerveInputTransform(24, 24, 7000, 550);");
             out.println();
             for (int x = 0; x <= 4; x++) {
                 for (int y = 0; y <= 4; y++) {
@@ -117,7 +127,7 @@ class SwerveInputTransformTest {
 
     @Test
     void process() {
-        SwerveInputTransform transform = new SwerveInputTransform(24, 24);
+        SwerveInputTransform transform = new SwerveInputTransform(24, 24, 7000, 550);
         WheelVector.VectorSet set = transform.processNorthUp(0, 0, 1, 0);
         assertTrue(set.equals(new WheelVector.VectorSet(
                 new WheelVector(1, 0),

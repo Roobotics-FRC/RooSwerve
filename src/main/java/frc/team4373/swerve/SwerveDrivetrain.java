@@ -3,8 +3,6 @@ package frc.team4373.swerve;
 import com.ctre.phoenix.sensors.PigeonIMU;
 import edu.wpi.first.wpilibj.command.Subsystem;
 
-import javax.annotation.Nullable;
-
 /**
  * A programmatic representation of a swerve drivetrain.
  *
@@ -98,7 +96,8 @@ public abstract class SwerveDrivetrain extends Subsystem {
         this.initialAngle = getPigeonYawRaw();
 
         this.transform = new SwerveInputTransform(config.dimensions.trackwidth,
-                config.dimensions.wheelbase);
+                config.dimensions.wheelbase, config.wheels.maxWheelSpeed,
+                config.wheels.nativeUnitsPerInch);
 
         this.brakeVectors = this.transform.calculateBrakeVectors(brakeMode);
     }
