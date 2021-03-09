@@ -7,14 +7,14 @@ buildscript {
 plugins {
     id "java"
     id "checkstyle"
-    id "edu.wpi.first.GradleRIO" version "2020.1.2"
+    id "edu.wpi.first.GradleRIO" version "2021.2.2"
     id "idea"
     id "com.github.spotbugs" version "3.0.0"
     id "maven-publish"
 }
 
 group 'frc.team4373'
-version '3.0.0-SNAPSHOT1'
+version '3.0.0-SNAPSHOT'
 
 sourceCompatibility = 1.11
 

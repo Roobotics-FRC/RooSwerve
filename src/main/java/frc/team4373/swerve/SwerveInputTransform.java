@@ -16,7 +16,7 @@ public class SwerveInputTransform {
     private final DoubleUnaryOperator nativeUnitsToMetersPerSecond;
     private final DoubleUnaryOperator metersPerSecondToNativeUnits;
 
-    private final SwerveDriveKinematics kinematics;
+    final SwerveDriveKinematics kinematics;
 
     private final double radius;
 

@@ -2,6 +2,11 @@ package frc.team4373.swerve;
 
 import com.ctre.phoenix.sensors.PigeonIMU;
 import edu.wpi.first.wpilibj.command.Subsystem;
+import edu.wpi.first.wpilibj.geometry.Pose2d;
+import edu.wpi.first.wpilibj.geometry.Rotation2d;
+import edu.wpi.first.wpilibj.kinematics.SwerveDriveOdometry;
+import edu.wpi.first.wpilibj.kinematics.SwerveModuleState;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 /**
  * A programmatic representation of a swerve drivetrain.
@@ -68,11 +73,14 @@ public abstract class SwerveDrivetrain extends Subsystem {
     private SwerveWheel left2;
     private PigeonIMU pigeon;
     private double initialAngle;
+    private double offsetAngle;
 
     private DriveMode driveMode = DriveMode.NORTH_UP;
     private BrakeMode brakeMode = BrakeMode.IMPLODE;
 
     private WheelVector.VectorSet brakeVectors;
+
+    private SwerveDriveOdometry odometry;
 
     /**
      * Creates a new SwerveDrivetrain subclass instance with the given configuration.
@@ -81,25 +89,53 @@ public abstract class SwerveDrivetrain extends Subsystem {
     protected SwerveDrivetrain(SwerveConfig config) {
         this.right1 = new SwerveWheel(WheelID.RIGHT_1,
                 config.wheels.right1Drive, config.wheels.right1Rotate,
-                config.wheels.maxWheelSpeed, config.wheels.currentLimitConfig);
+                config.wheels.maxWheelSpeed, config.wheels.currentLimitConfig,
+                config.wheels.nativeUnitsPerInch);
         this.right2 = new SwerveWheel(WheelID.RIGHT_2,
                 config.wheels.right2Drive, config.wheels.right2Rotate,
-                config.wheels.maxWheelSpeed, config.wheels.currentLimitConfig);
+                config.wheels.maxWheelSpeed, config.wheels.currentLimitConfig,
+                config.wheels.nativeUnitsPerInch);
         this.left1 = new SwerveWheel(WheelID.LEFT_1,
                 config.wheels.left1Drive, config.wheels.left1Rotate,
-                config.wheels.maxWheelSpeed, config.wheels.currentLimitConfig);
+                config.wheels.maxWheelSpeed, config.wheels.currentLimitConfig,
+                config.wheels.nativeUnitsPerInch);
         this.left2 = new SwerveWheel(WheelID.LEFT_2,
                 config.wheels.left2Drive, config.wheels.left2Rotate,
-                config.wheels.maxWheelSpeed, config.wheels.currentLimitConfig);
+                config.wheels.maxWheelSpeed, config.wheels.currentLimitConfig,
+                config.wheels.nativeUnitsPerInch);
 
         this.pigeon = new PigeonIMU(config.pigeonID);
-        this.initialAngle = getPigeonYawRaw();
+        this.initialAngle = this.offsetAngle = getPigeonYawRaw();
 
         this.transform = new SwerveInputTransform(config.dimensions.trackwidth,
                 config.dimensions.wheelbase, config.wheels.maxWheelSpeed,
                 config.wheels.nativeUnitsPerInch);
 
         this.brakeVectors = this.transform.calculateBrakeVectors(brakeMode);
+
+        this.odometry = new SwerveDriveOdometry(transform.kinematics, getActualAngle());
+    }
+
+    @Override
+    public void periodic() {
+        this.odometry.update(getActualAngle(), left1.getState(), right1.getState(), right2.getState(), left2.getState());
+        SmartDashboard.putNumber("swerve/left1/WPI/speed", left1.getSpeedMetersPerSecond());
+        SmartDashboard.putNumber("swerve/left1/WPI/angle", left1.getCurrentRotation().getDegrees());
+        SmartDashboard.putNumber("swerve/left1/AFS/speed", left1.getDriveMotorVelocity());
+        SmartDashboard.putNumber("swerve/left1/AFS/angle", left1.getRotatorMotorPosition());
+        var pose = getPose();
+        SmartDashboard.putNumber("swerve/pose/x", pose.getX());
+        SmartDashboard.putNumber("swerve/pose/y", pose.getY());
+        SmartDashboard.putNumber("swerve/pose/rotation", pose.getRotation().getDegrees());
+        SmartDashboard.putNumber("actual_angle", getActualAngle().getDegrees());
+    }
+
+    public Pose2d getPose() {
+        Pose2d pose = this.odometry.getPoseMeters();
+        // I know it FEELS like this should be `-pose.getRotation()`
+        //   (or `pose.getRotation().unaryMinus()`) but empirical testing has shown that's wrong.
+        //   Perhaps we're inverting it somewhere else, but this results in CW positive.
+        return new Pose2d(-pose.getY(), pose.getX(), pose.getRotation());
     }
 
     /**
@@ -114,9 +150,9 @@ public abstract class SwerveDrivetrain extends Subsystem {
 
     /**
      * Drives using the transform for the given parameters.
-     * @param rotation the joystick rotation, in degrees.
-     * @param x the x-coordinate, -1 to 1.
-     * @param y the y-coordinate, -1 to 1.
+     * @param rotation the fraction of max rotation, [-1, 1], CW positive.
+     * @param x the fraction of max horizontal speed, [-1, 1], right positive.
+     * @param y the fraction of max 'vertical' speed, [-1, 1], downfield positive.
      */
     public void drive(double rotation, double x, double y) {
         switch (driveMode) {
@@ -128,6 +164,11 @@ public abstract class SwerveDrivetrain extends Subsystem {
                 break;
             default: break;
         }
+        System.out.println("left1.getState().toString() = " + left1.getState().toString());
+        System.out.println("right1.getState().toString() = " + right1.getState().toString());
+        System.out.println("right2.getState().toString() = " + right2.getState().toString());
+        System.out.println("left2.getState().toString() = " + left2.getState().toString());
+        System.out.println("getActualAngle() = " + getActualAngle().getDegrees());
     }
 
     /**
@@ -169,12 +210,16 @@ public abstract class SwerveDrivetrain extends Subsystem {
         }
     }
 
+    Rotation2d getActualAngle() {
+        return Rotation2d.fromDegrees(Utils.normalizeAngle(getPigeonYawRaw() - initialAngle));
+    }
+
     /**
      * Returns the current angle relative to the starting position (mod 360).
      * @return the current angle relative to the starting position on the interval [0, 360).
      */
     public double getAngle() {
-        return Utils.normalizeAngle(getPigeonYawRaw() - initialAngle);
+        return Utils.normalizeAngle(getPigeonYawRaw() - offsetAngle);
     }
 
     /**
@@ -337,7 +382,7 @@ public abstract class SwerveDrivetrain extends Subsystem {
      * Resets the pigeon's yaw to consider the current orientation field-forward (zero degrees).
      */
     public void resetPigeonYaw() {
-        this.initialAngle = this.getPigeonYawRaw();
+        this.offsetAngle = this.getPigeonYawRaw();
     }
 
     /**
@@ -345,6 +390,6 @@ public abstract class SwerveDrivetrain extends Subsystem {
      * @param angle the value, in degrees, that the pigeon should have at the current position..
      */
     public void setPigeonYaw(double angle) {
-        this.initialAngle = this.getPigeonYawRaw() + angle;
+        this.offsetAngle = this.getPigeonYawRaw() + angle;
     }
 }

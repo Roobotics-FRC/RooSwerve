@@ -3,7 +3,12 @@ package frc.team4373.swerve;
 import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.FeedbackDevice;
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
+import edu.wpi.first.wpilibj.geometry.Rotation2d;
+import edu.wpi.first.wpilibj.kinematics.SwerveModuleState;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+import edu.wpi.first.wpilibj.util.Units;
+
+import java.util.function.DoubleUnaryOperator;
 
 /**
  * Represents a swerve wheel with two motors.
@@ -17,6 +22,9 @@ class SwerveWheel {
 
     private boolean isInverted = false;
 
+    private final DoubleUnaryOperator nativeUnitsToMetersPerSecond;
+    private final DoubleUnaryOperator metersPerSecondToNativeUnits;
+
     /**
      * Constructs a new swerve wheel for the specified wheel.
      * @param driveMotorConfig the config for the drive motor.
@@ -27,7 +35,8 @@ class SwerveWheel {
     SwerveWheel(SwerveDrivetrain.WheelID wheelID,
                 SwerveConfig.MotorConfig driveMotorConfig,
                 SwerveConfig.MotorConfig rotatorMotorConfig,
-                double maxWheelSpeed, SwerveConfig.CurrentLimitConfig currentLimitConfig) {
+                double maxWheelSpeed, SwerveConfig.CurrentLimitConfig currentLimitConfig,
+                double nativeUnitsPerInch) {
         this.wheelID = wheelID;
         this.maxWheelSpeed = maxWheelSpeed;
 
@@ -81,6 +90,24 @@ class SwerveWheel {
         this.rotatorMotor.config_kP(SwerveConstants.PID_IDX, rotatorMotorConfig.gains.kP);
         this.rotatorMotor.config_kI(SwerveConstants.PID_IDX, rotatorMotorConfig.gains.kI);
         this.rotatorMotor.config_kD(SwerveConstants.PID_IDX, rotatorMotorConfig.gains.kD);
+
+        this.nativeUnitsToMetersPerSecond = (nu) -> Units.inchesToMeters(nu / nativeUnitsPerInch)
+                * 10;
+        this.metersPerSecondToNativeUnits = (mps) -> Units.metersToInches(mps)
+                * nativeUnitsPerInch / 10;
+    }       
+
+    SwerveModuleState getState() {
+        return new SwerveModuleState(getSpeedMetersPerSecond(), getCurrentRotation());
+    }
+
+    Rotation2d getCurrentRotation() {
+        return Rotation2d.fromDegrees(-getRotatorMotorPosition()
+                / SwerveConstants.DEGREES_TO_ENCODER_UNITS);
+    }
+
+    double getSpeedMetersPerSecond() {
+        return nativeUnitsToMetersPerSecond.applyAsDouble(getDriveMotorVelocity());
     }
 
     /**
