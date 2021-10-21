@@ -291,6 +291,18 @@ public abstract class SwerveDrivetrain extends Subsystem {
         return this.brakeMode;
     }
 
+
+    /**
+     * Sets the max acceleration for each wheel.
+     * @param maxAccel the maximum acceleration.
+     */
+    public void setMaxWheelAcceleration(double maxAccel) {
+        right1.setMaxWheelAcceleration(maxAccel);
+        right2.setMaxWheelAcceleration(maxAccel);
+        left1.setMaxWheelAcceleration(maxAccel);
+        left2.setMaxWheelAcceleration(maxAccel);
+    }
+
     /**
      * Gets the swerve wheel with the specified ID.
      * @param wheelID the ID of the wheel to fetch.

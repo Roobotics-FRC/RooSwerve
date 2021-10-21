@@ -17,6 +17,10 @@ class SwerveWheel {
 
     private boolean isInverted = false;
 
+    private double maxAcceleration = 2;
+
+    private double lastSetSpeed = 0;
+
     /**
      * Constructs a new swerve wheel for the specified wheel.
      * @param driveMotorConfig the config for the drive motor.
@@ -89,6 +93,16 @@ class SwerveWheel {
      * @param speed the percent of maximum speed at which to drive.
      */
     void set(double speed, double heading) {
+
+        double acceleration = speed - lastSetSpeed;
+
+        if (acceleration > maxAcceleration) {
+            speed = lastSetSpeed + maxAcceleration;
+        } else if (acceleration < -maxAcceleration) {
+            speed = lastSetSpeed - maxAcceleration;
+        }
+
+        lastSetSpeed = speed;
 
         heading *= SwerveConstants.DEGREES_TO_ENCODER_UNITS;
 
@@ -234,5 +248,9 @@ class SwerveWheel {
      */
     double getRotatorMotorVelocity() {
         return rotatorMotor.getSelectedSensorVelocity();
+    }
+
+    void setMaxWheelAcceleration(double maxAccel) {
+        maxAcceleration = maxAccel;
     }
 }
